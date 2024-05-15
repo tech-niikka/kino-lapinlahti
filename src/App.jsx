@@ -8,16 +8,17 @@ import three from '../src/3.png'
 function App() {
   return (
     <div>
-      <Nav/>
-      <div class='bg-main pt-5 text-heading'>
-        <div class=' flex flex-col items-center justify-between'>
-            <h2 class='pt-16 font-serif font-semibold text-3xl leading-7'>
+      <Nav />
+      <div class="bg-main pt-5 text-heading">
+        <div class=" flex flex-col items-center justify-between">
+          <h2 class="pt-16 font-serif font-semibold text-3xl leading-7">
             22.8.-24.8.2024
-            </h2>
-            <h1 class='pt-3  font-serif font-semibold text-5xl leading-loose'>
+          </h2>
+          <h1 class="pt-3  font-serif font-semibold text-5xl leading-loose">
             Lapinlahden elokuvajuhlat
-            </h1>
+          </h1>
         </div>
+
         <div class=" mx-auto overflow-x-auto lg:space-y-0 lg:gap-0 lg:grid lg:grid-cols-4">
            <div class="w-full rounded h-96">
                <img class="h-96 w-full object-cover" src={three} alt="image"/>
