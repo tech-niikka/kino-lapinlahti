@@ -9,6 +9,10 @@ module.exports = {
       'main':'#F4AD04',
       'text':'#000000',
       'heading':'#222431',
+      'yellow': '#FFE6AA',
+      'blue': '#E7E7ED',
+      'green': '#C8AA65',
+      'gray': '#8E8E8E',
 
     },
     extend: {
