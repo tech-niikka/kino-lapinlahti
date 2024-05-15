@@ -1,5 +1,6 @@
 import React from 'react';
 import Nav from './Nav.jsx';
+import Schedule from './Schedule.jsx';
 import one from '../src/1.png'
 import two from '../src/2.png'
 import three from '../src/3.png'
@@ -17,7 +18,7 @@ function App() {
             Lapinlahden elokuvajuhlat
             </h1>
         </div>
-        <div class=" mx-auto overflow-x-auto lg:space-y-0 lg:gap-0 lg:grid lg:grid-cols-6">
+        <div class=" mx-auto overflow-x-auto lg:space-y-0 lg:gap-0 lg:grid lg:grid-cols-4">
            <div class="w-full rounded h-96">
                <img class="h-96 w-full object-cover" src={three} alt="image"/>
            </div>
@@ -30,19 +31,53 @@ function App() {
            <div class="w-full rounded h-96 ">
                <img class="h-96 w-full object-cover" src={three} alt="image"/> 
            </div>
-           <div class="w-full rounded h-96">
-               <img class="h-96 w-full object-cover" src={one} alt="image"/>
-           </div>
-           <div class="w-full rounded h-96">
-               <img class="h-96 w-full object-cover" src={two} alt="image"/>
-           </div>
+           
            
         </div>
 <div class='flex flex-col items-center justify-between'>
   <h3 class='pt-8 uppercase font-serif font-semibold text-2xl leading-7' >Elokuva tekee hyvää</h3>
 </div>
     </div>
-      
+    <div class='my-40 mx-auto w-full'>
+    <div class="flex flex-row items-center justify-center">
+        <div class="mx-20 bg-text w-2/3 h-0.5"></div>
+        <div class="px-2">
+            <h2 class="font-semibold text-xl">AIKATAULU</h2>
+        </div>
+        <div class="mx-20 bg-text w-2/3 h-0.5 "></div>
+    </div>
+    </div>
+    <div class='flex justify-center items-center '>
+      <Schedule/>
+      </div>
+      <div class='my-40 mx-auto w-full'>
+    <div class="flex flex-row items-center justify-center">
+        <div class="mx-20 bg-text w-2/3 h-0.5"></div>
+        <div class="px-2">
+            <h2 class="font-semibold text-xl">OHJELMISTO</h2>
+        </div>
+        <div class="mx-20 bg-text w-2/3 h-0.5 "></div>
+    </div>
+    </div>
+    <div class='my-40 mx-auto w-full'>
+    <div class="flex flex-row items-center justify-center">
+        <div class="mx-20 bg-text w-2/3 h-0.5"></div>
+        <div class="px-2">
+            <h2 class="font-semibold text-xl">TAPAHTUMASTA</h2>
+        </div>
+        <div class="mx-20 bg-text w-2/3 h-0.5 "></div>
+    </div>
+    </div>
+    <div class='my-40 mx-auto w-full'>
+    <div class="flex flex-row items-center justify-center">
+        <div class="mx-20 bg-text w-2/3 h-0.5"></div>
+        <div class="px-2">
+            <h2 class="font-semibold text-xl">ALUE</h2>
+        </div>
+        <div class="mx-20 bg-text w-2/3 h-0.5 "></div>
+    </div>
+    </div>
+
 
     </div>
   );
