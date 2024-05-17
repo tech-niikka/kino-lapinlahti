@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react';
+import one from '../src/1.png'
 
 function Schedule() {
+  const [showSchedule, setShowSchedule] = useState(false);
+
+  const toggleSchedule = () => {
+    setShowSchedule(!showSchedule);
+  };
   return (
     <div class=" w-full  ">
       <div class=' flex items-center justify-center'>
-        <div class='p-10  w-10/12 flex-row flex items-center justify-center bg-yellow'>
+        <div class='p-10  w-[1270px] flex-row flex items-center justify-center bg-yellow overflow-hidden'>
           <div class='flex flex-col '>
             <div>
                 <h1 class=' uppercase font-serif font-semibold text-4xl' >Torstai 22.8</h1>
@@ -19,18 +25,19 @@ function Schedule() {
                 </h3>
              </div>
               <div>
-                <button> <p class='mt-12 font-semibold hover:underline'>lue lisää</p></button>
+                <button onClick={toggleSchedule} > <p class='mt-12 font-semibold hover:underline'>näe koko aikataulu...</p></button>
               </div>
           </div>
           <div class='flex justify-end' >
                 <div class='mx-6 w-80 h-80 bg-green'>
-                    <p >Teemaan liittyvä kuva?</p>
+                    <img src={one} alt="image" />
                  </div>
              </div>
         </div>  
       </div>
+      {showSchedule && (
       <div class='flex items-center justify-center '>
-      <div class='w-10/12 bg-yellow'>
+      <div class='w-[1270px] bg-yellow'>
         <div class='flex flex-wrap'>
         <div class='p-10 w-1/2' >
             <h2 class='pb-4 font-serif font-semibold'>Pitkät elokuvat</h2>
@@ -107,7 +114,7 @@ function Schedule() {
       </div>
 
       </div>
-      
+      )}
    </div>
    
   )

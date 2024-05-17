@@ -1,7 +1,11 @@
 import React from 'react';
 import logo from '../src/logo.png'
 
-function Nav() {
+
+const Nav = React.forwardRef(({handleScroll}, ref) => {
+
+
+
   return (
     <div className='bg-navorange flex flex-wrap items-center justify-between h-24 w-screen'>
       <div>
@@ -10,14 +14,15 @@ function Nav() {
             alt="image"/>
         </button>
       </div>
-      <ul className="flex flex-row"> {/* Added flex-row class to the ul */}
-  <li class='p-1 h-7'><button className='text-heading uppercase border-2 border-solid rounded-full w-28 h-8 hover:bg-heading hover:text-navorange font-sans-700'>aikataulu</button></li>
-  <li class='p-1 h-7'><button className='text-heading uppercase border-2 border-solid rounded-full w-28 h-8 hover:bg-heading hover:text-navorange'>ohjelmisto</button></li>
-  <li class='p-1 h-7'><button className='text-heading uppercase border-2 border-solid rounded-full w-28 h-8 hover:bg-heading hover:text-navorange'>info</button></li>
-  <li class='p-1 h-7'><button className='text-heading uppercase border-2 border-solid rounded-full w-28 h-8 hover:bg-heading hover:text-navorange'>alue</button></li>
+      <ul className="flex flex-row gap-2 ml-72"> {/* Added flex-row class to the ul */}
+  <li onClick={() => handleScroll(ref[0])} class='px-2 py-1 text-heading text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-navorange font-sans-700'>aikataulu</li>
+  <li onClick={() => handleScroll(ref[1])} class='px-2 py-1 text-heading text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-navorange font-sans-700'>ohjelmisto</li>
+  <li onClick={() => handleScroll(ref[2])} class='px-2 py-1 text-heading text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-navorange font-sans-700'>tapahtumasta</li>
+  <li onClick={() => handleScroll(ref[3])} class='px-2 py-1 text-heading text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-navorange font-sans-700'>alue</li>
+  
 </ul>
 
-      <div class='p-4'>
+      <div class='p-4 mr-20'>
         <ul class='flex flex-row' >
          <li>
          <button className='text-heading uppercase pr-1 underline'>fi</button>
@@ -30,6 +35,6 @@ function Nav() {
       </div>
     </div>
   );
-}
+})
 
 export default Nav;
