@@ -1,27 +1,28 @@
 import placeholderImg from "../src/assets/movieCover.png";
 
-export const Film = () => {
+export const Film = ({ film }) => {
   return (
-    <div class="flex flex-row items-center justify-between">
+    <div class="flex flex-row justify-between w-[50%] text-sm relative p-[1rem]">
       <div>
-        <img src={placeholderImg} alt="" />
+        <img src={placeholderImg} alt="" class="w-[28rem] pr-[1rem]" />
       </div>
-      <div>
-        <div>GENRE</div>
-        <div>
-          <div>Day</div>
-          <div>Date</div>
-          <div>Time</div>
+      <div class="flex flex-col justify-between h-full">
+        <div class="flex flex-col justify-between gap-[0.5rem]">
+          <div class="text-sm">{film.fields.genre}</div>
+          <div class="flex gap-[0.5rem] text-sm">
+            <div>Day</div>
+            <div>Date</div>
+            <div>Time</div>
+          </div>
+          <h3 class="text-2xl font-semibold">Title</h3>
+          <div class="text-xl font-semibold">1h 50min</div>
+          <div class="text-xs">Country</div>
+          <p class="text-base">
+            Description description description description description
+            description
+          </p>
         </div>
-        <h3>Title</h3>
-        <div>1h 50min</div>
-        <div>Country</div>
-        <p>
-          Description description description description description
-          description description description description description
-          description description description description
-        </p>
-        <div>Production Company</div>
+        <div class="text-sm">Production Company</div>
       </div>
     </div>
   );
