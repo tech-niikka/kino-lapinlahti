@@ -9,18 +9,23 @@ import { useState, useEffect, useRef } from "react";
 import client from "./contentfulClient.js";
 
 import { Catalog } from "./Catalog.jsx";
-import Area from './Area.jsx';
-import Footer from './Footer.jsx';
+import Area from "./Area.jsx";
+import Footer from "./Footer.jsx";
+import Event from "./Event.jsx";
 
 function App() {
   const [schedule, setSchedule] = useState([]);
   const [event, setEvent] = useState([]);
   const [films, setFilms] = useState([]);
-  
+
   const aikataulu = useRef(null);
   const ohjelmisto = useRef(null);
   const info = useRef(null);
   const alue = useRef(null);
+
+  const handleScroll = (ref) => {
+    ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   useEffect(() => {
     client
@@ -57,7 +62,10 @@ function App() {
 
   return (
     <div>
-      <Nav handleScroll={handleScroll} ref={[aikataulu,ohjelmisto, info, alue ]}/>
+      <Nav
+        handleScroll={handleScroll}
+        ref={[aikataulu, ohjelmisto, info, alue]}
+      />
       <div class="bg-main pt-5 text-heading">
         <div class=" flex flex-col items-center justify-between">
           <h2 class="pt-16 font-serif font-semibold text-3xl leading-7">
@@ -88,7 +96,10 @@ function App() {
           </h3>
         </div>
       </div>
-      <div ref={aikataulu} class="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[85%]">
+      <div
+        ref={aikataulu}
+        class="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[85%]"
+      >
         <div class="flex flex-row items-center justify-center ">
           <div class=" bg-text w-[100%] h-0.5"></div>
           <div class="px-[4rem]">
@@ -103,7 +114,10 @@ function App() {
         ))}
       </div>
 
-      <div ref={ohjelmisto} class="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[85%]">
+      <div
+        ref={ohjelmisto}
+        class="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[85%]"
+      >
         <div class="flex flex-row items-center justify-center ">
           <div class=" bg-text w-[100%] h-0.5"></div>
           <div class="px-[4rem]">
@@ -122,7 +136,7 @@ function App() {
           <div class="bg-text w-[100%] h-0.5 "></div>
         </div>
       </div>
-        <Event/>
+      <Event />
       <div ref={alue} class="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[85%]">
         <div class="flex flex-row items-center justify-center ">
           <div class=" bg-text w-[100%] h-0.5"></div>
@@ -131,11 +145,9 @@ function App() {
           </div>
           <div class="bg-text w-[100%] h-0.5 "></div>
         </div>
-        <div class="mx-20 bg-text w-2/3 h-0.5 "></div>
-    </div>
-    </div>
-    <Area/>
-    <Footer/>
+      </div>
+      <Area />
+      <Footer />
     </div>
   );
 }
