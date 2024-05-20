@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from 'react';
+import one from '../src/1.png'
 
 function Schedule({ data }) {
+    const [showSchedule, setShowSchedule] = useState(false);
+
+  const toggleSchedule = () => {
+    setShowSchedule(!showSchedule);
+  };
   return (
     <div class=" w-full pb-[1rem] ">
       <div class=" flex items-center justify-center">
-        <div class="p-10  w-[85%] flex-row flex items-center justify-center bg-yellow">
+        <div class="p-10  w-[85%] flex-row flex items-center justify-center bg-yellow overflow-hidden">
           <div class="flex flex-col ">
             <div>
               <h1 class="uppercase font-serif font-semibold text-4xl">
@@ -16,20 +22,23 @@ function Schedule({ data }) {
                 {data.fields.theme}
               </h2>
             </div>
-
             <div>
               <h3 class="w-2/3 leading-7">
                 {data.fields.description.content[0].content[0].value}
               </h3>
             </div>
+            <div>
+                <button onClick={toggleSchedule} > <p class='mt-12 font-semibold hover:underline'>näe koko aikataulu...</p></button>
+              </div>
           </div>
           <div class="flex justify-end">
-            <div class="mx-6 w-80 h-80 bg-green">
-              <p>Teemaan liittyvä kuva?</p>
-            </div>
+          <div class='mx-6 w-80 h-80 bg-green'>
+                    <img src={one} alt="image" />
+                 </div>
           </div>
         </div>
       </div>
+  {showSchedule && (
       <div class="flex items-center justify-center">
         <div class="w-[85%] bg-yellow">
           <div class="flex flex-wrap">
@@ -54,6 +63,8 @@ function Schedule({ data }) {
           </div>
         </div>
       </div>
+)}
+
     </div>
   );
 }
