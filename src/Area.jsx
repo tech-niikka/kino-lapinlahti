@@ -2,9 +2,9 @@ import React from "react";
 
 function Area() {
   return (
-    <div class="w-screen mb-20 flex flex-row items-center justify-center">
-      <div class="max-w-[85%] flex flex-row items-center justify-center ">
-        <div class="flex flex-col w-2/3">
+    <div class="mb-20 flex flex-row justify-center items-center w-full leading-7">
+      <div class="max-w-[85%] flex flex-row justify-center items-center">
+        <div class="flex flex-col mr-24">
           <div class="">
             <h1 class="font-serif font-semibold text-4xl mb-4">
               Miten saavut paikalle
