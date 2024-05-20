@@ -3,7 +3,7 @@ import two from "../src/2.png";
 
 function Event() {
   return (
-    <div class="flex flex-row justify-center items-center w-full">
+    <div class="flex flex-row justify-center items-center w-full leading-7">
       <div className="max-w-[85%] flex flex-row justify-center items-center">
         <div class="flex flex-col">
           <div class="">
@@ -46,12 +46,12 @@ function Event() {
             </h2>
           </div>
         </div>
-        <div>
-          <div class=" mb-6">
-            <img src={two} alt="image" />
+        <div class='flex flex-col justify-between'>
+          <div class="mb-6 ">
+            <img class='aspect-square' src={two} alt="image" />
           </div>
-          <div class=" mb-6">
-            <img src={two} alt="image" />
+          <div class=" ">
+            <img class='aspect-square' src={two} alt="image" />
           </div>
         </div>
       </div>
