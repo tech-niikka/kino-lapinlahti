@@ -23,14 +23,14 @@ function Schedule({ data, index }) {
   };
 
   return (
-    <div class=" w-full leading-7 ">
+    <div class=" w-full ">
       <div class="flex items-center justify-center">
         <div
-          class={`px-16 pt-16 pb-16  w-[85%] flex-row flex items-center justify-center ${
+          class={`px-16 pt-16 pb-16 w-[85%] flex-row flex items-between justify-center ${
             index % 2 === 0 ? "bg-yellow" : "bg-blue"
           }  overflow-hidden`}
         >
-          <div class="flex flex-col ">
+          <div class="flex flex-col">
             <div>
               <h1 class="uppercase font-serif font-semibold text-4xl">
                 {data.fields.date}
@@ -42,7 +42,7 @@ function Schedule({ data, index }) {
               </h2>
             </div>
             <div>
-              <h3 class="w-2/3 ">
+              <h3 class="w-[100%] lg:w-[90%] pr-[3rem]">
                 {data.fields.description.content[0].content[0].value}
               </h3>
             </div>
@@ -56,8 +56,8 @@ function Schedule({ data, index }) {
               </button>
             </div>
           </div>
-          <div class="flex justify-end w-full h-auto">
-            <div class=" w-[20rem] h-auto">
+          <div class="flex flex-grow justify-center items-center w-[100%]">
+            <div class=" w-[14rem] h-auto md:w-[16rem] lg:w-[20rem]">
               <img
                 class="aspect-square object-cover"
                 src={data.fields.image.fields.file.url}
@@ -74,9 +74,9 @@ function Schedule({ data, index }) {
               index % 2 === 0 ? "bg-yellow" : "bg-blue"
             }`}
           >
-            <div class="flex flex-wrap">
+            <div class="flex flex-col flex-wrap md:flex-row">
               {data.fields.eventCategory.map((item) => (
-                <div class="p-10 py-5 w-1/2">
+                <div class="p-10 py-5 w-1/1 md:w-1/2">
                   <h2 class="pb-4 font-serif font-semibold capitalize">
                     {item.fields.title}
                   </h2>

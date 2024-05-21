@@ -3,8 +3,8 @@ import React from "react";
 function Area({ data }) {
   return (
     <div class="mb-20 flex flex-row justify-center items-center w-full leading-7">
-      <div class="max-w-[85%] flex flex-row justify-center items-center">
-        <div class="flex flex-col mr-[1.5rem] w-[50%]">
+      <div class="max-w-[85%] flex flex-col justify-center items-start md:flex-row md:items-center">
+        <div class="flex flex-col mr-[1.5rem] w-[100%] md:w-[50%]">
           <div class="">
             <h1 class="font-serif font-semibold text-4xl mb-4">
               {data?.secondaryTitle}
@@ -32,11 +32,27 @@ function Area({ data }) {
         </div>
 
         <div>
-          <div className="w-[50%] mb-6">
+          <div className="w-[100%] mb-6 md:w-[50%]">
+            <style>
+              {`
+          @media (max-width: 1024px) {
+            iframe.responsive-iframe {
+              width: 24.125rem;
+              height: 22.875rem
+            }
+          }
+
+          @media (min-width: 1025px) {
+            iframe.responsive-iframe {
+              width: 28.125rem;
+              height: 26.875rem;
+            }
+          }
+        `}
+            </style>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1584.4612808598185!2d24.911512298500625!3d60.16752629689014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920a37d09b33d7%3A0x80af25826e6d8cf6!2sLapinlahden%20L%C3%A4hde!5e0!3m2!1sen!2sse!4v1715858112461!5m2!1sen!2sse"
-              width="450"
-              height="430"
+              className="responsive-iframe"
               style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
