@@ -1,58 +1,38 @@
 import React from "react";
 import two from "../src/2.png";
 
-function Event() {
+function Event({ data }) {
+  console.log("eventData", data);
   return (
     <div class="flex flex-row justify-center items-center w-full leading-7">
-      <div className="max-w-[85%] flex flex-row justify-center items-center">
-        <div class="flex flex-col">
-          <div class="">
-            <h1 class="font-serif font-semibold text-4xl mb-4">Mitä teemme</h1>
-          </div>
-          <div class="w-7/12 flex flex-col justify-between ">
-            <h2 class="py-5 leading-7">
-              Neljän päivän ajan näytämme elokuvia Lapinlahden merellisessä
-              ympäristössä luoden merkittäviä kohtaamisia. Päivisin näytöksiä
-              järjestetään pimennetyssä teltassa, josta ulos astuessa aukeaa
-              upea historiallinen puutarha. Auringon laskiessa kivipihalla
-              järjestetään ulkoilmanäytös isolta valkokankaalta. Unohtumaton
-              kulttuurikokemus on taattu 400-paikkaisessa katsomossa
-              tähtitaivaan alla
-            </h2>
-            <h2 class="py-5 leading-7">
-              Lapinlahden elokuvajuhlat on elokuvafestivaali, jossa jaettu
-              elokuvakokemus on keskiössä. Festivaalilla elokuvat eivät kilpaile
-              keskenään, vaan rakentuvat vuosittain vaihtuvan teeman ympärille.
-              Vuoden 2024 teema on: “Elokuva tekee hyvää”.  Elokuvajuhlille
-              valikoituvat pitkät teokset jaetaan kolmeen teemaan: Luontosuhde,
-              ego ja kasvukipuja.
-            </h2>
-            <h2 class="py-5 leading-7">
-              Neljän päivän ajan näytämme elokuvia Lapinlahden merellisessä
-              ympäristössä luoden merkittäviä kohtaamisia. Päivisin näytöksiä
-              järjestetään pimennetyssä teltassa, josta ulos astuessa aukeaa
-              upea historiallinen puutarha. Auringon laskiessa kivipihalla
-              järjestetään ulkoilmanäytös isolta valkokankaalta. Unohtumaton
-              kulttuurikokemus on taattu 400-paikkaisessa katsomossa
-              tähtitaivaan alla
-            </h2>
-            <h2 class="py-5 leading-7">
-              Lapinlahden elokuvajuhlat on elokuvafestivaali, jossa jaettu
-              elokuvakokemus on keskiössä. Festivaalilla elokuvat eivät kilpaile
-              keskenään, vaan rakentuvat vuosittain vaihtuvan teeman ympärille.
-              Vuoden 2024 teema on: “Elokuva tekee hyvää”.  Elokuvajuhlille
-              valikoituvat pitkät teokset jaetaan kolmeen teemaan: Luontosuhde,
-              ego ja kasvukipuja.
-            </h2>
+      <div className="max-w-[85%] flex flex-row justify-center items-start">
+        <div class="flex flex-col w-[50%] pr-[1rem]">
+          <div class="w-[90%] ">
+            <div class="">
+              <h1 class="font-serif font-semibold text-4xl mb-4">
+                {data?.secondaryTitle}
+              </h1>
+            </div>
+            <div class=" flex flex-col justify-between item ">
+              <h2 class="py-5 leading-7">{data?.paragraph}</h2>
+              <h2 class="py-5 leading-7">{data?.paragraph2}</h2>
+              <h2 class="py-5 leading-7">{data?.paragraph3}</h2>
+              <h2 class="py-5 leading-7">{data?.paragraph4}</h2>
+            </div>
           </div>
         </div>
-        <div class='flex flex-col justify-between'>
-          <div class="mb-6 ">
-            <img class='aspect-square' src={two} alt="image" />
-          </div>
-          <div class=" ">
-            <img class='aspect-square' src={two} alt="image" />
-          </div>
+        <div class="flex flex-col justify-between w-[50%] pl-[6rem]">
+          <img
+            class="aspect-square w-[100%] h-auto object-cover mb-[1rem]"
+            src={data?.images[0].fields.file.url}
+            alt="image"
+          />
+
+          <img
+            class="aspect-square w-[100%] h-auto object-cover"
+            src={data?.images[1].fields.file.url}
+            alt="image"
+          />
         </div>
       </div>
     </div>
