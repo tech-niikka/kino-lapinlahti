@@ -1,5 +1,8 @@
 import React from "react";
 import logo from "../src/logo.png";
+import llogo from "../src/llLogo.png";
+import plogo from "../src/prologo.png";
+import mlogo from "../src/mielilogo.png";
 
 function topFunction() {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -9,7 +12,7 @@ function Footer() {
   return (
     <div class="w-full bg-purple py-8 flex flex-row items-center justify-center">
       <div class="w-[85%] ">
-        <div class="py-10">
+        <div class=" flex custom-883:flex-row flex-col  justify-between custom-883:items-center">
           <button
             onClick={() => {
               topFunction(); // Call topFunction to scroll to top
@@ -20,6 +23,15 @@ function Footer() {
           >
             <img className="w-30 h-12" src={logo} alt="image" />
           </button>
+          <div>
+          <img class="w-32 h-auto cursor-pointer" src={mlogo} alt="image" />
+          </div>
+          <div>
+          <img class="w-32 h-auto cursor-pointer" src={llogo} alt="image" />
+          </div>
+          <div>
+          <img class="w-32 h-auto cursor-pointer" src={plogo} alt="image" />
+          </div>
         </div>
         <div class="py-4">
           <h2>Lapinlahdenkatu 12 A 12, 00100 Helsinki</h2>

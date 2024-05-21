@@ -1,5 +1,4 @@
 import React from "react";
-import two from "../src/2.png";
 
 function Event({ data }) {
   console.log("eventData", data);

@@ -41,6 +41,15 @@ module.exports = {
         "extra-bold": "800",
         black: "900",
       },
+      screens: {
+        'custom-983': '983px',
+        'custom-883': '883px',
+        'custom-930': '930px',
+        'custom-710': '710px',
+        'custom-1020': '1020px',
+        'custom-955': '955px',
+
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],
