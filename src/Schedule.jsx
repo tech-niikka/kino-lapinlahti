@@ -26,9 +26,9 @@ function Schedule({ data, index }) {
     <div class=" w-full ">
       <div class="flex items-center justify-center">
         <div
-          class={`px-16 pt-16 pb-16 w-[85%] flex-row flex items-between justify-center ${
+          class={`px-16 pt-16 pb-16 w-[85%] flex-col flex items-between justify-center ${
             index % 2 === 0 ? "bg-yellow" : "bg-blue"
-          }  overflow-hidden`}
+          }  overflow-hidden md:flex-row relative`}
         >
           <div class="flex flex-col">
             <div>
@@ -42,21 +42,12 @@ function Schedule({ data, index }) {
               </h2>
             </div>
             <div>
-              <h3 class="w-[100%] lg:w-[90%] pr-[3rem]">
+              <h3 class="w-[100%] lg:w-[90%] pr-[0rem] pb-[1rem] md:pb-[3rem] md:pr-[3rem]">
                 {data.fields.description.content[0].content[0].value}
               </h3>
             </div>
-            <div>
-              <button
-                onClick={handleBothClicks}
-                class="mt-12 font-semibold hover:underline"
-              >
-                {" "}
-                {buttonText}{" "}
-              </button>
-            </div>
           </div>
-          <div class="flex flex-grow justify-center items-center w-[100%]">
+          <div class="flex flex-grow justify-start items-center w-[100%] pb-[1rem] md:pb-[0rem]">
             <div class=" w-[14rem] h-auto md:w-[16rem] lg:w-[20rem]">
               <img
                 class="aspect-square object-cover"
@@ -64,6 +55,14 @@ function Schedule({ data, index }) {
                 alt="image"
               />
             </div>
+          </div>
+          <div class="absolute bottom-[3rem] left-[4rem] ">
+            <button
+              onClick={handleBothClicks}
+              class="mt-12 font-semibold hover:underline"
+            >
+              {buttonText}
+            </button>
           </div>
         </div>
       </div>
