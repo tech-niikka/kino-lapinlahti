@@ -95,21 +95,54 @@ function App() {
         areaTitle={areaSection[0]?.fields.title}
         ref={[aikataulu, ohjelmisto, info, alue]}
       />
-      <div class="bg-main pt-5 text-heading">
+      <div class="bg-main pt-[0.25rem] text-heading text-center">
         <div class=" flex flex-col items-center justify-between">
-          <h2 class="pt-16 font-serif font-semibold text-3xl leading-7">
+          <h2 class="pt-16 font-serif font-semibold text-2xl leading-7 md:text-3xl">
             {landingPage[0]?.fields.date}
           </h2>
-          <h1 class="pt-3  font-serif font-semibold text-5xl leading-loose">
+          <h1 class="pt-[0.25rem] pb-[2rem] font-serif font-semibold text-4xl sm:text-4xl md:text-5xl">
             {landingPage[0]?.fields.title}
           </h1>
         </div>
+        <style>
+          {`
+          .grid-container {
+            display: grid;
+            grid-template-columns: 1fr;
+      
+          }
 
-        <div class=" mx-auto overflow-x-auto lg:space-y-0 lg:gap-0 lg:grid lg:grid-cols-4">
-          {landingPage[0]?.fields.images.map((image) => (
-            <div class="w-full rounded h-96">
+          @media (min-width: 640px) {
+            .grid-container {
+              grid-template-columns: repeat(2, 1fr);
+            }
+          }
+
+          @media (min-width: 740px) {
+            .grid-container {
+              grid-template-columns: repeat(3, 1fr);
+            }
+          }
+
+          @media (min-width: 1024px) {
+            .grid-container {
+              grid-template-columns: repeat(4, 1fr);
+            }
+          }
+        `}
+        </style>
+        <div className="grid-container">
+          {landingPage[0]?.fields.images.map((image, index) => (
+            <div
+              class={`w-full rounded h-96  ${
+                index === 0 ? "hidden lg:block" : ""
+              }
+            ${index === 1 ? "hidden sm:block" : ""}
+            ${index === 2 ? "hidden xsm:block" : ""}
+            ${index === 3 ? "block" : ""}`}
+            >
               <img
-                class="h-96 w-full object-cover"
+                class={`h-96 w-full object-cover `}
                 src={image.fields.file.url}
                 alt="image"
               />

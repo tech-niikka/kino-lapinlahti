@@ -5,15 +5,15 @@ function Event({ data }) {
   console.log("eventData", data);
   return (
     <div class="flex flex-row justify-center items-center w-full leading-7">
-      <div className="max-w-[85%] flex flex-row justify-center items-start">
-        <div class="flex flex-col w-[50%] pr-[1rem]">
-          <div class="w-[90%] ">
+      <div className="max-w-[85%] flex flex-col justify-center items-start lg:flex-row">
+        <div class="flex flex-col w-[100%] pr-[1rem] lg:w-[50%]">
+          <div class="w-[100%] mb:w-[90%]">
             <div class="">
               <h1 class="font-serif font-semibold text-4xl mb-4">
                 {data?.secondaryTitle}
               </h1>
             </div>
-            <div class=" flex flex-col justify-between item ">
+            <div class="flex flex-col justify-between item ">
               <h2 class="py-5 leading-7">{data?.paragraph}</h2>
               <h2 class="py-5 leading-7">{data?.paragraph2}</h2>
               <h2 class="py-5 leading-7">{data?.paragraph3}</h2>
@@ -21,15 +21,15 @@ function Event({ data }) {
             </div>
           </div>
         </div>
-        <div class="flex flex-col justify-between w-[50%] pl-[6rem]">
+        <div class="flex flex-row justify-between w-full px-[0rem] pl-[0rem] lg:flex-col lg:w-[50%] lg:pl-[6rem] lg:px-[0rem]">
           <img
-            class="aspect-square w-[100%] h-auto object-cover mb-[1rem]"
+            class="aspect-square w-[100%] max-w-[20rem] h-auto object-cover pb-[0rem] lg:pb-[1rem] lg:max-w-[40rem]"
             src={data?.images[0].fields.file.url}
             alt="image"
           />
 
           <img
-            class="aspect-square w-[100%] h-auto object-cover"
+            class="aspect-square w-[100%] max-w-[20rem] h-auto object-cover lg:max-w-[40rem]"
             src={data?.images[1].fields.file.url}
             alt="image"
           />
