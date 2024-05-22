@@ -27,7 +27,7 @@ const Nav = React.forwardRef(
     };
 
     return (
-      <div className="bg-navorange flex items-center justify-between py-[1.5rem] px-[2rem] custom-710:px-[4rem]">
+      <div className="bg-navorange flex items-center justify-between py-[1.5rem] px-[1rem] custom-710:px-[4rem]">
         <div>
           <img
             class="w-40 h-10 cursor-pointer custom-710:w-48 custom-710:h-12"

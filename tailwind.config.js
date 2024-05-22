@@ -42,6 +42,10 @@ module.exports = {
         black: "900",
       },
       screens: {
+        "custom-330": "330px",
+        "custom-780": "780px",
+        "custom-440": "440px",
+        "custom-590": "590px",
         "custom-983": "983px",
         "custom-883": "883px",
         "custom-930": "930px",
@@ -49,6 +53,7 @@ module.exports = {
         "custom-1020": "1020px",
         "custom-955": "955px",
         "custom-1120": "1200px",
+        "custom-1150": "1150px",
       },
     },
   },

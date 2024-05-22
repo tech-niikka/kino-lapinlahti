@@ -26,7 +26,7 @@ function Schedule({ data, index, buttons }) {
     <div class=" w-full ">
       <div class="flex items-center justify-center">
         <div
-          class={`px-8 xsm:px-16 pt-16 pb-16 w-[85%] flex-col flex items-between justify-center ${
+          class={`px-8 xsm:px-16 pt-16 pb-16 w-[90%] sm:w-[85%] flex-col flex items-between justify-center ${
             index % 2 === 0 ? "bg-yellow" : "bg-blue"
           }  overflow-hidden md:flex-row relative`}
         >
@@ -67,25 +67,26 @@ function Schedule({ data, index, buttons }) {
         </div>
       </div>
       {showSchedule && (
-        <div class=" flex items-center justify-center">
+        <div class="flex items-center justify-center">
           <div
-            class={`px-6 pb-12 w-[85%] ${
+            class={`px-6 pb-12 w-[90%] sm:w-[85%] ${
               index % 2 === 0 ? "bg-yellow" : "bg-blue"
-            }`}
+            }
+            flex items-center justify-center`}
           >
-            <div class="flex flex-col flex-wrap md:flex-row">
+            <div class="flex flex-col flex-wrap md:flex-row w-[100%]">
               {data.fields.eventCategory.map((item) => (
-                <div class="p-10 py-5 w-1/1 md:w-1/2">
+                <div class="sm:px-[2rem] py-5 w-1/1 md:w-1/2">
                   <h2 class="pb-4 font-serif font-semibold capitalize">
                     {item.fields.title}
                   </h2>
                   {item.fields.events.map((event) => (
-                    <div>
+                    <div class="text-xs custom-330:text-sm">
                       <div class="w-full h-px bg-gray" />
                       <div class="flex flex-row justify-between p-3">
-                        <h3 class="min-w-[6rem]">{event.fields.title}</h3>
-                        <h4 class="min-w-[2rem]">{event.fields.time}</h4>
-                        <h5 class="min-w-[7rem]">{event.fields.location}</h5>
+                        <h3>{event.fields.title}</h3>
+                        <h4>{event.fields.time}</h4>
+                        <h5>{event.fields.location}</h5>
                       </div>
                     </div>
                   ))}

@@ -3,7 +3,7 @@ import React from "react";
 function Event({ data }) {
   return (
     <div class="flex flex-row justify-center items-center w-full leading-7">
-      <div className="max-w-[85%] flex flex-col justify-center items-start lg:flex-row">
+      <div className="max-w-[90%] sm:max-w-[85%] flex flex-col justify-center items-start lg:flex-row">
         <div class="flex flex-col w-[100%] lg:pr-[5rem] lg:w-[50%]">
           <div class="w-[100%] mb:w-[90%]">
             <div class="">
@@ -27,7 +27,7 @@ function Event({ data }) {
           />
 
           <img
-            class="aspect-square w-[100%] max-w-[20rem] h-auto object-cover lg:max-w-[40rem]"
+            class="aspect-square w-[100%] max-w-[20rem] h-auto object-cover lg:max-w-[40rem] hidden custom-780:block"
             src={data?.images[1].fields.file.url}
             alt="image"
           />

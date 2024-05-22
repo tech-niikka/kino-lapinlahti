@@ -3,7 +3,7 @@ import React from "react";
 function Area({ data }) {
   return (
     <div class="mb-20 flex flex-row justify-center items-center w-full leading-7">
-      <div class="max-w-[85%] flex flex-col justify-center items-start md:flex-row md:items-center">
+      <div class="max-w-[90%] sm:max-w-[85%] flex flex-col justify-center items-start md:flex-row md:items-center">
         <div class="flex flex-col mr-[1.5rem] w-[100%] md:w-[50%]">
           <div class="">
             <h1 class="font-serif font-semibold text-4xl mb-4">
@@ -37,8 +37,8 @@ function Area({ data }) {
               {`
           @media (max-width: 1024px) {
             iframe.responsive-iframe {
-              width: 24.125rem;
-              height: 22.875rem
+              width: 20.125rem;
+              height: 18.875rem
             }
           }
 
