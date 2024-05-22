@@ -24,21 +24,21 @@ function Footer() {
             <img className="w-30 h-12 pb-[0.5rem]" src={logo} alt="image" />
           </button>
           <div>
-            <img class="w-32 h-auto cursor-pointer" src={mlogo} alt="image" />
+            <a href="https://mieli.fi/"><img class="w-32 h-auto cursor-pointer" src={mlogo} alt="image" /></a>
           </div>
           <div>
-            <img
+          <a href="https://lapinlahdenlahde.fi/"><img
               class="w-32 h-auto cursor-pointer pb-[2rem]"
               src={llogo}
               alt="image"
-            />
+            /></a>
           </div>
           <div>
-            <img
+          <a href="https://www.prolapinlahtiry.fi/"> <img
               class="w-32 h-auto cursor-pointer py-[1rem]"
               src={plogo}
               alt="image"
-            />
+            /></a>
           </div>
         </div>
         <div class="py-4">
