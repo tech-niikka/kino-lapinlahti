@@ -1,6 +1,7 @@
 import React from "react";
 
 function Area({ data }) {
+  console.log("OMMMGG", data);
   return (
     <div class="mb-20 flex flex-row justify-center items-center w-full leading-7">
       <div class="max-w-[88%] sm:max-w-[85%] flex flex-col justify-center items-start md:flex-row md:items-center">
@@ -18,7 +19,10 @@ function Area({ data }) {
 
             <div class="py-4">
               <h3 class="font-bold">{data?.subheading2}</h3>
-              <div>{data?.paragraph2}</div>
+              <div>{data?.openHours.fields.item1}</div>
+              <div>{data?.openHours.fields.item2}</div>
+              <div>{data?.openHours.fields.item3}</div>
+              <div>{data?.openHours.fields.item4}</div>
             </div>
             <div class="py-4">
               <h3 class="font-bold leading-7">{data?.subheading3}</h3>
