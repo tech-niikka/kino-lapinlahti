@@ -143,18 +143,18 @@ function App() {
           ))}
         </div>
         <div class="flex flex-col items-center justify-between">
-          <h3 class="pt-0 xsm:pt-8 pb-8 xsm:pb-0 uppercase font-serif font-semibold text-xl xsm:text-2xl leading-7">
+          <h3 class="pt-0 xsm:pt-8 pb-[2rem] xsm:pb-[0rem] uppercase font-serif font-semibold text-xl xsm:text-2xl leading-7">
             {content.landingPage[0]?.fields.secondaryTitle}
           </h3>
         </div>
       </div>
       <div
         ref={aikataulu}
-        class="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[90%] sm:max-w-[85%]"
+        class="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
       >
         <div class="flex flex-row items-center justify-center ">
           <div class=" bg-text w-[100%] h-0.5"></div>
-          <div class="px-[4rem]">
+          <div class="px-[2rem]">
             <h2 class="font-semibold text-xl">
               {content.scheduleSection[0]?.fields.title}
             </h2>
@@ -175,11 +175,11 @@ function App() {
 
       <div
         ref={ohjelmisto}
-        class="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[90%] sm:max-w-[85%]"
+        class="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
       >
         <div class="flex flex-row items-center justify-center ">
           <div class=" bg-text w-[100%] h-0.5"></div>
-          <div class="px-[4rem]">
+          <div class="px-[2rem]">
             <h2 class="font-semibold text-xl">
               {content.catalogSection[0]?.fields.title}
             </h2>
@@ -190,11 +190,11 @@ function App() {
       <Catalog films={content.catalogSection[0]?.fields.films} />
       <div
         ref={info}
-        class="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[90%] sm:max-w-[85%]"
+        class="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
       >
         <div class="flex flex-row items-center justify-center ">
           <div class=" bg-text w-[100%] h-0.5"></div>
-          <div class="px-[4rem]">
+          <div class="px-[2rem]">
             <h2 class="font-semibold text-xl">
               {content.eventSection[0]?.fields.title}
             </h2>
@@ -205,11 +205,11 @@ function App() {
       <Event data={content.eventSection[0]?.fields} />
       <div
         ref={alue}
-        class="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[90%] sm:max-w-[85%]"
+        class="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
       >
         <div class="flex flex-row items-center justify-center ">
           <div class=" bg-text w-[100%] h-0.5"></div>
-          <div class="px-[4rem]">
+          <div class="px-[2rem]">
             <h2 class="font-semibold text-xl">
               {content.areaSection[0]?.fields.title}
             </h2>

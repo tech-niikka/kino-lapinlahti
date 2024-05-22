@@ -26,7 +26,7 @@ function Schedule({ data, index, buttons }) {
     <div class=" w-full ">
       <div class="flex items-center justify-center">
         <div
-          class={`px-8 xsm:px-16 pt-16 pb-16 w-[90%] sm:w-[85%] flex-col flex items-between justify-center ${
+          class={`px-8 xsm:px-16 pt-16 pb-16 w-[88%] sm:w-[85%] flex-col flex items-between justify-center ${
             index % 2 === 0 ? "bg-yellow" : "bg-blue"
           }  overflow-hidden md:flex-row relative`}
         >
@@ -42,7 +42,7 @@ function Schedule({ data, index, buttons }) {
               </h2>
             </div>
             <div>
-              <h3 class="w-[100%] lg:w-[90%] pr-[0rem] pb-[1rem] md:pb-[3rem] md:pr-[3rem]">
+              <h3 class="w-[100%] lg:w-[88%] pr-[0rem] pb-[1rem] md:pb-[3rem] md:pr-[3rem]">
                 {data.fields.description.content[0].content[0].value}
               </h3>
             </div>
@@ -69,7 +69,7 @@ function Schedule({ data, index, buttons }) {
       {showSchedule && (
         <div class="flex items-center justify-center">
           <div
-            class={`px-6 pb-12 w-[90%] sm:w-[85%] ${
+            class={`px-6 pb-12 w-[88%] sm:w-[85%] ${
               index % 2 === 0 ? "bg-yellow" : "bg-blue"
             }
             flex items-center justify-center`}

@@ -3,9 +3,9 @@ import React from "react";
 function Event({ data }) {
   return (
     <div class="flex flex-row justify-center items-center w-full leading-7">
-      <div className="max-w-[90%] sm:max-w-[85%] flex flex-col justify-center items-start lg:flex-row">
+      <div className="max-w-[88%] sm:max-w-[85%] flex flex-col justify-center items-start lg:flex-row">
         <div class="flex flex-col w-[100%] lg:pr-[5rem] lg:w-[50%]">
-          <div class="w-[100%] mb:w-[90%]">
+          <div class="w-[100%] mb:w-[88%]">
             <div class="">
               <h1 class="font-serif font-semibold text-4xl mb-4">
                 {data?.secondaryTitle}

@@ -11,7 +11,7 @@ function topFunction() {
 function Footer() {
   return (
     <div class="w-full bg-purple py-8 flex flex-row items-center justify-center">
-      <div class="w-[90%] sm:w-[85%] ">
+      <div class="w-[88%] sm:w-[85%] ">
         <div class=" flex custom-883:flex-row flex-col  justify-between custom-883:items-center">
           <button
             onClick={() => {
