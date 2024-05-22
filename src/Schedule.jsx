@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import one from "../src/1.png";
 
-function Schedule({ data, index }) {
+function Schedule({ data, index, buttons }) {
   const [showSchedule, setShowSchedule] = useState(false);
-  const [buttonText, setButtonText] = useState("katso päivän aikataulu");
+  const [buttonText, setButtonText] = useState(buttons[0]?.fields.closed);
 
   const toggleSchedule = () => {
     setShowSchedule(!showSchedule);
@@ -11,9 +11,9 @@ function Schedule({ data, index }) {
 
   const handleClick = () => {
     setButtonText(
-      buttonText === "katso päivän aikataulu"
-        ? "sulje aikataulu"
-        : "katso päivän aikataulu"
+      buttonText === buttons[0].fields.closed
+        ? buttons[0].fields.open
+        : buttons[0].fields.closed
     );
   };
 
@@ -26,7 +26,7 @@ function Schedule({ data, index }) {
     <div class=" w-full ">
       <div class="flex items-center justify-center">
         <div
-          class={`px-16 pt-16 pb-16 w-[85%] flex-col flex items-between justify-center ${
+          class={`px-8 xsm:px-16 pt-16 pb-16 w-[85%] flex-col flex items-between justify-center ${
             index % 2 === 0 ? "bg-yellow" : "bg-blue"
           }  overflow-hidden md:flex-row relative`}
         >
@@ -56,7 +56,7 @@ function Schedule({ data, index }) {
               />
             </div>
           </div>
-          <div class="absolute bottom-[3rem] left-[4rem] ">
+          <div class="absolute bottom-[3rem] left-[2rem] xsm:left-[4rem]">
             <button
               onClick={handleBothClicks}
               class="mt-12 font-semibold hover:underline"
@@ -83,9 +83,9 @@ function Schedule({ data, index }) {
                     <div>
                       <div class="w-full h-px bg-gray" />
                       <div class="flex flex-row justify-between p-3">
-                        <h3>{event.fields.title}</h3>
-                        <h4>{event.fields.time}</h4>
-                        <h5>{event.fields.location}</h5>
+                        <h3 class="min-w-[6rem]">{event.fields.title}</h3>
+                        <h4 class="min-w-[2rem]">{event.fields.time}</h4>
+                        <h5 class="min-w-[7rem]">{event.fields.location}</h5>
                       </div>
                     </div>
                   ))}

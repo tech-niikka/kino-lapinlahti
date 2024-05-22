@@ -1,11 +1,10 @@
 import React from "react";
 
 function Event({ data }) {
-  console.log("eventData", data);
   return (
     <div class="flex flex-row justify-center items-center w-full leading-7">
       <div className="max-w-[85%] flex flex-col justify-center items-start lg:flex-row">
-        <div class="flex flex-col w-[100%] pr-[1rem] lg:w-[50%]">
+        <div class="flex flex-col w-[100%] lg:pr-[5rem] lg:w-[50%]">
           <div class="w-[100%] mb:w-[90%]">
             <div class="">
               <h1 class="font-serif font-semibold text-4xl mb-4">
@@ -20,9 +19,9 @@ function Event({ data }) {
             </div>
           </div>
         </div>
-        <div class="flex flex-row justify-between w-full px-[0rem] pl-[0rem] lg:flex-col lg:w-[50%] lg:pl-[6rem] lg:px-[0rem]">
+        <div class="flex flex-row justify-between w-full px-[0rem] pl-[0rem] lg:flex-col lg:w-[50%] lg:pl-[8rem] lg:px-[0rem]">
           <img
-            class="aspect-square w-[100%] max-w-[20rem] h-auto object-cover pb-[0rem] lg:pb-[1rem] lg:max-w-[40rem]"
+            class="aspect-square w-[100%] max-w-[20rem] h-auto object-cover pb-[0rem] lg:pb-[1rem] lg:max-w-[40rem] "
             src={data?.images[0].fields.file.url}
             alt="image"
           />

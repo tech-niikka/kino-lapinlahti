@@ -21,16 +21,24 @@ function Footer() {
             title="Scroll to top"
             className="flex items-center"
           >
-            <img className="w-30 h-12" src={logo} alt="image" />
+            <img className="w-30 h-12 pb-[0.5rem]" src={logo} alt="image" />
           </button>
           <div>
-          <img class="w-32 h-auto cursor-pointer" src={mlogo} alt="image" />
+            <img class="w-32 h-auto cursor-pointer" src={mlogo} alt="image" />
           </div>
           <div>
-          <img class="w-32 h-auto cursor-pointer" src={llogo} alt="image" />
+            <img
+              class="w-32 h-auto cursor-pointer pb-[2rem]"
+              src={llogo}
+              alt="image"
+            />
           </div>
           <div>
-          <img class="w-32 h-auto cursor-pointer" src={plogo} alt="image" />
+            <img
+              class="w-32 h-auto cursor-pointer py-[1rem]"
+              src={plogo}
+              alt="image"
+            />
           </div>
         </div>
         <div class="py-4">

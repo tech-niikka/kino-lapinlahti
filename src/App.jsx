@@ -10,14 +10,28 @@ import Area from "./Area.jsx";
 import Footer from "./Footer.jsx";
 import Event from "./Event.jsx";
 
+import "./App.css";
+
 function App() {
-  const [schedule, setSchedule] = useState([]);
-  const [films, setFilms] = useState([]);
-  const [landingPage, setLandingPage] = useState([]);
-  const [scheduleSection, setScheduleSection] = useState([]);
-  const [catalogSection, setCatalogSection] = useState([]);
-  const [eventSection, setEventSection] = useState([]);
-  const [areaSection, setAreaSection] = useState([]);
+  // const [schedule, setSchedule] = useState([]);
+  // const [films, setFilms] = useState([]);
+  // const [landingPage, setLandingPage] = useState([]);
+  // const [scheduleSection, setScheduleSection] = useState([]);
+  // const [catalogSection, setCatalogSection] = useState([]);
+  // const [eventSection, setEventSection] = useState([]);
+  // const [areaSection, setAreaSection] = useState([]);
+  // const [buttons, setButton] = useState([]);
+
+  const [content, setContent] = useState({
+    schedule: [],
+    films: [],
+    landingPage: [],
+    scheduleSection: [],
+    catalogSection: [],
+    eventSection: [],
+    areaSection: [],
+    buttons: [],
+  });
 
   const [language, setLanguage] = useState("fi");
 
@@ -35,45 +49,80 @@ function App() {
   };
 
   useEffect(() => {
+    // Set initial cookies if needed
+    document.cookie = "initialVisit=true; SameSite=Lax; Secure";
+  }, []);
+
+  useEffect(() => {
     const fetchEntries = async () => {
       try {
-        const responses = await Promise.all([
-          client.getEntries({ content_type: "landingPage", locale: language }),
-          client.getEntries({
-            content_type: "schedule",
-            include: 4,
-            locale: language,
-          }),
-          client.getEntries({ content_type: "film", locale: language }),
-          client.getEntries({
-            content_type: "scheduleSection",
-            locale: language,
-          }),
-          client.getEntries({
-            content_type: "catalogSection",
-            locale: language,
-          }),
-          client.getEntries({ content_type: "eventSection", locale: language }),
-          client.getEntries({ content_type: "areaSection", locale: language }),
-        ]);
+        // const responses = await Promise.all([
+        //   client.getEntries({ content_type: "landingPage", locale: language }),
+        //   client.getEntries({
+        //     content_type: "schedule",
+        //     include: 4,
+        //     locale: language,
+        //   }),
+        //   client.getEntries({ content_type: "film", locale: language }),
+        //   client.getEntries({
+        //     content_type: "scheduleSection",
+        //     locale: language,
+        //   }),
+        //   client.getEntries({
+        //     content_type: "catalogSection",
+        //     locale: language,
+        //   }),
+        //   client.getEntries({ content_type: "eventSection", locale: language }),
+        //   client.getEntries({ content_type: "areaSection", locale: language }),
+        //   client.getEntries({
+        //     content_type: "button",
+        //     locale: language,
+        //   }),
+        // ]);
 
-        const [
-          landingPageResponse,
-          scheduleResponse,
-          filmResponse,
-          scheduleSectionResponse,
-          catalogSectionResponse,
-          eventSectionResponse,
-          areaSectionResponse,
-        ] = responses;
+        const contentTypes = [
+          { type: "landingPage", key: "landingPage" },
+          { type: "schedule", key: "schedule", include: 4 },
+          { type: "film", key: "films" },
+          { type: "scheduleSection", key: "scheduleSection" },
+          { type: "catalogSection", key: "catalogSection" },
+          { type: "eventSection", key: "eventSection" },
+          { type: "areaSection", key: "areaSection" },
+          { type: "button", key: "buttons" },
+        ];
 
-        setLandingPage(landingPageResponse.items);
-        setSchedule(scheduleResponse.items);
-        setFilms(filmResponse.items);
-        setScheduleSection(scheduleSectionResponse.items);
-        setCatalogSection(catalogSectionResponse.items);
-        setEventSection(eventSectionResponse.items);
-        setAreaSection(areaSectionResponse.items);
+        const requests = contentTypes.map(({ type, key, include }) =>
+          client.getEntries({ content_type: type, locale: language, include })
+        );
+
+        const responses = await Promise.all(requests);
+
+        // const [
+        //   landingPageResponse,
+        //   scheduleResponse,
+        //   filmResponse,
+        //   scheduleSectionResponse,
+        //   catalogSectionResponse,
+        //   eventSectionResponse,
+        //   areaSectionResponse,
+        //   buttonResponse,
+        // ] = responses;
+
+        // setLandingPage(landingPageResponse.items);
+        // setSchedule(scheduleResponse.items);
+        // setFilms(filmResponse.items);
+        // setScheduleSection(scheduleSectionResponse.items);
+        // setCatalogSection(catalogSectionResponse.items);
+        // setEventSection(eventSectionResponse.items);
+        // setAreaSection(areaSectionResponse.items);
+        // setButton(buttonResponse.items);
+
+        const newContent = responses.reduce((acc, response, index) => {
+          acc[contentTypes[index].key] = response.items;
+          return acc;
+        }, {});
+
+        setContent(newContent);
       } catch (error) {
         console.error("Error fetching entries:", error);
       }
@@ -81,27 +130,25 @@ function App() {
     fetchEntries();
   }, [language]);
 
-  console.log("hejhååå", landingPage);
-
   return (
     <div>
       <Nav
         handleScroll={handleScroll}
         changeLanguage={changeLanguage}
         language={language}
-        schedualeTitle={scheduleSection[0]?.fields.title}
-        catalogTitle={catalogSection[0]?.fields.title}
-        eventTitle={eventSection[0]?.fields.title}
-        areaTitle={areaSection[0]?.fields.title}
+        schedualeTitle={content.scheduleSection[0]?.fields.title}
+        catalogTitle={content.catalogSection[0]?.fields.title}
+        eventTitle={content.eventSection[0]?.fields.title}
+        areaTitle={content.areaSection[0]?.fields.title}
         ref={[aikataulu, ohjelmisto, info, alue]}
       />
       <div class="bg-main pt-[0.25rem] text-heading text-center">
         <div class=" flex flex-col items-center justify-between">
-          <h2 class="pt-16 font-serif font-semibold text-2xl leading-7 md:text-3xl">
-            {landingPage[0]?.fields.date}
+          <h2 class="pt-16 font-serif font-semibold text-xl leading-7 xsm:text-2xl md:text-3xl">
+            {content.landingPage[0]?.fields.date}
           </h2>
-          <h1 class="pt-[0.25rem] pb-[2rem] font-serif font-semibold text-4xl sm:text-4xl md:text-5xl">
-            {landingPage[0]?.fields.title}
+          <h1 class="pt-[0.25rem] pb-[4rem] xsm:pb-[2rem] font-serif font-semibold text-3xl xsm:text-4xl md:text-5xl">
+            {content.landingPage[0]?.fields.title}
           </h1>
         </div>
         <style>
@@ -132,17 +179,19 @@ function App() {
         `}
         </style>
         <div className="grid-container">
-          {landingPage[0]?.fields.images.map((image, index) => (
+          {content.landingPage[0]?.fields.images.map((image, index) => (
             <div
+              key={index}
               class={`w-full rounded h-96  ${
                 index === 0 ? "hidden lg:block" : ""
               }
             ${index === 1 ? "hidden sm:block" : ""}
             ${index === 2 ? "hidden xsm:block" : ""}
-            ${index === 3 ? "block" : ""}`}
+            ${index === 3 ? "block" : ""}
+            `}
             >
               <img
-                class={`h-96 w-full object-cover `}
+                class={`h-[20rem] w-full object-cover xsm:h-96`}
                 src={image.fields.file.url}
                 alt="image"
               />
@@ -150,8 +199,8 @@ function App() {
           ))}
         </div>
         <div class="flex flex-col items-center justify-between">
-          <h3 class="pt-8 uppercase font-serif font-semibold text-2xl leading-7">
-            {landingPage[0]?.fields.secondaryTitle}
+          <h3 class="pt-0 xsm:pt-8 pb-8 xsm:pb-0 uppercase font-serif font-semibold text-xl xsm:text-2xl leading-7">
+            {content.landingPage[0]?.fields.secondaryTitle}
           </h3>
         </div>
       </div>
@@ -163,15 +212,20 @@ function App() {
           <div class=" bg-text w-[100%] h-0.5"></div>
           <div class="px-[4rem]">
             <h2 class="font-semibold text-xl">
-              {scheduleSection[0]?.fields.title}
+              {content.scheduleSection[0]?.fields.title}
             </h2>
           </div>
           <div class="bg-text w-[100%] h-0.5 "></div>
         </div>
       </div>
       <div class="flex flex-col justify-center items-center ">
-        {schedule.map((item, index) => (
-          <Schedule key={index} data={item} index={index} />
+        {content.schedule.map((item, index) => (
+          <Schedule
+            key={index}
+            data={item}
+            index={index}
+            buttons={content.buttons}
+          />
         ))}
       </div>
 
@@ -183,37 +237,37 @@ function App() {
           <div class=" bg-text w-[100%] h-0.5"></div>
           <div class="px-[4rem]">
             <h2 class="font-semibold text-xl">
-              {catalogSection[0]?.fields.title}
+              {content.catalogSection[0]?.fields.title}
             </h2>
           </div>
           <div class="bg-text w-[100%] h-0.5 "></div>
         </div>
       </div>
-      <Catalog films={films} />
+      <Catalog films={content.films} />
       <div ref={info} class="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[85%]">
         <div class="flex flex-row items-center justify-center ">
           <div class=" bg-text w-[100%] h-0.5"></div>
           <div class="px-[4rem]">
             <h2 class="font-semibold text-xl">
-              {eventSection[0]?.fields.title}
+              {content.eventSection[0]?.fields.title}
             </h2>
           </div>
           <div class="bg-text w-[100%] h-0.5 "></div>
         </div>
       </div>
-      <Event data={eventSection[0]?.fields} />
+      <Event data={content.eventSection[0]?.fields} />
       <div ref={alue} class="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[85%]">
         <div class="flex flex-row items-center justify-center ">
           <div class=" bg-text w-[100%] h-0.5"></div>
           <div class="px-[4rem]">
             <h2 class="font-semibold text-xl">
-              {areaSection[0]?.fields.title}
+              {content.areaSection[0]?.fields.title}
             </h2>
           </div>
           <div class="bg-text w-[100%] h-0.5 "></div>
         </div>
       </div>
-      <Area data={areaSection[0]?.fields} />
+      <Area data={content.areaSection[0]?.fields} />
       <Footer />
     </div>
   );
