@@ -1,17 +1,16 @@
 import React from "react";
 
 function Area({ data }) {
-  console.log("OMMMGG", data);
   return (
     <div class="mb-20 flex flex-row justify-center items-center w-full leading-7">
-      <div class="max-w-[88%] sm:max-w-[85%] flex flex-col justify-center items-start md:flex-row md:items-center">
+      <div class="max-w-[88%] sm:max-w-[85%] flex flex-col justify-center items-start md:flex-row md:items-center md:justify-between">
         <div class="flex flex-col mr-[1.5rem] w-[100%] md:w-[50%]">
           <div class="">
             <h1 class="font-serif font-semibold text-4xl mb-4">
               {data?.secondaryTitle}
             </h1>
           </div>
-          <div class=" flex flex-col justify-between w-2/3">
+          <div class=" flex flex-col justify-between">
             <div class="py-4">
               <h3 class="font-bold leading-7">{data?.subheading1}</h3>
               <h2 class="">{data?.paragraph1}</h2>
