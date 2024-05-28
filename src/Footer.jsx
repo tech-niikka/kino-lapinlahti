@@ -24,21 +24,24 @@ function Footer() {
             <img className="w-30 h-12 pb-[0.5rem]" src={logo} alt="image" />
           </button>
           <div>
-            <a href="https://mieli.fi/"><img class="w-32 h-auto cursor-pointer" src={mlogo} alt="image" /></a>
+            <img class="w-32 h-auto cursor-pointer" src={mlogo} alt="image" />
           </div>
           <div>
-          <a href="https://lapinlahdenlahde.fi/"><img
+            <img
               class="w-32 h-auto cursor-pointer pb-[2rem]"
               src={llogo}
               alt="image"
-            /></a>
+            />
           </div>
           <div>
-          <a href="https://www.prolapinlahtiry.fi/"> <img
+            <img
               class="w-32 h-auto cursor-pointer py-[1rem]"
               src={plogo}
               alt="image"
-            /></a>
+            />
+          </div>
+          <div>
+          <a href="https://filmfreeway.com/festivals/81791?utm_campaign=Lapinlahti+Film+Festival&utm_medium=External&utm_source=Submission+Button" target="_blank" title="Click to submit on FilmFreeway"><img src="https://public-assets.filmfreeway.com/submission_buttons/v2/med_submission_btn@2x-black.png" title="Click to submit on FilmFreeway" class='w-32 h-auto'/></a>
           </div>
         </div>
         <div class="py-4">
