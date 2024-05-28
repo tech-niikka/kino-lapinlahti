@@ -142,8 +142,8 @@ function App() {
             </div>
           ))}
         </div>
-        <div class="flex flex-col items-center justify-between">
-          <h3 class="pt-0 xsm:pt-8 pb-[2rem] xsm:pb-[0rem] uppercase font-serif font-semibold text-xl xsm:text-2xl leading-7">
+        <div class="flex flex-col items-center justify-between pt-0">
+          <h3 class="pt-0 xsm:pt-16 custom-440:pb-[2rem] xsm:pb-[0rem] uppercase font-serif font-semibold text-text text-2xl xsm:text-3xl leading-7 w-[200px] custom-440:w-full">
             {content.landingPage[0]?.fields.secondaryTitle}
           </h3>
         </div>
