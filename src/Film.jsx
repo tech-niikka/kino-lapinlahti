@@ -10,7 +10,7 @@ export const Film = ({ film }) => {
       </div>
       <div class="flex flex-col justify-between h-full w-[100%] sm:w-[60%] custom-1150:w-[60%] custom-1120:w-[60%]">
         <div class="flex flex-col justify-between gap-[0.15rem]">
-          <div class='flex flex-row justify-between  custom-588:flex-col'>
+          <div class='flex flex-row justify-between pt-2 custom-588:pt-0 custom-588:flex-col'>
           <div class="uppercase text-sm font-light">{film.fields.genre}</div>
           <div class="flex gap-[0.5rem] text-sm lowercase font-light">
             <div>{film.fields.day}</div>
