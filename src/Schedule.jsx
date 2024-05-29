@@ -47,8 +47,8 @@ function Schedule({ data, index, buttons }) {
               </h3>
             </div>
           </div>
-          <div class="flex flex-grow justify-start items-center w-[100%] pb-[1rem] md:pb-[0rem]">
-            <div class=" w-[14rem] h-auto md:w-[16rem] lg:w-[20rem]">
+          <div class="flex flex-grow custom-1150:justify-end justify-start items-center w-[100%] pb-[1rem] md:pb-[0rem]">
+            <div class=" w-[14rem] h-auto md:w-[16rem] lg:w-[20rem] custom-1150:ml-[3rem]">
               <img
                 class="aspect-square object-cover"
                 src={data.fields.image.fields.file.url}
