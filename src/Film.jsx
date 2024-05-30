@@ -5,7 +5,7 @@ export const Film = ({ film }) => {
         <img
           src={film.fields.artwork.fields.file.url}
           alt=""
-          class="w-[100%] sm:pr-[2rem] pr-0 h-auto min-h-[18rem]"
+          class="w-[100%] sm:pr-[2rem] pr-0 h-auto custom-588:max-w-[15rem] min-h-[18rem]"
         />
       </div>
       <div class="flex flex-col justify-between h-full w-[100%] sm:w-[60%] custom-1150:w-[60%] custom-1120:w-[60%]">
