@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import one from "../src/1.png";
 
 function Schedule({ data, index, buttons }) {
   const [showSchedule, setShowSchedule] = useState(false);
