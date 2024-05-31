@@ -1,4 +1,5 @@
 import React from "react";
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 import Nav from "./Nav.jsx";
 import Schedule from "./Schedule.jsx";
 
@@ -74,8 +75,17 @@ function App() {
     fetchEntries();
   }, [language]);
 
+  const helmetContext = {};
+
+
+
   return (
     <div>
+      <HelmetProvider context={helmetContext}>
+        <Helmet>
+          <title>Lapinlahden Elokuvajuhlat</title>
+          <meta name="description" content="Lapinlahden Elokuajuhlat järjestetään 22.8.-24.8.2024 Lapinlahden merellisessä ympäristössä luoden merkittäviä kohtaamisia." />
+        </Helmet>
       <Nav
         handleScroll={handleScroll}
         changeLanguage={changeLanguage}
@@ -219,6 +229,7 @@ function App() {
       </div>
       <Area data={content.areaSection[0]?.fields} />
       <Footer />
+      </HelmetProvider>
     </div>
   );
 }
