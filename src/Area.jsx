@@ -1,7 +1,6 @@
 import React from "react";
 
 function Area({ data }) {
-  console.log("OMMMGG", data);
   return (
     <div class="mb-20 flex flex-row justify-center items-center w-full leading-7">
       <div class="max-w-[88%] sm:max-w-[85%] flex flex-col justify-between items-start md:flex-row md:items-center">
