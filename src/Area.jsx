@@ -30,6 +30,7 @@ function Area({ data }) {
             <div class="py-4">
               <h3 class="font-bold leading-7">{data?.subheading4}</h3>
               <h2 class="">{data?.paragraph4}</h2>
+              <p><a class='font-bold leading-7 hover:underline' href="https://lapinlahdenlahde.fi/wp-content/uploads/FI-Q-door-access-ramp-Omatoimiohje.pdf">esteettömyys/accessibility guide</a></p>
             </div>
           </div>
         </div>
