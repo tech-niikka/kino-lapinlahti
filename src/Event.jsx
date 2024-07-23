@@ -25,12 +25,13 @@ function Event({ data }) {
             src={data?.images[0].fields.file.url}
             alt="image"
           />
-
+{/* This is a JSX comment 
           <img
             class="aspect-square w-[100%] max-w-[20rem] h-auto object-cover lg:max-w-[40rem] hidden custom-780:block"
             src={data?.images[1].fields.file.url}
             alt="image"
           />
+          */}
         </div>
       </div>
     </div>
