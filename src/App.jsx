@@ -1,14 +1,18 @@
 import React from "react";
+import client from "./contentfulClient.js";
+
 import Nav from "./Nav.jsx";
 import Schedule from "./Schedule.jsx";
 
 import { useState, useEffect, useRef } from "react";
-import client from "./contentfulClient.js";
+
 
 import { Catalog } from "./Catalog.jsx";
 import Area from "./Area.jsx";
 import Footer from "./Footer.jsx";
 import Event from "./Event.jsx";
+
+import poster2 from "./laatu2.jpg"
 
 import "./App.css";
 
@@ -89,7 +93,7 @@ function App() {
           <h2 class="pt-16 font-serif font-semibold text-xl leading-7 xsm:text-2xl md:text-3xl">
             {content.landingPage[0]?.fields.date}
           </h2>
-          <h1 class="pt-[0.25rem] pb-[4rem] xsm:pb-[2rem] font-serif font-semibold text-3xl xsm:text-4xl md:text-5xl">
+          <h1 class="pt-[0.25rem] custom-710:pb-[2rem] pb-[1rem] font-serif font-semibold text-3xl xsm:text-4xl md:text-5xl">
             {content.landingPage[0]?.fields.title}
           </h1>
         </div>
@@ -120,6 +124,7 @@ function App() {
           }
         `}
         </style>
+      {/* Old image grid system!!!!
         <div className="grid-container">
           {content.landingPage[0]?.fields.images.map((image, index) => (
             <div
@@ -137,18 +142,28 @@ function App() {
                 src={image.fields.file.url}
                 alt="image"
               />
-            </div>
+            </div> 
           ))}
         </div>
+        */}
+        <div>
+        <img
+                class={`h-[20rem] w-full object-cover object-[center_top] xsm:h-[37rem]`}
+                src={poster2}
+                alt="image"
+              />
+        </div>
+
+
         <div class="flex flex-col items-center justify-between pt-0">
-          <h3 class="pt-0 xsm:pt-16 custom-440:pb-[2rem] xsm:pb-[0rem] uppercase font-serif font-semibold text-text text-2xl xsm:text-3xl leading-7 w-[200px] custom-440:w-full">
+          <h3 class="pt-[1rem] custom-710:pt-[2rem] custom-883:pt-[5rem]  custom-440:pb-[2rem] xsm:pb-[0rem] uppercase font-serif font-semibold text-text text-2xl xsm:text-3xl leading-7 w-[200px] custom-440:w-full">
             {content.landingPage[0]?.fields.secondaryTitle}
           </h3>
         </div>
       </div>
       <div
         ref={aikataulu}
-        class="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
+        class="pt-[6rem] custom-710:pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
       >
         <div class="flex flex-row items-center justify-center ">
           <div class=" bg-text w-[100%] h-0.5"></div>
