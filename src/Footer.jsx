@@ -18,7 +18,7 @@ function Footer() {
   return (
     <div class="w-full bg-purple py-8 flex flex-row ">
       <div class="w-[88%] sm:w-[85%] mx-auto">
-        <div class=" flex flex-wrap custom-883:flex-row flex-col custom-883:grid grid-cols-5 custom-883:items-center ">
+        <div class="  flex-wrap custom-883:flex-row flex-row grid custom-883:grid-cols-5 grid-cols-2 custom-588:grid-cols-3 custom-883:items-center">
           <button
             onClick={() => {
               topFunction(); // Call topFunction to scroll to top
@@ -29,12 +29,12 @@ function Footer() {
           >
             <img className="w-30 h-12 pb-[0.5rem] " src={logo} alt="image" />
           </button>
-          <div>
+          <div class="flex justify-center items-center"> 
           <a href="https://mieli.fi/">
             <img class="w-32 h-auto cursor-pointer pb-[1rem]" src={mlogo} alt="image" />
             </a>
           </div>
-          <div>
+          <div class="flex justify-center items-center">
           <a href="https://lapinlahdenlahde.fi/">
             <img
               class="w-32 h-auto cursor-pointer pb-[1rem] "
@@ -43,7 +43,7 @@ function Footer() {
             />
             </a>
           </div>
-          <div>
+          <div class="flex justify-center items-center">
             <a href="https://www.prolapinlahtiry.fi/">
             <img
               class="w-32 h-auto cursor-pointer pb-[1rem] "
@@ -52,7 +52,7 @@ function Footer() {
             />
             </a>
           </div>
-          <div>
+          <div class="flex justify-center items-center">
           <a href="https://www.myhelsinki.fi/">
             <img
               class="w-32 h-auto cursor-pointer pb-[1rem] "
@@ -61,7 +61,7 @@ function Footer() {
             />
             </a>
           </div>
-          <div>
+          <div class="flex justify-center items-center">
           <a href="https://cinemamondo.fi/">
             <img
               class="w-48 h-auto cursor-pointer pb-[1rem]"
@@ -70,7 +70,7 @@ function Footer() {
             />
             </a>
           </div>
-          <div>
+          <div class="flex justify-center items-center">
           <a href="https://www.dokumenttikilta.fi/">
             <img
               class="w-32 h-auto cursor-pointer pb-[1rem]"
@@ -79,7 +79,7 @@ function Footer() {
             />
             </a>
           </div>
-          <div>
+          <div class="flex justify-center items-center">
             <a href="https://setry.fi/">
             <img
               class="w-32 h-auto cursor-pointer pb-[1rem] "
@@ -88,7 +88,7 @@ function Footer() {
             />
             </a>
           </div>
-          <div>
+          <div class="flex justify-center items-center">
             <a href="https://www.cined.eu/">
             <img
               class="w-32 h-auto cursor-pointer pb-[1rem]"
@@ -97,7 +97,7 @@ function Footer() {
             />
             </a>
           </div>
-          <div>
+          <div class="flex justify-center items-center">
             <a href="https://cinemaorion.fi/en/elavan-kuvan-keskus-elke-ry/">
             <img
               class="w-32 h-auto cursor-pointer pb-[2rem]"
