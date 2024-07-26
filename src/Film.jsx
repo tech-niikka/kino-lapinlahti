@@ -1,11 +1,11 @@
 export const Film = ({ film }) => {
   return (
-    <div class="flex flex-col justify-center w-[95%] custom-440:w-[70%] text-sm relative px-0 custom-588:px-[1rem] py-[0.1rem] custom-588:py-[3rem] custom-590:flex-col custom-590:w-[50%] custom-1120:w-[50%] sm:w-[100%] sm:flex-row custom-1150:w-[50%]">
+    <div class="flex flex-col justify-center w-[95%] custom-440:w-[70%] text-sm relative px-0 custom-588:px-[1rem] py-[0.1rem] custom-588:py-[3rem] custom-590:flex-col custom-590:w-[50%] custom-1120:w-[50%] sm:w-[100%] sm:flex-row custom-1150:w-[50%]  ">
       <div>
         <img
           src={film.fields.artwork.fields.file.url}
           alt=""
-          class="w-[100%] sm:pr-[2rem] pr-0 h-auto custom-588:max-w-[15rem] min-h-[18rem]"
+          class="w-[100%] sm:pr-[2rem] pr-0 h-auto custom-588:w-[17rem] min-h-[18rem]"
         />
       </div>
       <div class="flex flex-col justify-between h-full w-[100%] sm:w-[60%] custom-1150:w-[60%] custom-1120:w-[60%]">
