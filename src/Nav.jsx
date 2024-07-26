@@ -167,11 +167,13 @@ const Nav = React.forwardRef(
             </div>
           </div>
           <div class="flex flex-row justify-center items-center">
-           <a href="https://www.instagram.com/kinolapinlahti?igsh=MTM0Z3l5cWg5Y2g2eQ%3D%3D"> <AiOutlineInstagram
+           <a href="https://www.instagram.com/lapinlahtifilmfestival/"> <AiOutlineInstagram
               size={30}
               class="cursor-pointer  text-heading"
             /></a>
-            <AiOutlineFacebook size={30} class="cursor-pointer text-heading" />
+           <a href="https://www.facebook.com/events/lapinlahdenpolku-8-00180-helsinki-finland/lapinlahden-elokuvajuhlat-lapinlahti-film-festival/1397138120949216/"> <AiOutlineFacebook
+               size={30} class="cursor-pointer text-heading" />
+               </a>
           </div>
         </div>
       </div>

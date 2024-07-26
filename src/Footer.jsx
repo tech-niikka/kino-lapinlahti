@@ -9,6 +9,12 @@ import dokulogo from "../src/dokumenttikilta_logo.png";
 import setlogo from "../src/set_logo.png";
 import cinedlogo from "../src/cined_logo.png";
 import elkelogo from "../src/elke_logo.png";
+import ihmelogo from "../src/ihme_l.png";
+
+import {
+  AiOutlineInstagram,
+  AiOutlineFacebook,
+} from "react-icons/ai";
 
 function topFunction() {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -106,6 +112,15 @@ function Footer() {
             />
             </a>
           </div>
+          <div class="flex justify-center items-center">
+            <a href="https://cinemaorion.fi/en/elavan-kuvan-keskus-elke-ry/">
+            <img
+              class="w-32 h-auto cursor-pointer pb-[2rem]"
+              src={ihmelogo}
+              alt="image"
+            />
+            </a>
+          </div>
 
         </div>
         <div class="py-4">
@@ -114,6 +129,15 @@ function Footer() {
           <a href="mailto:kinolapinlahti@gmail.com" className="btn-mailto">
             kinolapinlahti@gmail.com
           </a>
+          <div class="flex flex-row pt-[0.5rem]">
+           <a href="https://www.instagram.com/lapinlahtifilmfestival/"> <AiOutlineInstagram
+              size={30}
+              class="cursor-pointer  text-heading "
+            /></a>
+           <a href="https://www.facebook.com/events/lapinlahdenpolku-8-00180-helsinki-finland/lapinlahden-elokuvajuhlat-lapinlahti-film-festival/1397138120949216/"> <AiOutlineFacebook
+               size={30} class="cursor-pointer text-heading" />
+               </a>
+          </div>
         </div>
         <div class="py-4">
           <h2>© 2024 Kino Lapinlahti ry. Kaikki oikeudet pidätetään. </h2>
