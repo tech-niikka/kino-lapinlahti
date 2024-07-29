@@ -9,7 +9,7 @@ import dokulogo from "../src/dokumenttikilta_logo.png";
 import setlogo from "../src/set_logo.png";
 import cinedlogo from "../src/cined_logo.png";
 import elkelogo from "../src/elke_logo.png";
-import ihmelogo from "../src/ihme_l.png"
+
 
 import {
   AiOutlineInstagram,
@@ -108,15 +108,6 @@ function Footer() {
             <img
               class="w-32 h-auto cursor-pointer pb-[2rem]"
               src={elkelogo}
-              alt="image"
-            />
-            </a>
-          </div>
-          <div class="flex justify-center items-center">
-            <a href="https://cinemaorion.fi/en/elavan-kuvan-keskus-elke-ry/">
-            <img
-              class="w-32 h-auto cursor-pointer pb-[2rem]"
-              src={ihmelogo}
               alt="image"
             />
             </a>
