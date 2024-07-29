@@ -9,7 +9,7 @@ import dokulogo from "../src/dokumenttikilta_logo.png";
 import setlogo from "../src/set_logo.png";
 import cinedlogo from "../src/cined_logo.png";
 import elkelogo from "../src/elke_logo.png";
-import ihmelogo from "../src/ihme_l.png";
+import ihmelogo from "../src/ihme_l.png"
 
 import {
   AiOutlineInstagram,
@@ -138,7 +138,7 @@ function Footer() {
                size={30} class="cursor-pointer text-heading" />
                </a>
           </div>
-        </div>
+        </div> 
         <div class="py-4">
           <h2>© 2024 Kino Lapinlahti ry. Kaikki oikeudet pidätetään. </h2>
         </div>
