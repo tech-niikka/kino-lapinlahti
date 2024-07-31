@@ -10,6 +10,7 @@ import setlogo from "../src/set_logo.png";
 import cinedlogo from "../src/cined_logo.png";
 import elkelogo from "../src/elke_logo.png";
 import ihmelogo from "../src/ihme_logo.png"
+import laplogo from "../src/lap_kan.png"
 
 
 import {
@@ -119,6 +120,15 @@ function Footer() {
               class="w-32 h-auto cursor-pointer pb-[2rem]"
               src={ihmelogo}
               alt="image"
+            />
+            </a>
+          </div>
+          <div class="flex justify-center items-center">
+            <a href="https://lapinlahdenlahde.fi/kuntalaisaloite/" title="Allekirjoita kuntalaisaloite Lapinlahden pelastamiseksi">
+            <img
+              class="w-60 h-auto cursor-pointer pb-[2rem]"
+              src={laplogo}
+              alt="Allekirjoita kuntalaisaloite Lapinlahden pelastamiseksi"
             />
             </a>
           </div>

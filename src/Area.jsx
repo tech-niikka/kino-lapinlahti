@@ -14,6 +14,7 @@ function Area({ data }) {
             <div class="py-4">
               <h3 class="font-bold leading-7">{data?.subheading1}</h3>
               <h2 class="">{data?.paragraph1}</h2>
+              <h2 class="">{data?.paragraph5}</h2>
             </div>
 
             <div class="py-4">
@@ -30,7 +31,8 @@ function Area({ data }) {
             <div class="py-4">
               <h3 class="font-bold leading-7">{data?.subheading4}</h3>
               <h2 class="">{data?.paragraph4}</h2>
-              <p><a class='font-bold leading-7 hover:underline' href="https://lapinlahdenlahde.fi/wp-content/uploads/FI-Q-door-access-ramp-Omatoimiohje.pdf">esteettömyys/accessibility guide</a></p>
+              <h3 class="font-bold leading-7">{data?.subheading5}</h3>
+              <p><a class='hover:underline' href="https://lapinlahdenlahde.fi/wp-content/uploads/FI-Q-door-access-ramp-Omatoimiohje.pdf">Q-door-access-ramp-Omatoimiohje.pdf</a></p>
             </div>
           </div>
         </div>
