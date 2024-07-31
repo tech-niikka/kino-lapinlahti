@@ -41,10 +41,16 @@ function Schedule({ data, index, buttons }) {
               </h2>
             </div>
             <div>
-              <h3 class="w-[100%] lg:w-[88%] pr-[0rem] pb-[1rem] md:pb-[3rem] md:pr-[3rem]">
+              <h3 class="w-[100%] lg:w-[88%] pr-[0rem] pb-[1rem] md:pb-[1rem] md:pr-[3rem]">
                 {data.fields.description.content[0].content[0].value}
               </h3>
             </div>
+            <div>
+              <h3 class="w-[100%] lg:w-[88%] pr-[0rem] pb-[1rem] md:pb-[3rem] md:pr-[3rem]">
+                {data.fields.descriptionTwo?.content[0]?.content[0]?.value}
+              </h3>
+            </div>
+          
           </div>
           <div class="flex flex-grow custom-1150:justify-end justify-start items-center w-[100%] pb-[1rem] md:pb-[0rem]">
             <div class=" w-[14rem] h-auto md:w-[16rem] lg:w-[20rem] custom-1150:ml-[3rem] custom-883:pb-0 pb-[2rem]">
