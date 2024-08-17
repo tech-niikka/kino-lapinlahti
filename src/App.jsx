@@ -161,6 +161,10 @@ function App() {
           </h3>
         </div>
       </div>
+      <div class='flex mx-auto items-center justify-center p-[2rem] pt-[3rem] '>
+        <a class='font-semibold hover:underline ' href="https://holvi.com/shop/lapinlahtifilmfestival/">Varaa liput elokuvanäytöksiin sekä oheisohjelmaan täältä / Book your tickets for screenings and additional events here</a>
+        
+      </div>
       <div
         ref={aikataulu}
         class="pt-[6rem] custom-710:pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
