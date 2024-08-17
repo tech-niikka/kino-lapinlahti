@@ -50,8 +50,8 @@ function Schedule({ data, index, buttons }) {
                 {data.fields.descriptionTwo?.content[0]?.content[0]?.value}
               </h3>
             </div>
-          
           </div>
+
           <div class="flex flex-grow custom-1150:justify-end justify-start items-center w-[100%] pb-[1rem] md:pb-[0rem]">
             <div class=" w-[14rem] h-auto md:w-[16rem] lg:w-[20rem] custom-1150:ml-[3rem] custom-883:pb-0 pb-[2rem]">
               <img
@@ -61,10 +61,16 @@ function Schedule({ data, index, buttons }) {
               />
             </div>
           </div>
+
+
+
           <div class="absolute bottom-[3rem] left-[2rem] xsm:left-[4rem]">
+          <div class='font-semibold underline custom-883:mt-12'>
+            <a href="src/aik.pdf" target="_blank">PDF-aikataulu / PDF-schedule</a>
+          </div>
             <button
               onClick={handleBothClicks}
-              class="font-semibold underline custom-883:mt-12"
+              class="font-semibold underline"
             >
               {buttonText}
             </button>
