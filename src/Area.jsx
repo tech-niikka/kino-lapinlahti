@@ -14,7 +14,7 @@ function Area({ data }) {
             <div class="py-4">
               <h3 class="font-bold leading-7">{data?.subheading1}</h3>
               <h2 class="">{data?.paragraph1}</h2>
-              <h2 class="">{data?.paragraph5}</h2>
+              <h2 class="pt-[0.5rem] underline">{data?.paragraph5}</h2>
             </div>
 
             <div class="py-4">
@@ -31,9 +31,19 @@ function Area({ data }) {
             <div class="py-4">
               <h3 class="font-bold leading-7">{data?.subheading4}</h3>
               <h2 class="">{data?.paragraph4}</h2>
-              <h3 class="font-bold leading-7">{data?.subheading5}</h3>
-              <p><a class='hover:underline' href="https://lapinlahdenlahde.fi/wp-content/uploads/FI-Q-door-access-ramp-Omatoimiohje.pdf">Q-door-access-ramp-Omatoimiohje.pdf</a></p>
+              <a class='hover:underline'  target="_blank" href="https://docs.google.com/document/d/18mhspc47rtUlAMXKDayj_F4Q89gykPB0-dy2PHDo1nQ/"><h3 class=" italic leading-7 pt-4">{data?.subheading5}</h3></a>
+              <a class='hover:underline'  target="_blank" href="https://lapinlahdenlahde.fi/wp-content/uploads/FI-Q-door-access-ramp-Omatoimiohje.pdf"><h3 class=" italic leading-7 pt-2">{data?.subheading6}</h3></a>
+              <a class='hover:underline'  target="_blank" href="https://docs.google.com/document/d/1HPmF-iGggS4Mc2DQ-sHwWL8seaGIxKXDG_o1tgJf1_o/"><h3 class=" italic leading-7 pt-2">{data?.subheading7}</h3></a>
+              <a class='hover:underline'  target="_blank" href="https://bit.ly/myos-safer-space"><h3 class=" italic leading-7 pt-2">{data?.subheading8}</h3></a>
             </div>
+            <h3 class="font-bold leading-7">{data?.subheading9} </h3>
+            <h4>{data?.paragraph6}</h4>
+            <h3 class="font-semibold leading-7 pt-4 underline"> {data?.subheading10}</h3>
+            <h4>{data?.paragraph7}</h4>
+            <h3 class="font-semibold leading-7 pt-4 underline"> {data?.subheading11}</h3>
+            <h4>{data?.paragraph8}</h4>
+            <h3 class="font-semibold leading-7 pt-4 underline"> {data?.subheading12}</h3>
+            <h4>{data?.paragraph9}</h4>
           </div>
         </div>
 

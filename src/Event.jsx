@@ -15,7 +15,8 @@ function Event({ data }) {
               <h2 class="py-5 leading-7">{data?.paragraph}</h2>
               <h2 class="py-5 leading-7">{data?.paragraph2}</h2>
               <h2 class="py-5 leading-7">{data?.paragraph3}</h2>
-              <h2 class="py-5 leading-7 font-bold">{data?.paragraph4} <a class='hover:underline' href="https://forms.gle/vH6HE7zVd7oM6b8K9">https://forms.gle/vH6HE7zVd7oM6b8K9</a></h2>
+             {/* This is a JSX comment  <h2 class="py-5 leading-7 font-bold">{data?.paragraph4} <a class='hover:underline' href="https://forms.gle/vH6HE7zVd7oM6b8K9">https://forms.gle/vH6HE7zVd7oM6b8K9</a></h2>
+             */}
             </div>
           </div>
         </div>
