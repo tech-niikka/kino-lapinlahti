@@ -11,6 +11,12 @@ import cinedlogo from "../src/cined_logo.png";
 import elkelogo from "../src/elke_logo.png";
 import ihmelogo from "../src/ihme_logo.png"
 import laplogo from "../src/lap_kan.png"
+import clogo from "../src/cinemanselogo.jpg"
+import hyvälogo from "../src/hyvä.png"
+import oceanlogo from "../src/ocean.png"
+import elogo from "../src/estrella-logo.png"
+import jalologo from "../src/Jalotofu.png"
+import bulogo from "../src/images.png"
 
 
 import {
@@ -38,12 +44,12 @@ function Footer() {
             <img className="w-30 h-12 pb-[0.5rem] " src={logo} alt="image" />
           </button>
           <div class="flex justify-center items-center"> 
-          <a href="https://mieli.fi/">
+          <a href="https://mieli.fi/" target="_blank">
             <img class="w-32 h-auto cursor-pointer pb-[1rem]" src={mlogo} alt="image" />
             </a>
           </div>
           <div class="flex justify-center items-center">
-          <a href="https://lapinlahdenlahde.fi/">
+          <a href="https://lapinlahdenlahde.fi/" target="_blank">
             <img
               class="w-32 h-auto cursor-pointer pb-[1rem] "
               src={llogo}
@@ -52,7 +58,7 @@ function Footer() {
             </a>
           </div>
           <div class="flex justify-center items-center">
-            <a href="https://www.prolapinlahtiry.fi/">
+            <a href="https://www.prolapinlahtiry.fi/" target="_blank">
             <img
               class="w-32 h-auto cursor-pointer pb-[1rem] "
               src={plogo}
@@ -61,7 +67,7 @@ function Footer() {
             </a>
           </div>
           <div class="flex justify-center items-center">
-          <a href="https://www.myhelsinki.fi/">
+          <a href="https://www.myhelsinki.fi/" target="_blank">
             <img
               class="w-32 h-auto cursor-pointer pb-[1rem] "
               src={hlogo}
@@ -70,7 +76,7 @@ function Footer() {
             </a>
           </div>
           <div class="flex justify-center items-center">
-          <a href="https://cinemamondo.fi/">
+          <a href="https://cinemamondo.fi/" target="_blank">
             <img
               class="w-48 h-auto cursor-pointer pb-[1rem]"
               src={cinemalogo}
@@ -79,7 +85,7 @@ function Footer() {
             </a>
           </div>
           <div class="flex justify-center items-center">
-          <a href="https://www.dokumenttikilta.fi/">
+          <a href="https://www.dokumenttikilta.fi/" target="_blank">
             <img
               class="w-32 h-auto cursor-pointer pb-[1rem]"
               src={dokulogo}
@@ -88,7 +94,7 @@ function Footer() {
             </a>
           </div>
           <div class="flex justify-center items-center">
-            <a href="https://setry.fi/">
+            <a href="https://setry.fi/" target="_blank">
             <img
               class="w-32 h-auto cursor-pointer pb-[1rem] "
               src={setlogo}
@@ -97,7 +103,7 @@ function Footer() {
             </a>
           </div>
           <div class="flex justify-center items-center">
-            <a href="https://www.cined.eu/">
+            <a href="https://www.cined.eu/" target="_blank">
             <img
               class="w-32 h-auto cursor-pointer pb-[1rem]"
               src={cinedlogo}
@@ -106,7 +112,7 @@ function Footer() {
             </a>
           </div>
           <div class="flex justify-center items-center">
-            <a href="https://cinemaorion.fi/en/elavan-kuvan-keskus-elke-ry/">
+            <a href="https://cinemaorion.fi/en/elavan-kuvan-keskus-elke-ry/" target="_blank">
             <img
               class="w-32 h-auto cursor-pointer pb-[2rem]"
               src={elkelogo}
@@ -115,7 +121,7 @@ function Footer() {
             </a>
           </div>
           <div class="flex justify-center items-center">
-            <a href="https://cinemaorion.fi/en/elavan-kuvan-keskus-elke-ry/">
+            <a href="https://cinemaorion.fi/en/elavan-kuvan-keskus-elke-ry/" target="_blank">
             <img
               class="w-32 h-auto cursor-pointer pb-[2rem]"
               src={ihmelogo}
@@ -124,10 +130,68 @@ function Footer() {
             </a>
           </div>
           <div class="flex justify-center items-center">
-            <a href="https://lapinlahdenlahde.fi/kuntalaisaloite/" title="Allekirjoita kuntalaisaloite Lapinlahden pelastamiseksi">
+            <a href="https://lapinlahdenlahde.fi/kuntalaisaloite/" target="_blank" title="Allekirjoita kuntalaisaloite Lapinlahden pelastamiseksi">
             <img
               class="w-60 h-auto cursor-pointer pb-[2rem]"
               src={laplogo}
+              alt="Allekirjoita kuntalaisaloite Lapinlahden pelastamiseksi"
+            />
+            </a>
+          </div>
+
+
+
+          <div class="flex justify-center items-center">
+            <a href="https://cinemanse.fi/" title=" linkki cinemansen sivuille" target="_blank">
+            <img
+              class="w-32 h-auto cursor-pointer pb-[2rem]"
+              src={clogo}
+              alt="Allekirjoita kuntalaisaloite Lapinlahden pelastamiseksi"
+            />
+            </a>
+          </div>
+          <div class="flex justify-center items-center">
+            <a href="https://www.osallisuusmedia.fi" target="_blank" title="Allekirjoita kuntalaisaloite Lapinlahden pelastamiseksi">
+            <img
+              class="w-32 h-auto cursor-pointer pb-[2rem]"
+              src={hyvälogo}
+              alt="Allekirjoita kuntalaisaloite Lapinlahden pelastamiseksi"
+            />
+            </a>
+          </div>
+          <div class="flex justify-center items-center">
+            <a href="https://www.originbyocean.com/" target="_blank" title="Allekirjoita kuntalaisaloite Lapinlahden pelastamiseksi">
+            <img
+              class="w-32 h-auto cursor-pointer pb-[2rem]"
+              src={oceanlogo}
+              alt="Allekirjoita kuntalaisaloite Lapinlahden pelastamiseksi"
+            />
+            </a>
+          </div>
+          <div class="flex justify-center items-center">
+            <a href="https://jalotofu.fi/" target="_blank" title="Allekirjoita kuntalaisaloite Lapinlahden pelastamiseksi">
+            <img
+              class="w-32 h-auto cursor-pointer pb-[2rem]"
+              src={jalologo}
+              alt="Allekirjoita kuntalaisaloite Lapinlahden pelastamiseksi"
+            />
+            </a>
+          </div>
+          <div class="flex justify-center items-center">
+            <a href="https://www.estrella.fi/" target="_blank" title="Allekirjoita kuntalaisaloite Lapinlahden pelastamiseksi">
+            <img
+              class="w-32 h-auto cursor-pointer pb-[2rem]"
+              src={elogo}
+              alt="Allekirjoita kuntalaisaloite Lapinlahden pelastamiseksi"
+            />
+            </a>
+          </div>
+        
+          <div class="flex justify-center items-center">
+            <a href="https://www.buenosaires.fi/" target="_blank" title="Allekirjoita kuntalaisaloite Lapinlahden pelastamiseksi">
+            <img
+              class="w-32 h-auto cursor-pointer pb-[2rem]"
+              src={bulogo}
               alt="Allekirjoita kuntalaisaloite Lapinlahden pelastamiseksi"
             />
             </a>
