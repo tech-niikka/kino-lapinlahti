@@ -151,7 +151,7 @@ function Footer() {
           </div>
         </div> 
         <div class="py-4">
-          <h2>© 2024 Kino Lapinlahti ry. Kaikki oikeudet pidätetään. </h2>
+          <a href="https://docs.google.com/document/d/1s5Tda7QWJ9YQH6VCThGGvxd1Ol-r2TGbU8_Q8ijprJA/" target="_blank"><h2>© 2024 Kino Lapinlahti ry. Kaikki oikeudet pidätetään.</h2></a>
         </div>
       </div>
     </div>
