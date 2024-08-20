@@ -162,7 +162,7 @@ function App() {
         </div>
       </div>
       <div class='flex mx-auto items-center justify-center p-[2rem] pt-[3rem] '>
-        <a class='font-semibold hover:underline text-center' target="_blank"  href="https://linktr.ee/lapinlahtifilmfestival">Varaa liput elokuvanäytöksiin sekä oheisohjelmaan täältä / Book tickets for screenings and additional events here</a>
+        <a class='font-semibold hover:underline text-center' target="_blank"   href="https://linktr.ee/lapinlahtifilmfestival">Varaa liput elokuvanäytöksiin sekä oheisohjelmaan täältä / Book tickets for screenings and additional events here</a>
         
       </div>
       <div

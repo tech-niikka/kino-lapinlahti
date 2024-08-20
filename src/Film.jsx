@@ -21,7 +21,7 @@ export const Film = ({ film }) => {
           <div class="uppercase text-sm font-light">{film.fields.genre}</div>
           </div>
           <div class="flex gap-[0.5rem] pt-[1rem] text-[1rem] lowercase font-semibold ">
-            <div>{film.fields.day}</div>
+            <div>{film.fields.day} </div>
             <div>{film.fields.date}</div>
             <div>{film.fields.time}</div>
           </div>

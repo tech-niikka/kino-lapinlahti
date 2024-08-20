@@ -66,7 +66,7 @@ function Schedule({ data, index, buttons }) {
 
           <div class="absolute bottom-[3rem] left-[2rem] xsm:left-[4rem]">
           <div class='font-semibold underline custom-883:mt-12'>
-            <a href="/aik.pdf" target="_blank">PDF-aikataulu / PDF-schedule</a>
+            <a href="/aik.pdf" target="_blank" >PDF-aikataulu / PDF-schedule</a>
           </div>
           
             <button
