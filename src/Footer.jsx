@@ -236,7 +236,7 @@ function Footer() {
         </div> 
         <a href="https://docs.google.com/document/d/1s5Tda7QWJ9YQH6VCThGGvxd1Ol-r2TGbU8_Q8ijprJA/"  target="_blank">Tietosuojaseloste / Privacy Notice</a>
         <div class="py-4">
-          <h2>© 2024 Kino Lapinlahti ry. Kaikki oikeudet pidätetään.</h2>
+          <h2>© 2025 Kino Lapinlahti ry. Kaikki oikeudet pidätetään.</h2>
         </div>
       </div>
     </div>
