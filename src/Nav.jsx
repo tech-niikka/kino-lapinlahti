@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../src/logo.png";
+import logo from "../src/assets/logo/logo-black-en.png";
 import {
   AiOutlineMenu,
   AiOutlineClose,
@@ -13,7 +13,7 @@ const Nav = React.forwardRef(
       handleScroll,
       changeLanguage,
       language,
-      schedualeTitle,
+      scheduleTitle,
       catalogTitle,
       eventTitle,
       areaTitle,
@@ -40,25 +40,25 @@ const Nav = React.forwardRef(
             <ul className="flex flex-row flex-wrap md:gap-[1rem]">
               <li
                 onClick={() => handleScroll(ref[0])}
-                class="px-2 py-1 text-heading text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-navorange text-sm custom-1020:text-base"
+                class="px-2 py-1 text-heading text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-navorange text-sm custom-1020:text-base hover:cursor-pointer"
               >
-                {schedualeTitle}
+                {scheduleTitle}
               </li>
               <li
                 onClick={() => handleScroll(ref[1])}
-                class="px-2 py-1 text-heading text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-navorange text-sm custom-1020:text-base"
+                class="px-2 py-1 text-heading text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-navorange text-sm custom-1020:text-base hover:cursor-pointer"
               >
                 {catalogTitle}
               </li>
               <li
                 onClick={() => handleScroll(ref[2])}
-                class="px-2 py-1 text-heading text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-navorange text-sm custom-1020:text-base"
+                class="px-2 py-1 text-heading text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-navorange text-sm custom-1020:text-base hover:cursor-pointer"
               >
                 {eventTitle}
               </li>
               <li
                 onClick={() => handleScroll(ref[3])}
-                class="px-2 py-1 text-heading text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-navorange text-sm custom-1020:text-base"
+                class="px-2 py-1 text-heading text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-navorange text-sm custom-1020:text-base hover:cursor-pointer"
               >
                 {areaTitle}
               </li>
@@ -114,7 +114,7 @@ const Nav = React.forwardRef(
                     }}
                     class="px-2 py-1 text-heading text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-navorange font-sans-700 cursor-pointer"
                   >
-                    {schedualeTitle}
+                    {scheduleTitle}
                   </li>
                   <li
                     onClick={() => {
