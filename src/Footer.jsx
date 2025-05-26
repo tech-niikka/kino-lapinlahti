@@ -1,24 +1,24 @@
 import React from "react";
-import logo from "../src/logo.png";
-import llogo from "../src/llLogo.png";
-import plogo from "../src/prologo.png";
-import mlogo from "../src/mielilogo.png";
-import hlogo from "../src/Helsinki_logo.png";
-import cinemalogo from "../src/cinemamondo_logo.png";
-import dokulogo from "../src/dokumenttikilta_logo.png";
-import setlogo from "../src/set_logo.png";
-import cinedlogo from "../src/cined_logo.png";
-import elkelogo from "../src/elke_logo.png";
-import ihmelogo from "../src/ihme_logo.png"
-import laplogo from "../src/lap_kan.png"
-import clogo from "../src/cinemanselogo.jpg"
-import hyvälogo from "../src/hyvä.png"
-import oceanlogo from "../src/ocean.png"
-import elogo from "../src/estrella-logo.png"
-import jalologo from "../src/Jalotofu.png"
-import bulogo from "../src/images.png"
-import dlogo from "../src/dash.png"
-import slogo from "../src/siili.png"
+import logo from "../src/assets/logo/logo-black-en.png";
+import llogo from "../src/assets/logo/llLogo.png";
+import plogo from "../src/assets/logo/prologo.png";
+import mlogo from "../src/assets/logo/mielilogo.png";
+import hlogo from "../src/assets/logo/Helsinki_logo.png";
+import cinemalogo from "../src/assets/logo/cinemamondo_logo.png";
+import dokulogo from "../src/assets/logo/dokumenttikilta_logo.png";
+import setlogo from "../src/assets/logo/set_logo.png";
+import cinedlogo from "../src/assets/logo/cined_logo.png";
+import elkelogo from "../src/assets/logo/elke_logo.png";
+import ihmelogo from "../src/assets/logo/ihme_logo.png"
+import laplogo from "../src/assets/logo/lap_kan.png"
+import clogo from "../src/assets/logo/cinemanselogo.jpg"
+import hyvälogo from "../src/assets/logo/hyvä.png"
+import oceanlogo from "../src/assets/logo/ocean.png"
+import elogo from "../src/assets/logo/estrella-logo.png"
+import jalologo from "../src/assets/logo/Jalotofu.png"
+import bulogo from "../src/assets/logo/images.png"
+import dlogo from "../src/assets/logo/dash.png"
+import slogo from "../src/assets/logo/siili.png"
 
 
 import {
@@ -34,14 +34,14 @@ function Footer() {
   return (
     <div class="w-full bg-purple py-8 flex flex-row ">
       <div class="w-[88%] sm:w-[85%] mx-auto">
-        <div class="  flex-wrap custom-883:flex-row flex-row grid custom-883:grid-cols-5 grid-cols-2 custom-588:grid-cols-3 custom-883:items-center">
+        <div class="grid custom-883:grid-cols-5 grid-cols-2 custom-588:grid-cols-3 custom-883:items-center">
           <button
             onClick={() => {
               topFunction(); // Call topFunction to scroll to top
             }}
             id="Lapinlahti logo button"
-            title="Scroll to top / skrollaa sivun alkuun"
-            className="flex items-center "
+            title="Scroll to top / Palaa sivun alkuun"
+            className="flex justify-center items-center"
           >
             <img className="w-30 h-12 pb-[0.5rem] " src={logo} alt="image" />
           </button>
@@ -55,7 +55,7 @@ function Footer() {
             <img
               class="w-32 h-auto cursor-pointer pb-[1rem] "
               src={llogo}
-              alt="lapinlahden lähde logo joka toimii linkkinä"
+              alt="Lapinlahden Lähteen logo, joka toimii linkkinä"
             />
             </a>
           </div>
@@ -64,7 +64,7 @@ function Footer() {
             <img
               class="w-32 h-auto cursor-pointer pb-[1rem] "
               src={plogo}
-              alt="pro lapinlahti logo joka toimii linkkinä"
+              alt="Pro Lapinlahti -logo, joka toimii linkkinä"
             />
             </a>
           </div>
@@ -73,7 +73,7 @@ function Footer() {
             <img
               class="w-32 h-auto cursor-pointer pb-[1rem] "
               src={hlogo}
-              alt="helsingin kaupungin logo joka toimii linkkinä"
+              alt="Helsingin kaupungin logo, joka toimii linkkinä"
             />
             </a>
           </div>
@@ -82,7 +82,7 @@ function Footer() {
             <img
               class="w-48 h-auto cursor-pointer pb-[1rem]"
               src={cinemalogo}
-              alt="cinemamondon logo joka toimii linkkinä"
+              alt="Cinema Mondon logo, joka toimii linkkinä"
             />
             </a>
           </div>
@@ -91,7 +91,7 @@ function Footer() {
             <img
               class="w-32 h-auto cursor-pointer pb-[1rem]"
               src={dokulogo}
-              alt="dokumenttikillan logo joka toimii linkkinä"
+              alt="Dokumenttikillan logo, joka toimii linkkinä"
             />
             </a>
           </div>
@@ -100,7 +100,7 @@ function Footer() {
             <img
               class="w-32 h-auto cursor-pointer pb-[1rem] "
               src={setlogo}
-              alt="set ry:n logo joka toimii linkkinä"
+              alt="SET ry:n logo, joka toimii linkkinä"
             />
             </a>
           </div>
@@ -109,7 +109,7 @@ function Footer() {
             <img
               class="w-32 h-auto cursor-pointer pb-[1rem]"
               src={cinedlogo}
-              alt="cined:in logo joka toimii linkkinä"
+              alt="CineD:in logo, joka toimii linkkinä"
             />
             </a>
           </div>
@@ -118,7 +118,7 @@ function Footer() {
             <img
               class="w-32 h-auto cursor-pointer pb-[2rem]"
               src={elkelogo}
-              alt="cinema orionin logo joka toimii linkkinä"
+              alt="Cinema Orionin logo, joka toimii linkkinä"
             />
             </a>
           </div>
@@ -127,7 +127,7 @@ function Footer() {
             <img
               class="w-32 h-auto cursor-pointer pb-[2rem]"
               src={ihmelogo}
-              alt="ihme filmin logo joka toimii linkkinä"
+              alt="Ihmefilmin logo, joka toimii linkkinä"
             />
             </a>
           </div>
@@ -136,7 +136,7 @@ function Footer() {
             <img
               class="w-60 h-auto cursor-pointer pb-[2rem]"
               src={laplogo}
-              alt="kuntalaisaloite lapinlanlahden lähteen pelastamiseksi logo joka toimii linkkinä"
+              alt="Kuntalaisaloite Lapinlahden Lähteen pelastamiseksi -logo, joka toimii linkkinä"
             />
             </a>
           </div>
@@ -148,7 +148,7 @@ function Footer() {
             <img
               class="w-32 h-auto cursor-pointer pb-[2rem]"
               src={clogo}
-              alt="cinemanse logo joka toimii linkkinä"
+              alt="Cinemansen logo, joka toimii linkkinä"
             />
             </a>
           </div>
@@ -157,7 +157,7 @@ function Footer() {
             <img
               class="w-32 h-auto cursor-pointer pb-[2rem]"
               src={hyvälogo}
-              alt="hyvinvointivaalijat ry:n logo joka toimii linkkinä"
+              alt="Hyvinvointivaalijat ry:n logo, joka toimii linkkinä"
             />
             </a>
           </div>
@@ -166,7 +166,7 @@ function Footer() {
             <img
               class="w-32 h-auto cursor-pointer pb-[2rem]"
               src={oceanlogo}
-              alt="origin by ocean logo joka toimii linkkinä"
+              alt="Origin by Ocean -logo, joka toimii linkkinä"
             />
             </a>
           </div>
@@ -175,7 +175,7 @@ function Footer() {
             <img
               class="w-32 h-auto cursor-pointer pb-[2rem]"
               src={jalologo}
-              alt="jalotofun logo joka toimii linkkinä"
+              alt="Jalotofun logo, joka toimii linkkinä"
             />
             </a>
           </div>
@@ -184,7 +184,7 @@ function Footer() {
             <img
               class="w-32 h-auto cursor-pointer pb-[2rem]"
               src={elogo}
-              alt="estrellan logo joka toimii linkkinä"
+              alt="Estrellan logo, joka toimii linkkinä"
             />
             </a>
           </div>
@@ -194,7 +194,7 @@ function Footer() {
             <img
               class="w-32 h-auto cursor-pointer pb-[2rem]"
               src={bulogo}
-              alt="buenos aires kahvila baarin logo joka toimii linkkinä"
+              alt="Buenos Aires -kahvilan/baarin logo, joka toimii linkkinä"
             />
             </a>
           </div>
@@ -203,7 +203,7 @@ function Footer() {
             <img
               class="w-32 h-auto cursor-pointer pb-[2rem]"
               src={dlogo}
-              alt="dash coffeen logo joka toimii linkkinä"
+              alt="Dash Coffeen logo, joka toimii linkkinä"
             />
             </a>
           </div>
@@ -212,16 +212,20 @@ function Footer() {
             <img
               class="w-32 h-auto cursor-pointer pb-[2rem]"
               src={slogo}
-              alt="pidetään saaristo siistinä ry:n logo joka toimii linkkinä"
+              alt="Pidetään saaristo siistinä ry:n logo, joka toimii linkkinä"
             />
             </a>
           </div>
 
         </div>
         <div class="py-4">
-          <h2>Lapinlahdenpolku 8, 00180 Helsinki</h2>
-          <h2>+358 44 278 8829</h2>
-          <a href="mailto:kinolapinlahti@gmail.com" className="btn-mailto">
+          <a href="https://maps.app.goo.gl/umz7SezqGTJSiJS88" className="block hover:underline">
+            Lapinlahdenpolku 8, 00180 Helsinki
+            </a>
+          <a href="tel:+358442788829" className="block hover:underline">
+            +358 44 278 8829
+          </a>
+          <a href="mailto:kinolapinlahti@gmail.com" className="block hover:underline">
             kinolapinlahti@gmail.com
           </a>
           <div class="flex flex-row pt-[0.5rem]">
@@ -234,7 +238,7 @@ function Footer() {
                </a>
           </div>
         </div> 
-        <a href="https://docs.google.com/document/d/1s5Tda7QWJ9YQH6VCThGGvxd1Ol-r2TGbU8_Q8ijprJA/"  target="_blank">Tietosuojaseloste / Privacy Notice</a>
+        <a href="https://docs.google.com/document/d/1s5Tda7QWJ9YQH6VCThGGvxd1Ol-r2TGbU8_Q8ijprJA/"  target="_blank" className="block hover:underline">Tietosuojaseloste / Privacy Notice</a>
         <div class="py-4">
           <h2>© 2025 Kino Lapinlahti ry. Kaikki oikeudet pidätetään.</h2>
         </div>

@@ -12,7 +12,7 @@ import Area from "./Area.jsx";
 import Footer from "./Footer.jsx";
 import Event from "./Event.jsx";
 
-import poster2 from "./laatu2.jpg"
+import poster2 from "./assets/poster_2024.jpg"
 
 import "./App.css";
 
@@ -82,7 +82,7 @@ function App() {
         handleScroll={handleScroll}
         changeLanguage={changeLanguage}
         language={language}
-        schedualeTitle={content.scheduleSection[0]?.fields.title}
+        scheduleTitle={content.scheduleSection[0]?.fields.title}
         catalogTitle={content.catalogSection[0]?.fields.title}
         eventTitle={content.eventSection[0]?.fields.title}
         areaTitle={content.areaSection[0]?.fields.title}
@@ -91,10 +91,10 @@ function App() {
       <div class="bg-main pt-[0.25rem] text-heading text-center">
         <div class=" flex flex-col items-center justify-between">
           <h2 class="pt-16 font-serif font-semibold text-xl leading-7 xsm:text-2xl md:text-3xl">
-            {content.landingPage[0]?.fields.date}
+            {content.landingPage[0]?.fields.date} {/* festival date above site main heading */}
           </h2>
           <h1 class="pt-[0.25rem] custom-710:pb-[2rem] pb-[1rem] font-serif font-semibold text-3xl xsm:text-4xl md:text-5xl">
-            {content.landingPage[0]?.fields.title}
+            {content.landingPage[0]?.fields.title} {/* site main heading */}
           </h1>
         </div>
         <style>

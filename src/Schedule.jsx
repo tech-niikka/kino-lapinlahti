@@ -32,22 +32,22 @@ function Schedule({ data, index, buttons }) {
           <div class="flex flex-col">
             <div>
               <h1 class="uppercase font-serif font-semibold text-4xl">
-                {data.fields.date}
+                {data.fields.date} {/* schedule block heading (weekday & date) */}
               </h1>
             </div>
             <div>
               <h2 class="py-8 font-serif font-semibold text-2xl">
-                {data.fields.theme}
+                {data.fields.theme} {/* schedule block subheading (theme) */}
               </h2>
             </div>
             <div>
               <h3 class="w-[100%] lg:w-[88%] pr-[0rem] pb-[1rem] md:pb-[1rem] md:pr-[3rem]">
-                {data.fields.description.content[0].content[0].value}
+                {data.fields.description.content[0].content[0].value} {/* body text 1st paragraph */}
               </h3>
             </div>
             <div>
               <h3 class="w-[100%] lg:w-[88%] pr-[0rem] pb-[1rem] md:pb-[3rem] md:pr-[3rem]">
-                {data.fields.descriptionTwo?.content[0]?.content[0]?.value}
+                {data.fields.descriptionTwo?.content[0]?.content[0]?.value} {/* body text 2nd paragraph (placeholder atm) */}
               </h3>
             </div>
           </div>
@@ -66,7 +66,7 @@ function Schedule({ data, index, buttons }) {
 
           <div class="absolute bottom-[3rem] left-[2rem] xsm:left-[4rem]">
           <div class='font-semibold underline custom-883:mt-12'>
-            <a href="/aik.pdf" target="_blank" >PDF-aikataulu / PDF-schedule</a>
+            <a href="/aik.pdf" target="_blank" >PDF-aikataulu / PDF-schedule</a> {/* link to pdf schedule */}
           </div>
           
             <button
@@ -95,7 +95,7 @@ function Schedule({ data, index, buttons }) {
                   {item.fields.events.map((event) => (
                     <div class="text-xs custom-330:text-sm">
                       <div class="w-full h-px bg-gray" />
-                      <div class="flex flex-row justify-between p-3">
+                      <div class="grid grid-cols-[3fr_1fr_2fr] gap-2 p-3 text-left"> {/* columns aligned, widths based on content (title 3, time 1, location 2) */}
                         <h3>{event.fields.title}</h3>
                         <h4>{event.fields.time}</h4>
                         <h5>{event.fields.location}</h5>
