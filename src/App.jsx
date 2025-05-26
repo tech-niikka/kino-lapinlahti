@@ -16,6 +16,8 @@ import poster2 from "./assets/poster_2024.jpg"
 
 import "./App.css";
 
+{/* Contentful: Content model content types
+    When adding new content type, add it here and also below*/}
 function App() {
   const [content, setContent] = useState({
     landingPage: [],
@@ -24,6 +26,7 @@ function App() {
     eventSection: [],
     areaSection: [],
     buttons: [],
+    navBar: [],
   });
 
   const [language, setLanguage] = useState("fi");
@@ -45,6 +48,8 @@ function App() {
     document.cookie = "initialVisit=true; SameSite=Lax; Secure";
   }, []);
 
+  {/* Contentful: Add new content types also below inside contentTypes
+      Then pass it to the component where it is needed (e.g., inside const Nav) */}
   useEffect(() => {
     const fetchEntries = async () => {
       try {
@@ -55,6 +60,7 @@ function App() {
           { type: "eventSection", key: "eventSection" },
           { type: "areaSection", key: "areaSection" },
           { type: "button", key: "buttons" },
+          { type: "navBar", key: "navBar"},
         ];
 
         const requests = contentTypes.map(({ type, key, include }) =>
@@ -87,13 +93,14 @@ function App() {
         eventTitle={content.eventSection[0]?.fields.title}
         areaTitle={content.areaSection[0]?.fields.title}
         ref={[aikataulu, ohjelmisto, info, alue]}
+        logoUrl={content.navBar[0]?.fields.logo?.fields.file.url}
       />
-      <div class="bg-main pt-[0.25rem] text-heading text-center">
-        <div class=" flex flex-col items-center justify-between">
-          <h2 class="pt-16 font-serif font-semibold text-xl leading-7 xsm:text-2xl md:text-3xl">
+      <div className="bg-main pt-[0.25rem] text-heading text-center">
+        <div className=" flex flex-col items-center justify-between">
+          <h2 className="pt-16 font-serif font-semibold text-xl leading-7 xsm:text-2xl md:text-3xl">
             {content.landingPage[0]?.fields.date} {/* festival date above site main heading */}
           </h2>
-          <h1 class="pt-[0.25rem] custom-710:pb-[2rem] pb-[1rem] font-serif font-semibold text-3xl xsm:text-4xl md:text-5xl">
+          <h1 className="pt-[0.25rem] custom-710:pb-[2rem] pb-[1rem] font-serif font-semibold text-3xl xsm:text-4xl md:text-5xl">
             {content.landingPage[0]?.fields.title} {/* site main heading */}
           </h1>
         </div>
@@ -129,7 +136,7 @@ function App() {
           {content.landingPage[0]?.fields.images.map((image, index) => (
             <div
               key={index}
-              class={`w-full rounded h-96  ${
+              className={`w-full rounded h-96  ${
                 index === 0 ? "hidden lg:block" : ""
               }
             ${index === 1 ? "hidden sm:block" : ""}
@@ -138,7 +145,7 @@ function App() {
             `}
             >
               <img
-                class={`h-[20rem] w-full object-cover xsm:h-96`}
+                className={`h-[20rem] w-full object-cover xsm:h-96`}
                 src={image.fields.file.url}
                 alt="image"
               />
@@ -148,15 +155,15 @@ function App() {
         */}
         <div>
         <img
-                class={`h-[20rem] w-full object-cover object-[center_top] xsm:h-[37rem]`}
+                className={`h-[20rem] w-full object-cover object-[center_top] xsm:h-[37rem]`}
                 src={poster2}
                 alt="image"
               />
         </div>
 
 
-        <div class="flex flex-col items-center justify-between pt-0">
-          <h3 class="pt-[1rem] custom-710:pt-[2rem] custom-883:pt-[5rem]  custom-440:pb-[2rem] xsm:pb-[0rem] uppercase font-serif font-semibold text-text text-2xl xsm:text-3xl leading-7 w-[200px] custom-440:w-full">
+        <div className="flex flex-col items-center justify-between pt-0">
+          <h3 className="pt-[1rem] custom-710:pt-[2rem] custom-883:pt-[5rem]  custom-440:pb-[2rem] xsm:pb-[0rem] uppercase font-serif font-semibold text-text text-2xl xsm:text-3xl leading-7 w-[200px] custom-440:w-full">
             {content.landingPage[0]?.fields.secondaryTitle}
           </h3>
         </div>
@@ -164,19 +171,19 @@ function App() {
 
       <div
         ref={aikataulu}
-        class="pt-[6rem] custom-710:pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
+        className="pt-[6rem] custom-710:pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
       >
-        <div class="flex flex-row items-center justify-center ">
-          <div class=" bg-text w-[100%] h-0.5"></div>
-          <div class="px-[2rem]">
-            <h2 class="font-semibold text-xl">
+        <div className="flex flex-row items-center justify-center ">
+          <div className=" bg-text w-[100%] h-0.5"></div>
+          <div className="px-[2rem]">
+            <h2 className="font-semibold text-xl">
               {content.scheduleSection[0]?.fields.title}
             </h2>
           </div>
-          <div class="bg-text w-[100%] h-0.5 "></div>
+          <div className="bg-text w-[100%] h-0.5 "></div>
         </div>
       </div>
-      <div class="flex flex-col justify-center items-center ">
+      <div className="flex flex-col justify-center items-center ">
         {content.scheduleSection[0]?.fields.schedule.map((item, index) => (
           <Schedule
             key={index}
@@ -189,46 +196,46 @@ function App() {
 
       <div
         ref={ohjelmisto}
-        class="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
+        className="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
       >
-        <div class="flex flex-row items-center justify-center ">
-          <div class=" bg-text w-[100%] h-0.5"></div>
-          <div class="px-[2rem]">
-            <h2 class="font-semibold text-xl">
+        <div className="flex flex-row items-center justify-center ">
+          <div className=" bg-text w-[100%] h-0.5"></div>
+          <div className="px-[2rem]">
+            <h2 className="font-semibold text-xl">
               {content.catalogSection[0]?.fields.title}
             </h2>
           </div>
-          <div class="bg-text w-[100%] h-0.5 "></div>
+          <div className="bg-text w-[100%] h-0.5 "></div>
         </div>
       </div>
       <Catalog films={content.catalogSection[0]?.fields.films} />
       <div
         ref={info}
-        class="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
+        className="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
       >
-        <div class="flex flex-row items-center justify-center ">
-          <div class=" bg-text w-[100%] h-0.5"></div>
-          <div class="px-[2rem]">
-            <h2 class="font-semibold text-xl">
+        <div className="flex flex-row items-center justify-center ">
+          <div className=" bg-text w-[100%] h-0.5"></div>
+          <div className="px-[2rem]">
+            <h2 className="font-semibold text-xl">
               {content.eventSection[0]?.fields.title}
             </h2>
           </div>
-          <div class="bg-text w-[100%] h-0.5 "></div>
+          <div className="bg-text w-[100%] h-0.5 "></div>
         </div>
       </div>
       <Event data={content.eventSection[0]?.fields} />
       <div
         ref={alue}
-        class="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
+        className="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
       >
-        <div class="flex flex-row items-center justify-center ">
-          <div class=" bg-text w-[100%] h-0.5"></div>
-          <div class="px-[2rem]">
-            <h2 class="font-semibold text-xl">
+        <div className="flex flex-row items-center justify-center ">
+          <div className=" bg-text w-[100%] h-0.5"></div>
+          <div className="px-[2rem]">
+            <h2 className="font-semibold text-xl">
               {content.areaSection[0]?.fields.title}
             </h2>
           </div>
-          <div class="bg-text w-[100%] h-0.5 "></div>
+          <div className="bg-text w-[100%] h-0.5 "></div>
         </div>
       </div>
       <Area data={content.areaSection[0]?.fields} />
