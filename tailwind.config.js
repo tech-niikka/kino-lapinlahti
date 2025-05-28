@@ -12,6 +12,11 @@ module.exports = {
       green: "#C8AA65",
       gray: "#8E8E8E",
       purple: "#AAAADA",
+      plum: "#441752",
+      peony: "#FFD0EC",
+      grape: "#4C3D6F",
+      cloud: "#FCF1FF",
+      blueberry: "#5A639C",
     },
     screens: {
       xsm: "640px",
