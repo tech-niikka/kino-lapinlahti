@@ -7,19 +7,19 @@ function Area({ data }) {
         <div className="flex flex-col mr-[1.5rem] custom-1020:mr-[8rem] w-[100%] md:w-[50%]">
           <div className="">
             <h1 className="font-serif font-semibold text-4xl mb-4">
-              {data?.secondaryTitle} {/* yläotsikko (miten saavut paikalle) */}
+              {data?.secondaryTitle} {/* Main heading (how to arrive) */}
             </h1>
           </div>
           <div className=" flex flex-col justify-between w-2/3">
             <div className="py-4">
-              <h3 className="font-bold leading-7">{data?.subheading1}</h3> {/* alaotsikko */}
+              <h3 className="font-bold leading-7">{data?.subheading1}</h3> {/* Subheading */}
               <h2 className="">{data?.paragraph1}</h2>
               <h2 className="pt-[0.5rem]">{data?.paragraph5}</h2>
             </div>
 
             <div className="py-4">
               <h3 className="font-bold">{data?.subheading2}</h3>
-              <div>{data?.openHours.fields.item1}</div> {/* aukioloajat */}
+              <div>{data?.openHours.fields.item1}</div> {/* Festival opening hours */}
               <div>{data?.openHours.fields.item2}</div>
               <div>{data?.openHours.fields.item3}</div>
               <div>{data?.openHours.fields.item4}</div>
@@ -31,7 +31,7 @@ function Area({ data }) {
             <div className="py-4">
               <h3 className="font-bold leading-7">{data?.subheading4}</h3>
               <h2 className="">{data?.paragraph4}</h2>
-              {/* alla linkit esteettömyysoppaisiin ym. */}
+              {/* Links to accessibility guides etc. */}
               <a className='hover:underline'  target="_blank" href="https://docs.google.com/document/d/18mhspc47rtUlAMXKDayj_F4Q89gykPB0-dy2PHDo1nQ/"><h3 className=" italic leading-7 pt-4">{data?.subheading5}</h3></a>
               <a className='hover:underline'  target="_blank" href="https://lapinlahdenlahde.fi/wp-content/uploads/FI-Q-door-access-ramp-Omatoimiohje.pdf"><h3 className=" italic leading-7 pt-2">{data?.subheading6}</h3></a>
               <a className='hover:underline'  target="_blank" href="https://docs.google.com/document/d/1HPmF-iGggS4Mc2DQ-sHwWL8seaGIxKXDG_o1tgJf1_o/"><h3 className=" italic leading-7 pt-2">{data?.subheading7}</h3></a>

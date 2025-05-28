@@ -1,22 +1,22 @@
 import React from "react";
 import logo from "../src/assets/logo/logo-black-en.png";
-import llogo from "../src/assets/logo/llLogo.png";
-import plogo from "../src/assets/logo/prologo.png";
-import mlogo from "../src/assets/logo/mielilogo.png";
-import hlogo from "../src/assets/logo/Helsinki_logo.png";
-import cinemalogo from "../src/assets/logo/cinemamondo_logo.png";
-import dokulogo from "../src/assets/logo/dokumenttikilta_logo.png";
-import setlogo from "../src/assets/logo/set_logo.png";
-import cinedlogo from "../src/assets/logo/cined_logo.png";
-import elkelogo from "../src/assets/logo/elke_logo.png";
-import ihmelogo from "../src/assets/logo/ihme_logo.png"
-import laplogo from "../src/assets/logo/lap_kan.png"
-import clogo from "../src/assets/logo/cinemanselogo.jpg"
+import llogo from "../src/assets/logo/lähde.png";
+import plogo from "../src/assets/logo/pro.png";
+import mlogo from "../src/assets/logo/mieli.png";
+import hlogo from "../src/assets/logo/helsinki.png";
+import cinemalogo from "../src/assets/logo/cinemamondo.png";
+import dokulogo from "../src/assets/logo/dokumenttikilta.png";
+import setlogo from "../src/assets/logo/set_ry.png";
+import cinedlogo from "../src/assets/logo/cined.png";
+import elkelogo from "../src/assets/logo/elke.png";
+import ihmelogo from "../src/assets/logo/ihmefilmi.png"
+import laplogo from "../src/assets/logo/lapinlahti_aloite.png"
+import clogo from "../src/assets/logo/cinemanse.jpg"
 import hyvälogo from "../src/assets/logo/hyvä.png"
 import oceanlogo from "../src/assets/logo/ocean.png"
-import elogo from "../src/assets/logo/estrella-logo.png"
-import jalologo from "../src/assets/logo/Jalotofu.png"
-import bulogo from "../src/assets/logo/images.png"
+import elogo from "../src/assets/logo/estrella.png"
+import jalologo from "../src/assets/logo/jalotofu.png"
+import bulogo from "../src/assets/logo/buenosaires.png"
 import dlogo from "../src/assets/logo/dash.png"
 import slogo from "../src/assets/logo/siili.png"
 
@@ -32,9 +32,13 @@ function topFunction() {
 
 function Footer() {
   return (
+
     <div className="w-full bg-purple py-8 flex flex-row ">
       <div className="w-[88%] sm:w-[85%] mx-auto">
         <div className="grid custom-883:grid-cols-5 grid-cols-2 custom-588:grid-cols-3 custom-883:items-center">
+
+          {/* LLFF logo */}
+
           <button
             onClick={() => {
               topFunction(); // Call topFunction to scroll to top
@@ -43,8 +47,11 @@ function Footer() {
             title="Scroll to top / Palaa sivun alkuun"
             className="flex justify-center items-center"
           >
-            <img className="w-30 h-12 pb-[0.5rem] " src={logo} alt="image" />
+            <img className="w-30 h-12 pb-[0.5rem] " src={logo} alt="logo" />
           </button>
+
+          {/* Sponsor logos */}
+
           <div className="flex justify-center items-center"> 
           <a href="https://mieli.fi/" target="_blank">
             <img className="w-32 h-auto cursor-pointer pb-[1rem]" src={mlogo} alt="mieli ry logo joka toimii linkkinä" />
@@ -59,6 +66,7 @@ function Footer() {
             />
             </a>
           </div>
+
           <div className="flex justify-center items-center">
             <a href="https://www.prolapinlahtiry.fi/" target="_blank">
             <img
@@ -68,6 +76,7 @@ function Footer() {
             />
             </a>
           </div>
+
           <div className="flex justify-center items-center">
           <a href="https://www.myhelsinki.fi/" target="_blank">
             <img
@@ -77,6 +86,7 @@ function Footer() {
             />
             </a>
           </div>
+
           <div className="flex justify-center items-center">
           <a href="https://cinemamondo.fi/" target="_blank">
             <img
@@ -86,6 +96,7 @@ function Footer() {
             />
             </a>
           </div>
+
           <div className="flex justify-center items-center">
           <a href="https://www.dokumenttikilta.fi/" target="_blank">
             <img
@@ -95,6 +106,7 @@ function Footer() {
             />
             </a>
           </div>
+
           <div className="flex justify-center items-center">
             <a href="https://setry.fi/" target="_blank">
             <img
@@ -104,6 +116,7 @@ function Footer() {
             />
             </a>
           </div>
+
           <div className="flex justify-center items-center">
             <a href="https://www.cined.eu/" target="_blank">
             <img
@@ -112,6 +125,7 @@ function Footer() {
               alt="CineD:in logo, joka toimii linkkinä"
             />
             </a>
+
           </div>
           <div className="flex justify-center items-center">
             <a href="https://cinemaorion.fi/en/elavan-kuvan-keskus-elke-ry/" target="_blank">
@@ -122,6 +136,7 @@ function Footer() {
             />
             </a>
           </div>
+
           <div className="flex justify-center items-center">
             <a href="https://www.ihmefilmi.fi/" target="_blank">
             <img
@@ -131,6 +146,7 @@ function Footer() {
             />
             </a>
           </div>
+
           <div className="flex justify-center items-center">
             <a href="https://lapinlahdenlahde.fi/kuntalaisaloite/" target="_blank" title="Allekirjoita kuntalaisaloite Lapinlahden pelastamiseksi">
             <img
@@ -141,8 +157,6 @@ function Footer() {
             </a>
           </div>
 
-
-
           <div className="flex justify-center items-center">
             <a href="https://cinemanse.fi/" title=" linkki cinemansen sivuille" target="_blank">
             <img
@@ -152,6 +166,7 @@ function Footer() {
             />
             </a>
           </div>
+
           <div className="flex justify-center items-center">
             <a href="https://www.osallisuusmedia.fi" target="_blank" >
             <img
@@ -161,6 +176,7 @@ function Footer() {
             />
             </a>
           </div>
+
           <div className="flex justify-center items-center">
             <a href="https://www.originbyocean.com/" target="_blank" >
             <img
@@ -170,6 +186,7 @@ function Footer() {
             />
             </a>
           </div>
+
           <div className="flex justify-center items-center">
             <a href="https://jalotofu.fi/" target="_blank" >
             <img
@@ -179,6 +196,7 @@ function Footer() {
             />
             </a>
           </div>
+
           <div className="flex justify-center items-center">
             <a href="https://www.estrella.fi/" target="_blank" >
             <img
@@ -198,6 +216,7 @@ function Footer() {
             />
             </a>
           </div>
+
           <div className="flex justify-center items-center">
             <a href="https://dashcoffees.com/" target="_blank" >
             <img
@@ -207,6 +226,7 @@ function Footer() {
             />
             </a>
           </div>
+
           <div className="flex justify-center items-center">
             <a href="https://pidasaaristosiistina.fi/" target="_blank" >
             <img
@@ -216,6 +236,8 @@ function Footer() {
             />
             </a>
           </div>
+
+        {/* Contact information, privacy notice, etc. */}
 
         </div>
         <div className="py-4">
@@ -231,7 +253,7 @@ function Footer() {
           <div className="flex flex-row pt-[0.5rem]">
            <a href="https://www.instagram.com/lapinlahtifilmfestival/"> <AiOutlineInstagram
               size={30}
-              className="cursor-pointer  text-heading "
+              className="cursor-pointer text-heading "
             /></a>
            <a href="https://www.facebook.com/events/lapinlahdenpolku-8-00180-helsinki-finland/lapinlahden-elokuvajuhlat-lapinlahti-film-festival/1397138120949216/"> <AiOutlineFacebook
                size={30} className="cursor-pointer text-heading" />
