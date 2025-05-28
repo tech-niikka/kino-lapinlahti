@@ -65,13 +65,13 @@ function Schedule({ data, index, buttons }) {
 
 
           <div className="absolute bottom-[3rem] left-[2rem] xsm:left-[4rem]">
-          <div className='font-semibold underline custom-883:mt-12'>
-            <a href="/aik.pdf" target="_blank" >PDF-aikataulu / PDF-schedule</a> {/* link to pdf schedule */}
-          </div>
+          {/* <div className='font-semibold underline custom-883:mt-12'>
+            <a href="/aik.pdf" target="_blank" >PDF-aikataulu / PDF-schedule</a>
+          </div> */} {/* commented pdf schedule out for now */}
           
             <button
               onClick={handleBothClicks}
-              className="font-semibold underline"
+              className="font-semibold hover:underline"
             >
               {buttonText}
             </button>
@@ -89,7 +89,7 @@ function Schedule({ data, index, buttons }) {
             <div className="flex flex-col flex-wrap md:flex-row w-[100%]">
               {data.fields.eventCategory.map((item) => (
                 <div className="sm:px-[2rem] py-5 w-1/1 md:w-1/2">
-                  <h2 className="pb-4 font-serif font-semibold capitalize">
+                  <h2 className="pb-4 font-serif font-semibold">
                     {item.fields.title}
                   </h2>
                   {item.fields.events.map((event) => (
