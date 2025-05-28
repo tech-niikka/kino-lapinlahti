@@ -49,7 +49,7 @@ function App() {
   }, []);
 
   {/* Contentful: Add new content types also below inside contentTypes
-      Then pass it to the component where it is needed (e.g., inside const Nav) */}
+      Then pass it to the component where it is needed (e.g., inside const Nav in Nav.jsx) */}
   useEffect(() => {
     const fetchEntries = async () => {
       try {

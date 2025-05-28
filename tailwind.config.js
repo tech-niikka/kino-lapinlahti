@@ -3,6 +3,7 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     colors: {
+      /* 2024 colors */
       navorange: "#EAA501",
       main: "#F4AD04",
       text: "#000000",
@@ -11,7 +12,13 @@ module.exports = {
       blue: "#E7E7ED",
       green: "#C8AA65",
       gray: "#8E8E8E",
+      /* 2025 colors */
       purple: "#AAAADA",
+      plum: "#441752",
+      peony: "#FFD0EC",
+      grape: "#4C3D6F",
+      cloud: "#FCF1FF",
+      blueberry: "#5A639C",
     },
     screens: {
       xsm: "640px",
