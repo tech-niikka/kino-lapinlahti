@@ -30,11 +30,14 @@ function topFunction() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-function Footer() {
+function Footer({ data }) {
   return (
     <div className="w-full bg-purple py-8 flex flex-row ">
       <div className="w-[88%] sm:w-[85%] mx-auto">
         <div className="grid custom-883:grid-cols-5 grid-cols-2 custom-588:grid-cols-3 custom-883:items-center">
+
+          {/* Festival logo button */}
+
           <button
             onClick={() => {
               topFunction(); // Call topFunction to scroll to top
@@ -43,11 +46,19 @@ function Footer() {
             title="Scroll to top / Palaa sivun alkuun"
             className="flex justify-center items-center"
           >
-            <img className="w-30 h-12 pb-[0.5rem] " src={logo} alt="image" />
+            <img className="w-30 h-12 pb-[0.5rem] " src={data?.logos[0].fields.logo.fields.file.url} alt="logo" /> 
+            {/* Festival logo now changes along with language versions
+                Might not be worth it to manage sponsor logos through Contentful */}
           </button>
+
+          {/* Sponsor logos */}
+
           <div className="flex justify-center items-center"> 
-          <a href="https://mieli.fi/" target="_blank">
-            <img className="w-32 h-auto cursor-pointer pb-[1rem]" src={mlogo} alt="mieli ry logo joka toimii linkkinä" />
+          <a href={data?.logos[1].fields.url} target="_blank">
+            <img 
+              className="w-32 h-auto cursor-pointer pb-[1rem]" 
+              src={data?.logos[1].fields.logo.fields.file.url} 
+              alt="Mieli ry:n logo, joka toimii linkkinä" />
             </a>
           </div>
           <div className="flex justify-center items-center">
@@ -59,6 +70,7 @@ function Footer() {
             />
             </a>
           </div>
+
           <div className="flex justify-center items-center">
             <a href="https://www.prolapinlahtiry.fi/" target="_blank">
             <img
@@ -68,6 +80,7 @@ function Footer() {
             />
             </a>
           </div>
+
           <div className="flex justify-center items-center">
           <a href="https://www.myhelsinki.fi/" target="_blank">
             <img
@@ -77,6 +90,7 @@ function Footer() {
             />
             </a>
           </div>
+
           <div className="flex justify-center items-center">
           <a href="https://cinemamondo.fi/" target="_blank">
             <img
@@ -86,6 +100,7 @@ function Footer() {
             />
             </a>
           </div>
+
           <div className="flex justify-center items-center">
           <a href="https://www.dokumenttikilta.fi/" target="_blank">
             <img
@@ -95,6 +110,7 @@ function Footer() {
             />
             </a>
           </div>
+
           <div className="flex justify-center items-center">
             <a href="https://setry.fi/" target="_blank">
             <img
@@ -104,6 +120,7 @@ function Footer() {
             />
             </a>
           </div>
+
           <div className="flex justify-center items-center">
             <a href="https://www.cined.eu/" target="_blank">
             <img
@@ -113,6 +130,7 @@ function Footer() {
             />
             </a>
           </div>
+
           <div className="flex justify-center items-center">
             <a href="https://cinemaorion.fi/en/elavan-kuvan-keskus-elke-ry/" target="_blank">
             <img
@@ -122,6 +140,7 @@ function Footer() {
             />
             </a>
           </div>
+
           <div className="flex justify-center items-center">
             <a href="https://www.ihmefilmi.fi/" target="_blank">
             <img
@@ -131,6 +150,7 @@ function Footer() {
             />
             </a>
           </div>
+
           <div className="flex justify-center items-center">
             <a href="https://lapinlahdenlahde.fi/kuntalaisaloite/" target="_blank" title="Allekirjoita kuntalaisaloite Lapinlahden pelastamiseksi">
             <img
@@ -141,8 +161,6 @@ function Footer() {
             </a>
           </div>
 
-
-
           <div className="flex justify-center items-center">
             <a href="https://cinemanse.fi/" title=" linkki cinemansen sivuille" target="_blank">
             <img
@@ -152,6 +170,7 @@ function Footer() {
             />
             </a>
           </div>
+
           <div className="flex justify-center items-center">
             <a href="https://www.osallisuusmedia.fi" target="_blank" >
             <img
@@ -161,6 +180,7 @@ function Footer() {
             />
             </a>
           </div>
+
           <div className="flex justify-center items-center">
             <a href="https://www.originbyocean.com/" target="_blank" >
             <img
@@ -170,6 +190,7 @@ function Footer() {
             />
             </a>
           </div>
+
           <div className="flex justify-center items-center">
             <a href="https://jalotofu.fi/" target="_blank" >
             <img
@@ -179,6 +200,7 @@ function Footer() {
             />
             </a>
           </div>
+
           <div className="flex justify-center items-center">
             <a href="https://www.estrella.fi/" target="_blank" >
             <img
@@ -198,6 +220,7 @@ function Footer() {
             />
             </a>
           </div>
+
           <div className="flex justify-center items-center">
             <a href="https://dashcoffees.com/" target="_blank" >
             <img
@@ -207,6 +230,7 @@ function Footer() {
             />
             </a>
           </div>
+          
           <div className="flex justify-center items-center">
             <a href="https://pidasaaristosiistina.fi/" target="_blank" >
             <img
@@ -216,17 +240,19 @@ function Footer() {
             />
             </a>
           </div>
-
         </div>
+
+        {/* Contact info, privacy notice, etc. */}
+
         <div className="py-4">
           <a href="https://maps.app.goo.gl/umz7SezqGTJSiJS88" className="block hover:underline">
-            Lapinlahdenpolku 8, 00180 Helsinki
+            {data?.address}
             </a>
           <a href="tel:+358442788829" className="block hover:underline">
-            +358 44 278 8829
+            {data?.phoneNumber}
           </a>
           <a href="mailto:kinolapinlahti@gmail.com" className="block hover:underline">
-            kinolapinlahti@gmail.com
+            {data?.emailAddress}
           </a>
           <div className="flex flex-row pt-[0.5rem]">
            <a href="https://www.instagram.com/lapinlahtifilmfestival/"> <AiOutlineInstagram
@@ -238,9 +264,11 @@ function Footer() {
                </a>
           </div>
         </div> 
-        <a href="https://docs.google.com/document/d/1s5Tda7QWJ9YQH6VCThGGvxd1Ol-r2TGbU8_Q8ijprJA/"  target="_blank" className="block hover:underline">Tietosuojaseloste / Privacy Notice</a>
+        <a href="https://docs.google.com/document/d/1s5Tda7QWJ9YQH6VCThGGvxd1Ol-r2TGbU8_Q8ijprJA/"  target="_blank" className="block hover:underline">
+            {data?.privacyNotice}
+        </a>
         <div className="py-4">
-          <h2>© 2025 Kino Lapinlahti ry. Kaikki oikeudet pidätetään.</h2>
+          <h2>{data?.copyright}</h2>
         </div>
       </div>
     </div>

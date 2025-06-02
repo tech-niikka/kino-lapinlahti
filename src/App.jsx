@@ -27,6 +27,7 @@ function App() {
     areaSection: [],
     buttons: [],
     navBar: [],
+    footer: [],
   });
 
   const [language, setLanguage] = useState("fi");
@@ -61,6 +62,7 @@ function App() {
           { type: "areaSection", key: "areaSection" },
           { type: "button", key: "buttons" },
           { type: "navBar", key: "navBar"},
+          { type: "footer", key: "footer"},
         ];
 
         const requests = contentTypes.map(({ type, key, include }) =>
@@ -81,6 +83,9 @@ function App() {
     };
     fetchEntries();
   }, [language]);
+
+/*console.log('data={content.footer[0]?.fields', content.footer[0]?.fields)
+/* ^ checks the fields in Contentful, helps understand field structure */
 
   return (
     <div>
@@ -239,7 +244,7 @@ function App() {
         </div>
       </div>
       <Area data={content.areaSection[0]?.fields} />
-      <Footer />
+      <Footer data={content.footer[0]?.fields}/>
     </div>
   );
 }
