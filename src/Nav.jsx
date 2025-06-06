@@ -32,11 +32,12 @@ const Nav = React.forwardRef(
       <div className="bg-navorange flex items-center justify-between py-[1.5rem] px-[1rem] custom-710:px-[4rem]">
         <div>
           <img
-            className="max-h-[52px] w-auto cursor-pointer"
+            className="max-h-[52px] w-auto"
             src={logoUrl ? `https:${logoUrl}` : logo}
             alt="logo"
           />
         </div>
+        
         <div className="hidden custom-955:flex">
           <div className="flex first-letter:items-center">
             <ul className="flex flex-row flex-wrap md:gap-[1rem]">
@@ -90,6 +91,7 @@ const Nav = React.forwardRef(
             </div>
           </div>
         </div>
+
         <div onClick={handleNav} className="custom-955:hidden cursor-pointer ">
           <AiOutlineMenu size={20} className="flex justify-end" />
         </div>
@@ -102,7 +104,11 @@ const Nav = React.forwardRef(
         >
           <div className="w-full flex flex-col justify-between">
             <div className="flex items-center justify-between">
-              <img className="w-30 h-12 mb-10 " src={logo} alt="image" />
+              <img 
+                className="w-30 h-12 mb-10"
+                src={logoUrl ? `https:${logoUrl}` : logo}
+                alt="logo"
+              />
               <div onClick={handleNav} className="cursor-pointer mb-10 ml-4">
                 <AiOutlineClose size={20} />
               </div>
@@ -168,14 +174,22 @@ const Nav = React.forwardRef(
               </div>
             </div>
           </div>
+
           <div className="flex flex-row justify-center items-center">
-           <a href="https://www.instagram.com/lapinlahtifilmfestival/"> <AiOutlineInstagram
+            <a 
+              href="https://www.instagram.com/lapinlahtifilmfestival/">
+              <AiOutlineInstagram
               size={30}
-              className="cursor-pointer  text-heading"
-            /></a>
-           <a href="https://www.facebook.com/events/lapinlahdenpolku-8-00180-helsinki-finland/lapinlahden-elokuvajuhlat-lapinlahti-film-festival/1397138120949216/"> <AiOutlineFacebook
-               size={30} className="cursor-pointer text-heading" />
-               </a>
+              className="cursor-pointer text-heading"
+              />
+            </a>
+            <a 
+              href="https://www.facebook.com/events/lapinlahdenpolku-8-00180-helsinki-finland/lapinlahden-elokuvajuhlat-lapinlahti-film-festival/1397138120949216/">
+              <AiOutlineFacebook
+                size={30}
+                className="cursor-pointer text-heading"
+              />
+            </a>
           </div>
         </div>
       </div>

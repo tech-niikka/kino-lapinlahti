@@ -22,7 +22,7 @@ function Schedule({ data, index, buttons }) {
   };
 
   return (
-    <div className=" w-full ">
+    <div className="w-full">
       <div className="flex items-center justify-center">
         <div
           className={`px-8 xsm:px-16 pt-16 pb-16 w-[88%] sm:w-[85%] flex-col flex items-between justify-center ${
@@ -35,16 +35,19 @@ function Schedule({ data, index, buttons }) {
                 {data.fields.date} {/* schedule block heading (weekday & date) */}
               </h1>
             </div>
+
             <div>
               <h2 className="py-8 font-serif font-semibold text-2xl">
                 {data.fields.theme} {/* schedule block subheading (theme) */}
               </h2>
             </div>
+
             <div>
               <h3 className="w-[100%] lg:w-[88%] pr-[0rem] pb-[1rem] md:pb-[1rem] md:pr-[3rem]">
                 {data.fields.description.content[0].content[0].value} {/* body text 1st paragraph */}
               </h3>
             </div>
+
             <div>
               <h3 className="w-[100%] lg:w-[88%] pr-[0rem] pb-[1rem] md:pb-[3rem] md:pr-[3rem]">
                 {data.fields.descriptionTwo?.content[0]?.content[0]?.value} {/* body text 2nd paragraph (placeholder atm) */}
@@ -62,11 +65,10 @@ function Schedule({ data, index, buttons }) {
             </div>
           </div>
 
-
-
           <div className="absolute bottom-[3rem] left-[2rem] xsm:left-[4rem]">
+
           {/* <div className='font-semibold underline custom-883:mt-12'>
-            <a href="/aik.pdf" target="_blank" >PDF-aikataulu / PDF-schedule</a>
+            <a href="/aik.pdf" target="_blank" rel="noopener noreferrer" >PDF-aikataulu / PDF-schedule</a>
           </div> */} {/* commented pdf schedule out for now */}
           
             <button
