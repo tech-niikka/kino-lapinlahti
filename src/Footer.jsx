@@ -46,7 +46,10 @@ function Footer({ data }) {
             title="Scroll to top / Palaa sivun alkuun"
             className="flex justify-center items-center"
           >
-            <img className="w-30 h-12 pb-[0.5rem] " src={data?.logos[0].fields.logo.fields.file.url} alt="logo" /> 
+            <img 
+              className="w-30 h-12 pb-[0.5rem]"
+              src={data?.logos[0].fields.logo.fields.file.url || logo} 
+              alt="logo" /> 
             {/* Festival logo now changes along with language versions
                 Might not be worth it to manage sponsor logos through Contentful */}
           </button>
@@ -54,45 +57,45 @@ function Footer({ data }) {
           {/* Sponsor logos */}
 
           <div className="flex justify-center items-center"> 
-          <a href={data?.logos[1].fields.url} target="_blank">
+          <a href={data?.logos[1].fields.url} target="_blank" rel="noopener noreferrer">
             <img 
               className="w-32 h-auto cursor-pointer pb-[1rem]" 
-              src={data?.logos[1].fields.logo.fields.file.url} 
+              src={data?.logos[1].fields.logo.fields.file.url || mlogo} 
               alt="Mieli ry:n logo, joka toimii linkkinä" />
             </a>
           </div>
           <div className="flex justify-center items-center">
-          <a href="https://lapinlahdenlahde.fi/" target="_blank">
+          <a href={data?.logos[2].fields.url} target="_blank" rel="noopener noreferrer">
             <img
               className="w-32 h-auto cursor-pointer pb-[1rem] "
-              src={llogo}
+              src={data?.logos[2].fields.logo.fields.file.url || llogo} 
               alt="Lapinlahden Lähteen logo, joka toimii linkkinä"
             />
             </a>
           </div>
 
           <div className="flex justify-center items-center">
-            <a href="https://www.prolapinlahtiry.fi/" target="_blank">
+            <a href={data?.logos[3].fields.url} target="_blank" rel="noopener noreferrer">
             <img
               className="w-32 h-auto cursor-pointer pb-[1rem] "
-              src={plogo}
+              src={data?.logos[3].fields.logo.fields.file.url || plogo} 
               alt="Pro Lapinlahti -logo, joka toimii linkkinä"
             />
             </a>
           </div>
 
           <div className="flex justify-center items-center">
-          <a href="https://www.myhelsinki.fi/" target="_blank">
+          <a href={data?.logos[4].fields.url} target="_blank" rel="noopener noreferrer">
             <img
               className="w-32 h-auto cursor-pointer pb-[1rem] "
-              src={hlogo}
+              src={data?.logos[4].fields.logo.fields.file.url || hlogo} 
               alt="Helsingin kaupungin logo, joka toimii linkkinä"
             />
             </a>
           </div>
 
           <div className="flex justify-center items-center">
-          <a href="https://cinemamondo.fi/" target="_blank">
+          <a href="https://cinemamondo.fi/" target="_blank" rel="noopener noreferrer">
             <img
               className="w-48 h-auto cursor-pointer pb-[1rem]"
               src={cinemalogo}
@@ -102,7 +105,7 @@ function Footer({ data }) {
           </div>
 
           <div className="flex justify-center items-center">
-          <a href="https://www.dokumenttikilta.fi/" target="_blank">
+          <a href="https://www.dokumenttikilta.fi/" target="_blank" rel="noopener noreferrer">
             <img
               className="w-32 h-auto cursor-pointer pb-[1rem]"
               src={dokulogo}
@@ -112,7 +115,7 @@ function Footer({ data }) {
           </div>
 
           <div className="flex justify-center items-center">
-            <a href="https://setry.fi/" target="_blank">
+            <a href="https://setry.fi/" target="_blank" rel="noopener noreferrer">
             <img
               className="w-32 h-auto cursor-pointer pb-[1rem] "
               src={setlogo}
@@ -122,7 +125,7 @@ function Footer({ data }) {
           </div>
 
           <div className="flex justify-center items-center">
-            <a href="https://www.cined.eu/" target="_blank">
+            <a href="https://www.cined.eu/" target="_blank" rel="noopener noreferrer">
             <img
               className="w-32 h-auto cursor-pointer pb-[1rem]"
               src={cinedlogo}
@@ -132,7 +135,7 @@ function Footer({ data }) {
           </div>
 
           <div className="flex justify-center items-center">
-            <a href="https://cinemaorion.fi/en/elavan-kuvan-keskus-elke-ry/" target="_blank">
+            <a href="https://cinemaorion.fi/en/elavan-kuvan-keskus-elke-ry/" target="_blank" rel="noopener noreferrer">
             <img
               className="w-32 h-auto cursor-pointer pb-[2rem]"
               src={elkelogo}
@@ -142,7 +145,7 @@ function Footer({ data }) {
           </div>
 
           <div className="flex justify-center items-center">
-            <a href="https://www.ihmefilmi.fi/" target="_blank">
+            <a href="https://www.ihmefilmi.fi/" target="_blank" rel="noopener noreferrer">
             <img
               className="w-32 h-auto cursor-pointer pb-[2rem]"
               src={ihmelogo}
@@ -152,7 +155,7 @@ function Footer({ data }) {
           </div>
 
           <div className="flex justify-center items-center">
-            <a href="https://lapinlahdenlahde.fi/kuntalaisaloite/" target="_blank" title="Allekirjoita kuntalaisaloite Lapinlahden pelastamiseksi">
+            <a href="https://lapinlahdenlahde.fi/kuntalaisaloite/" target="_blank" rel="noopener noreferrer" title="Allekirjoita kuntalaisaloite Lapinlahden pelastamiseksi">
             <img
               className="w-60 h-auto cursor-pointer pb-[2rem]"
               src={laplogo}
@@ -162,7 +165,7 @@ function Footer({ data }) {
           </div>
 
           <div className="flex justify-center items-center">
-            <a href="https://cinemanse.fi/" title=" linkki cinemansen sivuille" target="_blank">
+            <a href="https://cinemanse.fi/" title=" linkki cinemansen sivuille" target="_blank" rel="noopener noreferrer">
             <img
               className="w-32 h-auto cursor-pointer pb-[2rem]"
               src={clogo}
@@ -172,7 +175,7 @@ function Footer({ data }) {
           </div>
 
           <div className="flex justify-center items-center">
-            <a href="https://www.osallisuusmedia.fi" target="_blank" >
+            <a href="https://www.osallisuusmedia.fi" target="_blank" rel="noopener noreferrer" >
             <img
               className="w-32 h-auto cursor-pointer pb-[2rem]"
               src={hyvälogo}
@@ -182,7 +185,7 @@ function Footer({ data }) {
           </div>
 
           <div className="flex justify-center items-center">
-            <a href="https://www.originbyocean.com/" target="_blank" >
+            <a href="https://www.originbyocean.com/" target="_blank" rel="noopener noreferrer" >
             <img
               className="w-32 h-auto cursor-pointer pb-[2rem]"
               src={oceanlogo}
@@ -192,7 +195,7 @@ function Footer({ data }) {
           </div>
 
           <div className="flex justify-center items-center">
-            <a href="https://jalotofu.fi/" target="_blank" >
+            <a href="https://jalotofu.fi/" target="_blank" rel="noopener noreferrer" >
             <img
               className="w-32 h-auto cursor-pointer pb-[2rem]"
               src={jalologo}
@@ -202,7 +205,7 @@ function Footer({ data }) {
           </div>
 
           <div className="flex justify-center items-center">
-            <a href="https://www.estrella.fi/" target="_blank" >
+            <a href="https://www.estrella.fi/" target="_blank" rel="noopener noreferrer" >
             <img
               className="w-32 h-auto cursor-pointer pb-[2rem]"
               src={elogo}
@@ -212,7 +215,7 @@ function Footer({ data }) {
           </div>
         
           <div className="flex justify-center items-center">
-            <a href="https://www.buenosaires.fi/" target="_blank" >
+            <a href="https://www.buenosaires.fi/" target="_blank" rel="noopener noreferrer" >
             <img
               className="w-32 h-auto cursor-pointer pb-[2rem]"
               src={bulogo}
@@ -222,7 +225,7 @@ function Footer({ data }) {
           </div>
 
           <div className="flex justify-center items-center">
-            <a href="https://dashcoffees.com/" target="_blank" >
+            <a href="https://dashcoffees.com/" target="_blank" rel="noopener noreferrer" >
             <img
               className="w-32 h-auto cursor-pointer pb-[2rem]"
               src={dlogo}
@@ -232,7 +235,7 @@ function Footer({ data }) {
           </div>
           
           <div className="flex justify-center items-center">
-            <a href="https://pidasaaristosiistina.fi/" target="_blank" >
+            <a href="https://pidasaaristosiistina.fi/" target="_blank" rel="noopener noreferrer" >
             <img
               className="w-32 h-auto cursor-pointer pb-[2rem]"
               src={slogo}
@@ -245,31 +248,65 @@ function Footer({ data }) {
         {/* Contact info, privacy notice, etc. */}
 
         <div className="py-4">
-          <a href="https://maps.app.goo.gl/umz7SezqGTJSiJS88" className="block hover:underline">
-            {data?.address}
+
+          <div>
+            <a 
+              href="https://maps.app.goo.gl/umz7SezqGTJSiJS88" 
+              className="inline-block hover:underline">
+              {data?.address}
             </a>
-          <a href="tel:+358442788829" className="block hover:underline">
-            {data?.phoneNumber}
-          </a>
-          <a href="mailto:kinolapinlahti@gmail.com" className="block hover:underline">
-            {data?.emailAddress}
-          </a>
-          <div className="flex flex-row pt-[0.5rem]">
-           <a href="https://www.instagram.com/lapinlahtifilmfestival/"> <AiOutlineInstagram
-              size={30}
-              className="cursor-pointer  text-heading "
-            /></a>
-           <a href="https://www.facebook.com/events/lapinlahdenpolku-8-00180-helsinki-finland/lapinlahden-elokuvajuhlat-lapinlahti-film-festival/1397138120949216/"> <AiOutlineFacebook
-               size={30} className="cursor-pointer text-heading" />
-               </a>
           </div>
-        </div> 
-        <a href="https://docs.google.com/document/d/1s5Tda7QWJ9YQH6VCThGGvxd1Ol-r2TGbU8_Q8ijprJA/"  target="_blank" className="block hover:underline">
-            {data?.privacyNotice}
-        </a>
-        <div className="py-4">
-          <h2>{data?.copyright}</h2>
+
+          <div>
+            <a 
+              href="tel:+358442788829"
+              className="inline-block hover:underline">
+              {data?.phoneNumber}
+            </a>
+          </div>
+
+          <div>
+            <a 
+              href="mailto:kinolapinlahti@gmail.com"
+              className="inline-block hover:underline">
+              {data?.emailAddress}
+            </a>
+          </div>
+
+          <div className="flex flex-row pt-[0.5rem]">
+            <a 
+              href="https://www.instagram.com/lapinlahtifilmfestival/">
+              <AiOutlineInstagram
+                size={30}
+                className="cursor-pointer text-heading"
+              />
+            </a>
+            <a 
+              href="https://www.facebook.com/events/lapinlahdenpolku-8-00180-helsinki-finland/lapinlahden-elokuvajuhlat-lapinlahti-film-festival/1397138120949216/">
+              <AiOutlineFacebook
+                size={30}
+                className="cursor-pointer text-heading" 
+              />
+            </a>
+          </div>
         </div>
+
+          <div>
+            <a 
+              href="https://docs.google.com/document/d/1s5Tda7QWJ9YQH6VCThGGvxd1Ol-r2TGbU8_Q8ijprJA/"
+              target="_blank" rel="noopener noreferrer"
+              className="inline-block hover:underline">
+              {data?.privacyNotice}
+            </a>
+          </div>
+
+        <div className="py-4">
+
+          <h2>
+            {data?.copyright}
+          </h2>
+        </div>
+
       </div>
     </div>
   );

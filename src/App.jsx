@@ -1,12 +1,9 @@
 import React from "react";
+import { useState, useEffect, useRef } from "react";
 import client from "./contentfulClient.js";
 
 import Nav from "./Nav.jsx";
 import Schedule from "./Schedule.jsx";
-
-import { useState, useEffect, useRef } from "react";
-
-
 import { Catalog } from "./Catalog.jsx";
 import Area from "./Area.jsx";
 import Footer from "./Footer.jsx";
@@ -18,6 +15,7 @@ import "./App.css";
 
 {/* Contentful: Content model content types
     When adding new content type, add it here and also below*/}
+
 function App() {
   const [content, setContent] = useState({
     landingPage: [],
@@ -51,6 +49,7 @@ function App() {
 
   {/* Contentful: Add new content types also below inside contentTypes
       Then pass it to the component where it is needed (e.g., inside const Nav in Nav.jsx) */}
+
   useEffect(() => {
     const fetchEntries = async () => {
       try {
@@ -100,15 +99,18 @@ function App() {
         ref={[aikataulu, ohjelmisto, info, alue]}
         logoUrl={content.navBar[0]?.fields.logo?.fields.file.url}
       />
+
       <div className="bg-main pt-[0.25rem] text-heading text-center">
         <div className=" flex flex-col items-center justify-between">
           <h2 className="pt-16 font-serif font-semibold text-xl leading-7 xsm:text-2xl md:text-3xl">
             {content.landingPage[0]?.fields.date} {/* festival date above site main heading */}
           </h2>
+
           <h1 className="pt-[0.25rem] custom-710:pb-[2rem] pb-[1rem] font-serif font-semibold text-3xl xsm:text-4xl md:text-5xl">
             {content.landingPage[0]?.fields.title} {/* site main heading */}
           </h1>
         </div>
+
         <style>
           {`
           .grid-container {
@@ -136,36 +138,37 @@ function App() {
           }
         `}
         </style>
-      {/* Old image grid system!!!!
-        <div className="grid-container">
-          {content.landingPage[0]?.fields.images.map((image, index) => (
-            <div
-              key={index}
-              className={`w-full rounded h-96  ${
-                index === 0 ? "hidden lg:block" : ""
-              }
-            ${index === 1 ? "hidden sm:block" : ""}
-            ${index === 2 ? "hidden xsm:block" : ""}
-            ${index === 3 ? "block" : ""}
-            `}
-            >
-              <img
-                className={`h-[20rem] w-full object-cover xsm:h-96`}
-                src={image.fields.file.url}
-                alt="image"
-              />
-            </div> 
-          ))}
-        </div>
-        */}
-        <div>
-        <img
-                className={`h-[20rem] w-full object-cover object-[center_top] xsm:h-[37rem]`}
-                src={poster2}
-                alt="image"
-              />
-        </div>
 
+          {/* Old image grid system!!!!
+            <div className="grid-container">
+              {content.landingPage[0]?.fields.images.map((image, index) => (
+                <div
+                  key={index}
+                  className={`w-full rounded h-96  ${
+                    index === 0 ? "hidden lg:block" : ""
+                  }
+                ${index === 1 ? "hidden sm:block" : ""}
+                ${index === 2 ? "hidden xsm:block" : ""}
+                ${index === 3 ? "block" : ""}
+                `}
+                >
+                  <img
+                    className={`h-[20rem] w-full object-cover xsm:h-96`}
+                    src={image.fields.file.url}
+                    alt="image"
+                  />
+                </div> 
+              ))}
+            </div>
+            */}
+
+        <div>
+          <img
+            className={`h-[20rem] w-full object-cover object-[center_top] xsm:h-[37rem]`}
+            src={poster2}
+            alt="image"
+          />
+        </div>
 
         <div className="flex flex-col items-center justify-between pt-0">
           <h3 className="pt-[1rem] custom-710:pt-[2rem] custom-883:pt-[5rem]  custom-440:pb-[2rem] xsm:pb-[0rem] uppercase font-serif font-semibold text-text text-2xl xsm:text-3xl leading-7 w-[200px] custom-440:w-full">
@@ -213,7 +216,9 @@ function App() {
           <div className="bg-text w-[100%] h-0.5 "></div>
         </div>
       </div>
+
       <Catalog films={content.catalogSection[0]?.fields.films} />
+
       <div
         ref={info}
         className="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
@@ -228,7 +233,9 @@ function App() {
           <div className="bg-text w-[100%] h-0.5 "></div>
         </div>
       </div>
+
       <Event data={content.eventSection[0]?.fields} />
+
       <div
         ref={alue}
         className="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
@@ -243,7 +250,9 @@ function App() {
           <div className="bg-text w-[100%] h-0.5 "></div>
         </div>
       </div>
+
       <Area data={content.areaSection[0]?.fields} />
+      
       <Footer data={content.footer[0]?.fields}/>
     </div>
   );
