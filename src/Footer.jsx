@@ -44,7 +44,7 @@ function Footer({ data }) {
             }}
             id="Lapinlahti logo button"
             title="Scroll to top / Palaa sivun alkuun"
-            className="flex justify-center items-center"
+            className="flex justify-center items-center mx-auto"
           >
             <img 
               className="w-30 h-12 pb-[0.5rem]"

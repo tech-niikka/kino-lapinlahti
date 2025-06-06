@@ -39,38 +39,46 @@ function Area({ data }) {
               {/* Links to accessibility guides etc. */}
 
             <div className="py-4 font-bold leading-7">
-              <a 
-                href="https://docs.google.com/document/d/18mhspc47rtUlAMXKDayj_F4Q89gykPB0-dy2PHDo1nQ/"
-                className='hover:underline'
+              <div>
+                <a 
+                  href="https://docs.google.com/document/d/18mhspc47rtUlAMXKDayj_F4Q89gykPB0-dy2PHDo1nQ/"
+                  className='inline-block hover:underline'
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <h3 className="pt-4">{data?.subheading5}</h3>
+                </a>
+              </div>
+              <div>
+                <a 
+                href="https://lapinlahdenlahde.fi/wp-content/uploads/FI-Q-door-access-ramp-Omatoimiohje.pdf"
+                className='inline-block hover:underline'
                 target="_blank"
                 rel="noopener noreferrer"
-              >
-                <h3 className="pt-4">{data?.subheading5}</h3>
-              </a>
-              <a 
-              href="https://lapinlahdenlahde.fi/wp-content/uploads/FI-Q-door-access-ramp-Omatoimiohje.pdf"
-              className='hover:underline'
-              target="_blank"
-              rel="noopener noreferrer"
-              >
-                <h3 className="pt-2">{data?.subheading6}</h3>
-              </a>
-              <a
-                href="https://docs.google.com/document/d/1HPmF-iGggS4Mc2DQ-sHwWL8seaGIxKXDG_o1tgJf1_o/" 
-                className='hover:underline'
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <h3 className="pt-2">{data?.subheading7}</h3>
-              </a>
-              <a
-                href="https://bit.ly/myos-safer-space"
-                className='hover:underline'
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <h3 className="pt-2">{data?.subheading8}</h3>
-              </a>
+                >
+                  <h3 className="pt-2">{data?.subheading6}</h3>
+                </a>
+              </div>
+              <div>
+                <a
+                  href="https://docs.google.com/document/d/1HPmF-iGggS4Mc2DQ-sHwWL8seaGIxKXDG_o1tgJf1_o/" 
+                  className="inline-block hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <h3 className="pt-2">{data?.subheading7}</h3>
+                </a>
+              </div>
+              <div>
+                <a
+                  href="https://bit.ly/myos-safer-space"
+                  className="inline-block hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <h3 className="pt-2">{data?.subheading8}</h3>
+                </a>
+              </div>
             </div>
 
             <h3 className="font-bold leading-7">{data?.subheading9} </h3>
