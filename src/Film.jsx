@@ -1,17 +1,17 @@
 export const Film = ({ film }) => {
   return (
 
-    <div className="flex flex-col justify-center w-[95%] custom-440:w-[70%] text-sm relative px-0 custom-588:px-[1rem] py-[0.1rem] custom-588:py-[3rem] custom-590:flex-col custom-590:w-[50%] custom-1120:w-[50%] sm:w-[100%] sm:flex-row custom-1150:w-[50%]">
+    <div className="flex-grow-0 flex flex-col justify-between w-[95%] custom-440:w-[70%] text-sm relative px-0 custom-588:px-[1rem] py-[0.1rem] custom-588:py-[3rem] custom-590:flex-col custom-590:w-[50%] custom-1120:w-[50%] sm:w-[100%] sm:flex-row custom-1150:w-[50%] mx-auto sm:mx-0">
       
       <div>
         <img
           src={film.fields.artwork.fields.file.url}
           alt=""
-          className="w-[100%] sm:pr-[2rem] pr-0 h-auto custom-588:w-[17rem] min-h-[18rem]"
+          className="w-[100%] sm:pr-[2rem] pr-0 h-auto custom-588:w-[20rem] min-h-[18rem]"
         />
       </div>
 
-      <div className="flex flex-col justify-between h-full w-[100%] sm:w-[60%] custom-1150:w-[60%] custom-1120:w-[60%]">
+      <div className="flex flex-col justify-between w-[100%] sm:w-[60%] custom-1150:w-[60%] custom-1120:w-[60%]">
         <div className="flex flex-col justify-between gap-[0.15rem]">
 
           <div className='flex flex-col justify-between custom-588:pt-0'>
@@ -64,7 +64,9 @@ export const Film = ({ film }) => {
         </div>
 
         <div className="flex flex-row text-xs pt-[0.25rem] custom-588:pt-[1rem] pb-[2rem] custom-588:pb-[0.5rem]">
-          {film.fields.productionCompany}  {film.fields.country}
+          {film.fields.productionCompany}
+          {film.fields.productionCompany && film.fields.country ? " – " : ""}
+          {film.fields.country}
         </div>
       </div>
     </div>
