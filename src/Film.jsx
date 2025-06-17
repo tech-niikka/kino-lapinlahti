@@ -22,18 +22,19 @@ export const Film = ({ film }) => {
             <h4 className="text-base  sm:py-[0.25rem] font-light font-serif">
               {film.fields.originalTitle}
             </h4>
-
+{/*}
             <div className="uppercase text-sm font-light">
               {film.fields.genre}
             </div>
+            */}
           </div>
-
+{/*}
           <div className="flex gap-[0.5rem] pt-[1rem] text-[1rem] lowercase font-semibold">
             <div>{film.fields.day}</div>
             <div>{film.fields.date}</div>
             <div>{film.fields.time}</div>
           </div>
-
+*/}
           <div className="text-sm pt-[0.1rem] pb-[0rem] font-light">
             {film.fields.length}
           </div>
@@ -59,7 +60,7 @@ export const Film = ({ film }) => {
           </div>
             
           <p className="text-base min-h-[6.5rem] py-[0.2rem] font-light overflow-hidden">
-            {film.fields.description}
+            {film.fields.filmDescription}
           </p>
         </div>
 

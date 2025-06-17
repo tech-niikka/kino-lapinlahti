@@ -164,7 +164,7 @@ function App() {
 
         <div>
           <img
-            className={"h-[20rem] w-full object-cover object-[center_top] xsm:h-[37rem]"}
+            className={`h-[20rem] w-full object-cover object-[center_top] xsm:h-[37rem]`}
             src={poster2}
             alt="image"
           />

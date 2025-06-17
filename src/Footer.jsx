@@ -52,14 +52,14 @@ function Footer({ data }) {
               alt="logo" /> 
           </button>
 
-          {/* Sponsor logos */}
+          {/* Sponsor logos -- these could (and should) be modified to loop through the logos automatically, this solution is a bit too manual */}
 
           <div className="flex justify-center items-center"> 
           <a href={data?.logos[1].fields.url} target="_blank" rel="noopener noreferrer">
             <img 
               className="w-32 h-auto cursor-pointer pb-[1rem]" 
               src={data?.logos[1].fields.logo.fields.file.url || mlogo} 
-              alt="Mieli ry:n logo, joka toimii linkkinä" />
+              alt={data?.logos[1].fields.altText} />
             </a>
           </div>
 
@@ -68,7 +68,7 @@ function Footer({ data }) {
             <img
               className="w-32 h-auto cursor-pointer pb-[1rem] "
               src={data?.logos[2].fields.logo.fields.file.url || llogo} 
-              alt="Lapinlahden Lähteen logo, joka toimii linkkinä"
+              alt={data?.logos[2].fields.altText}
             />
             </a>
           </div>
@@ -78,7 +78,7 @@ function Footer({ data }) {
             <img
               className="w-32 h-auto cursor-pointer pb-[1rem] "
               src={data?.logos[3].fields.logo.fields.file.url || plogo} 
-              alt="Pro Lapinlahti -logo, joka toimii linkkinä"
+              alt={data?.logos[3].fields.altText}
             />
             </a>
           </div>
@@ -88,161 +88,163 @@ function Footer({ data }) {
             <img
               className="w-32 h-auto cursor-pointer pb-[1rem] "
               src={data?.logos[4].fields.logo.fields.file.url || hlogo} 
-              alt="Helsingin kaupungin logo, joka toimii linkkinä"
+              alt={data?.logos[4].fields.altText}
             />
             </a>
           </div>
 
           <div className="flex justify-center items-center">
-          <a href="https://cinemamondo.fi/" target="_blank" rel="noopener noreferrer">
-            <img
-              className="w-48 h-auto cursor-pointer pb-[1rem]"
-              src={cinemalogo}
-              alt="Cinema Mondon logo, joka toimii linkkinä"
-            />
-            </a>
-          </div>
-
-          <div className="flex justify-center items-center">
-          <a href="https://www.dokumenttikilta.fi/" target="_blank" rel="noopener noreferrer">
-            <img
-              className="w-32 h-auto cursor-pointer pb-[1rem]"
-              src={dokulogo}
-              alt="Dokumenttikillan logo, joka toimii linkkinä"
-            />
-            </a>
-          </div>
-
-          <div className="flex justify-center items-center">
-            <a href="https://setry.fi/" target="_blank" rel="noopener noreferrer">
+          <a href={data?.logos[5].fields.url} target="_blank" rel="noopener noreferrer">
             <img
               className="w-32 h-auto cursor-pointer pb-[1rem] "
-              src={setlogo}
-              alt="SET ry:n logo, joka toimii linkkinä"
+              src={data?.logos[5].fields.logo.fields.file.url || hlogo} 
+              alt={data?.logos[5].fields.altText}
             />
             </a>
           </div>
 
           <div className="flex justify-center items-center">
-            <a href="https://www.cined.eu/" target="_blank" rel="noopener noreferrer">
+          <a href={data?.logos[6].fields.url} target="_blank" rel="noopener noreferrer">
             <img
-              className="w-32 h-auto cursor-pointer pb-[1rem]"
-              src={cinedlogo}
-              alt="CineD:in logo, joka toimii linkkinä"
+              className="w-32 h-auto cursor-pointer pb-[1rem] "
+              src={data?.logos[6].fields.logo.fields.file.url || hlogo} 
+              alt={data?.logos[6].fields.altText}
             />
             </a>
           </div>
 
           <div className="flex justify-center items-center">
-            <a href="https://cinemaorion.fi/en/elavan-kuvan-keskus-elke-ry/" target="_blank" rel="noopener noreferrer">
+          <a href={data?.logos[7].fields.url} target="_blank" rel="noopener noreferrer">
             <img
-              className="w-32 h-auto cursor-pointer pb-[2rem]"
-              src={elkelogo}
-              alt="Cinema Orionin logo, joka toimii linkkinä"
+              className="w-32 h-auto cursor-pointer pb-[1rem] "
+              src={data?.logos[7].fields.logo.fields.file.url || hlogo} 
+              alt={data?.logos[7].fields.altText}
             />
             </a>
           </div>
 
           <div className="flex justify-center items-center">
-            <a href="https://www.ihmefilmi.fi/" target="_blank" rel="noopener noreferrer">
+          <a href={data?.logos[8].fields.url} target="_blank" rel="noopener noreferrer">
             <img
-              className="w-32 h-auto cursor-pointer pb-[2rem]"
-              src={ihmelogo}
-              alt="Ihmefilmin logo, joka toimii linkkinä"
+              className="w-32 h-auto cursor-pointer pb-[1rem] "
+              src={data?.logos[8].fields.logo.fields.file.url || hlogo} 
+              alt={data?.logos[8].fields.altText}
+            />
+            </a>
+          </div>
+          {/*
+          <div className="flex justify-center items-center">
+          <a href={data?.logos[9].fields.url} target="_blank" rel="noopener noreferrer">
+            <img
+              className="w-32 h-auto cursor-pointer pb-[1rem] "
+              src={data?.logos[9].fields.logo.fields.file.url || hlogo} 
+              alt={data?.logos[9].fields.altText}
             />
             </a>
           </div>
 
           <div className="flex justify-center items-center">
-            <a href="https://lapinlahdenlahde.fi/kuntalaisaloite/" target="_blank" rel="noopener noreferrer" title="Allekirjoita kuntalaisaloite Lapinlahden pelastamiseksi">
+          <a href={data?.logos[10].fields.url} target="_blank" rel="noopener noreferrer">
             <img
-              className="w-60 h-auto cursor-pointer pb-[2rem]"
-              src={laplogo}
-              alt="Kuntalaisaloite Lapinlahden Lähteen pelastamiseksi -logo, joka toimii linkkinä"
+              className="w-32 h-auto cursor-pointer pb-[1rem] "
+              src={data?.logos[10].fields.logo.fields.file.url || hlogo} 
+              alt={data?.logos[10].fields.altText}
             />
             </a>
           </div>
 
           <div className="flex justify-center items-center">
-            <a href="https://cinemanse.fi/" title=" linkki cinemansen sivuille" target="_blank" rel="noopener noreferrer">
+          <a href={data?.logos[11].fields.url} target="_blank" rel="noopener noreferrer">
             <img
-              className="w-32 h-auto cursor-pointer pb-[2rem]"
-              src={clogo}
-              alt="Cinemansen logo, joka toimii linkkinä"
+              className="w-32 h-auto cursor-pointer pb-[1rem] "
+              src={data?.logos[11].fields.logo.fields.file.url || hlogo} 
+              alt={data?.logos[11].fields.altText}
             />
             </a>
           </div>
 
           <div className="flex justify-center items-center">
-            <a href="https://www.osallisuusmedia.fi" target="_blank" rel="noopener noreferrer" >
+          <a href={data?.logos[12].fields.url} target="_blank" rel="noopener noreferrer">
             <img
-              className="w-32 h-auto cursor-pointer pb-[2rem]"
-              src={hyvälogo}
-              alt="Hyvinvointivaalijat ry:n logo, joka toimii linkkinä"
+              className="w-32 h-auto cursor-pointer pb-[1rem] "
+              src={data?.logos[12].fields.logo.fields.file.url || hlogo} 
+              alt={data?.logos[12].fields.altText}
             />
             </a>
           </div>
 
           <div className="flex justify-center items-center">
-            <a href="https://www.originbyocean.com/" target="_blank" rel="noopener noreferrer" >
+          <a href={data?.logos[13].fields.url} target="_blank" rel="noopener noreferrer">
             <img
-              className="w-32 h-auto cursor-pointer pb-[2rem]"
-              src={oceanlogo}
-              alt="Origin by Ocean -logo, joka toimii linkkinä"
+              className="w-32 h-auto cursor-pointer pb-[1rem] "
+              src={data?.logos[13].fields.logo.fields.file.url || hlogo} 
+              alt={data?.logos[13].fields.altText}
             />
             </a>
           </div>
 
           <div className="flex justify-center items-center">
-            <a href="https://jalotofu.fi/" target="_blank" rel="noopener noreferrer" >
+          <a href={data?.logos[14].fields.url} target="_blank" rel="noopener noreferrer">
             <img
-              className="w-32 h-auto cursor-pointer pb-[2rem]"
-              src={jalologo}
-              alt="Jalotofun logo, joka toimii linkkinä"
+              className="w-32 h-auto cursor-pointer pb-[1rem] "
+              src={data?.logos[14].fields.logo.fields.file.url || hlogo} 
+              alt={data?.logos[14].fields.altText}
             />
             </a>
           </div>
 
           <div className="flex justify-center items-center">
-            <a href="https://www.estrella.fi/" target="_blank" rel="noopener noreferrer" >
+          <a href={data?.logos[15].fields.url} target="_blank" rel="noopener noreferrer">
             <img
-              className="w-32 h-auto cursor-pointer pb-[2rem]"
-              src={elogo}
-              alt="Estrellan logo, joka toimii linkkinä"
+              className="w-32 h-auto cursor-pointer pb-[1rem] "
+              src={data?.logos[15].fields.logo.fields.file.url || hlogo} 
+              alt={data?.logos[15].fields.altText}
+            />
+            </a>
+          </div>
+
+          <div className="flex justify-center items-center">
+          <a href={data?.logos[16].fields.url} target="_blank" rel="noopener noreferrer">
+            <img
+              className="w-32 h-auto cursor-pointer pb-[1rem] "
+              src={data?.logos[16].fields.logo.fields.file.url || hlogo} 
+              alt={data?.logos[16].fields.altText}
             />
             </a>
           </div>
         
           <div className="flex justify-center items-center">
-            <a href="https://www.buenosaires.fi/" target="_blank" rel="noopener noreferrer" >
+          <a href={data?.logos[17].fields.url} target="_blank" rel="noopener noreferrer">
             <img
-              className="w-32 h-auto cursor-pointer pb-[2rem]"
-              src={bulogo}
-              alt="Buenos Aires -kahvilan/baarin logo, joka toimii linkkinä"
+              className="w-32 h-auto cursor-pointer pb-[1rem] "
+              src={data?.logos[17].fields.logo.fields.file.url || hlogo} 
+              alt={data?.logos[17].fields.altText}
             />
             </a>
           </div>
 
           <div className="flex justify-center items-center">
-            <a href="https://dashcoffees.com/" target="_blank" rel="noopener noreferrer" >
+          <a href={data?.logos[18].fields.url} target="_blank" rel="noopener noreferrer">
             <img
-              className="w-32 h-auto cursor-pointer pb-[2rem]"
-              src={dlogo}
-              alt="Dash Coffeen logo, joka toimii linkkinä"
+              className="w-32 h-auto cursor-pointer pb-[1rem] "
+              src={data?.logos[18].fields.logo.fields.file.url || hlogo} 
+              alt={data?.logos[18].fields.altText}
             />
             </a>
           </div>
           
           <div className="flex justify-center items-center">
-            <a href="https://pidasaaristosiistina.fi/" target="_blank" rel="noopener noreferrer" >
+          <a href={data?.logos[19].fields.url} target="_blank" rel="noopener noreferrer">
             <img
-              className="w-32 h-auto cursor-pointer pb-[2rem]"
-              src={slogo}
-              alt="Pidetään saaristo siistinä ry:n logo, joka toimii linkkinä"
+              className="w-32 h-auto cursor-pointer pb-[1rem] "
+              src={data?.logos[19].fields.logo.fields.file.url || hlogo} 
+              alt={data?.logos[19].fields.altText}
             />
             </a>
           </div>
+          */}
         </div>
+
 
         {/* Contact info, privacy notice, etc. */}
 
