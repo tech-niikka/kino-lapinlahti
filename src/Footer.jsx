@@ -32,7 +32,7 @@ function topFunction() {
 
 function Footer({ data }) {
   return (
-    <div className="w-full bg-purple py-8 flex flex-row ">
+    <div className="w-full bg-peony py-8 flex flex-row ">
       <div className="w-[88%] sm:w-[85%] mx-auto">
         <div className="grid custom-883:grid-cols-5 grid-cols-2 custom-588:grid-cols-3 custom-883:items-center">
 
@@ -50,8 +50,6 @@ function Footer({ data }) {
               className="w-30 h-12 pb-[0.5rem]"
               src={data?.logos[0].fields.logo.fields.file.url || logo} 
               alt="logo" /> 
-            {/* Festival logo now changes along with language versions
-                Might not be worth it to manage sponsor logos through Contentful */}
           </button>
 
           {/* Sponsor logos */}
@@ -64,6 +62,7 @@ function Footer({ data }) {
               alt="Mieli ry:n logo, joka toimii linkkinä" />
             </a>
           </div>
+
           <div className="flex justify-center items-center">
           <a href={data?.logos[2].fields.url} target="_blank" rel="noopener noreferrer">
             <img

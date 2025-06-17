@@ -4,7 +4,7 @@ function Area({ data }) {
   return (
     <div className="mb-20 flex flex-row justify-center items-start w-full leading-7">
       <div className="max-w-[88%] sm:max-w-[85%] flex flex-col justify-between items-start md:flex-row md:items-start">
-        <div className="flex flex-col mr-[1.5rem] custom-1020:mr-[8rem] w-[100%] md:w-[50%]">
+        <div className="flex flex-col mr-[1.5rem] custom-1020:mr-[8rem] w-[100%] md:w-[50%] text-white">
           <div className="">
             <h1 className="font-serif font-semibold text-4xl mb-4">
               {data?.secondaryTitle}
@@ -59,6 +59,7 @@ function Area({ data }) {
                   <h3 className="pt-2">{data?.subheading6}</h3>
                 </a>
               </div>
+              {/* ! Program in simple English commented out until we have a 2025 version ! 
               <div>
                 <a
                   href="https://docs.google.com/document/d/1HPmF-iGggS4Mc2DQ-sHwWL8seaGIxKXDG_o1tgJf1_o/" 
@@ -69,6 +70,7 @@ function Area({ data }) {
                   <h3 className="pt-2">{data?.subheading7}</h3>
                 </a>
               </div>
+              */}
               <div>
                 <a
                   href="https://bit.ly/myos-safer-space"

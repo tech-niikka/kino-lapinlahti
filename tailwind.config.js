@@ -17,6 +17,7 @@ module.exports = {
       grape: "#4C3D6F",
       cloud: "#FCF1FF",
       blueberry: "#5A639C",
+      white: "#FFFFFF",
     },
     screens: {
       xsm: "640px",
