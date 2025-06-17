@@ -9,7 +9,7 @@ import Area from "./Area.jsx";
 import Footer from "./Footer.jsx";
 import Event from "./Event.jsx";
 
-import poster2 from "./assets/poster_2024.jpg"
+import poster2 from "./assets/banner-2025.jpg"
 
 import "./App.css";
 
@@ -100,8 +100,8 @@ function App() {
         logoUrl={content.navBar[0]?.fields.logo?.fields.file.url}
       />
 
-      <div className="bg-main pt-[0.25rem] text-heading text-center">
-        <div className=" flex flex-col items-center justify-between">
+      <div className="bg-grape pt-[0.25rem] text-white text-center">
+        <div className="flex flex-col items-center justify-between">
           <h2 className="pt-16 font-serif font-semibold text-xl leading-7 xsm:text-2xl md:text-3xl">
             {content.landingPage[0]?.fields.date} {/* festival date above site main heading */}
           </h2>
@@ -164,19 +164,22 @@ function App() {
 
         <div>
           <img
-            className={`h-[20rem] w-full object-cover object-[center_top] xsm:h-[37rem]`}
+            className={"h-[20rem] w-full object-cover object-[center_top] xsm:h-[37rem]"}
             src={poster2}
             alt="image"
           />
         </div>
 
         <div className="flex flex-col items-center justify-between pt-0">
-          <h3 className="pt-[1rem] custom-710:pt-[2rem] custom-883:pt-[5rem]  custom-440:pb-[2rem] xsm:pb-[0rem] uppercase font-serif font-semibold text-text text-2xl xsm:text-3xl leading-7 w-[200px] custom-440:w-full">
+          <h3 className="pt-[1rem] custom-710:pt-[2rem] custom-883:pt-[5rem] custom-440:pb-[2rem] xsm:pb-[0rem] uppercase font-serif font-semibold text-white text-2xl xsm:text-3xl leading-7 w-[200px] custom-440:w-full">
             {content.landingPage[0]?.fields.secondaryTitle}
           </h3>
         </div>
       </div>
 
+{/* Button for booking tickets will go here eventually */}
+
+{/*
       <div
         ref={aikataulu}
         className="pt-[6rem] custom-710:pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
@@ -201,19 +204,19 @@ function App() {
           />
         ))}
       </div>
-
+*/}
       <div
         ref={ohjelmisto}
         className="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
       >
         <div className="flex flex-row items-center justify-center ">
-          <div className=" bg-text w-[100%] h-0.5"></div>
+          <div className="bg-white w-[100%] h-0.5"></div>
           <div className="px-[2rem]">
-            <h2 className="font-semibold text-xl">
+            <h2 className="font-semibold text-xl text-white">
               {content.catalogSection[0]?.fields.title}
             </h2>
           </div>
-          <div className="bg-text w-[100%] h-0.5 "></div>
+          <div className="bg-white w-[100%] h-0.5 "></div>
         </div>
       </div>
 
@@ -224,13 +227,13 @@ function App() {
         className="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
       >
         <div className="flex flex-row items-center justify-center ">
-          <div className=" bg-text w-[100%] h-0.5"></div>
+          <div className=" bg-white w-[100%] h-0.5"></div>
           <div className="px-[2rem]">
-            <h2 className="font-semibold text-xl">
+            <h2 className="font-semibold text-xl text-white">
               {content.eventSection[0]?.fields.title}
             </h2>
           </div>
-          <div className="bg-text w-[100%] h-0.5 "></div>
+          <div className="bg-white w-[100%] h-0.5 "></div>
         </div>
       </div>
 
@@ -241,13 +244,13 @@ function App() {
         className="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
       >
         <div className="flex flex-row items-center justify-center ">
-          <div className=" bg-text w-[100%] h-0.5"></div>
+          <div className=" bg-white w-[100%] h-0.5"></div>
           <div className="px-[2rem]">
-            <h2 className="font-semibold text-xl">
+            <h2 className="font-semibold text-white text-xl">
               {content.areaSection[0]?.fields.title}
             </h2>
           </div>
-          <div className="bg-text w-[100%] h-0.5 "></div>
+          <div className="bg-white w-[100%] h-0.5 "></div>
         </div>
       </div>
 

@@ -32,7 +32,7 @@ function topFunction() {
 
 function Footer({ data }) {
   return (
-    <div className="w-full bg-purple py-8 flex flex-row ">
+    <div className="w-full bg-peony py-8 flex flex-row ">
       <div className="w-[88%] sm:w-[85%] mx-auto">
         <div className="grid custom-883:grid-cols-5 grid-cols-2 custom-588:grid-cols-3 custom-883:items-center">
 

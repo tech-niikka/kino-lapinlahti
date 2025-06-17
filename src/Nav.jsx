@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../src/assets/logo/logo-black-en.png";
+import logo from "../src/assets/logo/logo-white-en.png";
 import {
   AiOutlineMenu,
   AiOutlineClose,
@@ -29,7 +29,7 @@ const Nav = React.forwardRef(
     };
 
     return (
-      <div className="bg-navorange flex items-center justify-between py-[1.5rem] px-[1rem] custom-710:px-[4rem]">
+      <div className="bg-blueberry flex items-center justify-between py-[1.5rem] px-[1rem] custom-710:px-[4rem]">
         <div>
           <img
             className="max-h-[52px] w-auto"
@@ -43,35 +43,35 @@ const Nav = React.forwardRef(
             <ul className="flex flex-row flex-wrap md:gap-[1rem]">
               <li
                 onClick={() => handleScroll(ref[0])}
-                className="px-2 py-1 text-heading text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-navorange text-sm custom-1020:text-base hover:cursor-pointer"
+                className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer"
               >
                 {scheduleTitle}
               </li>
               <li
                 onClick={() => handleScroll(ref[1])}
-                className="px-2 py-1 text-heading text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-navorange text-sm custom-1020:text-base hover:cursor-pointer"
+                className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer"
               >
                 {catalogTitle}
               </li>
               <li
                 onClick={() => handleScroll(ref[2])}
-                className="px-2 py-1 text-heading text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-navorange text-sm custom-1020:text-base hover:cursor-pointer"
+                className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer"
               >
                 {eventTitle}
               </li>
               <li
                 onClick={() => handleScroll(ref[3])}
-                className="px-2 py-1 text-heading text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-navorange text-sm custom-1020:text-base hover:cursor-pointer"
+                className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer"
               >
                 {areaTitle}
               </li>
             </ul>
 
-            <div className="pl-[1rem] py-1 ">
+            <div className="pl-[1rem] py-1">
               <ul className="flex flex-row" onClick={changeLanguage}>
                 <li>
                   <button
-                    className={`text-heading text-sm custom-983:text-base uppercase px-1  ${
+                    className={`text-white text-sm custom-983:text-base uppercase px-1  ${
                       language === "fi" ? "underline" : ""
                     }`}
                   >
@@ -80,7 +80,7 @@ const Nav = React.forwardRef(
                 </li>
                 <li>
                   <button
-                    className={`text-heading text-sm custom-983:text-base uppercase px-1  ${
+                    className={`text-white text-sm custom-983:text-base uppercase px-1  ${
                       language === "en-US" ? "underline" : ""
                     }`}
                   >
@@ -98,7 +98,7 @@ const Nav = React.forwardRef(
         <div
           className={
             menuOpen
-              ? "fixed z-50 left-0 top-0 w-[100%] custom-955:hidden h-full bg-navorange shadow-lg p-10 ease-in duration-500"
+              ? "fixed z-50 left-0 top-0 w-[100%] custom-955:hidden h-full bg-blueberry shadow-lg p-10 ease-in duration-500"
               : "fixed left-[-100%] w-[100%] h-full top-0 p-10 ease-in duration-500"
           }
         >
@@ -120,7 +120,7 @@ const Nav = React.forwardRef(
                     onClick={() => {
                       handleScroll(ref[0]), setMenuOpen(false);
                     }}
-                    className="px-2 py-1 text-heading text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-navorange font-sans-700 cursor-pointer"
+                    className="px-2 py-1 text-heading text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-peony font-sans-700 cursor-pointer"
                   >
                     {scheduleTitle}
                   </li>
@@ -128,7 +128,7 @@ const Nav = React.forwardRef(
                     onClick={() => {
                       handleScroll(ref[1]), setMenuOpen(false);
                     }}
-                    className="px-2 py-1 text-heading text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-navorange font-sans-700 cursor-pointer"
+                    className="px-2 py-1 text-heading text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-peony font-sans-700 cursor-pointer"
                   >
                     {catalogTitle}
                   </li>
@@ -136,7 +136,7 @@ const Nav = React.forwardRef(
                     onClick={() => {
                       handleScroll(ref[2]), setMenuOpen(false);
                     }}
-                    className="px-2 py-1 text-heading text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-navorange font-sans-700 cursor-pointer"
+                    className="px-2 py-1 text-heading text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-peony font-sans-700 cursor-pointer"
                   >
                     {eventTitle}
                   </li>
@@ -144,7 +144,7 @@ const Nav = React.forwardRef(
                     onClick={() => {
                       handleScroll(ref[3]), setMenuOpen(false);
                     }}
-                    className="px-2 py-1 text-heading text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-navorange font-sans-700 cursor-pointer"
+                    className="px-2 py-1 text-heading text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-peony font-sans-700 cursor-pointer"
                   >
                     {areaTitle}
                   </li>
