@@ -50,8 +50,6 @@ function Footer({ data }) {
               className="w-30 h-12 pb-[0.5rem]"
               src={data?.logos[0].fields.logo.fields.file.url || logo} 
               alt="logo" /> 
-            {/* Festival logo now changes along with language versions
-                Might not be worth it to manage sponsor logos through Contentful */}
           </button>
 
           {/* Sponsor logos */}
@@ -64,6 +62,7 @@ function Footer({ data }) {
               alt="Mieli ry:n logo, joka toimii linkkinä" />
             </a>
           </div>
+
           <div className="flex justify-center items-center">
           <a href={data?.logos[2].fields.url} target="_blank" rel="noopener noreferrer">
             <img
