@@ -59,16 +59,18 @@ export const Film = ({ film }) => {
             </div>
           </div>
             
-          <p className="text-base min-h-[6.5rem] py-[0.2rem] font-light overflow-hidden">
+          <p className="text-base min-h-[6.5rem] py-[0.2rem] font-light overflow-hidden whitespace-pre-line">
             {film.fields.filmDescription}
           </p>
+
+          <div className="flex flex-row text-xs pt-[0.25rem] custom-588:pt-[1rem] pb-[2rem] custom-588:pb-[0.5rem]">
+            {film.fields.productionCompany}
+            {film.fields.productionCompany && film.fields.country ? " – " : ""}
+            {film.fields.country}
+          </div>
         </div>
 
-        <div className="flex flex-row text-xs pt-[0.25rem] custom-588:pt-[1rem] pb-[2rem] custom-588:pb-[0.5rem]">
-          {film.fields.productionCompany}
-          {film.fields.productionCompany && film.fields.country ? " – " : ""}
-          {film.fields.country}
-        </div>
+
       </div>
     </div>
   );
