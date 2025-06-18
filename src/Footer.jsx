@@ -32,111 +32,95 @@ function topFunction() {
 
 function Footer({ data }) {
   return (
-    <div className="w-full bg-peony py-8 flex flex-row ">
+    <div className="w-full bg-peony py-8 flex flex-row">
       <div className="w-[88%] sm:w-[85%] mx-auto">
-        <div className="grid custom-883:grid-cols-5 grid-cols-2 custom-588:grid-cols-3 custom-883:items-center">
-
-          {/* Festival logo button */}
-
-          <button
-            onClick={() => {
-              topFunction(); // Call topFunction to scroll to top
-            }}
-            id="Lapinlahti logo button"
-            title="Scroll to top / Palaa sivun alkuun"
-            className="flex justify-center items-center mx-auto"
-          >
-            <img 
-              className="w-30 h-12 pb-[0.5rem]"
-              src={data?.logos[0].fields.logo.fields.file.url || logo} 
-              alt="logo" /> 
-          </button>
+        <div className="grid custom-883:grid-cols-5 grid-cols-2 custom-588:grid-cols-3 custom-883:items-center pb-8 gap-y-10">
 
           {/* Sponsor logos -- these could (and should) be modified to loop through the logos automatically, this solution is a bit too manual */}
 
           <div className="flex justify-center items-center"> 
-          <a href={data?.logos[1].fields.url} target="_blank" rel="noopener noreferrer">
+          <a href={data?.logos[1].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
             <img 
-              className="w-32 h-auto cursor-pointer pb-[1rem]" 
-              src={data?.logos[1].fields.logo.fields.file.url || mlogo} 
+              className="object-contain max-w-full max-h-full" 
+              src={data?.logos[1].fields.logo.fields.file.url} 
               alt={data?.logos[1].fields.altText} />
             </a>
           </div>
 
           <div className="flex justify-center items-center">
-          <a href={data?.logos[2].fields.url} target="_blank" rel="noopener noreferrer">
+          <a href={data?.logos[2].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
             <img
-              className="w-32 h-auto cursor-pointer pb-[1rem] "
-              src={data?.logos[2].fields.logo.fields.file.url || llogo} 
+              className="object-contain max-w-full max-h-full"
+              src={data?.logos[2].fields.logo.fields.file.url} 
               alt={data?.logos[2].fields.altText}
             />
             </a>
           </div>
 
           <div className="flex justify-center items-center">
-            <a href={data?.logos[3].fields.url} target="_blank" rel="noopener noreferrer">
+            <a href={data?.logos[3].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
             <img
-              className="w-32 h-auto cursor-pointer pb-[1rem] "
-              src={data?.logos[3].fields.logo.fields.file.url || plogo} 
+              className="object-contain max-w-full max-h-full"
+              src={data?.logos[3].fields.logo.fields.file.url || hlogo} 
               alt={data?.logos[3].fields.altText}
             />
             </a>
           </div>
 
           <div className="flex justify-center items-center">
-          <a href={data?.logos[4].fields.url} target="_blank" rel="noopener noreferrer">
+          <a href={data?.logos[4].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
             <img
-              className="w-32 h-auto cursor-pointer pb-[1rem] "
-              src={data?.logos[4].fields.logo.fields.file.url || hlogo} 
+              className="object-contain max-w-full max-h-full"
+              src={data?.logos[4].fields.logo.fields.file.url} 
               alt={data?.logos[4].fields.altText}
             />
             </a>
           </div>
 
           <div className="flex justify-center items-center">
-          <a href={data?.logos[5].fields.url} target="_blank" rel="noopener noreferrer">
+          <a href={data?.logos[5].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
             <img
-              className="w-32 h-auto cursor-pointer pb-[1rem] "
-              src={data?.logos[5].fields.logo.fields.file.url || hlogo} 
+              className="object-contain max-w-full max-h-full"
+              src={data?.logos[5].fields.logo.fields.file.url} 
               alt={data?.logos[5].fields.altText}
             />
             </a>
           </div>
 
           <div className="flex justify-center items-center">
-          <a href={data?.logos[6].fields.url} target="_blank" rel="noopener noreferrer">
+          <a href={data?.logos[6].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
             <img
-              className="w-32 h-auto cursor-pointer pb-[1rem] "
-              src={data?.logos[6].fields.logo.fields.file.url || hlogo} 
+              className="object-contain max-w-full max-h-full"
+              src={data?.logos[6].fields.logo.fields.file.url} 
               alt={data?.logos[6].fields.altText}
             />
             </a>
           </div>
 
           <div className="flex justify-center items-center">
-          <a href={data?.logos[7].fields.url} target="_blank" rel="noopener noreferrer">
+          <a href={data?.logos[7].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
             <img
-              className="w-32 h-auto cursor-pointer pb-[1rem] "
-              src={data?.logos[7].fields.logo.fields.file.url || hlogo} 
+              className="object-contain max-w-full max-h-full"
+              src={data?.logos[7].fields.logo.fields.file.url} 
               alt={data?.logos[7].fields.altText}
             />
             </a>
           </div>
 
           <div className="flex justify-center items-center">
-          <a href={data?.logos[8].fields.url} target="_blank" rel="noopener noreferrer">
+          <a href={data?.logos[8].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
             <img
-              className="w-32 h-auto cursor-pointer pb-[1rem] "
-              src={data?.logos[8].fields.logo.fields.file.url || hlogo} 
+              className="object-contain max-w-full max-h-full"
+              src={data?.logos[8].fields.logo.fields.file.url} 
               alt={data?.logos[8].fields.altText}
             />
             </a>
           </div>
-          {/*
+
           <div className="flex justify-center items-center">
-          <a href={data?.logos[9].fields.url} target="_blank" rel="noopener noreferrer">
+          <a href={data?.logos[9].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
             <img
-              className="w-32 h-auto cursor-pointer pb-[1rem] "
+              className="object-contain max-w-full max-h-full"
               src={data?.logos[9].fields.logo.fields.file.url || hlogo} 
               alt={data?.logos[9].fields.altText}
             />
@@ -144,19 +128,19 @@ function Footer({ data }) {
           </div>
 
           <div className="flex justify-center items-center">
-          <a href={data?.logos[10].fields.url} target="_blank" rel="noopener noreferrer">
+          <a href={data?.logos[10].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
             <img
-              className="w-32 h-auto cursor-pointer pb-[1rem] "
+              className="object-contain max-w-full max-h-full"
               src={data?.logos[10].fields.logo.fields.file.url || hlogo} 
               alt={data?.logos[10].fields.altText}
             />
             </a>
           </div>
-
+          {/*
           <div className="flex justify-center items-center">
-          <a href={data?.logos[11].fields.url} target="_blank" rel="noopener noreferrer">
+          <a href={data?.logos[11].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
             <img
-              className="w-32 h-auto cursor-pointer pb-[1rem] "
+              className="object-contain max-w-full max-h-full"
               src={data?.logos[11].fields.logo.fields.file.url || hlogo} 
               alt={data?.logos[11].fields.altText}
             />
@@ -164,9 +148,9 @@ function Footer({ data }) {
           </div>
 
           <div className="flex justify-center items-center">
-          <a href={data?.logos[12].fields.url} target="_blank" rel="noopener noreferrer">
+          <a href={data?.logos[12].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
             <img
-              className="w-32 h-auto cursor-pointer pb-[1rem] "
+              className="object-contain max-w-full max-h-full"
               src={data?.logos[12].fields.logo.fields.file.url || hlogo} 
               alt={data?.logos[12].fields.altText}
             />
@@ -174,9 +158,9 @@ function Footer({ data }) {
           </div>
 
           <div className="flex justify-center items-center">
-          <a href={data?.logos[13].fields.url} target="_blank" rel="noopener noreferrer">
+          <a href={data?.logos[13].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
             <img
-              className="w-32 h-auto cursor-pointer pb-[1rem] "
+              className="object-contain max-w-full max-h-full"
               src={data?.logos[13].fields.logo.fields.file.url || hlogo} 
               alt={data?.logos[13].fields.altText}
             />
@@ -184,9 +168,9 @@ function Footer({ data }) {
           </div>
 
           <div className="flex justify-center items-center">
-          <a href={data?.logos[14].fields.url} target="_blank" rel="noopener noreferrer">
+          <a href={data?.logos[14].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
             <img
-              className="w-32 h-auto cursor-pointer pb-[1rem] "
+              className="object-contain max-w-full max-h-full"
               src={data?.logos[14].fields.logo.fields.file.url || hlogo} 
               alt={data?.logos[14].fields.altText}
             />
@@ -194,9 +178,9 @@ function Footer({ data }) {
           </div>
 
           <div className="flex justify-center items-center">
-          <a href={data?.logos[15].fields.url} target="_blank" rel="noopener noreferrer">
+          <a href={data?.logos[15].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
             <img
-              className="w-32 h-auto cursor-pointer pb-[1rem] "
+              className="object-contain max-w-full max-h-full"
               src={data?.logos[15].fields.logo.fields.file.url || hlogo} 
               alt={data?.logos[15].fields.altText}
             />
@@ -204,9 +188,9 @@ function Footer({ data }) {
           </div>
 
           <div className="flex justify-center items-center">
-          <a href={data?.logos[16].fields.url} target="_blank" rel="noopener noreferrer">
+          <a href={data?.logos[16].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
             <img
-              className="w-32 h-auto cursor-pointer pb-[1rem] "
+              className="object-contain max-w-full max-h-full"
               src={data?.logos[16].fields.logo.fields.file.url || hlogo} 
               alt={data?.logos[16].fields.altText}
             />
@@ -214,9 +198,9 @@ function Footer({ data }) {
           </div>
         
           <div className="flex justify-center items-center">
-          <a href={data?.logos[17].fields.url} target="_blank" rel="noopener noreferrer">
+          <a href={data?.logos[17].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
             <img
-              className="w-32 h-auto cursor-pointer pb-[1rem] "
+              className="object-contain max-w-full max-h-full"
               src={data?.logos[17].fields.logo.fields.file.url || hlogo} 
               alt={data?.logos[17].fields.altText}
             />
@@ -224,9 +208,9 @@ function Footer({ data }) {
           </div>
 
           <div className="flex justify-center items-center">
-          <a href={data?.logos[18].fields.url} target="_blank" rel="noopener noreferrer">
+          <a href={data?.logos[18].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
             <img
-              className="w-32 h-auto cursor-pointer pb-[1rem] "
+              className="object-contain max-w-full max-h-full"
               src={data?.logos[18].fields.logo.fields.file.url || hlogo} 
               alt={data?.logos[18].fields.altText}
             />
@@ -234,9 +218,9 @@ function Footer({ data }) {
           </div>
           
           <div className="flex justify-center items-center">
-          <a href={data?.logos[19].fields.url} target="_blank" rel="noopener noreferrer">
+          <a href={data?.logos[19].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
             <img
-              className="w-32 h-auto cursor-pointer pb-[1rem] "
+              className="object-contain max-w-full max-h-full"
               src={data?.logos[19].fields.logo.fields.file.url || hlogo} 
               alt={data?.logos[19].fields.altText}
             />
@@ -245,10 +229,27 @@ function Footer({ data }) {
           */}
         </div>
 
-
         {/* Contact info, privacy notice, etc. */}
 
         <div className="py-4">
+
+          {/* Festival logo button */}
+
+          <div className="py-2">
+            <button
+              onClick={() => {
+                topFunction(); // Call topFunction to scroll to top
+              }}
+              id="Lapinlahti logo button"
+              title="Scroll to top / Palaa sivun alkuun"
+              className="flex justify-start items-center"
+            >
+              <img 
+                className="w-30 h-12 pb-[0.5rem]"
+                src={data?.logos[0].fields.logo.fields.file.url || logo} 
+                alt="logo" /> 
+            </button>
+          </div>
 
           <div>
             <a 

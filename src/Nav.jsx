@@ -41,12 +41,14 @@ const Nav = React.forwardRef(
         <div className="hidden custom-955:flex">
           <div className="flex first-letter:items-center">
             <ul className="flex flex-row flex-wrap md:gap-[1rem]">
+              {/* hidden until schedule section is good to go
               <li
                 onClick={() => handleScroll(ref[0])}
                 className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer"
               >
                 {scheduleTitle}
               </li>
+              */}
               <li
                 onClick={() => handleScroll(ref[1])}
                 className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer"
@@ -71,7 +73,7 @@ const Nav = React.forwardRef(
               <ul className="flex flex-row" onClick={changeLanguage}>
                 <li>
                   <button
-                    className={`text-white text-sm custom-983:text-base uppercase px-1  ${
+                    className={`text-white text-sm custom-983:text-base uppercase px-1 hover:text-peony  ${
                       language === "fi" ? "underline" : ""
                     }`}
                   >
@@ -80,7 +82,7 @@ const Nav = React.forwardRef(
                 </li>
                 <li>
                   <button
-                    className={`text-white text-sm custom-983:text-base uppercase px-1  ${
+                    className={`text-white text-sm custom-983:text-base uppercase px-1 hover:text-peony  ${
                       language === "en-US" ? "underline" : ""
                     }`}
                   >
@@ -154,7 +156,7 @@ const Nav = React.forwardRef(
                 <ul className="flex flex-row" onClick={changeLanguage}>
                   <li>
                     <button
-                      className={`text-heading uppercase p-1 ${
+                      className={`text-heading uppercase p-1 hover:text-peony ${
                         language === "fi" ? "underline" : ""
                       }`}
                     >
@@ -163,7 +165,7 @@ const Nav = React.forwardRef(
                   </li>
                   <li>
                     <button
-                      className={`text-heading uppercase p-1 ${
+                      className={`text-heading uppercase p-1 hover:text-peony ${
                         language === "en-US" ? "underline" : ""
                       }`}
                     >

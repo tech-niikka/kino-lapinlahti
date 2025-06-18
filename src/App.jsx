@@ -9,7 +9,7 @@ import Area from "./Area.jsx";
 import Footer from "./Footer.jsx";
 import Event from "./Event.jsx";
 
-import poster2 from "./assets/banner-2025.jpg"
+import poster2 from "./assets/banner-2025-1920.jpg"
 
 import "./App.css";
 
@@ -185,13 +185,13 @@ function App() {
         className="pt-[6rem] custom-710:pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
       >
         <div className="flex flex-row items-center justify-center ">
-          <div className=" bg-text w-[100%] h-0.5"></div>
+          <div className=" bg-white w-[100%] h-0.5"></div>
           <div className="px-[2rem]">
-            <h2 className="font-semibold text-xl">
+            <h2 className="font-semibold text-xl text-white">
               {content.scheduleSection[0]?.fields.title}
             </h2>
           </div>
-          <div className="bg-text w-[100%] h-0.5 "></div>
+          <div className="bg-white w-[100%] h-0.5 "></div>
         </div>
       </div>
       <div className="flex flex-col justify-center items-center ">

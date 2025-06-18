@@ -26,7 +26,7 @@ function Schedule({ data, index, buttons }) {
       <div className="flex items-center justify-center">
         <div
           className={`px-8 xsm:px-16 pt-16 pb-16 w-[88%] sm:w-[85%] flex-col flex items-between justify-center ${
-            index % 2 === 0 ? "bg-yellow" : "bg-blue"
+            index % 2 === 0 ? "bg-cloud" : "bg-peony"
           }  overflow-hidden md:flex-row relative`}
         >
           <div className="flex flex-col">
@@ -84,7 +84,7 @@ function Schedule({ data, index, buttons }) {
         <div className="flex items-center justify-center">
           <div
             className={`px-6 pb-12 w-[88%] sm:w-[85%] ${
-              index % 2 === 0 ? "bg-yellow" : "bg-blue"
+              index % 2 === 0 ? "bg-cloud" : "bg-peony"
             }
             flex items-center justify-center`}
           >
