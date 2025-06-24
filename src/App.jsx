@@ -179,7 +179,7 @@ function App() {
 
 {/* Button for booking tickets will go here eventually */}
 
-{/*
+{/* Schedule section commented out for now until release
       <div
         ref={aikataulu}
         className="pt-[6rem] custom-710:pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
@@ -220,7 +220,12 @@ function App() {
         </div>
       </div>
 
-      <Catalog films={content.catalogSection[0]?.fields.films} />
+      <Catalog 
+        films={content.catalogSection[0]?.fields.films} 
+        music={content.catalogSection[0]?.fields.music}
+        filmTitle={content.catalogSection[0]?.fields.filmSectionTitle}
+        musicTitle={content.catalogSection[0]?.fields.musicSectionTitle}
+      />
 
       <div
         ref={info}
