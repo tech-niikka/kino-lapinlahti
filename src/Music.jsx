@@ -19,7 +19,7 @@ export const Music = ({ music }) => {
               {music.fields.artist}
             </h3>
 
-          {music.fields.handle && (
+          {music.fields.handle && ( // @handle only shown if field is populated in Contentful
             <h4 className="text-base sm:py-[0.25rem] font-light font-serif hover:underline">
               <a 
                 href={`https://www.instagram.com/${music.fields.handle}`}     
@@ -44,14 +44,9 @@ export const Music = ({ music }) => {
           <p className="text-base min-h-[6.5rem] py-[0.2rem] font-light overflow-hidden whitespace-pre-line">
             {music.fields.description}
           </p>
-{/*
-          <div className="flex flex-row text-xs pt-[0.25rem] custom-588:pt-[1rem] pb-[2rem] custom-588:pb-[0.5rem]">
-            {film.fields.productionCompany}
-            {film.fields.productionCompany && film.fields.country ? " – " : ""}
-            {film.fields.country}
-*/}
-          </div>
+
         </div>
       </div>
+    </div>
   );
 };
