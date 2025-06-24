@@ -111,26 +111,28 @@ const Nav = React.forwardRef(
                 src={logoUrl ? `https:${logoUrl}` : logo}
                 alt="logo"
               />
-              <div onClick={handleNav} className="cursor-pointer mb-10 ml-4">
+              <div onClick={handleNav} className="cursor-pointer mb-10 ml-4 text-white pr-4">
                 <AiOutlineClose size={20} />
               </div>
             </div>
             <div className="flex flex-col justify-between items-center py-8">
               <div>
                 <ul className="flex flex-col flex-wrap gap-[1.5rem]">
+                  {/* hidden until schedule section is good to go
                   <li
                     onClick={() => {
                       handleScroll(ref[0]), setMenuOpen(false);
                     }}
-                    className="px-2 py-1 text-heading text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-peony font-sans-700 cursor-pointer"
+                    className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-peony font-sans-700 cursor-pointer"
                   >
                     {scheduleTitle}
                   </li>
+                  */}
                   <li
                     onClick={() => {
                       handleScroll(ref[1]), setMenuOpen(false);
                     }}
-                    className="px-2 py-1 text-heading text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-peony font-sans-700 cursor-pointer"
+                    className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-peony font-sans-700 cursor-pointer"
                   >
                     {catalogTitle}
                   </li>
@@ -138,7 +140,7 @@ const Nav = React.forwardRef(
                     onClick={() => {
                       handleScroll(ref[2]), setMenuOpen(false);
                     }}
-                    className="px-2 py-1 text-heading text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-peony font-sans-700 cursor-pointer"
+                    className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-peony font-sans-700 cursor-pointer"
                   >
                     {eventTitle}
                   </li>
@@ -146,7 +148,7 @@ const Nav = React.forwardRef(
                     onClick={() => {
                       handleScroll(ref[3]), setMenuOpen(false);
                     }}
-                    className="px-2 py-1 text-heading text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-peony font-sans-700 cursor-pointer"
+                    className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-peony font-sans-700 cursor-pointer"
                   >
                     {areaTitle}
                   </li>
@@ -156,7 +158,7 @@ const Nav = React.forwardRef(
                 <ul className="flex flex-row" onClick={changeLanguage}>
                   <li>
                     <button
-                      className={`text-heading uppercase p-1 hover:text-peony ${
+                      className={`text-white uppercase p-1 hover:text-peony ${
                         language === "fi" ? "underline" : ""
                       }`}
                     >
@@ -165,7 +167,7 @@ const Nav = React.forwardRef(
                   </li>
                   <li>
                     <button
-                      className={`text-heading uppercase p-1 hover:text-peony ${
+                      className={`text-white uppercase p-1 hover:text-peony ${
                         language === "en-US" ? "underline" : ""
                       }`}
                     >
@@ -181,15 +183,15 @@ const Nav = React.forwardRef(
             <a 
               href="https://www.instagram.com/lapinlahtifilmfestival/">
               <AiOutlineInstagram
-              size={30}
-              className="cursor-pointer text-heading"
+              size={32}
+              className="cursor-pointer text-white"
               />
             </a>
             <a 
               href="https://www.facebook.com/events/lapinlahdenpolku-8-00180-helsinki-finland/lapinlahden-elokuvajuhlat-lapinlahti-film-festival/1397138120949216/">
               <AiOutlineFacebook
-                size={30}
-                className="cursor-pointer text-heading"
+                size={32}
+                className="cursor-pointer text-white"
               />
             </a>
           </div>
