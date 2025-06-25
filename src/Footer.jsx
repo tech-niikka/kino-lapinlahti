@@ -1,25 +1,5 @@
 import React from "react";
-import logo from "../src/assets/logo/logo-black-en.png";
-import llogo from "../src/assets/logo/llLogo.png";
-import plogo from "../src/assets/logo/prologo.png";
-import mlogo from "../src/assets/logo/mielilogo.png";
-import hlogo from "../src/assets/logo/Helsinki_logo.png";
-import cinemalogo from "../src/assets/logo/cinemamondo_logo.png";
-import dokulogo from "../src/assets/logo/dokumenttikilta_logo.png";
-import setlogo from "../src/assets/logo/set_logo.png";
-import cinedlogo from "../src/assets/logo/cined_logo.png";
-import elkelogo from "../src/assets/logo/elke_logo.png";
-import ihmelogo from "../src/assets/logo/ihme_logo.png"
-import laplogo from "../src/assets/logo/lap_kan.png"
-import clogo from "../src/assets/logo/cinemanselogo.jpg"
-import hyvälogo from "../src/assets/logo/hyvä.png"
-import oceanlogo from "../src/assets/logo/ocean.png"
-import elogo from "../src/assets/logo/estrella-logo.png"
-import jalologo from "../src/assets/logo/Jalotofu.png"
-import bulogo from "../src/assets/logo/images.png"
-import dlogo from "../src/assets/logo/dash.png"
-import slogo from "../src/assets/logo/siili.png"
-
+import logo from "../src/assets/logo/logo-white-en.png";
 
 import {
   AiOutlineInstagram,
@@ -37,217 +17,25 @@ function Footer({ data }) {
         <div className="w-[88%] sm:w-[85%] mx-auto">
           <div className="grid custom-883:grid-cols-5 grid-cols-2 custom-588:grid-cols-3 custom-883:items-center pb-8 gap-y-10">
 
-            {/* Sponsor logos -- these could be modified to loop through the logos automatically, this solution is a bit manual */}
+            {/* Sponsor logos */}
 
-            <div className="flex justify-center items-center"> 
-            <a href={data?.logos[1].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
-              <img 
-                className="object-contain max-w-full max-h-full" 
-                src={data?.logos[1].fields.logo.fields.file.url} 
-                alt={data?.logos[1].fields.altText}
-                loading="lazy"
-                 />
-              </a>
-            </div>
-
-            <div className="flex justify-center items-center">
-            <a href={data?.logos[2].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
-              <img
-                className="object-contain max-w-full max-h-full"
-                src={data?.logos[2].fields.logo.fields.file.url} 
-                alt={data?.logos[2].fields.altText}
-                loading="lazy"
-              />
-              </a>
-            </div>
-
-            <div className="flex justify-center items-center">
-              <a href={data?.logos[3].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
-              <img
-                className="object-contain max-w-full max-h-full"
-                src={data?.logos[3].fields.logo.fields.file.url || hlogo} 
-                alt={data?.logos[3].fields.altText}
-                loading="lazy"
-              />
-              </a>
-            </div>
-
-            <div className="flex justify-center items-center">
-            <a href={data?.logos[4].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
-              <img
-                className="object-contain max-w-full max-h-full"
-                src={data?.logos[4].fields.logo.fields.file.url} 
-                alt={data?.logos[4].fields.altText}
-                loading="lazy"
-              />
-              </a>
-            </div>
-
-            <div className="flex justify-center items-center">
-            <a href={data?.logos[5].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
-              <img
-                className="object-contain max-w-full max-h-full"
-                src={data?.logos[5].fields.logo.fields.file.url} 
-                alt={data?.logos[5].fields.altText}
-                loading="lazy"
-              />
-              </a>
-            </div>
-
-            <div className="flex justify-center items-center">
-            <a href={data?.logos[6].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
-              <img
-                className="object-contain max-w-full max-h-full"
-                src={data?.logos[6].fields.logo.fields.file.url} 
-                alt={data?.logos[6].fields.altText}
-                loading="lazy"
-              />
-              </a>
-            </div>
-
-            <div className="flex justify-center items-center">
-            <a href={data?.logos[7].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
-              <img
-                className="object-contain max-w-full max-h-full"
-                src={data?.logos[7].fields.logo.fields.file.url} 
-                alt={data?.logos[7].fields.altText}
-                loading="lazy"
-              />
-              </a>
-            </div>
-
-            <div className="flex justify-center items-center">
-            <a href={data?.logos[8].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
-              <img
-                className="object-contain max-w-full max-h-full"
-                src={data?.logos[8].fields.logo.fields.file.url} 
-                alt={data?.logos[8].fields.altText}
-                loading="lazy"
-              />
-              </a>
-            </div>
-
-            <div className="flex justify-center items-center">
-            <a href={data?.logos[9].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
-              <img
-                className="object-contain max-w-full max-h-full"
-                src={data?.logos[9].fields.logo.fields.file.url || hlogo} 
-                alt={data?.logos[9].fields.altText}
-                loading="lazy"
-              />
-              </a>
-            </div>
-
-            <div className="flex justify-center items-center">
-            <a href={data?.logos[10].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
-              <img
-                className="object-contain max-w-full max-h-full"
-                src={data?.logos[10].fields.logo.fields.file.url || hlogo} 
-                alt={data?.logos[10].fields.altText}
-                loading="lazy"
-              />
-              </a>
-            </div>
-            {/*
-            <div className="flex justify-center items-center">
-            <a href={data?.logos[11].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
-              <img
-                className="object-contain max-w-full max-h-full"
-                src={data?.logos[11].fields.logo.fields.file.url || hlogo} 
-                alt={data?.logos[11].fields.altText}
-                loading="lazy"
-              />
-              </a>
-            </div>
-
-            <div className="flex justify-center items-center">
-            <a href={data?.logos[12].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
-              <img
-                className="object-contain max-w-full max-h-full"
-                src={data?.logos[12].fields.logo.fields.file.url || hlogo} 
-                alt={data?.logos[12].fields.altText}
-                loading="lazy"
-              />
-              </a>
-            </div>
-
-            <div className="flex justify-center items-center">
-            <a href={data?.logos[13].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
-              <img
-                className="object-contain max-w-full max-h-full"
-                src={data?.logos[13].fields.logo.fields.file.url || hlogo} 
-                alt={data?.logos[13].fields.altText}
-                loading="lazy"
-              />
-              </a>
-            </div>
-
-            <div className="flex justify-center items-center">
-            <a href={data?.logos[14].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
-              <img
-                className="object-contain max-w-full max-h-full"
-                src={data?.logos[14].fields.logo.fields.file.url || hlogo} 
-                alt={data?.logos[14].fields.altText}
-                loading="lazy"
-              />
-              </a>
-            </div>
-
-            <div className="flex justify-center items-center">
-            <a href={data?.logos[15].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
-              <img
-                className="object-contain max-w-full max-h-full"
-                src={data?.logos[15].fields.logo.fields.file.url || hlogo} 
-                alt={data?.logos[15].fields.altText}
-                loading="lazy"
-              />
-              </a>
-            </div>
-
-            <div className="flex justify-center items-center">
-            <a href={data?.logos[16].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
-              <img
-                className="object-contain max-w-full max-h-full"
-                src={data?.logos[16].fields.logo.fields.file.url || hlogo} 
-                alt={data?.logos[16].fields.altText}
-                loading="lazy"
-              />
-              </a>
-            </div>
-          
-            <div className="flex justify-center items-center">
-            <a href={data?.logos[17].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
-              <img
-                className="object-contain max-w-full max-h-full"
-                src={data?.logos[17].fields.logo.fields.file.url || hlogo} 
-                alt={data?.logos[17].fields.altText}
-                loading="lazy"
-              />
-              </a>
-            </div>
-
-            <div className="flex justify-center items-center">
-            <a href={data?.logos[18].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
-              <img
-                className="object-contain max-w-full max-h-full"
-                src={data?.logos[18].fields.logo.fields.file.url || hlogo} 
-                alt={data?.logos[18].fields.altText}
-                loading="lazy"
-              />
-              </a>
-            </div>
-            
-            <div className="flex justify-center items-center">
-            <a href={data?.logos[19].fields.url} target="_blank" rel="noopener noreferrer" className="w-36 h-24 flex justify-center items-center overflow-hidden">
-              <img
-                className="object-contain max-w-full max-h-full"
-                src={data?.logos[19].fields.logo.fields.file.url || hlogo} 
-                alt={data?.logos[19].fields.altText}
-                loading="lazy"
-              />
-              </a>
-            </div>
-            */}
+            {data?.logos?.slice(1).map((logoItem, index) => ( // slice(1) to avoid using LFF logo here which is used elsewhere in the footer
+              <div key={logoItem?.fields?.logo?.sys?.id || index} className="flex justify-center items-center">
+                <a
+                  href={logoItem?.fields?.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-36 h-24 flex justify-center items-center overflow-hidden"
+                >
+                  <img
+                    className="object-contain max-w-full max-h-full"
+                    src={logoItem?.fields?.logo?.fields?.file?.url}
+                    alt={logoItem?.fields?.altText || "Sponsor logo"}
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -260,7 +48,7 @@ function Footer({ data }) {
 
             <div className="flex flex-col md:flex-row items-stretch gap-4 md:gap-16 w-full md:flex-grow">
 
-              {/* Left column */}
+            {/* Left column */}
 
               <div className="flex flex-col">
 
