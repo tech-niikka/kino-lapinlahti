@@ -1,7 +1,7 @@
 export const Film = ({ film }) => {
   return (
 
-    <div className="flex-grow-0 flex flex-col justify-between w-[95%] custom-440:w-[70%] text-sm relative px-0 custom-588:px-[1rem] py-[0.1rem] custom-588:py-[3rem] custom-590:flex-col custom-590:w-[50%] custom-1120:w-[50%] sm:w-[100%] sm:flex-row custom-1150:w-[50%] mx-auto sm:mx-0">
+    <div className="flex-grow-0 flex flex-col items-start w-[95%] custom-440:w-[70%] text-sm relative px-0 custom-588:px-[1rem] py-[0.1rem] custom-588:py-[2rem] custom-590:flex-col custom-590:w-[50%] custom-1120:w-[50%] sm:w-[100%] sm:flex-row custom-1150:w-[50%] mx-auto sm:mx-0 gap-y-2 sm:gap-y-0">
       
       <div>
         <img
@@ -64,7 +64,7 @@ export const Film = ({ film }) => {
             {film.fields.filmDescription}
           </p>
 
-          <div className="flex flex-row text-xs pt-[0.25rem] custom-588:pt-[1rem] pb-[2rem] custom-588:pb-[0.5rem]">
+          <div className="flex flex-row text-xs pt-[0.25rem] custom-588:pt-[1rem] pb-[0.5rem] custom-588:pb-[0.5rem]">
             {film.fields.productionCompany}
             {film.fields.productionCompany && film.fields.country ? " – " : ""}
             {film.fields.country}

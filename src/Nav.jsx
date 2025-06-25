@@ -181,14 +181,18 @@ const Nav = React.forwardRef(
 
           <div className="flex flex-row justify-center items-center">
             <a 
-              href="https://www.instagram.com/lapinlahtifilmfestival/">
+              href="https://www.instagram.com/lapinlahtifilmfestival/"
+              target="_blank"
+              rel="noopener noreferrer">
               <AiOutlineInstagram
               size={32}
               className="cursor-pointer text-white"
               />
             </a>
             <a 
-              href="https://www.facebook.com/events/lapinlahdenpolku-8-00180-helsinki-finland/lapinlahden-elokuvajuhlat-lapinlahti-film-festival/1397138120949216/">
+              href="https://www.facebook.com/kinolapinlahti" // update with Facebook event link once it's out
+              target="_blank"
+              rel="noopener noreferrer">
               <AiOutlineFacebook
                 size={32}
                 className="cursor-pointer text-white"
