@@ -13,8 +13,8 @@ import poster2 from "./assets/banner-2025-1920.jpg"
 
 import "./App.css";
 
-{/* Contentful: Content model content types
-    When adding new content type, add it here and also below*/}
+// Contentful: Content model content types
+// When adding new content type, add it here and also below
 
 function App() {
   const [content, setContent] = useState({
@@ -29,6 +29,10 @@ function App() {
   });
 
   const [language, setLanguage] = useState("fi");
+
+  useEffect(() => {
+    document.documentElement.lang = language === "fi" ? "fi" : "en";
+  }, [language]);
 
   const aikataulu = useRef(null);
   const ohjelmisto = useRef(null);
@@ -111,6 +115,7 @@ function App() {
           </h1>
         </div>
 
+        {/*}
         <style>
           {`
           .grid-container {
@@ -160,7 +165,7 @@ function App() {
                 </div> 
               ))}
             </div>
-            */}
+        */}
 
         <div>
           <img
@@ -177,15 +182,15 @@ function App() {
         </div>
       </div>
 
-{/* Button for booking tickets will go here eventually */}
+      {/* Button for booking tickets will go here eventually */}
 
-{/* Schedule section commented out for now until release
+      {/* Schedule section commented out for now until release
       <div
         ref={aikataulu}
         className="pt-[6rem] custom-710:pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
       >
         <div className="flex flex-row items-center justify-center ">
-          <div className=" bg-white w-[100%] h-0.5"></div>
+          <div className="bg-white w-[100%] h-0.5"></div>
           <div className="px-[2rem]">
             <h2 className="font-semibold text-xl text-white">
               {content.scheduleSection[0]?.fields.title}
@@ -194,7 +199,7 @@ function App() {
           <div className="bg-white w-[100%] h-0.5 "></div>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center ">
+      <div className="flex flex-col justify-center items-center">
         {content.scheduleSection[0]?.fields.schedule.map((item, index) => (
           <Schedule
             key={index}

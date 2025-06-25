@@ -28,6 +28,7 @@ function Event({ data }) {
             className="aspect-square w-[100%] max-w-[20rem] h-auto object-cover pb-[0rem] lg:pb-[1rem] lg:max-w-[40rem]"
             src={data?.images[0].fields.file.url}
             alt="image"
+            loading="lazy"
           />
 
           {/*

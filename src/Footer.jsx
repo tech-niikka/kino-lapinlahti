@@ -44,7 +44,9 @@ function Footer({ data }) {
               <img 
                 className="object-contain max-w-full max-h-full" 
                 src={data?.logos[1].fields.logo.fields.file.url} 
-                alt={data?.logos[1].fields.altText} />
+                alt={data?.logos[1].fields.altText}
+                loading="lazy"
+                 />
               </a>
             </div>
 
@@ -54,6 +56,7 @@ function Footer({ data }) {
                 className="object-contain max-w-full max-h-full"
                 src={data?.logos[2].fields.logo.fields.file.url} 
                 alt={data?.logos[2].fields.altText}
+                loading="lazy"
               />
               </a>
             </div>
@@ -64,6 +67,7 @@ function Footer({ data }) {
                 className="object-contain max-w-full max-h-full"
                 src={data?.logos[3].fields.logo.fields.file.url || hlogo} 
                 alt={data?.logos[3].fields.altText}
+                loading="lazy"
               />
               </a>
             </div>
@@ -74,6 +78,7 @@ function Footer({ data }) {
                 className="object-contain max-w-full max-h-full"
                 src={data?.logos[4].fields.logo.fields.file.url} 
                 alt={data?.logos[4].fields.altText}
+                loading="lazy"
               />
               </a>
             </div>
@@ -84,6 +89,7 @@ function Footer({ data }) {
                 className="object-contain max-w-full max-h-full"
                 src={data?.logos[5].fields.logo.fields.file.url} 
                 alt={data?.logos[5].fields.altText}
+                loading="lazy"
               />
               </a>
             </div>
@@ -94,6 +100,7 @@ function Footer({ data }) {
                 className="object-contain max-w-full max-h-full"
                 src={data?.logos[6].fields.logo.fields.file.url} 
                 alt={data?.logos[6].fields.altText}
+                loading="lazy"
               />
               </a>
             </div>
@@ -104,6 +111,7 @@ function Footer({ data }) {
                 className="object-contain max-w-full max-h-full"
                 src={data?.logos[7].fields.logo.fields.file.url} 
                 alt={data?.logos[7].fields.altText}
+                loading="lazy"
               />
               </a>
             </div>
@@ -114,6 +122,7 @@ function Footer({ data }) {
                 className="object-contain max-w-full max-h-full"
                 src={data?.logos[8].fields.logo.fields.file.url} 
                 alt={data?.logos[8].fields.altText}
+                loading="lazy"
               />
               </a>
             </div>
@@ -124,6 +133,7 @@ function Footer({ data }) {
                 className="object-contain max-w-full max-h-full"
                 src={data?.logos[9].fields.logo.fields.file.url || hlogo} 
                 alt={data?.logos[9].fields.altText}
+                loading="lazy"
               />
               </a>
             </div>
@@ -134,6 +144,7 @@ function Footer({ data }) {
                 className="object-contain max-w-full max-h-full"
                 src={data?.logos[10].fields.logo.fields.file.url || hlogo} 
                 alt={data?.logos[10].fields.altText}
+                loading="lazy"
               />
               </a>
             </div>
@@ -144,6 +155,7 @@ function Footer({ data }) {
                 className="object-contain max-w-full max-h-full"
                 src={data?.logos[11].fields.logo.fields.file.url || hlogo} 
                 alt={data?.logos[11].fields.altText}
+                loading="lazy"
               />
               </a>
             </div>
@@ -154,6 +166,7 @@ function Footer({ data }) {
                 className="object-contain max-w-full max-h-full"
                 src={data?.logos[12].fields.logo.fields.file.url || hlogo} 
                 alt={data?.logos[12].fields.altText}
+                loading="lazy"
               />
               </a>
             </div>
@@ -164,6 +177,7 @@ function Footer({ data }) {
                 className="object-contain max-w-full max-h-full"
                 src={data?.logos[13].fields.logo.fields.file.url || hlogo} 
                 alt={data?.logos[13].fields.altText}
+                loading="lazy"
               />
               </a>
             </div>
@@ -174,6 +188,7 @@ function Footer({ data }) {
                 className="object-contain max-w-full max-h-full"
                 src={data?.logos[14].fields.logo.fields.file.url || hlogo} 
                 alt={data?.logos[14].fields.altText}
+                loading="lazy"
               />
               </a>
             </div>
@@ -184,6 +199,7 @@ function Footer({ data }) {
                 className="object-contain max-w-full max-h-full"
                 src={data?.logos[15].fields.logo.fields.file.url || hlogo} 
                 alt={data?.logos[15].fields.altText}
+                loading="lazy"
               />
               </a>
             </div>
@@ -194,6 +210,7 @@ function Footer({ data }) {
                 className="object-contain max-w-full max-h-full"
                 src={data?.logos[16].fields.logo.fields.file.url || hlogo} 
                 alt={data?.logos[16].fields.altText}
+                loading="lazy"
               />
               </a>
             </div>
@@ -204,6 +221,7 @@ function Footer({ data }) {
                 className="object-contain max-w-full max-h-full"
                 src={data?.logos[17].fields.logo.fields.file.url || hlogo} 
                 alt={data?.logos[17].fields.altText}
+                loading="lazy"
               />
               </a>
             </div>
@@ -214,6 +232,7 @@ function Footer({ data }) {
                 className="object-contain max-w-full max-h-full"
                 src={data?.logos[18].fields.logo.fields.file.url || hlogo} 
                 alt={data?.logos[18].fields.altText}
+                loading="lazy"
               />
               </a>
             </div>
@@ -224,6 +243,7 @@ function Footer({ data }) {
                 className="object-contain max-w-full max-h-full"
                 src={data?.logos[19].fields.logo.fields.file.url || hlogo} 
                 alt={data?.logos[19].fields.altText}
+                loading="lazy"
               />
               </a>
             </div>
@@ -301,7 +321,7 @@ function Footer({ data }) {
                   />
                 </a>
                 <a 
-                  href="https://www.facebook.com/events/lapinlahdenpolku-8-00180-helsinki-finland/lapinlahden-elokuvajuhlat-lapinlahti-film-festival/1397138120949216/">
+                  href="https://www.facebook.com/kinolapinlahti"> {/* update with facebook event link once it's out */}
                   <AiOutlineFacebook
                     size={32}
                     className="cursor-pointer text-heading" 

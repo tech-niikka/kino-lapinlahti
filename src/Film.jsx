@@ -8,6 +8,7 @@ export const Film = ({ film }) => {
           src={film.fields.artwork.fields.file.url}
           alt=""
           className="w-[100%] sm:pr-[2rem] pr-0 h-auto custom-588:w-[20rem] min-h-[18rem]"
+          loading="lazy"
         />
       </div>
 

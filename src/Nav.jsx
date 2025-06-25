@@ -95,7 +95,7 @@ const Nav = React.forwardRef(
         </div>
 
         <div onClick={handleNav} className="custom-955:hidden cursor-pointer ">
-          <AiOutlineMenu size={20} className="flex justify-end" />
+          <AiOutlineMenu size={20} className="flex justify-end text-white" />
         </div>
         <div
           className={
@@ -111,7 +111,7 @@ const Nav = React.forwardRef(
                 src={logoUrl ? `https:${logoUrl}` : logo}
                 alt="logo"
               />
-              <div onClick={handleNav} className="cursor-pointer mb-10 ml-4 text-white pr-4">
+              <div onClick={handleNav} className="cursor-pointer mb-10 ml-4 text-white">
                 <AiOutlineClose size={20} />
               </div>
             </div>
