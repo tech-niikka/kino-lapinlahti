@@ -285,7 +285,9 @@ function Footer({ data }) {
                 <div className="flex flex-col mt-auto space-y-1">
                   <div>
                     <a 
-                      href="https://maps.app.goo.gl/umz7SezqGTJSiJS88" 
+                      href="https://maps.app.goo.gl/umz7SezqGTJSiJS88"
+                      target="_blank"
+                      rel="noopener noreferrer" 
                       className="inline-block hover:underline">
                       {data?.address}
                     </a>
@@ -314,14 +316,18 @@ function Footer({ data }) {
             <div className="flex flex-col justify-end w-full md:w-1/2 min-w-0">
               <div className="flex flex-row py-2 items-center">
                 <a 
-                  href="https://www.instagram.com/lapinlahtifilmfestival/">
+                  href="https://www.instagram.com/lapinlahtifilmfestival/"
+                  target="_blank"
+                  rel="noopener noreferrer">
                   <AiOutlineInstagram
                     size={32}
                     className="cursor-pointer text-heading"
                   />
                 </a>
                 <a 
-                  href="https://www.facebook.com/kinolapinlahti"> {/* update with facebook event link once it's out */}
+                  href="https://www.facebook.com/kinolapinlahti" // update with Facebook event link once it's out
+                  target="_blank"
+                  rel="noopener noreferrer"> 
                   <AiOutlineFacebook
                     size={32}
                     className="cursor-pointer text-heading" 
@@ -333,7 +339,8 @@ function Footer({ data }) {
                 <div>
                   <a 
                     href="https://docs.google.com/document/d/1s5Tda7QWJ9YQH6VCThGGvxd1Ol-r2TGbU8_Q8ijprJA/"
-                    target="_blank" rel="noopener noreferrer"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-block hover:underline">
                     {data?.privacyNotice}
                   </a>

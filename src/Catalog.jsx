@@ -38,7 +38,7 @@ export const Catalog = ({ films, music, filmTitle, musicTitle }) => {
       </div>
 
       {/* Catalog Content */}
-      <div className="flex flex-wrap justify-start custom-590:flex-row sm:flex-col flex-wrap w-[88%] sm:w-[85%] bg-cloud px-[1rem] py-[1rem] custom-1150:flex-row">
+      <div className="flex flex-wrap justify-start custom-590:flex-row sm:flex-col flex-wrap w-[88%] sm:w-[85%] bg-cloud px-[1rem] py-[1rem] custom-1150:flex-row space-y-4 custom-590:space-y-0">
         {renderContent()}
       </div>
     </div>
