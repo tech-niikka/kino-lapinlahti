@@ -20,7 +20,7 @@ export const Catalog = ({ films, music, filmTitle, musicTitle }) => {
   return (
     <div className="w-full flex flex-col items-center">
       {/* Catalog selector */}
-      {/*} <= Remove this line to display catalog selector and to switch between different program types (music section still WIP)
+
       <div className="flex space-x-4 mb-4">
         <button
           onClick={() => handleSelect("films")}
