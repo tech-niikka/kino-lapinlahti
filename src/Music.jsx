@@ -20,13 +20,35 @@ export const Music = ({ music }) => {
               {music.fields.artist}
             </h3>
 
-          {music.fields.handle && ( // @handle only shown if field is populated in Contentful
+          {/* one instagram handle */}
+          {music.fields.handle && !music.fields.handle2 && ( // @handle only shown if field is populated in Contentful
             <h4 className="text-base sm:py-[0.25rem] font-light font-serif hover:underline">
               <a 
                 href={`https://www.instagram.com/${music.fields.handle}`}     
                 target="_blank"
                 rel="noopener noreferrer">
                 @{music.fields.handle}
+              </a>
+            </h4>
+          )}
+
+          {/* two instagram handles */}
+          {music.fields.handle && music.fields.handle2 && ( // @handle & @handle2 only shown if fields are populated in Contentful
+            <h4 className="text-base sm:py-[0.25rem] font-light font-serif">
+              <a 
+                href={`https://www.instagram.com/${music.fields.handle}`}     
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline">
+                @{music.fields.handle}
+              </a>
+              <br></br>
+              <a 
+                href={`https://www.instagram.com/${music.fields.handle2}`}     
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline">
+                @{music.fields.handle2}
               </a>
             </h4>
           )}
