@@ -42,7 +42,7 @@ export const Music = ({ music }) => {
                 className="hover:underline">
                 @{music.fields.handle}
               </a>
-              <br></br>
+              &nbsp;
               <a 
                 href={`https://www.instagram.com/${music.fields.handle2}`}     
                 target="_blank"
