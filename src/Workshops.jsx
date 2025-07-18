@@ -53,15 +53,25 @@ export const Workshops = ({ workshop }) => {
             </h4>
           )}
 
-            <div className="uppercase text-sm font-light">
+            {/* <div className="uppercase text-sm font-light">
               {workshop.fields.location}
-            </div>
+            </div> */}
           </div>
 
           <div className="flex gap-[0.5rem] pt-[1rem] text-[1rem] lowercase font-semibold">
             <div>{workshop.fields.day}</div>
             <div>{workshop.fields.date}</div>
             <div>{workshop.fields.time}</div>
+          </div>
+
+          <div className="flex flex-row">
+            <div className="text-sm pt-[0.1rem] pr-[0.5rem] font-semibold">
+              {workshop.fields.workshopLanguageTitle} 
+            </div>
+
+            <div className="text-sm pt-[0.1rem] font-light">
+              {workshop.fields.workshopLanguage}
+            </div>
           </div>
             
           <p className="text-base min-h-[6.5rem] py-[0.2rem] font-light overflow-hidden whitespace-pre-line">

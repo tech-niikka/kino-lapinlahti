@@ -23,7 +23,8 @@ export const Film = ({ film }) => {
             <h4 className="text-base  sm:py-[0.25rem] font-light font-serif">
               {film.fields.originalTitle}
             </h4>
-{/*}
+            
+            {/*}
             <div className="uppercase text-sm font-light">
               {film.fields.genre}
             </div>
