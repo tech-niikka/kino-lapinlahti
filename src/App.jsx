@@ -60,7 +60,7 @@ function App() {
         const contentTypes = [
           { type: "landingPage", key: "landingPage" },
           { type: "scheduleSection", key: "scheduleSection", include: 6 },
-          { type: "catalogSection", key: "catalogSection" },
+          { type: "catalogSection", key: "catalogSection", include: 2 },
           { type: "eventSection", key: "eventSection" },
           { type: "areaSection", key: "areaSection" },
           { type: "button", key: "buttons" },
@@ -228,8 +228,12 @@ function App() {
       <Catalog 
         films={content.catalogSection[0]?.fields.films} 
         music={content.catalogSection[0]?.fields.music}
+        shortFilms={content.catalogSection[0]?.fields.shortFilms}
+        workshops={content.catalogSection[0]?.fields.workshops}
         filmTitle={content.catalogSection[0]?.fields.filmSectionTitle}
         musicTitle={content.catalogSection[0]?.fields.musicSectionTitle}
+        shortFilmTitle={content.catalogSection[0]?.fields.shortFilmSectionTitle}      
+        workshopTitle={content.catalogSection[0]?.fields.workshopSectionTitle}
       />
 
       <div

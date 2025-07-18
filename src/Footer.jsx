@@ -4,6 +4,7 @@ import logo from "../src/assets/logo/logo-white-en.png";
 import {
   AiOutlineInstagram,
   AiOutlineFacebook,
+  AiOutlineLinkedin,
 } from "react-icons/ai";
 
 function topFunction() {
@@ -113,10 +114,19 @@ function Footer({ data }) {
                   />
                 </a>
                 <a 
-                  href="https://www.facebook.com/kinolapinlahti" // update with Facebook event link once it's out
+                  href="https://www.facebook.com/events/2063526377510306/"
                   target="_blank"
                   rel="noopener noreferrer"> 
                   <AiOutlineFacebook
+                    size={32}
+                    className="cursor-pointer text-heading" 
+                  />
+                </a>
+                <a 
+                  href="https://www.linkedin.com/company/kino-lapinlahti-ry/"
+                  target="_blank"
+                  rel="noopener noreferrer"> 
+                  <AiOutlineLinkedin
                     size={32}
                     className="cursor-pointer text-heading" 
                   />

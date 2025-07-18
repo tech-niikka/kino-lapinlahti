@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Film } from "./Film";
 import { Music } from "./Music";
+import { Workshops } from "./Workshops";
+import { ShortFilm } from "./ShortFilm";
 
-export const Catalog = ({ films, music, filmTitle, musicTitle }) => {
+export const Catalog = ({ films, shortFilms, music, workshops, filmTitle, shortFilmTitle, musicTitle, workshopTitle }) => {
   const [selectedType, setSelectedType] = useState("films");
 
   const handleSelect = (type) => {
@@ -14,6 +16,10 @@ export const Catalog = ({ films, music, filmTitle, musicTitle }) => {
       return films?.map((film, index) => <Film key={index} film={film} />);
     } else if (selectedType === "music") {
       return music?.map((artist, index) => <Music key={index} music={artist} />);
+    } else if (selectedType === "shortFilms") {
+      return shortFilms?.map((shortFilm, index) => <ShortFilm key={index} shortFilm={shortFilm} />);
+    } else if (selectedType === "workshops") {
+      return workshops?.map((workshop, index) => <Workshops key={index} workshop={workshop} />);
     }
   };
 
@@ -35,6 +41,20 @@ export const Catalog = ({ films, music, filmTitle, musicTitle }) => {
         >
           {musicTitle}
         </button>
+        {/* ~~~ remove comment to reveal buttons :^) ~~~
+        <button
+          onClick={() => handleSelect("shortFilms")}
+          className={`px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer ${selectedType === "shortFilms" ? "bg-heading text-peony" : "text-white"}`}
+        >
+          {shortFilmTitle}
+        </button>
+        <button
+          onClick={() => handleSelect("workshops")}
+          className={`px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer ${selectedType === "workshops" ? "bg-heading text-peony" : "text-white"}`}
+        >
+          {workshopTitle}
+        </button>
+        */}
       </div>
 
       {/* Catalog Content */}

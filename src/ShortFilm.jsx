@@ -1,12 +1,12 @@
-export const Film = ({ film }) => {
+export const ShortFilm = ({ shortFilm }) => {
   return (
 
     <div className="flex-grow-0 flex flex-col items-start w-[95%] custom-440:w-[70%] text-sm relative px-0 custom-588:px-[1rem] py-[0.1rem] custom-588:py-[2rem] custom-590:flex-col custom-590:w-[50%] custom-1120:w-[50%] sm:w-[100%] sm:flex-row custom-1150:w-[50%] mx-auto sm:mx-0 gap-y-2 sm:gap-y-0">
       
       <div>
         <img
-          src={film.fields.artwork.fields.file.url}
-          alt={`${film.fields.title} poster`}
+          src={shortFilm.fields.artwork.fields.file.url}
+          alt={`${shortFilm.fields.title} poster`}
           className="w-[100%] sm:pr-[2rem] pr-0 h-auto custom-588:w-[20rem] min-h-[18rem]"
           loading="lazy"
         />
@@ -17,57 +17,57 @@ export const Film = ({ film }) => {
 
           <div className='flex flex-col justify-between custom-588:pt-0'>
             <h3 className="text-2xl pt-[0.2rem] sm:py-[0.20rem] font-semibold font-serif">
-              {film.fields.title}
+              {shortFilm.fields.title}
             </h3>
 
             <h4 className="text-base  sm:py-[0.25rem] font-light font-serif">
-              {film.fields.originalTitle}
+              {shortFilm.fields.originalTitle}
             </h4>
 {/*}
             <div className="uppercase text-sm font-light">
-              {film.fields.genre}
+              {shortFilm.fields.genre}
             </div>
             */}
           </div>
 {/*}
           <div className="flex gap-[0.5rem] pt-[1rem] text-[1rem] lowercase font-semibold">
-            <div>{film.fields.day}</div>
-            <div>{film.fields.date}</div>
-            <div>{film.fields.time}</div>
+            <div>{shortFilm.fields.day}</div>
+            <div>{shortFilm.fields.date}</div>
+            <div>{shortFilm.fields.time}</div>
           </div>
 */}
           <div className="text-sm pt-[0.1rem] pb-[0rem] font-light">
-            {film.fields.length}
+            {shortFilm.fields.length}
           </div>
 
           <div className="flex flex-row">
             <div className="text-sm pt-[0.1rem] pr-[0.5rem] font-semibold">
-              {film.fields.languageTitle}
+              {shortFilm.fields.languageTitle}
             </div>
 
             <div className="text-sm pt-[0.1rem] font-light">
-              {film.fields.filmlanguage}
+              {shortFilm.fields.filmlanguage}
             </div>
           </div>
 
           <div className="flex flex-row">
             <div className="text-sm pt-[0.1rem] pr-[0.5rem] font-semibold">
-              {film.fields.textTitle}
+              {shortFilm.fields.textTitle}
             </div>
 
             <div className="text-sm pt-[0.1rem] pb-[1rem] font-light">
-              {film.fields.textlanguage}
+              {shortFilm.fields.textlanguage}
             </div>
           </div>
             
           <p className="text-base min-h-[6.5rem] py-[0.2rem] font-light overflow-hidden whitespace-pre-line">
-            {film.fields.filmDescription}
+            {shortFilm.fields.filmDescription}
           </p>
 
           <div className="flex flex-row text-xs pt-[0.25rem] custom-588:pt-[1rem] pb-[0.5rem] custom-588:pb-[0.5rem]">
-            {film.fields.productionCompany}
-            {film.fields.productionCompany && film.fields.country ? " – " : ""}
-            {film.fields.country}
+            {shortFilm.fields.productionCompany}
+            {shortFilm.fields.productionCompany && shortFilm.fields.country ? " – " : ""}
+            {shortFilm.fields.country}
           </div>
         </div>
 
