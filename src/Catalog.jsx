@@ -3,8 +3,9 @@ import { Film } from "./Film";
 import { Music } from "./Music";
 import { Workshops } from "./Workshops";
 import { ShortFilm } from "./ShortFilm";
+import { Now } from "./Now";
 
-export const Catalog = ({ films, shortFilms, music, workshops, filmTitle, shortFilmTitle, musicTitle, workshopTitle }) => {
+export const Catalog = ({ films, shortFilms, music, workshops, now, filmTitle, shortFilmTitle, musicTitle, workshopTitle, nowTitle }) => {
   const [selectedType, setSelectedType] = useState("films");
 
   const handleSelect = (type) => {
@@ -13,13 +14,23 @@ export const Catalog = ({ films, shortFilms, music, workshops, filmTitle, shortF
 
   const renderContent = () => {
     if (selectedType === "films") {
-      return films?.map((film, index) => <Film key={index} film={film} />);
+      return films
+        ?.filter((film) => film?.fields) // filter out invalid entries
+        .map((film, index) => <Film key={index} film={film} />);
     } else if (selectedType === "music") {
-      return music?.map((artist, index) => <Music key={index} music={artist} />);
+      return music
+        ?.filter((artist) => artist?.fields)
+        .map((artist, index) => <Music key={index} music={artist} />);
     } else if (selectedType === "shortFilms") {
-      return shortFilms?.map((shortFilm, index) => <ShortFilm key={index} shortFilm={shortFilm} />);
+      return shortFilms
+        ?.filter((shortFilm) => shortFilm?.fields)
+        .map((shortFilm, index) => <ShortFilm key={index} shortFilm={shortFilm} />);
     } else if (selectedType === "workshops") {
-      return workshops?.map((workshop, index) => <Workshops key={index} workshop={workshop} />);
+      return workshops
+        ?.filter((workshop) => workshop?.fields)
+        .map((workshop, index) => <Workshops key={index} workshop={workshop} />);
+    } else if (selectedType === "now" && now?.fields) {
+      return <Now now={now} />;
     }
   };
 
@@ -54,6 +65,14 @@ export const Catalog = ({ films, shortFilms, music, workshops, filmTitle, shortF
         >
           {workshopTitle}
         </button>
+        {/*}
+        <button
+          onClick={() => handleSelect("now")}
+          className={`px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer ${selectedType === "now" ? "bg-heading text-peony" : "text-white"}`}
+        >
+          {nowTitle}
+        </button>
+        */}
        
       </div>
 

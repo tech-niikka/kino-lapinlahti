@@ -230,10 +230,12 @@ function App() {
         music={content.catalogSection[0]?.fields.music}
         shortFilms={content.catalogSection[0]?.fields.shortFilms}
         workshops={content.catalogSection[0]?.fields.workshops}
+        now={content.catalogSection[0]?.fields.now}
         filmTitle={content.catalogSection[0]?.fields.filmSectionTitle}
         musicTitle={content.catalogSection[0]?.fields.musicSectionTitle}
         shortFilmTitle={content.catalogSection[0]?.fields.shortFilmSectionTitle}      
         workshopTitle={content.catalogSection[0]?.fields.workshopSectionTitle}
+        nowTitle={content.catalogSection[0]?.fields.nowSectionTitle}
       />
 
       <div
