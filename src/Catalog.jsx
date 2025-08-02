@@ -38,7 +38,7 @@ export const Catalog = ({ films, shortFilms, music, workshops, now, filmTitle, s
     <div className="w-full flex flex-col items-center">
       {/* Catalog selector */}
 
-      <div className="flex space-x-4 mb-4">
+      <div className="flex flex-col custom-590:flex-row flex-wrap justify-center gap-2 mb-4 items-center">
         <button
           onClick={() => handleSelect("films")}
 
@@ -65,14 +65,14 @@ export const Catalog = ({ films, shortFilms, music, workshops, now, filmTitle, s
         >
           {workshopTitle}
         </button>
-        {/*}
+
         <button
           onClick={() => handleSelect("now")}
           className={`px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer ${selectedType === "now" ? "bg-heading text-peony" : "text-white"}`}
         >
           {nowTitle}
         </button>
-        */}
+
        
       </div>
 

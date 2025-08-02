@@ -1,7 +1,7 @@
 export const Now = ({ now }) => {
   return (
 
-    <div className="flex-grow-0 flex flex-col items-start w-[95%] custom-440:w-[70%] text-sm relative px-0 custom-588:px-[1rem] py-[0.1rem] custom-588:py-[2rem] custom-590:flex-col custom-590:w-[50%] custom-1120:w-[50%] sm:w-[100%] sm:flex-row custom-1150:w-[50%] mx-auto sm:mx-0 gap-y-2 sm:gap-y-0">
+    <div className="flex w-[95%] max-w-[1200px] mx-auto items-start gap-6 flex-col sm:flex-row px-4 py-4">
       
       <div className="sm:pr-[2rem] overflow-hidden">
         <img
@@ -19,43 +19,6 @@ export const Now = ({ now }) => {
             <h3 className="text-2xl pt-[0.2rem] sm:py-[0.20rem] font-semibold font-serif">
               {now.fields.workshopName}
             </h3>
-
-          {/* one instagram handle */}
-          {now.fields.handle && !now.fields.handle2 && ( // @handle only shown if field is populated in Contentful
-            <h4 className="text-base sm:py-[0.25rem] font-light font-serif hover:underline">
-              <a 
-                href={`https://www.instagram.com/${now.fields.handle}`}     
-                target="_blank"
-                rel="noopener noreferrer">
-                @{now.fields.handle}
-              </a>
-            </h4>
-          )}
-
-          {/* two instagram handles */}
-          {now.fields.handle && now.fields.handle2 && ( // @handle & @handle2 only shown if fields are populated in Contentful
-            <h4 className="text-base sm:py-[0.25rem] font-light font-serif">
-              <a 
-                href={`https://www.instagram.com/${now.fields.handle}`}     
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:underline">
-                @{now.fields.handle}
-              </a>
-              &nbsp;
-              <a 
-                href={`https://www.instagram.com/${now.fields.handle2}`}     
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:underline">
-                @{now.fields.handle2}
-              </a>
-            </h4>
-          )}
-
-            {/* <div className="uppercase text-sm font-light">
-              {now.fields.location}
-            </div> */}
           </div>
 
           <div className="flex gap-[0.5rem] pt-[1rem] text-[1rem] lowercase font-semibold">
@@ -64,19 +27,69 @@ export const Now = ({ now }) => {
             <div>{now.fields.time}</div>
           </div>
 
-          <div className="flex flex-row">
-            <div className="text-sm pt-[0.1rem] pr-[0.5rem] font-semibold">
-              {now.fields.workshopLanguageTitle} 
-            </div>
-
-            <div className="text-sm pt-[0.1rem] font-light">
-              {now.fields.workshopLanguage}
-            </div>
+          <div className="py-4">
+            <h3 className="font-bold leading-7">{now.fields.subheading1}</h3>
+              
+            <p className="text-base py-[0.2rem] font-light overflow-hidden whitespace-pre-line">
+              {now.fields.paragraph1}
+            </p>
           </div>
-            
-          <p className="text-base min-h-[6.5rem] py-[0.2rem] font-light overflow-hidden whitespace-pre-line">
-            {now.fields.description}
-          </p>
+
+          <div className="py-4">
+            <h3 className="font-bold leading-7">{now.fields.subheading2}</h3>
+
+            <p className="text-base py-[0.2rem] font-light overflow-hidden whitespace-pre-line mt-2 mb-4">
+              {now.fields.paragraph2}
+            </p>
+
+            <a
+              href="https://warrenellis.ltd/film/dogma-25-manifesto/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-base py-[0.2rem] font-semibold leading-7 hover:underline overflow-hidden whitespace-pre-line"
+            >
+              {now.fields.link1}
+            </a>
+          </div>
+
+          <div className="py-4">
+            <h3 className="font-bold leading-7">{now.fields.subheading3}</h3>
+
+            <p className="text-base py-[0.2rem] font-light overflow-hidden whitespace-pre-line">
+              {now.fields.paragraph3}
+            </p>
+
+          </div>
+
+          <div className="py-4">
+            <h3 className="font-bold leading-7">{now.fields.subheading4}</h3>
+
+            <p className="text-base py-[0.2rem] font-light overflow-hidden whitespace-pre-line mt-2 mb-4">
+              {now.fields.paragraph4}
+            </p>
+
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSftm55ZmvbpoCC_Qbl1vGm4rKjrWXxH69n7t6DCTTYyPxqryg/viewform?usp=sharing&ouid=112752221650999465221"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-base py-[0.2rem] font-semibold leading-7 hover:underline overflow-hidden whitespace-pre-line mb-4 mt-2"
+            >
+              {now.fields.link2}
+            </a>
+
+             <p className="text-base py-[0.2rem] font-light overflow-hidden whitespace-pre-line mb-4 mt-2">
+              {now.fields.paragraph5}
+            </p>
+
+          </div>
+
+          <div className="py-4">
+            <h3 className="font-bold leading-7">{now.fields.subheading5}</h3>
+
+            <p className="text-base py-[0.2rem] font-light overflow-hidden whitespace-pre-line">
+              {now.fields.paragraph6}
+            </p>
+          </div>
 
         </div>
       </div>

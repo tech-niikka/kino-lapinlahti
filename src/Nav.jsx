@@ -19,6 +19,7 @@ const Nav = React.forwardRef(
       eventTitle,
       areaTitle,
       logoUrl,
+      ticketButton,
     },
     ref
   ) => {
@@ -68,6 +69,17 @@ const Nav = React.forwardRef(
               >
                 {areaTitle}
               </li>
+              {/* -- remove to add ticket button to nav bar --
+              <li className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer">
+                <a
+                  href="https://fienta.com/fi/o/lapinlahti-film-festival"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {ticketButton}
+                </a>
+              </li>
+              */}
             </ul>
 
             <div className="pl-[1rem] py-1">
@@ -153,6 +165,17 @@ const Nav = React.forwardRef(
                   >
                     {areaTitle}
                   </li>
+                  {/* -- remove comment to reveal ticket button (mobile menu) --
+                  <li className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-peony font-sans-700 cursor-pointer">
+                    <a
+                      href="https://fienta.com/fi/o/lapinlahti-film-festival"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {ticketButton}
+                    </a>
+                  </li>
+                  */}
                 </ul>
               </div>
               <div className=" py-8 ">
