@@ -102,6 +102,7 @@ function App() {
         areaTitle={content.areaSection[0]?.fields.title}
         ref={[aikataulu, ohjelmisto, info, alue]}
         logoUrl={content.navBar[0]?.fields.logo?.fields.file.url}
+        ticketButton={content.navBar[0]?.fields.ticketButton}
       />
 
       <div className="bg-grape pt-[0.25rem] text-white text-center">
@@ -182,7 +183,18 @@ function App() {
         </div>
       </div>
 
-      {/* Button for booking tickets will go here eventually */}
+      {/* -- remove this comment to reveal button to ticket reservation system --
+      <div className="flex flex-col items-center justify-between pt-8">
+        <a
+          href="https://fienta.com/fi/o/lapinlahti-film-festival"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`whitespace-normal px-8 py-2 text-white text-center uppercase border-2 border-solid rounded-full hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer`}
+        >
+          {content.buttons[0]?.fields.ticketButton}
+        </a>
+      </div> 
+      */}
 
       {/* Schedule section commented out for now until release
       <div
@@ -212,7 +224,7 @@ function App() {
 */}
       <div
         ref={ohjelmisto}
-        className="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
+        className="pt-[4rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
       >
         <div className="flex flex-row items-center justify-center ">
           <div className="bg-white w-[100%] h-0.5"></div>
