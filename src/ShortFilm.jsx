@@ -40,6 +40,7 @@ export const ShortFilm = ({ shortFilm }) => {
             {shortFilm.fields.length}
           </div>
 
+          {/*
           <div className="flex flex-row">
             <div className="text-sm pt-[0.1rem] pr-[0.5rem] font-semibold">
               {shortFilm.fields.languageTitle}
@@ -49,6 +50,7 @@ export const ShortFilm = ({ shortFilm }) => {
               {shortFilm.fields.filmlanguage}
             </div>
           </div>
+          */}
 
           <div className="flex flex-row">
             <div className="text-sm pt-[0.1rem] pr-[0.5rem] font-semibold">

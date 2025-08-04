@@ -5,7 +5,7 @@ import { Workshops } from "./Workshops";
 import { ShortFilm } from "./ShortFilm";
 import { Now } from "./Now";
 
-export const Catalog = ({ films, shortFilms, music, workshops, now, filmTitle, shortFilmTitle, musicTitle, workshopTitle, nowTitle }) => {
+export const Catalog = ({ films, shortFilms, music, workshops, now, filmTitle, shortFilmTitle, musicTitle, workshopTitle, nowTitle, handleScroll, scrollRef }) => {
   const [selectedType, setSelectedType] = useState("films");
 
   const handleSelect = (type) => {
@@ -40,33 +40,47 @@ export const Catalog = ({ films, shortFilms, music, workshops, now, filmTitle, s
 
       <div className="flex flex-col custom-590:flex-row flex-wrap justify-center gap-2 mb-4 items-center">
         <button
-          onClick={() => handleSelect("films")}
-
+          onClick={() => { 
+            handleSelect("films"); 
+            handleScroll(scrollRef)
+          }}
           className={`px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer ${selectedType === "films" ? "bg-heading text-peony" : "text-white"}`}
         >
           {filmTitle}
         </button>
         <button
-          onClick={() => handleSelect("music")}
+          onClick={() => { 
+            handleSelect("music"); 
+            handleScroll(scrollRef)
+          }}
           className={`px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer ${selectedType === "music" ? "bg-heading text-peony" : "text-white"}`}
         >
           {musicTitle}
         </button>
         <button
-          onClick={() => handleSelect("shortFilms")}
+          onClick={() => { 
+            handleSelect("shortFilms"); 
+            handleScroll(scrollRef)
+          }}
           className={`px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer ${selectedType === "shortFilms" ? "bg-heading text-peony" : "text-white"}`}
         >
           {shortFilmTitle}
         </button>
         <button
-          onClick={() => handleSelect("workshops")}
+          onClick={() => { 
+            handleSelect("workshops"); 
+            handleScroll(scrollRef)
+          }}
           className={`px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer ${selectedType === "workshops" ? "bg-heading text-peony" : "text-white"}`}
         >
           {workshopTitle}
         </button>
 
         <button
-          onClick={() => handleSelect("now")}
+          onClick={() => { 
+            handleSelect("now"); 
+            handleScroll(scrollRef)
+          }}
           className={`px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer ${selectedType === "now" ? "bg-heading text-peony" : "text-white"}`}
         >
           {nowTitle}
