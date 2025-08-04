@@ -248,6 +248,8 @@ function App() {
         shortFilmTitle={content.catalogSection[0]?.fields.shortFilmSectionTitle}      
         workshopTitle={content.catalogSection[0]?.fields.workshopSectionTitle}
         nowTitle={content.catalogSection[0]?.fields.nowSectionTitle}
+        handleScroll={handleScroll}
+        scrollRef={ohjelmisto}
       />
 
       <div
