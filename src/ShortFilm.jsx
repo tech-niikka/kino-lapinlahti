@@ -57,8 +57,18 @@ export const ShortFilm = ({ shortFilm }) => {
               {shortFilm.fields.textTitle}
             </div>
 
-            <div className="text-sm pt-[0.1rem] pb-[1rem] font-light">
+            <div className="text-sm pt-[0.1rem] font-light">
               {shortFilm.fields.textlanguage}
+            </div>
+          </div>
+
+          <div className="flex flex-row pb-[1rem]">
+            <div className="text-sm pt-[0.1rem] pr-[0.5rem] font-semibold">
+              {shortFilm.fields.ageLimitTitle}
+            </div>
+
+            <div className="text-sm pt-[0.1rem] font-light">
+              {shortFilm.fields.ageLimit}
             </div>
           </div>
             
