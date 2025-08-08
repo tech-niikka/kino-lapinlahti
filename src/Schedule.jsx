@@ -47,13 +47,13 @@ function Schedule({ data, index, buttons }) {
 
             <div>
               <h3 className="w-[100%] lg:w-[88%] pr-[0rem] pb-[1rem] md:pb-[1rem] md:pr-[3rem]">
-                {data.fields.description?.content?.[0]?.content?.[0]?.value} {/* body text 1st paragraph */}
+                {data.fields.paragraph1} {/* body text 1st paragraph */}
               </h3>
             </div>
 
             <div>
               <h3 className="w-[100%] lg:w-[88%] pr-[0rem] pb-[1rem] md:pb-[3rem] md:pr-[3rem]">
-                {data.fields.descriptionTwo?.content[0]?.content[0]?.value} {/* body text 2nd paragraph (placeholder atm) */}
+                {data.fields.paragraph2} {/* body text 2nd paragraph (placeholder atm) */}
               </h3>
             </div>
           </div>
