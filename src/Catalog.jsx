@@ -4,8 +4,12 @@ import { Music } from "./Music";
 import { Workshops } from "./Workshops";
 import { ShortFilm } from "./ShortFilm";
 import { Now } from "./Now";
+import { Art } from "./Art";
 
-export const Catalog = ({ films, shortFilms, music, workshops, now, filmTitle, shortFilmTitle, musicTitle, workshopTitle, nowTitle, handleScroll, scrollRef }) => {
+export const Catalog = ({ 
+  films, shortFilms, music, workshops, now, art,
+  filmTitle, shortFilmTitle, musicTitle, workshopTitle, nowTitle, artTitle,
+  handleScroll, scrollRef }) => {
   const [selectedType, setSelectedType] = useState("films");
 
   const handleSelect = (type) => {
@@ -31,6 +35,10 @@ export const Catalog = ({ films, shortFilms, music, workshops, now, filmTitle, s
         .map((workshop, index) => <Workshops key={index} workshop={workshop} />);
     } else if (selectedType === "now" && now?.fields) {
       return <Now now={now} />;
+    } else if (selectedType === "art") {
+      return art
+        ?.filter((art) => art?.fields)
+        .map((art, index) => <Art key={index} art={art} />);
     }
   };
 
@@ -85,7 +93,17 @@ export const Catalog = ({ films, shortFilms, music, workshops, now, filmTitle, s
         >
           {nowTitle}
         </button>
-
+        {/*
+        <button
+          onClick={() => { 
+            handleSelect("art"); 
+            handleScroll(scrollRef)
+          }}
+          className={`px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer ${selectedType === "art" ? "bg-heading text-peony" : "text-white"}`}
+        >
+          {artTitle}
+        </button>
+        */}
        
       </div>
 
