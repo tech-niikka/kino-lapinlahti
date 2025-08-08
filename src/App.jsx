@@ -196,7 +196,6 @@ function App() {
       </div> 
       */}
 
-      {/* Schedule section commented out for now until release
       <div
         ref={aikataulu}
         className="pt-[6rem] custom-710:pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
@@ -221,7 +220,7 @@ function App() {
           />
         ))}
       </div>
-*/}
+
       <div
         ref={ohjelmisto}
         className="pt-[4rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"

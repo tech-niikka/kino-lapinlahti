@@ -43,34 +43,32 @@ const Nav = React.forwardRef(
         <div className="hidden custom-955:flex">
           <div className="flex first-letter:items-center">
             <ul className="flex flex-row flex-wrap md:gap-[1rem]">
-              {/* hidden until schedule section is good to go
-              <li
+              <button
                 onClick={() => handleScroll(ref[0])}
                 className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer"
               >
                 {scheduleTitle}
-              </li>
-              */}
-              <li
+              </button>
+              <button
                 onClick={() => handleScroll(ref[1])}
                 className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer"
               >
                 {catalogTitle}
-              </li>
-              <li
+              </button>
+              <button
                 onClick={() => handleScroll(ref[2])}
                 className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer"
               >
                 {eventTitle}
-              </li>
-              <li
+              </button>
+              <button
                 onClick={() => handleScroll(ref[3])}
                 className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer"
               >
                 {areaTitle}
-              </li>
+              </button>
               {/* -- remove to add ticket button to nav bar --
-              <li className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer">
+              <button className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer">
                 <a
                   href="https://fienta.com/fi/o/lapinlahti-film-festival"
                   target="_blank"
@@ -78,13 +76,13 @@ const Nav = React.forwardRef(
                 >
                   {ticketButton}
                 </a>
-              </li>
+              </button>
               */}
             </ul>
 
             <div className="pl-[1rem] py-1">
               <ul className="flex flex-row" onClick={changeLanguage}>
-                <li>
+                <button>
                   <button
                     className={`text-white text-sm custom-983:text-base uppercase px-1 hover:text-peony  ${
                       language === "fi" ? "underline" : ""
@@ -92,8 +90,8 @@ const Nav = React.forwardRef(
                   >
                     fi
                   </button>
-                </li>
-                <li>
+                </button>
+                <button>
                   <button
                     className={`text-white text-sm custom-983:text-base uppercase px-1 hover:text-peony  ${
                       language === "en-US" ? "underline" : ""
@@ -101,7 +99,7 @@ const Nav = React.forwardRef(
                   >
                     en
                   </button>
-                </li>
+                </button>
               </ul>
             </div>
           </div>
@@ -131,42 +129,40 @@ const Nav = React.forwardRef(
             <div className="flex flex-col justify-between items-center py-8">
               <div>
                 <ul className="flex flex-col flex-wrap gap-[1.5rem]">
-                  {/* hidden until schedule section is good to go
-                  <li
+                  <button
                     onClick={() => {
                       handleScroll(ref[0]), setMenuOpen(false);
                     }}
                     className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-peony font-sans-700 cursor-pointer"
                   >
                     {scheduleTitle}
-                  </li>
-                  */}
-                  <li
+                  </button>
+                  <button
                     onClick={() => {
                       handleScroll(ref[1]), setMenuOpen(false);
                     }}
                     className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-peony font-sans-700 cursor-pointer"
                   >
                     {catalogTitle}
-                  </li>
-                  <li
+                  </button>
+                  <button
                     onClick={() => {
                       handleScroll(ref[2]), setMenuOpen(false);
                     }}
                     className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-peony font-sans-700 cursor-pointer"
                   >
                     {eventTitle}
-                  </li>
-                  <li
+                  </button>
+                  <button
                     onClick={() => {
                       handleScroll(ref[3]), setMenuOpen(false);
                     }}
                     className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-peony font-sans-700 cursor-pointer"
                   >
                     {areaTitle}
-                  </li>
+                  </button>
                   {/* -- remove comment to reveal ticket button (mobile menu) --
-                  <li className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-peony font-sans-700 cursor-pointer">
+                  <button className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-peony font-sans-700 cursor-pointer">
                     <a
                       href="https://fienta.com/fi/o/lapinlahti-film-festival"
                       target="_blank"
@@ -174,13 +170,13 @@ const Nav = React.forwardRef(
                     >
                       {ticketButton}
                     </a>
-                  </li>
+                  </button>
                   */}
                 </ul>
               </div>
               <div className=" py-8 ">
                 <ul className="flex flex-row" onClick={changeLanguage}>
-                  <li>
+                  <button>
                     <button
                       className={`text-white uppercase p-1 hover:text-peony ${
                         language === "fi" ? "underline" : ""
@@ -188,8 +184,8 @@ const Nav = React.forwardRef(
                     >
                       fi
                     </button>
-                  </li>
-                  <li>
+                  </button>
+                  <button>
                     <button
                       className={`text-white uppercase p-1 hover:text-peony ${
                         language === "en-US" ? "underline" : ""
@@ -197,7 +193,7 @@ const Nav = React.forwardRef(
                     >
                       en
                     </button>
-                  </li>
+                  </button>
                 </ul>
               </div>
             </div>

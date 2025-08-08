@@ -10,19 +10,6 @@ export const Film = ({ film }) => {
           className="w-[100%] h-auto custom-588:w-[20rem] min-h-[18rem] aspect-[7/10]" // check if any further tweaks to aspect ratios needed
           loading="lazy"
         />
-        {/* testing Fienta button for each film, this is a nightmare so will tweak this further later on
-        <div className="py-2">
-          <button className="px-2 py-1 w-full text-white text-center bg-grape uppercase border-2 border-solid rounded-full hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer">
-            <a
-              href="https://fienta.com/fi/o/lapinlahti-film-festival" // replace part after /o/ with the correct URL...maybe automate this using a Contentful field? maybe add failsafe just in case
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Varaa liput
-            </a>
-          </button>
-        </div>
-        */}
       </div>
 
       <div className="flex flex-col justify-between w-[100%] sm:w-[60%] custom-1150:w-[60%] custom-1120:w-[60%]">
@@ -69,8 +56,18 @@ export const Film = ({ film }) => {
               {film.fields.textTitle}
             </div>
 
-            <div className="text-sm pt-[0.1rem] pb-[1rem] font-light">
+            <div className="text-sm pt-[0.1rem] font-light">
               {film.fields.textlanguage}
+            </div>
+          </div>
+
+          <div className="flex flex-row pb-[1rem]">
+            <div className="text-sm pt-[0.1rem] pr-[0.5rem] font-semibold">
+              {film.fields.ageLimitTitle}
+            </div>
+
+            <div className="text-sm pt-[0.1rem] font-light">
+              {film.fields.ageLimit}
             </div>
           </div>
             

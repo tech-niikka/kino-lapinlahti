@@ -44,7 +44,7 @@ function Schedule({ data, index, buttons }) {
 
             <div>
               <h3 className="w-[100%] lg:w-[88%] pr-[0rem] pb-[1rem] md:pb-[1rem] md:pr-[3rem]">
-                {data.fields.description.content[0].content[0].value} {/* body text 1st paragraph */}
+                {data.fields.description?.content?.[0]?.content?.[0]?.value} {/* body text 1st paragraph */}
               </h3>
             </div>
 
@@ -89,21 +89,21 @@ function Schedule({ data, index, buttons }) {
             flex items-center justify-center`}
           >
             <div className="flex flex-col flex-wrap md:flex-row w-[100%]">
-              {data.fields.eventCategory.map((item) => (
-                <div className="sm:px-[2rem] py-5 w-1/1 md:w-1/2">
-                  <h2 className="pb-4 font-serif font-semibold">
-                    {item.fields.title}
-                  </h2>
-                  {item.fields.events.map((event) => (
-                    <div className="text-xs custom-330:text-sm">
-                      <div className="w-full h-px bg-gray" />
-                      <div className="grid grid-cols-[3fr_1fr_2fr] gap-2 p-3 text-left"> {/* columns aligned, widths based on content (title 3, time 1, location 2) */}
-                        <h3>{event.fields.title}</h3>
-                        <h4>{event.fields.time}</h4>
-                        <h5>{event.fields.location}</h5>
+              {data.fields.eventCategory.map((item, idx) => (
+                <div key={idx} className="sm:px-[2rem] py-5 w-full md:w-1/2">
+                  <h2 className="pb-4 font-serif font-semibold">{item.fields.title}</h2>
+                  {item.fields.events.map((event, jdx) =>
+                    event.fields ? (
+                      <div key={jdx} className="text-xs custom-330:text-sm">
+                        <div className="w-full h-px bg-gray" />
+                        <div className="grid grid-cols-[3fr_1fr_2fr] gap-2 p-3 text-left">
+                          <h3>{event.fields.title}</h3>
+                          <h4>{event.fields.time}</h4>
+                          <h5>{event.fields.location}</h5>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ) : null
+                  )}
                   <div className="w-full h-px bg-gray" />
                 </div>
               ))}
