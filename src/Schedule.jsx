@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function Schedule({ data, index, buttons }) {
   const [showSchedule, setShowSchedule] = useState(false);
   const [buttonText, setButtonText] = useState(buttons[0]?.fields.closed);
+
+  useEffect(() => {
+    setButtonText(showSchedule ? buttons[0].fields.open : buttons[0].fields.closed);
+  }, [buttons, showSchedule]);
 
   const toggleSchedule = () => {
     setShowSchedule(!showSchedule);
@@ -18,7 +22,6 @@ function Schedule({ data, index, buttons }) {
 
   const handleBothClicks = () => {
     toggleSchedule();
-    handleClick();
   };
 
   return (
@@ -71,11 +74,8 @@ function Schedule({ data, index, buttons }) {
             <a href="/aik.pdf" target="_blank" rel="noopener noreferrer" >PDF-aikataulu / PDF-schedule</a>
           </div> */} {/* commented pdf schedule out for now */}
           
-            <button
-              onClick={handleBothClicks}
-              className="font-semibold hover:underline"
-            >
-              {buttonText}
+            <button onClick={handleBothClicks} className="font-semibold hover:underline">
+                  {buttonText}
             </button>
           </div>
         </div>

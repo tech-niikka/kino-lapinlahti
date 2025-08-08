@@ -62,7 +62,7 @@ export const Catalog = ({ films, shortFilms, music, workshops, now, filmTitle, s
             handleSelect("shortFilms"); 
             handleScroll(scrollRef)
           }}
-          className={`px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer ${selectedType === "shortFilms" ? "bg-heading text-peony" : "text-white"}`}
+          className={`px-2 py-1 text-white text-center whitespace-nowrap uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer ${selectedType === "shortFilms" ? "bg-heading text-peony" : "text-white"}`}
         >
           {shortFilmTitle}
         </button>
