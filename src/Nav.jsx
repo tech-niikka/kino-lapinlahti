@@ -82,7 +82,7 @@ const Nav = React.forwardRef(
 
             <div className="pl-[1rem] py-1">
               <ul className="flex flex-row" onClick={changeLanguage}>
-                <button>
+                <li>
                   <button
                     className={`text-white text-sm custom-983:text-base uppercase px-1 hover:text-peony  ${
                       language === "fi" ? "underline" : ""
@@ -90,8 +90,8 @@ const Nav = React.forwardRef(
                   >
                     fi
                   </button>
-                </button>
-                <button>
+                </li>
+                <li>
                   <button
                     className={`text-white text-sm custom-983:text-base uppercase px-1 hover:text-peony  ${
                       language === "en-US" ? "underline" : ""
@@ -99,7 +99,7 @@ const Nav = React.forwardRef(
                   >
                     en
                   </button>
-                </button>
+                </li>
               </ul>
             </div>
           </div>
@@ -176,7 +176,7 @@ const Nav = React.forwardRef(
               </div>
               <div className=" py-8 ">
                 <ul className="flex flex-row" onClick={changeLanguage}>
-                  <button>
+                  <li>
                     <button
                       className={`text-white uppercase p-1 hover:text-peony ${
                         language === "fi" ? "underline" : ""
@@ -184,8 +184,8 @@ const Nav = React.forwardRef(
                     >
                       fi
                     </button>
-                  </button>
-                  <button>
+                  </li>
+                  <li>
                     <button
                       className={`text-white uppercase p-1 hover:text-peony ${
                         language === "en-US" ? "underline" : ""
@@ -193,7 +193,7 @@ const Nav = React.forwardRef(
                     >
                       en
                     </button>
-                  </button>
+                  </li>
                 </ul>
               </div>
             </div>

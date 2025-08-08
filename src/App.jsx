@@ -242,11 +242,13 @@ function App() {
         shortFilms={content.catalogSection[0]?.fields.shortFilms}
         workshops={content.catalogSection[0]?.fields.workshops}
         now={content.catalogSection[0]?.fields.now}
+        art={content.catalogSection[0]?.fields.art}
         filmTitle={content.catalogSection[0]?.fields.filmSectionTitle}
         musicTitle={content.catalogSection[0]?.fields.musicSectionTitle}
         shortFilmTitle={content.catalogSection[0]?.fields.shortFilmSectionTitle}      
         workshopTitle={content.catalogSection[0]?.fields.workshopSectionTitle}
         nowTitle={content.catalogSection[0]?.fields.nowSectionTitle}
+        artTitle={content.catalogSection[0]?.fields.artSectionTitle}
         handleScroll={handleScroll}
         scrollRef={ohjelmisto}
       />
