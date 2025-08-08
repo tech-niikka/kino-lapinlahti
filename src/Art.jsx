@@ -38,51 +38,14 @@ export const Art = ({ art }) => {
           </div>
 */}
           <div className="text-sm pt-[0.1rem] pb-[0rem] font-light">
-            {art.fields.length}
-          </div>
-
-          <div className="flex flex-row">
-            <div className="text-sm pt-[0.1rem] pr-[0.5rem] font-semibold">
-              {art.fields.languageTitle}
-            </div>
-
-            <div className="text-sm pt-[0.1rem] font-light">
-              {art.fields.filmlanguage}
-            </div>
-          </div>
-
-          <div className="flex flex-row">
-            <div className="text-sm pt-[0.1rem] pr-[0.5rem] font-semibold">
-              {art.fields.textTitle}
-            </div>
-
-            <div className="text-sm pt-[0.1rem] font-light">
-              {art.fields.textlanguage}
-            </div>
-          </div>
-
-          <div className="flex flex-row pb-[1rem]">
-            <div className="text-sm pt-[0.1rem] pr-[0.5rem] font-semibold">
-              {art.fields.ageLimitTitle}
-            </div>
-
-            <div className="text-sm pt-[0.1rem] font-light">
-              {art.fields.ageLimit}
-            </div>
+            {art.fields.location}
           </div>
             
           <p className="text-base min-h-[6.5rem] py-[0.2rem] font-light overflow-hidden whitespace-pre-line">
             {art.fields.description}
           </p>
 
-          <div className="flex flex-row text-xs pt-[0.25rem] custom-588:pt-[1rem] pb-[0.5rem] custom-588:pb-[0.5rem]">
-            {art.fields.productionCompany}
-            {art.fields.productionCompany && art.fields.country ? " – " : ""}
-            {art.fields.country}
-          </div>
         </div>
-
-
       </div>
     </div>
   );

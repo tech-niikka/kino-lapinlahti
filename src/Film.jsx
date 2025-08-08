@@ -80,9 +80,8 @@ export const Film = ({ film }) => {
             {film.fields.productionCompany && film.fields.country ? " – " : ""}
             {film.fields.country}
           </div>
+          
         </div>
-
-
       </div>
     </div>
   );
