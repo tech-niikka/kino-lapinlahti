@@ -81,9 +81,8 @@ export const ShortFilm = ({ shortFilm }) => {
             {shortFilm.fields.productionCompany && shortFilm.fields.country ? " – " : ""}
             {shortFilm.fields.country}
           </div>
+          
         </div>
-
-
       </div>
     </div>
   );
