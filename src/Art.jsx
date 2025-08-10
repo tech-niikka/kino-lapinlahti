@@ -5,7 +5,7 @@ export const Art = ({ art }) => {
       
       <div className="sm:pr-[2rem] pr-0">
         <img
-          src={art.fields.artwork.fields.file.url}
+          src={`https:${art.fields.artwork.fields.file.url}?w=600&fm=webp`}
           alt={`${art.fields.title} poster`}
           className="w-[100%] h-auto custom-588:w-[20rem] min-h-[18rem] aspect-[7/10]" // check if any further tweaks to aspect ratios needed
           loading="lazy"

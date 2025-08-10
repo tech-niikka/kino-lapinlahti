@@ -61,8 +61,8 @@ function Schedule({ data, index, buttons }) {
           <div className="flex flex-grow custom-1150:justify-end justify-start items-center w-[100%] pb-[1rem] md:pb-[0rem]">
             <div className=" w-[14rem] h-auto md:w-[16rem] lg:w-[20rem] custom-1150:ml-[3rem] custom-883:pb-0 pb-[2rem]">
               <img
-                className="aspect-square object-cover "
-                src={data.fields.image.fields.file.url}
+                className="aspect-square object-cover"
+                src={`https:${data.fields.image.fields.file.url}?w=640&fm=webp`}
                 alt="image"
               />
             </div>
