@@ -5,7 +5,7 @@ export const ShortFilm = ({ shortFilm }) => {
       
       <div>
         <img
-          src={shortFilm.fields.artwork.fields.file.url}
+          src={`https:${shortFilm.fields.artwork.fields.file.url}?w=600&fm=webp`}
           alt={`${shortFilm.fields.title} poster`}
           className="w-[100%] sm:pr-[2rem] pr-0 h-auto custom-588:w-[20rem] min-h-[18rem]"
           loading="lazy"
