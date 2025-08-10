@@ -82,6 +82,7 @@ function Footer({ data }) {
                     </a>
                   </div>
 
+                  {/*}
                   <div>
                     <a 
                       href="tel:+358442788829"
@@ -89,7 +90,8 @@ function Footer({ data }) {
                       {data?.phoneNumber}
                     </a>
                   </div>
-
+                  */}
+                  
                   <div>
                     <a 
                       href="mailto:kinolapinlahti@gmail.com"
