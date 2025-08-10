@@ -93,7 +93,7 @@ export const Catalog = ({
         >
           {nowTitle}
         </button>
-        {/*
+
         <button
           onClick={() => { 
             handleSelect("art"); 
@@ -103,7 +103,7 @@ export const Catalog = ({
         >
           {artTitle}
         </button>
-        */}
+
        
       </div>
 
