@@ -183,7 +183,6 @@ function App() {
         </div>
       </div>
 
-      {/* -- remove this comment to reveal button to ticket reservation system --
       <div className="flex flex-col items-center justify-between pt-8">
         <a
           href="https://fienta.com/fi/o/lapinlahti-film-festival"
@@ -194,11 +193,10 @@ function App() {
           {content.buttons[0]?.fields.ticketButton}
         </a>
       </div> 
-      */}
 
       <div
         ref={aikataulu}
-        className="pt-[6rem] custom-710:pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
+        className="pt-[6rem] custom-710:pt-[4rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
       >
         <div className="flex flex-row items-center justify-center ">
           <div className="bg-white w-[100%] h-0.5"></div>

@@ -33,7 +33,7 @@ function Event({ data }) {
           {/*
           <img
             className="aspect-square w-[100%] max-w-[20rem] h-auto object-cover lg:max-w-[40rem] hidden custom-780:block"
-            src={data?.images[1].fields.file.url}
+            src={`https:${data?.images[1].fields.file.url}?w=1280&fm=webp`}
             alt="image"
           />
           */}
