@@ -43,6 +43,15 @@ const Nav = React.forwardRef(
         <div className="hidden custom-955:flex">
           <div className="flex first-letter:items-center">
             <ul className="flex flex-row flex-wrap md:gap-[1rem]">
+              <button className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer">
+                <a
+                  href="https://fienta.com/fi/o/lapinlahti-film-festival"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {ticketButton}
+                </a>
+              </button>
               <button
                 onClick={() => handleScroll(ref[0])}
                 className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer"
@@ -67,17 +76,6 @@ const Nav = React.forwardRef(
               >
                 {areaTitle}
               </button>
-              {/* -- remove to add ticket button to nav bar --
-              <button className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer">
-                <a
-                  href="https://fienta.com/fi/o/lapinlahti-film-festival"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {ticketButton}
-                </a>
-              </button>
-              */}
             </ul>
 
             <div className="pl-[1rem] py-1">
@@ -129,6 +127,15 @@ const Nav = React.forwardRef(
             <div className="flex flex-col justify-between items-center py-8">
               <div>
                 <ul className="flex flex-col flex-wrap gap-[1.5rem]">
+                  <button className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-peony font-sans-700 cursor-pointer">
+                    <a
+                      href="https://fienta.com/fi/o/lapinlahti-film-festival"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {ticketButton}
+                    </a>
+                  </button>
                   <button
                     onClick={() => {
                       handleScroll(ref[0]), setMenuOpen(false);
@@ -161,17 +168,6 @@ const Nav = React.forwardRef(
                   >
                     {areaTitle}
                   </button>
-                  {/* -- remove comment to reveal ticket button (mobile menu) --
-                  <button className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-peony font-sans-700 cursor-pointer">
-                    <a
-                      href="https://fienta.com/fi/o/lapinlahti-film-festival"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {ticketButton}
-                    </a>
-                  </button>
-                  */}
                 </ul>
               </div>
               <div className=" py-8 ">

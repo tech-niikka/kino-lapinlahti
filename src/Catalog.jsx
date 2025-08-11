@@ -86,16 +86,6 @@ export const Catalog = ({
 
         <button
           onClick={() => { 
-            handleSelect("now"); 
-            handleScroll(scrollRef)
-          }}
-          className={`px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer ${selectedType === "now" ? "bg-heading text-peony" : "text-white"}`}
-        >
-          {nowTitle}
-        </button>
-
-        <button
-          onClick={() => { 
             handleSelect("art"); 
             handleScroll(scrollRef)
           }}
@@ -104,7 +94,16 @@ export const Catalog = ({
           {artTitle}
         </button>
 
-       
+        <button
+          onClick={() => { 
+            handleSelect("now"); 
+            handleScroll(scrollRef)
+          }}
+          className={`px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer ${selectedType === "now" ? "bg-heading text-peony" : "text-white"}`}
+        >
+          {nowTitle}
+        </button>
+
       </div>
 
       {/* Catalog Content */}
