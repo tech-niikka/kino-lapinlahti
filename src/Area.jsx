@@ -94,8 +94,24 @@ function Area({ data }) {
           </div>
         </div>
 
-        <div className="w-full md:w-1/2 mb-6">
-          <div className="relative pt-[75%] rounded-2xl overflow-hidden shadow-lg mt-8">
+        <div className="w-full md:w-1/2 mb-6 flex flex-col items-center">
+          <a
+            href="/area-map.png"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <picture>
+              <source srcSet="/area-map-1000.webp" type="image/webp" />
+              <img
+                className="aspect-square w-[100%] max-w-[22rem] md:max-w-[28rem] h-auto object-cover pb-[0rem] lg:pb-[1rem] lg:max-w-[36rem]"
+                src="/area-map.png"
+                alt="image"
+                loading="lazy"
+              />
+            </picture>
+          </a>
+
+          <div className="relative pt-[60%] rounded-2xl overflow-hidden shadow-lg mt-8 w-full max-w-[22rem] md:max-w-[28rem] lg:max-w-[36rem]">
             <iframe
               className="absolute top-0 left-0 w-full h-full border-0"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1584.4612808598185!2d24.911512298500625!3d60.16752629689014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920a37d09b33d7%3A0x80af25826e6d8cf6!2sLapinlahden%20L%C3%A4hde!5e0!3m2!1sen!2sse!4v1715858112461!5m2!1sen!2sse"
@@ -104,6 +120,7 @@ function Area({ data }) {
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
+          
         </div>
       </div>
     </div>
