@@ -68,6 +68,7 @@ export const Now = ({ now }) => {
               {now.fields.paragraph4}
             </p>
 
+            {/*
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSftm55ZmvbpoCC_Qbl1vGm4rKjrWXxH69n7t6DCTTYyPxqryg/viewform?usp=sharing&ouid=112752221650999465221"
               target="_blank"
@@ -76,10 +77,12 @@ export const Now = ({ now }) => {
             >
               {now.fields.link2}
             </a>
+            
 
              <p className="text-base py-[0.2rem] font-light overflow-hidden whitespace-pre-line mb-4 mt-2">
               {now.fields.paragraph5}
             </p>
+            */}
 
           </div>
 
