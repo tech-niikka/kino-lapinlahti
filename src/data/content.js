@@ -19,7 +19,7 @@ const fi = {
     {
       fields: {
         title: "Lapinlahden elokuvajuhlat",
-        date: "Tulossa elokuussa 2026",
+        date: "17.–23.8.2026",
         secondaryTitle: "Elokuvia tekee iloa",
       },
     },
@@ -55,10 +55,13 @@ const fi = {
     {
       fields: {
         title: "Tapahtumasta",
-        secondaryTitle: "",
-        paragraph: "",
-        paragraph2: "",
-        paragraph3: "",
+        secondaryTitle: "Mitä teemme",
+        paragraph:
+          "Lapinlahden elokuvajuhlat on vapaan pääsyn tapahtuma. Festivaalin ohjelma on vierailijoille ilmainen, mutta elokuvanäytökset sekä työpajat vaativat ennakkoilmoittautumisen. Lipunvarausjärjestelmä aukeaa lähempänä festivaaliviikonloppua. Loppuunvaratuissa näytöksissä ja työpajoissa paikanpäälle voi tulla jonottamaan peruutuspaikkoja.",
+        paragraph2:
+          "Päivisin järjestämme elokuvanäytöksiä historiallisessa rakennuksessa. Auringon laskiessa kivipihalla järjestetään ulkoilmanäytös isolta valkokankaalta.",
+        paragraph3:
+          "Lapinlahden elokuvajuhlat on elokuvafestivaali, jossa jaettu elokuvakokemus on keskiössä. Festivaalilla elokuvat eivät kilpaile keskenään, vaan rakentuvat vuosittain vaihtuvan teeman ympärille. Ohjelmistossa on luvassa myös yhteisöllisyyttä rakentavia työpajoja, musiikkiesityksiä ja taidenäyttelyitä.",
         paragraph4: "",
         images: [],
       },
@@ -132,7 +135,7 @@ const en = {
     {
       fields: {
         title: "Lapinlahti Film Festival",
-        date: "Coming in August 2026",
+        date: "17–23 August 2026",
         secondaryTitle: "Films Bring Joy",
       },
     },
@@ -168,10 +171,13 @@ const en = {
     {
       fields: {
         title: "About",
-        secondaryTitle: "",
-        paragraph: "",
-        paragraph2: "",
-        paragraph3: "",
+        secondaryTitle: "What we do",
+        paragraph:
+          "Lapinlahti Film Festival is a free-admission event. The programme is free to visitors, but due to limited space films and workshops require enrollment in advance. The ticket reservation system opens up closer to the festival. In case of fully booked screenings and workshops you can come and queue for cancelled reservations.",
+        paragraph2:
+          "During the day, screenings are organised inside the historical building. As the sun sets, an open-air screening is organised in the stone yard.",
+        paragraph3:
+          "The Lapinlahti Film Festival is a film festival where the shared film experience is at the centre. At the festival, the films do not compete with each other, but are built around a theme that changes every year. The programme also includes a variety of art and mental wellbeing workshops, art exhibitions and live music performances.",
         paragraph4: "",
         images: [],
       },
