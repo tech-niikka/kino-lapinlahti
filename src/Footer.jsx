@@ -41,7 +41,7 @@ function Footer({ data }) {
         </div>
       </div>
 
-      <div className="w-full bg-cloud py-8 flex flex-col md:flex-row">
+      <div className="w-full bg-blueberry py-8 flex flex-col md:flex-row">
         <div className="w-[88%] sm:w-[85%] mx-auto">
           <div className="flex flex-col md:flex-row gap-y-8 md:gap-y-0 md:gap-x-8">
 
