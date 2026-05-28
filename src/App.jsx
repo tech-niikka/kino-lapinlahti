@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect, useRef } from "react";
-import client from "./contentfulClient.js";
+import { getContent, getPlaceholders } from "./data/content.js";
 
 import Nav from "./Nav.jsx";
 import Schedule from "./Schedule.jsx";
@@ -13,22 +13,14 @@ import poster2 from "./assets/banner-2026-1920.jpg"
 
 import "./App.css";
 
-// Contentful: Content model content types
-// When adding new content type, add it here and also below
+// Sisältö tulee paikallisesta moduulista `src/data/content.js`.
+// Kun sisältöjä tulee lisää (esim. 2026 ohjelmisto), lisää ne sinne
+// — ei tarvita ulkopuolista CMS:ää nykyisellä toteutuksella.
 
 function App() {
-  const [content, setContent] = useState({
-    landingPage: [],
-    scheduleSection: [],
-    catalogSection: [],
-    eventSection: [],
-    areaSection: [],
-    buttons: [],
-    navBar: [],
-    footer: [],
-  });
-
   const [language, setLanguage] = useState("fi");
+  const [content, setContent] = useState(() => getContent("fi"));
+  const [placeholders, setPlaceholders] = useState(() => getPlaceholders("fi"));
 
   useEffect(() => {
     document.documentElement.lang = language === "fi" ? "fi" : "en";
@@ -51,44 +43,24 @@ function App() {
     document.cookie = "initialVisit=true; SameSite=Lax; Secure";
   }, []);
 
-  {/* Contentful: Add new content types also below inside contentTypes
-      Then pass it to the component where it is needed (e.g., inside const Nav in Nav.jsx) */}
-
+  // Päivitä sisältö kun kieli vaihtuu
   useEffect(() => {
-    const fetchEntries = async () => {
-      try {
-        const contentTypes = [
-          { type: "landingPage", key: "landingPage" },
-          { type: "scheduleSection", key: "scheduleSection", include: 6 },
-          { type: "catalogSection", key: "catalogSection", include: 2 },
-          { type: "eventSection", key: "eventSection" },
-          { type: "areaSection", key: "areaSection" },
-          { type: "button", key: "buttons" },
-          { type: "navBar", key: "navBar"},
-          { type: "footer", key: "footer"},
-        ];
-
-        const requests = contentTypes.map(({ type, key, include }) =>
-          client.getEntries({ content_type: type, locale: language, include })
-        );
-
-        const responses = await Promise.all(requests);
-
-        const newContent = responses.reduce((acc, response, index) => {
-          acc[contentTypes[index].key] = response.items;
-          return acc;
-        }, {});
-
-        setContent(newContent);
-      } catch (error) {
-        console.error("Error fetching entries:", error);
-      }
-    };
-    fetchEntries();
+    setContent(getContent(language));
+    setPlaceholders(getPlaceholders(language));
   }, [language]);
 
-/*console.log('data={content.footer[0]?.fields', content.footer[0]?.fields)
-/* ^ checks the fields in Contentful, helps understand field structure */
+  // Apurit: onko sektiolla näytettävää sisältöä?
+  const hasSchedule = (content.scheduleSection[0]?.fields.schedule?.length ?? 0) > 0;
+  const catalogFields = content.catalogSection[0]?.fields;
+  const hasCatalog =
+    (catalogFields?.films?.length ?? 0) > 0 ||
+    (catalogFields?.music?.length ?? 0) > 0 ||
+    (catalogFields?.shortFilms?.length ?? 0) > 0 ||
+    (catalogFields?.workshops?.length ?? 0) > 0 ||
+    (catalogFields?.art?.length ?? 0) > 0 ||
+    !!catalogFields?.now;
+  const hasEvent = (content.eventSection[0]?.fields.images?.length ?? 0) > 0 ||
+    !!content.eventSection[0]?.fields.paragraph;
 
   return (
     <div>
@@ -209,14 +181,20 @@ function App() {
         </div>
       </div>
       <div className="flex flex-col justify-center items-center">
-        {content.scheduleSection[0]?.fields.schedule.map((item, index) => (
-          <Schedule
-            key={index}
-            data={item}
-            index={index}
-            buttons={content.buttons}
-          />
-        ))}
+        {hasSchedule ? (
+          content.scheduleSection[0]?.fields.schedule.map((item, index) => (
+            <Schedule
+              key={index}
+              data={item}
+              index={index}
+              buttons={content.buttons}
+            />
+          ))
+        ) : (
+          <p className="text-plum text-center text-lg pt-8 pb-8">
+            {placeholders.schedule}
+          </p>
+        )}
       </div>
 
       <div
@@ -234,22 +212,28 @@ function App() {
         </div>
       </div>
 
-      <Catalog 
-        films={content.catalogSection[0]?.fields.films} 
-        music={content.catalogSection[0]?.fields.music}
-        shortFilms={content.catalogSection[0]?.fields.shortFilms}
-        workshops={content.catalogSection[0]?.fields.workshops}
-        now={content.catalogSection[0]?.fields.now}
-        art={content.catalogSection[0]?.fields.art}
-        filmTitle={content.catalogSection[0]?.fields.filmSectionTitle}
-        musicTitle={content.catalogSection[0]?.fields.musicSectionTitle}
-        shortFilmTitle={content.catalogSection[0]?.fields.shortFilmSectionTitle}      
-        workshopTitle={content.catalogSection[0]?.fields.workshopSectionTitle}
-        nowTitle={content.catalogSection[0]?.fields.nowSectionTitle}
-        artTitle={content.catalogSection[0]?.fields.artSectionTitle}
-        handleScroll={handleScroll}
-        scrollRef={ohjelmisto}
-      />
+      {hasCatalog ? (
+        <Catalog
+          films={content.catalogSection[0]?.fields.films}
+          music={content.catalogSection[0]?.fields.music}
+          shortFilms={content.catalogSection[0]?.fields.shortFilms}
+          workshops={content.catalogSection[0]?.fields.workshops}
+          now={content.catalogSection[0]?.fields.now}
+          art={content.catalogSection[0]?.fields.art}
+          filmTitle={content.catalogSection[0]?.fields.filmSectionTitle}
+          musicTitle={content.catalogSection[0]?.fields.musicSectionTitle}
+          shortFilmTitle={content.catalogSection[0]?.fields.shortFilmSectionTitle}
+          workshopTitle={content.catalogSection[0]?.fields.workshopSectionTitle}
+          nowTitle={content.catalogSection[0]?.fields.nowSectionTitle}
+          artTitle={content.catalogSection[0]?.fields.artSectionTitle}
+          handleScroll={handleScroll}
+          scrollRef={ohjelmisto}
+        />
+      ) : (
+        <p className="text-plum text-center text-lg pt-4 pb-8">
+          {placeholders.catalog}
+        </p>
+      )}
 
       <div
         ref={info}
@@ -266,7 +250,13 @@ function App() {
         </div>
       </div>
 
-      <Event data={content.eventSection[0]?.fields} />
+      {hasEvent ? (
+        <Event data={content.eventSection[0]?.fields} />
+      ) : (
+        <p className="text-plum text-center text-lg pt-4 pb-8">
+          {placeholders.event}
+        </p>
+      )}
 
       <div
         ref={alue}

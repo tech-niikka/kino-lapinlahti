@@ -64,10 +64,10 @@ function Footer({ data }) {
                     title="Scroll to top / Palaa sivun alkuun"
                     className="flex justify-start items-center"
                   >
-                    <img 
+                    <img
                       className="w-30 h-12 pb-[0.5rem]"
-                      src={data?.logos[0].fields.logo.fields.file.url || logo} 
-                      alt="logo" /> 
+                      src={data?.logos?.[0]?.fields?.logo?.fields?.file?.url || logo}
+                      alt="logo" />
                   </button>
                 </div>
 

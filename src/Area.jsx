@@ -20,10 +20,10 @@ function Area({ data }) {
 
             <div className="py-4">
               <h3 className="font-bold">{data?.subheading2}</h3>
-              <div>{data?.openHours.fields.item1}</div>
-              <div>{data?.openHours.fields.item2}</div>
-              <div>{data?.openHours.fields.item3}</div>
-              <div>{data?.openHours.fields.item4}</div>
+              <div>{data?.openHours?.fields?.item1}</div>
+              <div>{data?.openHours?.fields?.item2}</div>
+              <div>{data?.openHours?.fields?.item3}</div>
+              <div>{data?.openHours?.fields?.item4}</div>
             </div>
 
             <div className="py-4">
