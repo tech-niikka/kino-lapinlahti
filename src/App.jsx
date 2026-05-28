@@ -9,7 +9,7 @@ import Area from "./Area.jsx";
 import Footer from "./Footer.jsx";
 import Event from "./Event.jsx";
 
-import poster2 from "./assets/banner-2025-1920.jpg"
+import poster2 from "./assets/banner-2026-1920.jpg"
 
 import "./App.css";
 
