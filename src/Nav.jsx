@@ -18,6 +18,7 @@ const Nav = React.forwardRef(
       catalogTitle,
       eventTitle,
       areaTitle,
+      contactsTitle,
       logoUrl,
       ticketButton,
     },
@@ -74,6 +75,12 @@ const Nav = React.forwardRef(
                 className="px-2 py-1 text-plum text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer"
               >
                 {areaTitle}
+              </button>
+              <button
+                onClick={() => handleScroll(ref[4])}
+                className="px-2 py-1 text-plum text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer"
+              >
+                {contactsTitle}
               </button>
             </ul>
 
@@ -165,6 +172,14 @@ const Nav = React.forwardRef(
                     className="px-2 py-1 text-plum text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-peony font-sans-700 cursor-pointer"
                   >
                     {areaTitle}
+                  </button>
+                  <button
+                    onClick={() => {
+                      handleScroll(ref[4]), setMenuOpen(false);
+                    }}
+                    className="px-2 py-1 text-plum text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-peony font-sans-700 cursor-pointer"
+                  >
+                    {contactsTitle}
                   </button>
                 </ul>
               </div>

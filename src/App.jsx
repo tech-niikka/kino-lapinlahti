@@ -31,6 +31,7 @@ function App() {
   const ohjelmisto = useRef(null);
   const info = useRef(null);
   const alue = useRef(null);
+  const yhteystiedot = useRef(null);
 
   const handleScroll = (ref) => {
     ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -73,7 +74,8 @@ function App() {
         catalogTitle={content.catalogSection[0]?.fields.title}
         eventTitle={content.eventSection[0]?.fields.title}
         areaTitle={content.areaSection[0]?.fields.title}
-        ref={[aikataulu, ohjelmisto, info, alue]}
+        contactsTitle={content.contactsSection[0]?.fields.title}
+        ref={[aikataulu, ohjelmisto, info, alue, yhteystiedot]}
         logoUrl={content.navBar[0]?.fields.logo?.fields.file.url}
         ticketButton={content.navBar[0]?.fields.ticketButton}
       />
@@ -216,7 +218,10 @@ function App() {
 
       <Area data={content.areaSection[0]?.fields} />
 
-      <div className="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]">
+      <div
+        ref={yhteystiedot}
+        className="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
+      >
         <div className="flex flex-row items-center justify-center ">
           <div className="bg-plum w-[100%] h-0.5"></div>
           <div className="px-[2rem]">
