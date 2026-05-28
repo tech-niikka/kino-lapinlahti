@@ -1,3 +1,6 @@
+// Paikalliset kuvat — Vite resolvoi import-URL:t buildissa
+import eventImage from "../assets/event-2026.jpg";
+
 // Paikallinen sisältömoduuli — korvasi aiemmin Contentful-API:n
 //
 // Ylätason avaimet vastaavat App.jsx:n `content`-state:n avaimia ja
@@ -63,7 +66,13 @@ const fi = {
         paragraph3:
           "Lapinlahden elokuvajuhlat on elokuvafestivaali, jossa jaettu elokuvakokemus on keskiössä. Festivaalilla elokuvat eivät kilpaile keskenään, vaan rakentuvat vuosittain vaihtuvan teeman ympärille. Ohjelmistossa on luvassa myös yhteisöllisyyttä rakentavia työpajoja, musiikkiesityksiä ja taidenäyttelyitä.",
         paragraph4: "",
-        images: [],
+        images: [
+          {
+            fields: {
+              file: { url: eventImage },
+            },
+          },
+        ],
       },
     },
   ],
@@ -179,7 +188,13 @@ const en = {
         paragraph3:
           "The Lapinlahti Film Festival is a film festival where the shared film experience is at the centre. At the festival, the films do not compete with each other, but are built around a theme that changes every year. The programme also includes a variety of art and mental wellbeing workshops, art exhibitions and live music performances.",
         paragraph4: "",
-        images: [],
+        images: [
+          {
+            fields: {
+              file: { url: eventImage },
+            },
+          },
+        ],
       },
     },
   ],

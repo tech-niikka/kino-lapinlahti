@@ -37,7 +37,7 @@ function Event({ data }) {
           <div className="flex flex-row justify-center w-full px-[0rem] pl-[0rem] lg:flex-col lg:w-[50%] lg:pl-[8rem] lg:px-[0rem] custom-1020:mt-[8rem] pt-8 lg:pt-0">
             <img
               className="aspect-square w-[100%] max-w-[20rem] h-auto object-cover pb-[0rem] lg:pb-[1rem] lg:max-w-[40rem]"
-              src={imageUrl.startsWith("http") ? imageUrl : `https:${imageUrl}`}
+              src={imageUrl.startsWith("//") ? `https:${imageUrl}` : imageUrl}
               alt="image"
               loading="lazy"
             />
