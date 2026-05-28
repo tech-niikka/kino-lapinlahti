@@ -13,10 +13,10 @@ module.exports = {
       gray: "#8E8E8E",
       purple: "#AAAADA",
       plum: "#441752",
-      peony: "#FFEEFD",
-      grape: "#D5F6E5",
-      cloud: "#F5FFFA",
-      blueberry: "#BEEDD5",
+      peony: "#FFEEFD", // Schedule Saturday + sponsor logo background
+      grape: "#D5F6E5", // Page background
+      cloud: "#F5FFFA", // Schedule Friday + Catalog (ohjelmisto) background
+      blueberry: "#BEEDD5", // Top navigation + Footer background
       white: "#FFFFFF",
     },
     screens: {
