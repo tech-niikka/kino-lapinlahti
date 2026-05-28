@@ -74,6 +74,74 @@ const sponsorLogos = sponsorEntries.map((entry) => ({
 // Komponentit on suunniteltu kestämään tyhjät listat, ja App.jsx
 // näyttää placeholderin kun lista on tyhjä.
 
+// Tiimin yhteystiedot — sama lista molemmille kielille, vain tittelit lokalisoidaan
+const contactsByLocale = {
+  fi: [
+    {
+      name: "Sveta Sirin",
+      title: "Vastaava tuottaja",
+      email: "sveta.sirin@kinolapinlahti.fi",
+    },
+    {
+      name: "Anton Baer",
+      title: "Taiteellinen johtaja",
+      email: "anton.baer@kinolapinlahti.fi",
+    },
+    {
+      name: "Lars",
+      title: "Viestintävastaava",
+      email: "lars@kinolapinlahti.fi",
+    },
+    {
+      name: "Siiri Siltala",
+      title: "Kuraattori",
+      email: "siiri.siltala@kinolapinlahti.fi",
+    },
+    {
+      name: "Hanna Hovitie",
+      title: "Kuraattori",
+      email: "hanna.hovitie@kinolapinlahti.fi",
+    },
+    {
+      name: "Anna Lehtonen",
+      title: "NOW-työpajan tuottaja",
+      email: "anna.lehtonen@kinolapinlahti.fi",
+    },
+  ],
+  "en-US": [
+    {
+      name: "Sveta Sirin",
+      title: "Executive Producer",
+      email: "sveta.sirin@kinolapinlahti.fi",
+    },
+    {
+      name: "Anton Baer",
+      title: "Artistic Director",
+      email: "anton.baer@kinolapinlahti.fi",
+    },
+    {
+      name: "Lars",
+      title: "Communications",
+      email: "lars@kinolapinlahti.fi",
+    },
+    {
+      name: "Siiri Siltala",
+      title: "Curator",
+      email: "siiri.siltala@kinolapinlahti.fi",
+    },
+    {
+      name: "Hanna Hovitie",
+      title: "Curator",
+      email: "hanna.hovitie@kinolapinlahti.fi",
+    },
+    {
+      name: "Anna Lehtonen",
+      title: "NOW workshop producer",
+      email: "anna.lehtonen@kinolapinlahti.fi",
+    },
+  ],
+};
+
 const fi = {
   landingPage: [
     {
@@ -108,6 +176,14 @@ const fi = {
         workshops: [],
         now: null,
         art: [],
+      },
+    },
+  ],
+  contactsSection: [
+    {
+      fields: {
+        title: "Yhteystiedot",
+        contacts: contactsByLocale.fi,
       },
     },
   ],
@@ -230,6 +306,14 @@ const en = {
         workshops: [],
         now: null,
         art: [],
+      },
+    },
+  ],
+  contactsSection: [
+    {
+      fields: {
+        title: "Contact",
+        contacts: contactsByLocale["en-US"],
       },
     },
   ],

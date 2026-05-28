@@ -8,6 +8,7 @@ import { Catalog } from "./Catalog.jsx";
 import Area from "./Area.jsx";
 import Footer from "./Footer.jsx";
 import Event from "./Event.jsx";
+import Contacts from "./Contacts.jsx";
 
 import poster2 from "./assets/banner-2026-1920.jpg"
 
@@ -214,6 +215,20 @@ function App() {
       </div>
 
       <Area data={content.areaSection[0]?.fields} />
+
+      <div className="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]">
+        <div className="flex flex-row items-center justify-center ">
+          <div className="bg-plum w-[100%] h-0.5"></div>
+          <div className="px-[2rem]">
+            <h2 className="font-semibold text-xl text-plum">
+              {content.contactsSection[0]?.fields.title}
+            </h2>
+          </div>
+          <div className="bg-plum w-[100%] h-0.5 "></div>
+        </div>
+      </div>
+
+      <Contacts contacts={content.contactsSection[0]?.fields.contacts} />
 
       <div
         ref={aikataulu}
