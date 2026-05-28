@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../src/assets/logo/logo-white-en.png";
+import logo from "../src/assets/logo/logo-black-en.png";
 import {
   AiOutlineMenu,
   AiOutlineClose,
@@ -47,31 +47,31 @@ const Nav = React.forwardRef(
                 href="https://fienta.com/fi/o/lapinlahti-film-festival"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer inline-block"
+                className="px-2 py-1 text-plum text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer inline-block"
               >
                 {ticketButton}
               </a>
               <button
                 onClick={() => handleScroll(ref[0])}
-                className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer"
+                className="px-2 py-1 text-plum text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer"
               >
                 {scheduleTitle}
               </button>
               <button
                 onClick={() => handleScroll(ref[1])}
-                className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer"
+                className="px-2 py-1 text-plum text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer"
               >
                 {catalogTitle}
               </button>
               <button
                 onClick={() => handleScroll(ref[2])}
-                className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer"
+                className="px-2 py-1 text-plum text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer"
               >
                 {eventTitle}
               </button>
               <button
                 onClick={() => handleScroll(ref[3])}
-                className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer"
+                className="px-2 py-1 text-plum text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer"
               >
                 {areaTitle}
               </button>
@@ -81,7 +81,7 @@ const Nav = React.forwardRef(
               <ul className="flex flex-row" onClick={changeLanguage}>
                 <li>
                   <button
-                    className={`text-white text-sm custom-983:text-base uppercase px-1 hover:text-peony  ${
+                    className={`text-plum text-sm custom-983:text-base uppercase px-1 hover:text-peony  ${
                       language === "fi" ? "underline" : ""
                     }`}
                   >
@@ -90,7 +90,7 @@ const Nav = React.forwardRef(
                 </li>
                 <li>
                   <button
-                    className={`text-white text-sm custom-983:text-base uppercase px-1 hover:text-peony  ${
+                    className={`text-plum text-sm custom-983:text-base uppercase px-1 hover:text-peony  ${
                       language === "en-US" ? "underline" : ""
                     }`}
                   >
@@ -103,7 +103,7 @@ const Nav = React.forwardRef(
         </div>
 
         <div onClick={handleNav} className="custom-955:hidden cursor-pointer ">
-          <AiOutlineMenu size={20} className="flex justify-end text-white" />
+          <AiOutlineMenu size={20} className="flex justify-end text-plum" />
         </div>
         <div
           className={
@@ -119,7 +119,7 @@ const Nav = React.forwardRef(
                 src={logoUrl ? `https:${logoUrl}` : logo}
                 alt="logo"
               />
-              <div onClick={handleNav} className="cursor-pointer mb-10 ml-4 text-white">
+              <div onClick={handleNav} className="cursor-pointer mb-10 ml-4 text-plum">
                 <AiOutlineClose size={20} />
               </div>
             </div>
@@ -130,7 +130,7 @@ const Nav = React.forwardRef(
                     href="https://fienta.com/fi/o/lapinlahti-film-festival"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer inline-block"
+                    className="px-2 py-1 text-plum text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer inline-block"
                   >
                     {ticketButton}
                   </a>
@@ -138,7 +138,7 @@ const Nav = React.forwardRef(
                     onClick={() => {
                       handleScroll(ref[0]), setMenuOpen(false);
                     }}
-                    className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-peony font-sans-700 cursor-pointer"
+                    className="px-2 py-1 text-plum text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-peony font-sans-700 cursor-pointer"
                   >
                     {scheduleTitle}
                   </button>
@@ -146,7 +146,7 @@ const Nav = React.forwardRef(
                     onClick={() => {
                       handleScroll(ref[1]), setMenuOpen(false);
                     }}
-                    className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-peony font-sans-700 cursor-pointer"
+                    className="px-2 py-1 text-plum text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-peony font-sans-700 cursor-pointer"
                   >
                     {catalogTitle}
                   </button>
@@ -154,7 +154,7 @@ const Nav = React.forwardRef(
                     onClick={() => {
                       handleScroll(ref[2]), setMenuOpen(false);
                     }}
-                    className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-peony font-sans-700 cursor-pointer"
+                    className="px-2 py-1 text-plum text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-peony font-sans-700 cursor-pointer"
                   >
                     {eventTitle}
                   </button>
@@ -162,7 +162,7 @@ const Nav = React.forwardRef(
                     onClick={() => {
                       handleScroll(ref[3]), setMenuOpen(false);
                     }}
-                    className="px-2 py-1 text-white text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-peony font-sans-700 cursor-pointer"
+                    className="px-2 py-1 text-plum text-center uppercase border-2 border-solid rounded-full w-36  hover:bg-heading hover:text-peony font-sans-700 cursor-pointer"
                   >
                     {areaTitle}
                   </button>
@@ -172,7 +172,7 @@ const Nav = React.forwardRef(
                 <ul className="flex flex-row" onClick={changeLanguage}>
                   <li>
                     <button
-                      className={`text-white uppercase p-1 hover:text-peony ${
+                      className={`text-plum uppercase p-1 hover:text-peony ${
                         language === "fi" ? "underline" : ""
                       }`}
                     >
@@ -181,7 +181,7 @@ const Nav = React.forwardRef(
                   </li>
                   <li>
                     <button
-                      className={`text-white uppercase p-1 hover:text-peony ${
+                      className={`text-plum uppercase p-1 hover:text-peony ${
                         language === "en-US" ? "underline" : ""
                       }`}
                     >
@@ -200,7 +200,7 @@ const Nav = React.forwardRef(
               rel="noopener noreferrer">
               <AiOutlineInstagram
               size={32}
-              className="cursor-pointer text-white"
+              className="cursor-pointer text-plum"
               />
             </a>
             <a 
@@ -209,7 +209,7 @@ const Nav = React.forwardRef(
               rel="noopener noreferrer">
               <AiOutlineFacebook
                 size={32}
-                className="cursor-pointer text-white"
+                className="cursor-pointer text-plum"
               />
             </a>
             <a 
@@ -218,7 +218,7 @@ const Nav = React.forwardRef(
               rel="noopener noreferrer">
               <AiOutlineLinkedin
                 size={32}
-                className="cursor-pointer text-white"
+                className="cursor-pointer text-plum"
               />
             </a>
           </div>

@@ -4,7 +4,7 @@ function Area({ data }) {
   return (
     <div className="mb-20 flex flex-row justify-center items-start w-full leading-7">
       <div className="max-w-[88%] sm:max-w-[85%] flex flex-col justify-between items-start md:flex-row md:items-start">
-        <div className="flex flex-col mr-[1.5rem] custom-1020:mr-[8rem] w-[100%] md:w-[50%] text-white">
+        <div className="flex flex-col mr-[1.5rem] custom-1020:mr-[8rem] w-[100%] md:w-[50%] text-plum">
           <div className="">
             <h1 className="font-serif font-semibold text-4xl mb-4">
               {data?.secondaryTitle}

@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../src/assets/logo/logo-white-en.png";
+import logo from "../src/assets/logo/logo-black-en.png";
 
 import {
   AiOutlineInstagram,

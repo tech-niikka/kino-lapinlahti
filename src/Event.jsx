@@ -8,12 +8,12 @@ function Event({ data }) {
         <div className="flex flex-col w-[100%] lg:pr-[5rem] lg:w-[50%]">
           <div className="w-[100%] mb:w-[88%]">
             <div className="">
-              <h1 className="font-serif font-semibold text-white text-4xl mb-4">
+              <h1 className="font-serif font-semibold text-plum text-4xl mb-4">
                 {data?.secondaryTitle}
               </h1>
             </div>
 
-            <div className="flex flex-col justify-between item text-white">
+            <div className="flex flex-col justify-between item text-plum">
               <h2 className="py-5 leading-7">{data?.paragraph}</h2>
               <h2 className="py-5 leading-7">{data?.paragraph2}</h2>
               <h2 className="py-5 leading-7">{data?.paragraph3}</h2>
