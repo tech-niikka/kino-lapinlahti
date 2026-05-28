@@ -23,7 +23,7 @@ const fi = {
       fields: {
         title: "Lapinlahden elokuvajuhlat",
         date: "17.–23.8.2026",
-        secondaryTitle: "Elokuvia tekee iloa",
+        secondaryTitle: "Elokuva tekee hyvää",
       },
     },
   ],
@@ -145,7 +145,7 @@ const en = {
       fields: {
         title: "Lapinlahti Film Festival",
         date: "17–23 August 2026",
-        secondaryTitle: "Films Bring Joy",
+        secondaryTitle: "Film Works Wonders",
       },
     },
   ],
