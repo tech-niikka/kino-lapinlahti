@@ -1,126 +1,168 @@
 import React from "react";
 
+// Apuri: näytä lohko vain jos joku sen sisältä on totta
+function hasAny(...values) {
+  return values.some(Boolean);
+}
+
 function Area({ data }) {
+  const openHours = data?.openHours?.fields;
+  const accessibilityLinks = [
+    {
+      href: "https://docs.google.com/document/d/18mhspc47rtUlAMXKDayj_F4Q89gykPB0-dy2PHDo1nQ/",
+      label: data?.subheading5,
+    },
+    {
+      href: "https://lapinlahdenlahde.fi/wp-content/uploads/FI-Q-door-access-ramp-Omatoimiohje.pdf",
+      label: data?.subheading6,
+    },
+    {
+      href: "https://bit.ly/myos-safer-space",
+      label: data?.subheading8,
+    },
+  ].filter((link) => link.label);
+
   return (
-    <div className="mb-20 flex flex-row justify-center items-start w-full leading-7">
-      <div className="max-w-[88%] sm:max-w-[85%] flex flex-col justify-between items-start md:flex-row md:items-start">
-        <div className="flex flex-col mr-[1.5rem] custom-1020:mr-[8rem] w-[100%] md:w-[50%] text-plum">
-          <div className="">
-            <h1 className="font-serif font-semibold text-4xl mb-4">
-              {data?.secondaryTitle}
+    <div className="flex flex-row justify-center items-center w-full leading-7">
+      <div className="max-w-[88%] sm:max-w-[85%] flex flex-col justify-center items-start lg:flex-row">
+        <div className="flex flex-col w-[100%] lg:pr-[5rem] lg:w-[50%] text-plum">
+          {data?.secondaryTitle && (
+            <h1 className="font-serif font-semibold text-plum text-4xl mb-4">
+              {data.secondaryTitle}
             </h1>
-          </div>
+          )}
 
-          <div className=" flex flex-col justify-between">
+          {hasAny(data?.subheading1, data?.paragraph1, data?.paragraph5) && (
             <div className="py-4">
-              <h3 className="font-bold leading-7">{data?.subheading1}</h3>
-              <h2 className="">{data?.paragraph1}</h2>
-              <h2 className="pt-[0.5rem]">{data?.paragraph5}</h2>
+              {data?.subheading1 && (
+                <h3 className="font-bold leading-7">{data.subheading1}</h3>
+              )}
+              {data?.paragraph1 && <p>{data.paragraph1}</p>}
+              {data?.paragraph5 && <p className="pt-[0.5rem]">{data.paragraph5}</p>}
             </div>
+          )}
 
+          {hasAny(
+            data?.subheading2,
+            openHours?.item1,
+            openHours?.item2,
+            openHours?.item3,
+            openHours?.item4,
+          ) && (
             <div className="py-4">
-              <h3 className="font-bold">{data?.subheading2}</h3>
-              <div>{data?.openHours?.fields?.item1}</div>
-              <div>{data?.openHours?.fields?.item2}</div>
-              <div>{data?.openHours?.fields?.item3}</div>
-              <div>{data?.openHours?.fields?.item4}</div>
+              {data?.subheading2 && (
+                <h3 className="font-bold">{data.subheading2}</h3>
+              )}
+              {openHours?.item1 && <div>{openHours.item1}</div>}
+              {openHours?.item2 && <div>{openHours.item2}</div>}
+              {openHours?.item3 && <div>{openHours.item3}</div>}
+              {openHours?.item4 && <div>{openHours.item4}</div>}
             </div>
+          )}
 
+          {hasAny(data?.subheading3, data?.paragraph3) && (
             <div className="py-4">
-              <h3 className="font-bold leading-7">{data?.subheading3}</h3> 
-              <h2 className="">{data?.paragraph3}</h2>
+              {data?.subheading3 && (
+                <h3 className="font-bold leading-7">{data.subheading3}</h3>
+              )}
+              {data?.paragraph3 && <p>{data.paragraph3}</p>}
             </div>
-            
+          )}
+
+          {hasAny(data?.subheading4, data?.paragraph4) && (
             <div className="py-4">
-              <h3 className="font-bold leading-7">{data?.subheading4}</h3>
-              <h2 className="">{data?.paragraph4}</h2>
+              {data?.subheading4 && (
+                <h3 className="font-bold leading-7">{data.subheading4}</h3>
+              )}
+              {data?.paragraph4 && <p>{data.paragraph4}</p>}
             </div>
+          )}
 
-              {/* Links to accessibility guides etc. */}
-
+          {accessibilityLinks.length > 0 && (
             <div className="py-4 font-bold leading-7">
-              <div>
-                <a 
-                  href="https://docs.google.com/document/d/18mhspc47rtUlAMXKDayj_F4Q89gykPB0-dy2PHDo1nQ/"
-                  className='inline-block hover:underline'
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <h3 className="pt-4">{data?.subheading5}</h3>
-                </a>
-              </div>
-              <div>
-                <a 
-                href="https://lapinlahdenlahde.fi/wp-content/uploads/FI-Q-door-access-ramp-Omatoimiohje.pdf"
-                className='inline-block hover:underline'
-                target="_blank"
-                rel="noopener noreferrer"
-                >
-                  <h3 className="pt-2">{data?.subheading6}</h3>
-                </a>
-              </div>
-              {/* ! Program in simple English commented out until we have a 2025 version ! 
-              <div>
-                <a
-                  href="https://docs.google.com/document/d/1HPmF-iGggS4Mc2DQ-sHwWL8seaGIxKXDG_o1tgJf1_o/" 
-                  className="inline-block hover:underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <h3 className="pt-2">{data?.subheading7}</h3>
-                </a>
-              </div>
-              */}
-              <div>
-                <a
-                  href="https://bit.ly/myos-safer-space"
-                  className="inline-block hover:underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <h3 className="pt-2">{data?.subheading8}</h3>
-                </a>
-              </div>
+              {accessibilityLinks.map((link, i) => (
+                <div key={link.href}>
+                  <a
+                    href={link.href}
+                    className="inline-block hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <h3 className={i === 0 ? "pt-4" : "pt-2"}>{link.label}</h3>
+                  </a>
+                </div>
+              ))}
             </div>
+          )}
 
-            <h3 className="font-bold leading-7">{data?.subheading9} </h3>
-            <h4>{data?.paragraph6}</h4>
-            <h3 className="font-semibold leading-7 pt-4 underline"> {data?.subheading10}</h3>
-            <h4>{data?.paragraph7}</h4>
-            <h3 className="font-semibold leading-7 pt-4 underline"> {data?.subheading11}</h3>
-            <h4>{data?.paragraph8}</h4>
-            <h3 className="font-semibold leading-7 pt-4 underline"> {data?.subheading12}</h3>
-            <h4>{data?.paragraph9}</h4>
-          </div>
+          {hasAny(data?.subheading9, data?.paragraph6) && (
+            <>
+              {data?.subheading9 && (
+                <h3 className="font-bold leading-7">{data.subheading9}</h3>
+              )}
+              {data?.paragraph6 && <p>{data.paragraph6}</p>}
+            </>
+          )}
+          {hasAny(data?.subheading10, data?.paragraph7) && (
+            <>
+              {data?.subheading10 && (
+                <h3 className="font-semibold leading-7 pt-4 underline">
+                  {data.subheading10}
+                </h3>
+              )}
+              {data?.paragraph7 && <p>{data.paragraph7}</p>}
+            </>
+          )}
+          {hasAny(data?.subheading11, data?.paragraph8) && (
+            <>
+              {data?.subheading11 && (
+                <h3 className="font-semibold leading-7 pt-4 underline">
+                  {data.subheading11}
+                </h3>
+              )}
+              {data?.paragraph8 && <p>{data.paragraph8}</p>}
+            </>
+          )}
+          {hasAny(data?.subheading12, data?.paragraph9) && (
+            <>
+              {data?.subheading12 && (
+                <h3 className="font-semibold leading-7 pt-4 underline">
+                  {data.subheading12}
+                </h3>
+              )}
+              {data?.paragraph9 && <p>{data.paragraph9}</p>}
+            </>
+          )}
         </div>
 
-        <div className="w-full md:w-1/2 mb-6 flex flex-col items-center">
+        <div className="flex flex-col w-full lg:w-[50%] items-center pt-8 lg:pt-0">
           <a
             href="/area-map.png"
             target="_blank"
             rel="noopener noreferrer"
+            className="w-full max-w-[20rem] lg:max-w-[40rem]"
           >
             <picture>
               <source srcSet="/area-map-1000.webp" type="image/webp" />
               <img
-                className="aspect-square w-[100%] max-w-[22rem] md:max-w-[28rem] h-auto object-cover pb-[0rem] lg:pb-[1rem] lg:max-w-[36rem]"
+                className="aspect-square w-full h-auto object-cover"
                 src="/area-map.png"
-                alt="image"
+                alt="Lapinlahden alueen kartta"
                 loading="lazy"
               />
             </picture>
           </a>
 
-          <div className="relative pt-[60%] rounded-2xl overflow-hidden shadow-lg mt-8 w-full max-w-[22rem] md:max-w-[28rem] lg:max-w-[36rem]">
+          <div className="relative pt-[60%] rounded-2xl overflow-hidden shadow-lg mt-8 w-full max-w-[20rem] lg:max-w-[40rem]">
             <iframe
               className="absolute top-0 left-0 w-full h-full border-0"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1584.4612808598185!2d24.911512298500625!3d60.16752629689014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920a37d09b33d7%3A0x80af25826e6d8cf6!2sLapinlahden%20L%C3%A4hde!5e0!3m2!1sen!2sse!4v1715858112461!5m2!1sen!2sse"
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
+              title="Lapinlahden Lähde sijainti"
             ></iframe>
           </div>
-          
         </div>
       </div>
     </div>

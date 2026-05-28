@@ -20,23 +20,31 @@ function Footer({ data }) {
 
             {/* Sponsor logos */}
 
-            {data?.logos?.slice(1).map((logoItem, index) => ( // slice(1) to avoid using LFF logo here which is used elsewhere in the footer
-              <div key={logoItem?.fields?.logo?.sys?.id || index} className="flex justify-center items-center">
-                <a
-                  href={logoItem?.fields?.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-36 h-24 flex justify-center items-center overflow-hidden"
-                >
-                  <img
-                    className="object-contain max-w-full max-h-full"
-                    src={logoItem?.fields?.logo?.fields?.file?.url}
-                    alt={logoItem?.fields?.altText || "Sponsor logo"}
-                    loading="lazy"
-                  />
-                </a>
-              </div>
-            ))}
+            {data?.logos?.slice(1).map((logoItem, index) => {
+              // slice(1) ohittaa festivaalin oman logon — sitä käytetään alaosassa
+              const size = logoItem?.fields?.size;
+              const containerClass =
+                size === "large"
+                  ? "w-52 h-32 flex justify-center items-center overflow-hidden"
+                  : "w-36 h-24 flex justify-center items-center overflow-hidden";
+              return (
+                <div key={logoItem?.fields?.logo?.sys?.id || index} className="flex justify-center items-center">
+                  <a
+                    href={logoItem?.fields?.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={containerClass}
+                  >
+                    <img
+                      className="object-contain max-w-full max-h-full"
+                      src={logoItem?.fields?.logo?.fields?.file?.url}
+                      alt={logoItem?.fields?.altText || "Sponsor logo"}
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

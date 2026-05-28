@@ -12,12 +12,16 @@ import lahdeLogo from "../assets/sponsors/lapinlahden-lahde.png";
 //   - Footer.jsx ohittaa indeksin [0] festivaalin omana logona
 //     (placeholder-merkintä alla, Footer käyttää paikallista fallbackia)
 //   - Indeksit [1]+ ovat sponsorit
+//   - `size: "large"` saa containeriin enemmän tilaa Footer.jsx:ssä
+//     (esim. vaakasuorat tai muutoin pienet logot tarvitsevat sitä,
+//     jotta ne ovat luettavissa muiden joukossa)
 const sponsorEntries = [
   { logoUrl: null, url: null, altText: "Lapinlahden elokuvajuhlat" }, // [0] festival-placeholder
   {
     logoUrl: koneenSaatioLogo,
     url: "https://koneensaatio.fi/",
     altText: "Koneen Säätiö",
+    size: "large",
   },
   {
     logoUrl: proLapinlahtiLogo,
@@ -28,6 +32,7 @@ const sponsorEntries = [
     logoUrl: yleLogo,
     url: "https://yle.fi/",
     altText: "Yle",
+    size: "large",
   },
   {
     logoUrl: helsinkiLogo,
@@ -49,6 +54,7 @@ const sponsorLogos = sponsorEntries.map((entry) => ({
       : null,
     url: entry.url,
     altText: entry.altText,
+    size: entry.size ?? "default",
   },
 }));
 

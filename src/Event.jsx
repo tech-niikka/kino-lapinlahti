@@ -34,11 +34,11 @@ function Event({ data }) {
         </div>
 
         {imageUrl && (
-          <div className="flex flex-row justify-center w-full px-[0rem] pl-[0rem] lg:flex-col lg:w-[50%] lg:pl-[8rem] lg:px-[0rem] custom-1020:mt-[8rem] pt-8 lg:pt-0">
+          <div className="flex flex-col w-full lg:w-[50%] items-center pt-8 lg:pt-0">
             <img
-              className="aspect-square w-[100%] max-w-[20rem] h-auto object-cover pb-[0rem] lg:pb-[1rem] lg:max-w-[40rem]"
+              className="aspect-square w-full max-w-[20rem] lg:max-w-[40rem] h-auto object-cover"
               src={imageUrl.startsWith("//") ? `https:${imageUrl}` : imageUrl}
-              alt="image"
+              alt="Lapinlahden elokuvajuhlat"
               loading="lazy"
             />
           </div>
