@@ -88,7 +88,7 @@ const contactsByLocale = {
       email: "anton.baer@kinolapinlahti.fi",
     },
     {
-      name: "Lars",
+      name: "Lasse Hulden",
       title: "Viestintävastaava",
       email: "lars@kinolapinlahti.fi",
     },
@@ -120,7 +120,7 @@ const contactsByLocale = {
       email: "anton.baer@kinolapinlahti.fi",
     },
     {
-      name: "Lars",
+      name: "Lasse Hulden",
       title: "Communications",
       email: "lars@kinolapinlahti.fi",
     },
