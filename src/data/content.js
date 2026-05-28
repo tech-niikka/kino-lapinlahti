@@ -1,6 +1,57 @@
 // Paikalliset kuvat — Vite resolvoi import-URL:t buildissa
 import eventImage from "../assets/event-2026.jpg";
 
+// Sponsoreiden logot
+import koneenSaatioLogo from "../assets/sponsors/koneen-saatio.webp";
+import proLapinlahtiLogo from "../assets/sponsors/pro-lapinlahti.png";
+import yleLogo from "../assets/sponsors/yle.png";
+import helsinkiLogo from "../assets/sponsors/helsinki.png";
+import lahdeLogo from "../assets/sponsors/lapinlahden-lahde.png";
+
+// Sponsorilistan rakenne mukailee aiempaa Contentful-rakennetta:
+//   - Footer.jsx ohittaa indeksin [0] festivaalin omana logona
+//     (placeholder-merkintä alla, Footer käyttää paikallista fallbackia)
+//   - Indeksit [1]+ ovat sponsorit
+const sponsorEntries = [
+  { logoUrl: null, url: null, altText: "Lapinlahden elokuvajuhlat" }, // [0] festival-placeholder
+  {
+    logoUrl: koneenSaatioLogo,
+    url: "https://koneensaatio.fi/",
+    altText: "Koneen Säätiö",
+  },
+  {
+    logoUrl: proLapinlahtiLogo,
+    url: "https://www.prolapinlahtiry.fi/",
+    altText: "Pro Lapinlahti Mielenterveysseura ry",
+  },
+  {
+    logoUrl: yleLogo,
+    url: "https://yle.fi/",
+    altText: "Yle",
+  },
+  {
+    logoUrl: helsinkiLogo,
+    url: "https://www.myhelsinki.fi/",
+    altText: "Helsingin kaupunki",
+  },
+  {
+    logoUrl: lahdeLogo,
+    url: "https://lapinlahdenlahde.fi/",
+    altText: "Lapinlahden Lähde",
+  },
+];
+
+// Muunna entry Contentful-yhteensopivaan rakenteeseen jonka Footer.jsx odottaa
+const sponsorLogos = sponsorEntries.map((entry) => ({
+  fields: {
+    logo: entry.logoUrl
+      ? { fields: { file: { url: entry.logoUrl } } }
+      : null,
+    url: entry.url,
+    altText: entry.altText,
+  },
+}));
+
 // Paikallinen sisältömoduuli — korvasi aiemmin Contentful-API:n
 //
 // Ylätason avaimet vastaavat App.jsx:n `content`-state:n avaimia ja
@@ -126,10 +177,10 @@ const fi = {
   footer: [
     {
       fields: {
-        // Sponsoreita ei näytetä ennen kuin 2026 partnerit on vahvistettu.
-        // Footer.jsx käyttää data?.logos[0] festivaalin omana logona,
-        // mutta jos logos-array on tyhjä, fallback on paikallinen logo.
-        logos: [],
+        // Footer.jsx käyttää data?.logos[0] festivaalin omana logona;
+        // se on null tässä → paikallinen import-fallback Footer.jsx:ssä.
+        // Indeksit [1]+ ovat sponsorit jotka näytetään yläosassa.
+        logos: sponsorLogos,
         address: "Lapinlahdenpolku 8, 00180 Helsinki",
         emailAddress: "kinolapinlahti@gmail.com",
         privacyNotice: "Tietosuojaseloste",

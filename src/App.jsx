@@ -166,9 +166,58 @@ function App() {
         </a>
       </div> 
 
+      {/* Sektioiden järjestys 2026:
+          1) Tapahtumasta (sisältöä)
+          2) Alue (kartta + Lapinlahden Lähde)
+          3) Aikataulu (placeholder)
+          4) Ohjelmisto (placeholder)
+          Refs (ref[0..3] = aikataulu, ohjelmisto, info, alue) säilytetty
+          Nav-painikkeiden scroll-toiminnan vuoksi — DOM-järjestys
+          riippumaton refs-indekseistä. */}
+
+      <div
+        ref={info}
+        className="pt-[6rem] custom-710:pt-[4rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
+      >
+        <div className="flex flex-row items-center justify-center ">
+          <div className=" bg-plum w-[100%] h-0.5"></div>
+          <div className="px-[2rem]">
+            <h2 className="font-semibold text-xl text-plum">
+              {content.eventSection[0]?.fields.title}
+            </h2>
+          </div>
+          <div className="bg-plum w-[100%] h-0.5 "></div>
+        </div>
+      </div>
+
+      {hasEvent ? (
+        <Event data={content.eventSection[0]?.fields} />
+      ) : (
+        <p className="text-plum text-center text-lg pt-4 pb-8">
+          {placeholders.event}
+        </p>
+      )}
+
+      <div
+        ref={alue}
+        className="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
+      >
+        <div className="flex flex-row items-center justify-center ">
+          <div className=" bg-plum w-[100%] h-0.5"></div>
+          <div className="px-[2rem]">
+            <h2 className="font-semibold text-plum text-xl">
+              {content.areaSection[0]?.fields.title}
+            </h2>
+          </div>
+          <div className="bg-plum w-[100%] h-0.5 "></div>
+        </div>
+      </div>
+
+      <Area data={content.areaSection[0]?.fields} />
+
       <div
         ref={aikataulu}
-        className="pt-[6rem] custom-710:pt-[4rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
+        className="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
       >
         <div className="flex flex-row items-center justify-center ">
           <div className="bg-plum w-[100%] h-0.5"></div>
@@ -235,46 +284,6 @@ function App() {
         </p>
       )}
 
-      <div
-        ref={info}
-        className="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
-      >
-        <div className="flex flex-row items-center justify-center ">
-          <div className=" bg-plum w-[100%] h-0.5"></div>
-          <div className="px-[2rem]">
-            <h2 className="font-semibold text-xl text-plum">
-              {content.eventSection[0]?.fields.title}
-            </h2>
-          </div>
-          <div className="bg-plum w-[100%] h-0.5 "></div>
-        </div>
-      </div>
-
-      {hasEvent ? (
-        <Event data={content.eventSection[0]?.fields} />
-      ) : (
-        <p className="text-plum text-center text-lg pt-4 pb-8">
-          {placeholders.event}
-        </p>
-      )}
-
-      <div
-        ref={alue}
-        className="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
-      >
-        <div className="flex flex-row items-center justify-center ">
-          <div className=" bg-plum w-[100%] h-0.5"></div>
-          <div className="px-[2rem]">
-            <h2 className="font-semibold text-plum text-xl">
-              {content.areaSection[0]?.fields.title}
-            </h2>
-          </div>
-          <div className="bg-plum w-[100%] h-0.5 "></div>
-        </div>
-      </div>
-
-      <Area data={content.areaSection[0]?.fields} />
-      
       <Footer data={content.footer[0]?.fields}/>
     </div>
   );
