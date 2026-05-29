@@ -23,9 +23,9 @@ function Area({ data }) {
   ].filter((link) => link.label);
 
   return (
-    <div className="flex flex-row justify-center items-center w-full leading-7">
+    <div className="flex flex-row justify-center items-center w-full leading-8">
       <div className="max-w-[88%] sm:max-w-[85%] flex flex-col justify-center items-start lg:flex-row">
-        <div className="flex flex-col w-[100%] lg:pr-[5rem] lg:w-[50%] text-plum">
+        <div className="flex flex-col w-[100%] lg:pr-[5rem] lg:w-[50%] text-plum text-lg leading-8">
           {data?.secondaryTitle && (
             <h1 className="font-serif font-semibold text-plum text-4xl mb-4">
               {data.secondaryTitle}

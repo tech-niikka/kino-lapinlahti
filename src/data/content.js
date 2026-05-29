@@ -191,7 +191,7 @@ const fi = {
     {
       fields: {
         title: "Tapahtumasta",
-        secondaryTitle: "Mitä teemme",
+        secondaryTitle: "Lapinlahden elokuvajuhlat",
         paragraph:
           "Lapinlahden elokuvajuhlat on vapaan pääsyn tapahtuma. Festivaalin ohjelma on vierailijoille ilmainen, mutta elokuvanäytökset sekä työpajat vaativat ennakkoilmoittautumisen. Lipunvarausjärjestelmä aukeaa lähempänä festivaaliviikonloppua. Loppuunvaratuissa näytöksissä ja työpajoissa paikanpäälle voi tulla jonottamaan peruutuspaikkoja.",
         paragraph2:
@@ -321,7 +321,7 @@ const en = {
     {
       fields: {
         title: "About",
-        secondaryTitle: "What we do",
+        secondaryTitle: "Lapinlahti Film Festival",
         paragraph:
           "Lapinlahti Film Festival is a free-admission event. The programme is free to visitors, but due to limited space films and workshops require enrollment in advance. The ticket reservation system opens up closer to the festival. In case of fully booked screenings and workshops you can come and queue for cancelled reservations.",
         paragraph2:
@@ -412,16 +412,16 @@ export function getContent(language) {
 // Yleisesti käytetyt placeholder-tekstit kun sektion data on tyhjä
 export const placeholders = {
   fi: {
-    schedule: "Aikataulu julkaistaan pian.",
-    catalog: "Ohjelmisto julkaistaan pian.",
-    event: "Lisätietoja tulossa pian.",
-    area: "Sisältöä päivitetään lähiaikoina.",
+    schedule: "Aikataulu julkaistaan heinäkuussa.",
+    catalog: "Ohjelmisto julkaistaan heinäkuussa.",
+    event: "Lisätietoja julkaistaan heinäkuussa.",
+    area: "Sisältöä päivitetään heinäkuussa.",
   },
   "en-US": {
-    schedule: "The schedule will be published soon.",
-    catalog: "The programme will be published soon.",
-    event: "More information coming soon.",
-    area: "Content will be updated soon.",
+    schedule: "The schedule will be published in July.",
+    catalog: "The programme will be published in July.",
+    event: "More information will be published in July.",
+    area: "Content will be updated in July.",
   },
 };
 

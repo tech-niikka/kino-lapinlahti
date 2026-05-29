@@ -1,48 +1,60 @@
 import React from "react";
 
 function Event({ data }) {
-  const imageUrl = data?.images?.[0]?.fields?.file?.url;
-
   return (
-    <div className="flex flex-row justify-center items-center w-full leading-7">
-      <div className="max-w-[88%] sm:max-w-[85%] flex flex-col justify-center items-start lg:flex-row">
-        <div className="flex flex-col w-[100%] lg:pr-[5rem] lg:w-[50%]">
-          <div className="w-[100%] mb:w-[88%]">
-            {data?.secondaryTitle && (
-              <div>
-                <h1 className="font-serif font-semibold text-plum text-4xl mb-4">
-                  {data.secondaryTitle}
-                </h1>
-              </div>
-            )}
-
-            <div className="flex flex-col justify-between item text-plum">
-              {data?.paragraph && (
-                <h2 className="py-5 leading-7">{data.paragraph}</h2>
-              )}
-              {data?.paragraph2 && (
-                <h2 className="py-5 leading-7">{data.paragraph2}</h2>
-              )}
-              {data?.paragraph3 && (
-                <h2 className="py-5 leading-7">{data.paragraph3}</h2>
-              )}
-              {data?.paragraph4 && (
-                <h2 className="py-5 leading-7">{data.paragraph4}</h2>
-              )}
+    <div className="w-full leading-7">
+      {/* Tekstiosa pysyy sivun marginaalien sisällä */}
+      <div className="flex flex-row justify-center items-center w-full">
+        <div className="max-w-[88%] sm:max-w-[85%] w-full">
+          {data?.secondaryTitle && (
+            <div>
+              <h1 className="font-serif font-semibold text-plum text-4xl mb-4">
+                {data.secondaryTitle}
+              </h1>
             </div>
+          )}
+
+          <div className="flex flex-col justify-between item text-plum text-lg leading-8">
+            {data?.paragraph && (
+              <h2 className="py-5">{data.paragraph}</h2>
+            )}
+            {data?.paragraph2 && (
+              <h2 className="py-5">{data.paragraph2}</h2>
+            )}
+            {data?.paragraph3 && (
+              <h2 className="py-5">{data.paragraph3}</h2>
+            )}
+            {data?.paragraph4 && (
+              <h2 className="py-5">{data.paragraph4}</h2>
+            )}
           </div>
         </div>
+      </div>
 
-        {imageUrl && (
-          <div className="flex flex-col w-full lg:w-[50%] items-center pt-8 lg:pt-0">
-            <img
-              className="aspect-square w-full max-w-[20rem] lg:max-w-[40rem] h-auto object-cover"
-              src={imageUrl.startsWith("//") ? `https:${imageUrl}` : imageUrl}
-              alt="Lapinlahden elokuvajuhlat"
-              loading="lazy"
-            />
-          </div>
-        )}
+      {/* Teaser-video tekstin alla — koko ruudun levyinen.
+          Mobiili (alle md = 868px): pystyversio.
+          Desktop (md ja yli): vaakaversio. */}
+      <div className="w-full pt-8">
+        <video
+          className="block md:hidden w-full h-auto"
+          src="/teaser-pysty.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          aria-label="Lapinlahden elokuvajuhlat -teaser"
+        />
+        <video
+          className="hidden md:block w-full h-auto"
+          src="/teaser-vaaka.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          aria-label="Lapinlahden elokuvajuhlat -teaser"
+        />
       </div>
     </div>
   );
