@@ -152,6 +152,9 @@ export const buildVenues = (locale) => {
           "Lapinlahdenpolku 8, 00180 Helsingfors"
         ),
         mapsUrl: MAPS.lahde,
+        // Upotettu kartta näytetään vain päänäyttämölle
+        mapEmbed:
+          "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1584.4612808598185!2d24.911512298500625!3d60.16752629689014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920a37d09b33d7%3A0x80af25826e6d8cf6!2sLapinlahden%20L%C3%A4hde!5e0!3m2!1sen!2sse!4v1715858112461!5m2!1sen!2sse",
         photo: imgLahde,
         photoCredit: null,
         sections: [

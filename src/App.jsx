@@ -6,7 +6,6 @@ import Nav from "./Nav.jsx";
 import Schedule from "./Schedule.jsx";
 import ProgramTimeline from "./ProgramTimeline.jsx";
 import { Catalog } from "./Catalog.jsx";
-import Area from "./Area.jsx";
 import Footer from "./Footer.jsx";
 import Event from "./Event.jsx";
 import Teaser from "./Teaser.jsx";
@@ -180,19 +179,12 @@ function App() {
         </div>
       </div>
 
+      {/* Lipunvarauksen aukeamisaika. Varsinainen Liput-nappi on poistettu
+          etusivulta siihen asti, kunnes varaus on auki — nappi löytyy yhä
+          navigaatiosta. Palauta tähän kun Fienta-varaus aukeaa. */}
       <div className="flex flex-col items-center justify-between pt-8">
-        <a
-          href="https://fienta.com/fi/o/lapinlahti-film-festival"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`whitespace-normal px-8 py-2 text-plum text-center uppercase border-2 border-solid rounded-full hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer`}
-        >
-          {content.buttons[0]?.fields.ticketButton}
-        </a>
-
-        {/* Lipunvarauksen aukeamisaika napin alla */}
         {content.buttons[0]?.fields.ticketNote && (
-          <p className="pt-3 px-6 text-plum text-center text-sm custom-1020:text-base">
+          <p className="px-6 text-plum text-center font-semibold text-lg xsm:text-xl md:text-2xl leading-8">
             {content.buttons[0].fields.ticketNote}
           </p>
         )}
@@ -323,8 +315,6 @@ function App() {
       </div>
 
       <Venues data={content.venuesSection} />
-
-      <Area data={content.areaSection[0]?.fields} />
 
       <Teaser />
 

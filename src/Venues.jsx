@@ -68,6 +68,20 @@ function Venues({ data }) {
                     ))}
                   </div>
 
+                  {/* Upotettu kartta (vain päänäyttämöllä) */}
+                  {venue.mapEmbed && (
+                    <div className="relative pt-[56%] xsm:pt-[45%] rounded-2xl overflow-hidden shadow-lg mt-6 w-full">
+                      <iframe
+                        className="absolute top-0 left-0 w-full h-full border-0"
+                        src={venue.mapEmbed}
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title={venue.name}
+                      ></iframe>
+                    </div>
+                  )}
+
                   <div className="flex flex-col gap-2 pt-6">
                     {venue.links?.map((link) => (
                       <a
