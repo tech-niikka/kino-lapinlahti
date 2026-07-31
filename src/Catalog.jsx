@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Film } from "./Film";
 import { Music } from "./Music";
 import { Workshops } from "./Workshops";
@@ -6,104 +5,122 @@ import { ShortFilm } from "./ShortFilm";
 import { Now } from "./Now";
 import { Art } from "./Art";
 
-export const Catalog = ({ 
+// Ankkuri-id, jota App.jsx käyttää aikataulusta korttiin vierittämiseen
+export const catalogAnchorId = (type, id) => `catalog-${type}-${id}`;
+
+export const Catalog = ({
   films, shortFilms, music, workshops, now, art,
   filmTitle, shortFilmTitle, musicTitle, workshopTitle, nowTitle, artTitle,
+  selectedType, onSelect,
   handleScroll, scrollRef }) => {
-  const [selectedType, setSelectedType] = useState("films");
 
   const handleSelect = (type) => {
-    setSelectedType(type);
+    onSelect(type);
   };
 
   const renderContent = () => {
     if (selectedType === "films") {
       return films
         ?.filter((film) => film?.fields) // filter out invalid entries
-        .map((film, index) => <Film key={index} film={film} />);
+        .map((film, index) => (
+          <Film
+            key={index}
+            film={film}
+            anchorId={film.id ? catalogAnchorId("films", film.id) : undefined}
+          />
+        ));
     } else if (selectedType === "music") {
       return music
         ?.filter((artist) => artist?.fields)
-        .map((artist, index) => <Music key={index} music={artist} />);
+        .map((artist, index) => (
+          <Music
+            key={index}
+            music={artist}
+            anchorId={
+              artist.id ? catalogAnchorId("music", artist.id) : undefined
+            }
+          />
+        ));
     } else if (selectedType === "shortFilms") {
       return shortFilms
         ?.filter((shortFilm) => shortFilm?.fields)
-        .map((shortFilm, index) => <ShortFilm key={index} shortFilm={shortFilm} />);
+        .map((shortFilm, index) => (
+          <ShortFilm
+            key={index}
+            shortFilm={shortFilm}
+            anchorId={
+              shortFilm.id
+                ? catalogAnchorId("shortFilms", shortFilm.id)
+                : undefined
+            }
+          />
+        ));
     } else if (selectedType === "workshops") {
       return workshops
         ?.filter((workshop) => workshop?.fields)
-        .map((workshop, index) => <Workshops key={index} workshop={workshop} />);
+        .map((workshop, index) => (
+          <Workshops
+            key={index}
+            workshop={workshop}
+            anchorId={
+              workshop.id
+                ? catalogAnchorId("workshops", workshop.id)
+                : undefined
+            }
+          />
+        ));
     } else if (selectedType === "now" && now?.fields) {
       return <Now now={now} />;
     } else if (selectedType === "art") {
       return art
-        ?.filter((art) => art?.fields)
-        .map((art, index) => <Art key={index} art={art} />);
+        ?.filter((item) => item?.fields)
+        .map((item, index) => (
+          <Art
+            key={index}
+            art={item}
+            anchorId={item.id ? catalogAnchorId("art", item.id) : undefined}
+          />
+        ));
     }
   };
+
+  // Näytetään vain välilehdet joilla on sisältöä
+  const tabs = [
+    { type: "films", title: filmTitle, hasContent: (films?.length ?? 0) > 0 },
+    { type: "music", title: musicTitle, hasContent: (music?.length ?? 0) > 0 },
+    {
+      type: "shortFilms",
+      title: shortFilmTitle,
+      hasContent: (shortFilms?.length ?? 0) > 0,
+    },
+    {
+      type: "workshops",
+      title: workshopTitle,
+      hasContent: (workshops?.length ?? 0) > 0,
+    },
+    { type: "art", title: artTitle, hasContent: (art?.length ?? 0) > 0 },
+    { type: "now", title: nowTitle, hasContent: !!now },
+  ].filter((tab) => tab.hasContent);
 
   return (
     <div className="w-full flex flex-col items-center">
       {/* Catalog selector */}
 
       <div className="flex flex-col custom-590:flex-row flex-wrap justify-center gap-2 mb-4 items-center">
-        <button
-          onClick={() => { 
-            handleSelect("films"); 
-            handleScroll(scrollRef)
-          }}
-          className={`px-2 py-1 text-plum text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer ${selectedType === "films" ? "bg-heading text-peony" : "text-plum"}`}
-        >
-          {filmTitle}
-        </button>
-        <button
-          onClick={() => { 
-            handleSelect("music"); 
-            handleScroll(scrollRef)
-          }}
-          className={`px-2 py-1 text-plum text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer ${selectedType === "music" ? "bg-heading text-peony" : "text-plum"}`}
-        >
-          {musicTitle}
-        </button>
-        <button
-          onClick={() => { 
-            handleSelect("shortFilms"); 
-            handleScroll(scrollRef)
-          }}
-          className={`px-2 py-1 text-plum text-center whitespace-nowrap uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer ${selectedType === "shortFilms" ? "bg-heading text-peony" : "text-plum"}`}
-        >
-          {shortFilmTitle}
-        </button>
-        <button
-          onClick={() => { 
-            handleSelect("workshops"); 
-            handleScroll(scrollRef)
-          }}
-          className={`px-2 py-1 text-plum text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer ${selectedType === "workshops" ? "bg-heading text-peony" : "text-plum"}`}
-        >
-          {workshopTitle}
-        </button>
-
-        <button
-          onClick={() => { 
-            handleSelect("art"); 
-            handleScroll(scrollRef)
-          }}
-          className={`px-2 py-1 text-plum text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer ${selectedType === "art" ? "bg-heading text-peony" : "text-plum"}`}
-        >
-          {artTitle}
-        </button>
-
-        <button
-          onClick={() => { 
-            handleSelect("now"); 
-            handleScroll(scrollRef)
-          }}
-          className={`px-2 py-1 text-plum text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer ${selectedType === "now" ? "bg-heading text-peony" : "text-plum"}`}
-        >
-          {nowTitle}
-        </button>
-
+        {tabs.map((tab) => (
+          <button
+            key={tab.type}
+            onClick={() => {
+              handleSelect(tab.type);
+              handleScroll(scrollRef);
+            }}
+            className={`px-2 py-1 text-center uppercase border-2 border-solid rounded-full w-32 custom-1020:w-36 hover:bg-heading hover:text-peony text-sm custom-1020:text-base hover:cursor-pointer ${
+              selectedType === tab.type ? "bg-heading text-peony" : "text-plum"
+            }`}
+          >
+            {tab.title}
+          </button>
+        ))}
       </div>
 
       {/* Catalog Content */}

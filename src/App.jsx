@@ -4,10 +4,13 @@ import { getContent, getPlaceholders } from "./data/content.js";
 
 import Nav from "./Nav.jsx";
 import Schedule from "./Schedule.jsx";
+import ProgramTimeline from "./ProgramTimeline.jsx";
 import { Catalog } from "./Catalog.jsx";
 import Area from "./Area.jsx";
 import Footer from "./Footer.jsx";
 import Event from "./Event.jsx";
+import Teaser from "./Teaser.jsx";
+import Venues from "./Venues.jsx";
 import Contacts from "./Contacts.jsx";
 
 import poster2 from "./assets/banner-2026-1920.jpg"
@@ -23,8 +26,28 @@ function App() {
   const [content, setContent] = useState(() => getContent("fi"));
   const [placeholders, setPlaceholders] = useState(() => getPlaceholders("fi"));
 
+  // Ohjelmiston valittu välilehti + aikataulusta avattu kortti
+  const [catalogType, setCatalogType] = useState("films");
+  const [catalogFocus, setCatalogFocus] = useState(null);
+
+  // Aikataulurivin klikkaus: avaa oikea välilehti ja vieritä korttiin
+  const openCatalog = (link) => {
+    setCatalogType(link.type);
+    setCatalogFocus(link.id);
+  };
+
   useEffect(() => {
-    document.documentElement.lang = language === "fi" ? "fi" : "en";
+    if (!catalogFocus) return;
+    const el = document.getElementById(
+      `catalog-${catalogType}-${catalogFocus}`
+    );
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    setCatalogFocus(null);
+  }, [catalogFocus, catalogType]);
+
+  useEffect(() => {
+    document.documentElement.lang =
+      language === "sv" ? "sv" : language === "en-US" ? "en" : "fi";
   }, [language]);
 
   const aikataulu = useRef(null);
@@ -37,9 +60,7 @@ function App() {
     ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
-  const changeLanguage = () => {
-    language === "fi" ? setLanguage("en-US") : setLanguage("fi");
-  };
+  // Kielivalinta tulee Navista koodina ("fi" | "en-US" | "sv")
 
   useEffect(() => {
     document.cookie = "initialVisit=true; SameSite=Lax; Secure";
@@ -53,6 +74,7 @@ function App() {
 
   // Apurit: onko sektiolla näytettävää sisältöä?
   const hasSchedule = (content.scheduleSection[0]?.fields.schedule?.length ?? 0) > 0;
+  const hasProgram = (content.programSection?.[0]?.fields.days?.length ?? 0) > 0;
   const catalogFields = content.catalogSection[0]?.fields;
   const hasCatalog =
     (catalogFields?.films?.length ?? 0) > 0 ||
@@ -68,7 +90,7 @@ function App() {
     <div>
       <Nav
         handleScroll={handleScroll}
-        changeLanguage={changeLanguage}
+        setLanguage={setLanguage}
         language={language}
         scheduleTitle={content.scheduleSection[0]?.fields.title}
         catalogTitle={content.catalogSection[0]?.fields.title}
@@ -167,16 +189,24 @@ function App() {
         >
           {content.buttons[0]?.fields.ticketButton}
         </a>
-      </div> 
+
+        {/* Lipunvarauksen aukeamisaika napin alla */}
+        {content.buttons[0]?.fields.ticketNote && (
+          <p className="pt-3 px-6 text-plum text-center text-sm custom-1020:text-base">
+            {content.buttons[0].fields.ticketNote}
+          </p>
+        )}
+      </div>
 
       {/* Sektioiden järjestys 2026:
-          1) Tapahtumasta (sisältöä)
-          2) Alue (kartta + Lapinlahden Lähde)
-          3) Aikataulu (placeholder)
-          4) Ohjelmisto (placeholder)
-          Refs (ref[0..3] = aikataulu, ohjelmisto, info, alue) säilytetty
-          Nav-painikkeiden scroll-toiminnan vuoksi — DOM-järjestys
-          riippumaton refs-indekseistä. */}
+          1) Tapahtumasta
+          2) Aikataulu (päiväkohtainen ohjelma)
+          3) Ohjelmisto (kortit)
+          4) Alue (kartta + Lapinlahden Lähde) + teaser-video
+          5) Yhteystiedot
+          Ohjelmasisältö ensin, käytännön tiedot loppuun.
+          Refs säilytetty Nav-painikkeiden scroll-toiminnan vuoksi —
+          DOM-järjestys on riippumaton refs-indekseistä. */}
 
       <div
         ref={info}
@@ -202,40 +232,6 @@ function App() {
       )}
 
       <div
-        ref={alue}
-        className="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
-      >
-        <div className="flex flex-row items-center justify-center ">
-          <div className=" bg-plum w-[100%] h-0.5"></div>
-          <div className="px-[2rem]">
-            <h2 className="font-semibold text-plum text-xl">
-              {content.areaSection[0]?.fields.title}
-            </h2>
-          </div>
-          <div className="bg-plum w-[100%] h-0.5 "></div>
-        </div>
-      </div>
-
-      <Area data={content.areaSection[0]?.fields} />
-
-      <div
-        ref={yhteystiedot}
-        className="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
-      >
-        <div className="flex flex-row items-center justify-center ">
-          <div className="bg-plum w-[100%] h-0.5"></div>
-          <div className="px-[2rem]">
-            <h2 className="font-semibold text-xl text-plum">
-              {content.contactsSection[0]?.fields.title}
-            </h2>
-          </div>
-          <div className="bg-plum w-[100%] h-0.5 "></div>
-        </div>
-      </div>
-
-      <Contacts contacts={content.contactsSection[0]?.fields.contacts} />
-
-      <div
         ref={aikataulu}
         className="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
       >
@@ -250,7 +246,12 @@ function App() {
         </div>
       </div>
       <div className="flex flex-col justify-center items-center">
-        {hasSchedule ? (
+        {hasProgram ? (
+          <ProgramTimeline
+            data={content.programSection[0]?.fields}
+            onOpenCatalog={openCatalog}
+          />
+        ) : hasSchedule ? (
           content.scheduleSection[0]?.fields.schedule.map((item, index) => (
             <Schedule
               key={index}
@@ -295,6 +296,8 @@ function App() {
           workshopTitle={content.catalogSection[0]?.fields.workshopSectionTitle}
           nowTitle={content.catalogSection[0]?.fields.nowSectionTitle}
           artTitle={content.catalogSection[0]?.fields.artSectionTitle}
+          selectedType={catalogType}
+          onSelect={setCatalogType}
           handleScroll={handleScroll}
           scrollRef={ohjelmisto}
         />
@@ -303,6 +306,44 @@ function App() {
           {placeholders.catalog}
         </p>
       )}
+
+      <div
+        ref={alue}
+        className="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
+      >
+        <div className="flex flex-row items-center justify-center ">
+          <div className=" bg-plum w-[100%] h-0.5"></div>
+          <div className="px-[2rem]">
+            <h2 className="font-semibold text-plum text-xl">
+              {content.areaSection[0]?.fields.title}
+            </h2>
+          </div>
+          <div className="bg-plum w-[100%] h-0.5 "></div>
+        </div>
+      </div>
+
+      <Venues data={content.venuesSection} />
+
+      <Area data={content.areaSection[0]?.fields} />
+
+      <Teaser />
+
+      <div
+        ref={yhteystiedot}
+        className="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
+      >
+        <div className="flex flex-row items-center justify-center ">
+          <div className="bg-plum w-[100%] h-0.5"></div>
+          <div className="px-[2rem]">
+            <h2 className="font-semibold text-xl text-plum">
+              {content.contactsSection[0]?.fields.title}
+            </h2>
+          </div>
+          <div className="bg-plum w-[100%] h-0.5 "></div>
+        </div>
+      </div>
+
+      <Contacts contacts={content.contactsSection[0]?.fields.contacts} />
 
       <Footer data={content.footer[0]?.fields}/>
     </div>

@@ -136,24 +136,11 @@ function Area({ data }) {
         </div>
 
         <div className="flex flex-col w-full lg:w-[50%] items-center pt-8 lg:pt-0">
-          <a
-            href="/area-map.png"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full max-w-[20rem] lg:max-w-[40rem]"
-          >
-            <picture>
-              <source srcSet="/area-map-1000.webp" type="image/webp" />
-              <img
-                className="aspect-square w-full h-auto object-cover"
-                src="/area-map.png"
-                alt="Lapinlahden alueen kartta"
-                loading="lazy"
-              />
-            </picture>
-          </a>
+          {/* Aluekartta poistettu 31.7.2026 — vanha 2025-kartta oli vanhentunut.
+              Palautetaan kun uusi 2026-kartta on valmis: kuvat public/area-map.png
+              ja public/area-map-1000.webp ovat yhä repossa. */}
 
-          <div className="relative pt-[60%] rounded-2xl overflow-hidden shadow-lg mt-8 w-full max-w-[20rem] lg:max-w-[40rem]">
+          <div className="relative pt-[60%] rounded-2xl overflow-hidden shadow-lg w-full max-w-[20rem] lg:max-w-[40rem]">
             <iframe
               className="absolute top-0 left-0 w-full h-full border-0"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1584.4612808598185!2d24.911512298500625!3d60.16752629689014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920a37d09b33d7%3A0x80af25826e6d8cf6!2sLapinlahden%20L%C3%A4hde!5e0!3m2!1sen!2sse!4v1715858112461!5m2!1sen!2sse"

@@ -12,7 +12,7 @@ const Nav = React.forwardRef(
   (
     {
       handleScroll,
-      changeLanguage,
+      setLanguage,
       language,
       scheduleTitle,
       catalogTitle,
@@ -26,6 +26,13 @@ const Nav = React.forwardRef(
   ) => {
 
     const [menuOpen, setMenuOpen] = useState(false);
+
+    // Tuetut kielet — koodi vastaa content.js:n avaimia
+    const LANGUAGES = [
+      { code: "fi", label: "fi" },
+      { code: "en-US", label: "en" },
+      { code: "sv", label: "sv" },
+    ];
 
     const handleNav = () => {
       setMenuOpen(!menuOpen);
@@ -85,25 +92,20 @@ const Nav = React.forwardRef(
             </ul>
 
             <div className="pl-[1rem] py-1">
-              <ul className="flex flex-row" onClick={changeLanguage}>
-                <li>
-                  <button
-                    className={`text-plum text-sm custom-983:text-base uppercase px-1 hover:text-peony  ${
-                      language === "fi" ? "underline" : ""
-                    }`}
-                  >
-                    fi
-                  </button>
-                </li>
-                <li>
-                  <button
-                    className={`text-plum text-sm custom-983:text-base uppercase px-1 hover:text-peony  ${
-                      language === "en-US" ? "underline" : ""
-                    }`}
-                  >
-                    en
-                  </button>
-                </li>
+              <ul className="flex flex-row">
+                {LANGUAGES.map((lang) => (
+                  <li key={lang.code}>
+                    <button
+                      onClick={() => setLanguage(lang.code)}
+                      aria-current={language === lang.code ? "true" : undefined}
+                      className={`text-plum text-sm custom-983:text-base uppercase px-1 hover:text-peony ${
+                        language === lang.code ? "underline" : ""
+                      }`}
+                    >
+                      {lang.label}
+                    </button>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -184,25 +186,22 @@ const Nav = React.forwardRef(
                 </ul>
               </div>
               <div className=" py-8 ">
-                <ul className="flex flex-row" onClick={changeLanguage}>
-                  <li>
-                    <button
-                      className={`text-plum uppercase p-1 hover:text-peony ${
-                        language === "fi" ? "underline" : ""
-                      }`}
-                    >
-                      fi
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      className={`text-plum uppercase p-1 hover:text-peony ${
-                        language === "en-US" ? "underline" : ""
-                      }`}
-                    >
-                      en
-                    </button>
-                  </li>
+                <ul className="flex flex-row">
+                  {LANGUAGES.map((lang) => (
+                    <li key={lang.code}>
+                      <button
+                        onClick={() => setLanguage(lang.code)}
+                        aria-current={
+                          language === lang.code ? "true" : undefined
+                        }
+                        className={`text-plum uppercase p-1 hover:text-peony ${
+                          language === lang.code ? "underline" : ""
+                        }`}
+                      >
+                        {lang.label}
+                      </button>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>

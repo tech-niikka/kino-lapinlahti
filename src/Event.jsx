@@ -30,32 +30,7 @@ function Event({ data }) {
           </div>
         </div>
       </div>
-
-      {/* Teaser-video tekstin alla — koko ruudun levyinen.
-          Mobiili (alle md = 868px): pystyversio.
-          Desktop (md ja yli): vaakaversio. */}
-      <div className="w-full pt-8">
-        <video
-          className="block md:hidden w-full h-auto"
-          src="/teaser-pysty.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="metadata"
-          aria-label="Lapinlahden elokuvajuhlat -teaser"
-        />
-        <video
-          className="hidden md:block w-full h-auto"
-          src="/teaser-vaaka.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="metadata"
-          aria-label="Lapinlahden elokuvajuhlat -teaser"
-        />
-      </div>
+      {/* Teaser-video on siirretty Alue-osion perään (Teaser.jsx) */}
     </div>
   );
 }
