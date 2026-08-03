@@ -817,6 +817,19 @@ export const buildCatalog = (locale) => {
       ),
     }),
     musicEntry({
+      id: "los-pan-pan",
+      artist: "Los Pan Pan",
+      img: imgLosPanPan,
+      venue: t("Kivipiha", "Stone yard", "Stengården"),
+      day: t("su", "Sun", "sön"),
+      date: "23.8.",
+      time: t("klo 14.00", "14.00", "kl. 14.00"),
+      desc: t(
+        "Pannut kuumina – Los Pan Pan, johtajana Satu Jämsä. Kirkkonummen Steel Band ry täyttää tänä vuonna komeat 30 vuotta!\n\nSteel panit eli \"pannut\" ovat Trinidad & Tobagosta kotoisin olevia melodisia lyömäsoittimia, jotka taipuvat moneen musatyyliin. Jokainen soitin taotaan käsityönä kierrätetyistä 200 litran tynnyreistä. Los Pan Panin soittimet ovat kuljettaneet entisessä elämässään mm. öljyä ja omenamehua. Kirkkonummelainen Los Pan Pan on yksi harvoista Suomessa toimivista steelbändeistä. Tällä kertaa soi Lapinlahden elokuvajuhlilla Kivipihalla – luvassa leffabiisejä ja lattareita.",
+        "Los Pan Pan, led by Satu Jämsä. The Kirkkonummi Steel Band celebrates its 30th anniversary this year!\n\nSteel pans are melodic percussion instruments originating from Trinidad & Tobago, each hand-hammered from recycled 200-litre barrels. In their former lives, Los Pan Pan's instruments carried oil and apple juice. Los Pan Pan is one of the few steel bands active in Finland. At Lapinlahti Film Festival they play the Stone yard with movie tunes and Latin rhythms."
+      ),
+    }),
+    musicEntry({
       id: "lyyti",
       artist: "Lyyti",
       img: imgLyyti,
@@ -1259,23 +1272,6 @@ export const buildCatalog = (locale) => {
       desc: t(
         "Super 8 -filmille kuvattua visuaalista runoutta – kutsu toimintaan luonnon suojelemiseksi. Nostalgian tuntua, aitouden makua keinotekoisuuden maailmassa. Unenomainen tunnelma, leijuva olo ja kaipaus kahden maailman – kaupungin ja maaseudun – välissä. Kerrottu kalaallisutiksi (grönlanniksi), englanninkielisellä tekstityksellä.\n\nDennis Tulugaq on grönlantilainen elokuvaohjaaja, kuvaaja ja tuottaja, joka asuu Nesoddenissa Norjassa. Tuotantoyhtiönsä Tulugaq Filmsin kautta hän kehittää dokumentti- ja fiktioprojekteja, joiden juuret ovat alkuperäiskansojen ja arktisen alueen tarinankerronnassa. Häntä ohjaa motto: \"Strengthening Indigenous stories, one story at a time.\"",
         "Visual poetry shot on super 8, a call for action on preservation of nature. A sense of nostalgia, a taste of realness in a world of artificiality. Dreamlike atmosphere, floaty feeling and longing in between two worlds, urban and rural. Narrated in Kalaallisut (Greenlandic) with English subtitles.\n\nDennis Tulugaq is a Greenlandic film director, cinematographer and producer based in Nesodden, Norway. Through his production company Tulugaq Films, he develops documentary and fiction projects rooted in Indigenous and Arctic storytelling. He is guided by his personal motto: \"Strengthening Indigenous stories, one story at a time.\""
-      ),
-    }),
-    artEntry({
-      id: "los-pan-pan",
-      title: "Los Pan Pan",
-      artist: t(
-        "Kirkkonummen Steel Band ry, johtajana Satu Jämsä",
-        "Kirkkonummi Steel Band, led by Satu Jämsä"
-      ),
-      img: imgLosPanPan,
-      location: t(
-        "Kivipiha · su 23.8. klo 14.00 · 35 min · Ei ilmoittautumista",
-        "Stone yard · Sun 23 Aug 14.00 · 35 min · No registration"
-      ),
-      desc: t(
-        "Pannut kuumina – Los Pan Pan, johtajana Satu Jämsä. Kirkkonummen Steel Band ry täyttää tänä vuonna komeat 30 vuotta!\n\nSteel panit eli \"pannut\" ovat Trinidad & Tobagosta kotoisin olevia melodisia lyömäsoittimia, jotka taipuvat moneen musatyyliin. Jokainen soitin taotaan käsityönä kierrätetyistä 200 litran tynnyreistä. Los Pan Panin soittimet ovat kuljettaneet entisessä elämässään mm. öljyä ja omenamehua. Kirkkonummelainen Los Pan Pan on yksi harvoista Suomessa toimivista steelbändeistä. Tällä kertaa soi Lapinlahden elokuvajuhlilla Kivipihalla – luvassa leffabiisejä ja lattareita.",
-        "Los Pan Pan, led by Satu Jämsä. The Kirkkonummi Steel Band celebrates its 30th anniversary this year!\n\nSteel pans are melodic percussion instruments originating from Trinidad & Tobago, each hand-hammered from recycled 200-litre barrels. In their former lives, Los Pan Pan's instruments carried oil and apple juice. Los Pan Pan is one of the few steel bands active in Finland. At Lapinlahti Film Festival they play the Stone yard with movie tunes and Latin rhythms."
       ),
     }),
   ];
