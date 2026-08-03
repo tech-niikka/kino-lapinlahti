@@ -179,12 +179,19 @@ function App() {
         </div>
       </div>
 
-      {/* Lipunvarauksen aukeamisaika. Varsinainen Liput-nappi on poistettu
-          etusivulta siihen asti, kunnes varaus on auki — nappi löytyy yhä
-          navigaatiosta. Palauta tähän kun Fienta-varaus aukeaa. */}
+      {/* Liput-nappi Fientaan + varauksen aukeamisaika sen alla */}
       <div className="flex flex-col items-center justify-between pt-8">
+        <a
+          href="https://fienta.com/fi/o/lapinlahti-film-festival"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="whitespace-normal px-10 py-2.5 text-plum text-center uppercase border-2 border-solid rounded-full hover:bg-heading hover:text-peony text-base custom-1020:text-lg hover:cursor-pointer"
+        >
+          {content.buttons[0]?.fields.ticketButton}
+        </a>
+
         {content.buttons[0]?.fields.ticketNote && (
-          <p className="px-6 text-plum text-center font-semibold text-lg xsm:text-xl md:text-2xl leading-8">
+          <p className="pt-4 px-6 text-plum text-center font-semibold text-lg xsm:text-xl md:text-2xl leading-8">
             {content.buttons[0].fields.ticketNote}
           </p>
         )}
