@@ -14,7 +14,6 @@ import yleLogo from "../assets/sponsors/yle.png";
 import helsinkiLogo from "../assets/sponsors/helsinki.png";
 import lahdeLogo from "../assets/sponsors/lapinlahden-lahde.png";
 import mesLogo from "../assets/sponsors/mes.svg";
-import mieliLogo from "../assets/sponsors/mieli.png";
 import pagaLogo from "../assets/sponsors/paga.png";
 import frikutLogo from "../assets/sponsors/frikut.svg";
 
@@ -58,12 +57,6 @@ const sponsorEntries = [
     logoUrl: mesLogo,
     url: "https://mes.fi/",
     altText: "Musiikin edistämissäätiö MES",
-  },
-  {
-    logoUrl: mieliLogo,
-    url: "https://mieli.fi/",
-    altText: "MIELI Suomen Mielenterveys ry",
-    size: "large",
   },
   {
     logoUrl: pagaLogo,
