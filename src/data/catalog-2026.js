@@ -94,6 +94,7 @@ export const buildCatalog = (locale) => {
   const WS_LANG = t("Työpajan kieli:", "Workshop language:", "Workshopens språk:");
   const FIENTA_LABEL = t("Varaa paikka (Fienta)", "Reserve a seat (Fienta)", "Boka plats (Fienta)");
   const DIRECTED = t("Ohjaus", "Directed by", "Regissör");
+  const TRAILER = t("Katso traileri", "Watch the trailer", "Se trailern");
 
   // Elokuvakortti
   const film = (o) => ({
@@ -105,6 +106,9 @@ export const buildCatalog = (locale) => {
       fientaUrl: o.fienta ?? null,
       fientaLabel: FIENTA_LABEL,
       artwork: artwork(o.img),
+      // Juliste linkittyy traileriin kun trailer on tiedossa
+      trailerUrl: o.trailer ?? null,
+      trailerLabel: TRAILER,
       length: o.length,
       languageTitle: LANG,
       filmlanguage: o.lang,
@@ -121,6 +125,7 @@ export const buildCatalog = (locale) => {
   const films = [
     film({
       id: "left-handed-girl",
+      trailer: "https://www.youtube.com/watch?v=0rXnpfzpk8s",
       title: t("Vasenkätinen tyttö", "Left-Handed Girl"),
       originalTitle: t("Left-Handed Girl", ""),
       screening: t(
@@ -147,6 +152,7 @@ export const buildCatalog = (locale) => {
     }),
     film({
       id: "haxan",
+      trailer: "https://www.youtube.com/watch?v=0er-CiMqfFg",
       title: t("Europa + Noita (Häxan)", "Europa + Häxan"),
       originalTitle: t(
         "Alkukuvana Europa (1931)",
@@ -177,6 +183,7 @@ export const buildCatalog = (locale) => {
     }),
     film({
       id: "miehen-tyo",
+      trailer: "https://www.youtube.com/watch?v=OVZFIIr43Go",
       title: t("Miehen työ", "Miehen työ (Man's Job)"),
       originalTitle: "",
       screening: t(
@@ -200,6 +207,7 @@ export const buildCatalog = (locale) => {
     }),
     film({
       id: "hairiotekija",
+      trailer: "https://www.youtube.com/watch?v=CfQ1CncwByU",
       title: t("Häiriötekijä", "Häiriötekijä (Distractions)"),
       originalTitle: "",
       screening: t(
@@ -223,6 +231,7 @@ export const buildCatalog = (locale) => {
     }),
     film({
       id: "shoplifters",
+      trailer: "https://www.youtube.com/watch?v=9382rwoMiRc",
       title: t("Shoplifters – perhesalaisuuksia", "Shoplifters"),
       originalTitle: "Manbiki Kazoku",
       screening: t(
@@ -246,6 +255,7 @@ export const buildCatalog = (locale) => {
     }),
     film({
       id: "kapina-elaman-puolesta",
+      trailer: "https://www.youtube.com/watch?v=k5z-BzQLJAo",
       title: "Kapina elämän puolesta",
       originalTitle: "",
       screening: t(
@@ -269,6 +279,7 @@ export const buildCatalog = (locale) => {
     }),
     film({
       id: "tyhjio",
+      trailer: "https://www.youtube.com/watch?v=GY9OTJqahiE",
       title: t("Tyhjiö", "Tyhjiö (Void)"),
       originalTitle: "",
       screening: t(
@@ -292,6 +303,7 @@ export const buildCatalog = (locale) => {
     }),
     film({
       id: "taste-of-cherry",
+      trailer: "https://www.youtube.com/watch?v=H2NhAmDv1dw",
       title: t("Kirsikan maku", "Taste of Cherry"),
       originalTitle: t("Taste of Cherry", "Ta'm e guilass"),
       screening: t(
@@ -315,6 +327,7 @@ export const buildCatalog = (locale) => {
     }),
     film({
       id: "isanpaiva",
+      trailer: "https://www.youtube.com/watch?v=JnjDq8QIDu8",
       title: t("Isänpäivä", "Isänpäivä (Father's Day)"),
       originalTitle: "",
       screening: t(
@@ -338,6 +351,7 @@ export const buildCatalog = (locale) => {
     }),
     film({
       id: "love-lies-bleeding",
+      trailer: "https://www.youtube.com/watch?v=AULR_GPteNQ",
       title: "Love Lies Bleeding",
       originalTitle: "",
       screening: t(
@@ -361,6 +375,7 @@ export const buildCatalog = (locale) => {
     }),
     film({
       id: "musta-orfeus",
+      trailer: "https://www.youtube.com/watch?v=FbcxQRuOa4o",
       title: t("Musta Orfeus", "Black Orpheus"),
       originalTitle: "Orfeu Negro",
       screening: t(
@@ -407,6 +422,7 @@ export const buildCatalog = (locale) => {
     }),
     film({
       id: "embrace-of-the-serpent",
+      trailer: "https://www.youtube.com/watch?v=uymNkBuR-SY",
       title: "Embrace of the Serpent",
       originalTitle: "El abrazo de la serpiente",
       screening: t(
@@ -433,6 +449,7 @@ export const buildCatalog = (locale) => {
     }),
     film({
       id: "turisti",
+      trailer: "https://www.youtube.com/watch?v=skQk2nVaAsI",
       title: t("Turisti", "Force Majeure"),
       originalTitle: t("Force Majeure", "Turist"),
       screening: t(
@@ -462,6 +479,7 @@ export const buildCatalog = (locale) => {
     }),
     film({
       id: "the-ugly-stepsister",
+      trailer: "https://www.youtube.com/watch?v=5vZ1_Yxjwzs",
       title: "The Ugly Stepsister",
       originalTitle: "Den stygge stesøsteren",
       screening: t(
@@ -488,6 +506,7 @@ export const buildCatalog = (locale) => {
     }),
     film({
       id: "taistelu-lapinlahdesta",
+      trailer: "https://vimeo.com/1148336033",
       title: t("Taistelu Lapinlahdesta", "The Battle for Lapinlahti"),
       originalTitle: t("", "Taistelu Lapinlahdesta"),
       screening: t(
@@ -511,6 +530,7 @@ export const buildCatalog = (locale) => {
     }),
     film({
       id: "christiania",
+      trailer: "https://www.youtube.com/watch?v=vvAi0qO0qiE",
       title: "Christiania",
       originalTitle: t("Suomen ensi-ilta", "Finnish premiere"),
       screening: t(
@@ -534,6 +554,7 @@ export const buildCatalog = (locale) => {
     }),
     film({
       id: "and-then-we-danced",
+      trailer: "https://www.youtube.com/watch?v=n25XEhQ6764",
       title: "And Then We Danced",
       originalTitle: "",
       screening: t(
@@ -557,6 +578,7 @@ export const buildCatalog = (locale) => {
     }),
     film({
       id: "aftersun",
+      trailer: "https://www.youtube.com/watch?v=G9jOaggGPKQ",
       title: "Aftersun",
       originalTitle: t("Aftersun – päivämme auringossa", ""),
       screening: t(

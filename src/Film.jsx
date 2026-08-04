@@ -7,12 +7,45 @@ export const Film = ({ film, anchorId }) => {
       className="flex-grow-0 flex flex-col items-start w-[95%] custom-440:w-[70%] text-sm relative px-0 custom-588:px-[1rem] py-[0.1rem] custom-588:py-[2rem] custom-590:flex-col custom-590:w-[50%] custom-1120:w-[50%] sm:w-[100%] sm:flex-row custom-1150:w-[50%] mx-auto sm:mx-0 gap-y-2 sm:gap-y-0 scroll-mt-24"
     >
       <div className="sm:pr-[2rem] pr-0">
-        <img
-          src={imgUrl(film.fields.artwork?.fields.file.url, "?w=600&fm=webp")}
-          alt={`${film.fields.title} poster`}
-          className="w-[100%] h-auto custom-588:w-[20rem] min-h-[18rem] aspect-[7/10] object-cover"
-          loading="lazy"
-        />
+        {/* Juliste vie traileriin, jos sellainen on tiedossa */}
+        {film.fields.trailerUrl ? (
+          <a
+            href={film.fields.trailerUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={film.fields.trailerLabel}
+            className="group block relative w-[100%] custom-588:w-[20rem]"
+          >
+            <img
+              src={imgUrl(film.fields.artwork?.fields.file.url, "?w=600&fm=webp")}
+              alt={`${film.fields.title} poster`}
+              className="w-[100%] h-auto min-h-[18rem] aspect-[7/10] object-cover"
+              loading="lazy"
+            />
+            {/* Toistokuvake — tummuu hiirellä ja näyttää tekstin */}
+            <span className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-plum/0 group-hover:bg-plum/50 group-focus-visible:bg-plum/50 transition-colors">
+              <span className="flex items-center justify-center w-14 h-14 rounded-full bg-white/85 opacity-70 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity">
+                <svg
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  className="w-6 h-6 translate-x-[2px] fill-plum"
+                >
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </span>
+              <span className="text-white text-sm font-semibold uppercase opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity">
+                {film.fields.trailerLabel}
+              </span>
+            </span>
+          </a>
+        ) : (
+          <img
+            src={imgUrl(film.fields.artwork?.fields.file.url, "?w=600&fm=webp")}
+            alt={`${film.fields.title} poster`}
+            className="w-[100%] h-auto custom-588:w-[20rem] min-h-[18rem] aspect-[7/10] object-cover"
+            loading="lazy"
+          />
+        )}
       </div>
 
       <div className="flex flex-col justify-between w-[100%] sm:w-[60%] custom-1150:w-[60%] custom-1120:w-[60%]">
