@@ -578,7 +578,7 @@ export const buildCatalog = (locale) => {
     }),
     film({
       id: "aftersun",
-      trailer: "https://www.youtube.com/watch?v=G9jOaggGPKQ",
+      trailer: "https://www.youtube.com/watch?v=vXKcWRu8K_U",
       title: "Aftersun",
       originalTitle: t("Aftersun – päivämme auringossa", ""),
       screening: t(
