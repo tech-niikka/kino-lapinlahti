@@ -218,7 +218,7 @@ const Nav = React.forwardRef(
               />
             </a>
             <a 
-              href="https://www.facebook.com/events/2063526377510306/"
+              href="https://fb.me/e/9B27HMCoJ"
               target="_blank"
               rel="noopener noreferrer">
               <AiOutlineFacebook

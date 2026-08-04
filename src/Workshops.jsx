@@ -71,7 +71,9 @@ export const Workshops = ({ workshop, anchorId }) => {
             )}
           </div>
 
-          <div className="flex gap-[0.5rem] pt-[1rem] text-[1rem] lowercase font-semibold">
+          {/* Ei lowercase-muunnosta: aika-kentässä on paikannimi (Wanha Labra,
+              Sininen Huone, Puisto), jonka iso alkukirjain pitää säilyä */}
+          <div className="flex gap-[0.5rem] pt-[1rem] text-[1rem] font-semibold">
             <div>{workshop.fields.day}</div>
             <div>{workshop.fields.date}</div>
             <div>{workshop.fields.time}</div>

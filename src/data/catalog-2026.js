@@ -48,6 +48,8 @@ import imgKajaMatura from "../assets/catalog/workshops/kaja-matura.jpg";
 import imgAngelicaLewis from "../assets/catalog/workshops/angelica-lewis.jpg";
 import imgOscarZemarti from "../assets/catalog/workshops/oscar-zemarti.jpg";
 import imgAnniPellikka from "../assets/catalog/workshops/anni-pellikka.jpg";
+import imgKatriHeiskala from "../assets/catalog/workshops/katri-heiskala.jpg";
+import imgCraftCorner from "../assets/catalog/workshops/craft-corner.jpg";
 import imgOlennot from "../assets/catalog/workshops/olennolliset-olennot.jpg";
 
 import imgKenTastaKay from "../assets/catalog/art/ken-tasta-kay.jpg";
@@ -1150,18 +1152,22 @@ export const buildCatalog = (locale) => {
     }),
     workshopEntry({
       id: "trauma-release-exercise",
+      fienta: fienta("tensionreleasingexercises-lapinlahti-film-festival", locale),
       name: t(
-        "Trauma Release Exercise (TRE) — Katri Heiskala",
-        "Trauma Release Exercise (TRE) by Katri Heiskala"
+        "TRE® — Tension Releasing Exercises · Katri Heiskala",
+        "TRE® — Tension Releasing Exercises by Katri Heiskala",
+        "TRE® — Tension Releasing Exercises med Katri Heiskala"
       ),
-      img: null,
-      day: t("pe", "Fri"),
+      img: imgKatriHeiskala,
+      handle: "katriheiskala",
+      day: t("pe", "Fri", "fre"),
       date: "21.8.",
-      time: t("klo 17–18.30 · Wanha Labra", "17–18.30 · Wanha Labra"),
+      time: t("klo 17–18.30 · Wanha Labra", "17–18.30 · Wanha Labra", "kl. 17–18.30 · Wanha Labra"),
       lang: t("suomi", "Finnish", "finska"),
       desc: t(
-        COMING_SOON + "\n\nKesto: 90 min.",
-        COMING_SOON + "\n\nDuration: 90 min."
+        "Tässä työpajassa tutustutaan TRE®-menetelmään (Tension, Stress & Trauma Releasing Exercises). Menetelmä hyödyntää kehon luonnollista palautumisjärjestelmää ja auttaa vapauttamaan kehoon kertyneitä jännityksiä ja kuormitusta.\n\nYksinkertaiset TRE®-alkuliikkeet aktivoivat kehon sisäsyntyisen stressin säätelyjärjestelmän: neurogeenisen tärinän. Tämän sisäisen värinän aktivoimisen ja harjoittamisen positiivisena vaikutuksena voi olla esimerkiksi kroonisten syväjännitysten väheneminen, parempi uni ja rentoutuminen. Työpaja sisältää kevyen johdatuksen teorian kautta menetelmään ja lyhyen harjoitusosuuden. Et tarvitse aiempaa kokemusta tai erityistä fyysistä kuntoa osallistumiseen.\n\nTyöpajan ohjaa Katri Heiskala, joka on Lapinlahden Lähteellä toimiva tanssi-liiketerapeutti (Master's degree in Dance Movement Therapy), sertifioitu TRE®-ohjaaja, FM.\n\nKesto: 1,5 tuntia. Ennakkoilmoittautuminen.",
+        "In this workshop, you will be introduced to the TRE® (Tension, Stress & Trauma Releasing Exercises) method. TRE® utilizes the body's natural recovery mechanism and helps release accumulated tension and stress stored in the body.\n\nSimple introductory TRE® exercises activate the body's innate stress-regulation mechanism through neurogenic tremors. Activating and practicing this natural shaking response may help reduce chronic muscular tension, improve sleep, and promote deep relaxation. The workshop includes a brief introduction to the theory behind the method, followed by a guided practice session. No previous experience or special level of physical fitness is required.\n\nThe workshop is led by Katri Heiskala, a Dance Movement Therapist (Master's Degree in Dance Movement Therapy), certified TRE® provider and Master of Arts, based at Lapinlahden Lähde.\n\nDuration: 1.5 hours. Advance registration required.",
+        "Under den här workshopen får du bekanta dig med TRE®-metoden (Tension, Stress & Trauma Releasing Exercises). Metoden använder kroppens naturliga återhämtningssystem och hjälper till att frigöra spänningar och belastningar som har samlats i kroppen.\n\nDe enkla inledande TRE®-övningarna aktiverar kroppens medfödda system för stressreglering genom neurogena skakningar. Att aktivera och träna denna naturliga skakrespons kan bidra till att minska kroniska muskelspänningar, förbättra sömnen och främja avslappning. Workshopen innehåller en kort introduktion till metodens teori samt en guidad övningsdel. Du behöver inga tidigare erfarenheter eller någon särskild fysisk kondition för att delta.\n\nWorkshopen leds av Katri Heiskala, dans- och rörelseterapeut (Master's Degree in Dance Movement Therapy), certifierad TRE®-handledare och filosofie magister, verksam vid Lapinlahden Lähde.\n\nLängd: 1,5 timme. Förhandsanmälan krävs."
       ),
     }),
     workshopEntry({
@@ -1270,18 +1276,22 @@ export const buildCatalog = (locale) => {
     }),
     workshopEntry({
       id: "hoitava-liike",
+      fienta: fienta("hoitavaliike-lapinlahti-film-festival", locale),
       name: t(
         "Hoitava liike — Katri Heiskala",
-        "Hoitava liike by Katri Heiskala"
+        "Healing Movement by Katri Heiskala",
+        "Helande rörelse med Katri Heiskala"
       ),
-      img: null,
-      day: t("su", "Sun"),
+      img: imgKatriHeiskala,
+      handle: "katriheiskala",
+      day: t("su", "Sun", "sön"),
       date: "23.8.",
-      time: t("klo 13–14 · Wanha Labra", "13–14 · Wanha Labra"),
+      time: t("klo 13–14 · Wanha Labra", "13–14 · Wanha Labra", "kl. 13–14 · Wanha Labra"),
       lang: t("suomi", "Finnish", "finska"),
       desc: t(
-        COMING_SOON + "\n\nKesto: 1 tunti.",
-        COMING_SOON + "\n\nDuration: 1 hour."
+        "Hoitavan liikkeen työpajassa palataan lempeästi tuntemaan ja aistimaan oma keho ja sen liikkeet. Liikekieli toimii ennen kaikkea väylänä lepoon, yhteyteen, rauhaan ja sisäiseen kokemukseen. Ei ole oikeaa eikä väärää, jokainen liikkuu omaa kehoaan ja tarpeitaan kuunnellen. Harjoitteet ovat saaneet innoitetta modernin tanssin liikeimprovisaatiosta ja tanssi-liiketerapian menetelmistä.\n\nTyöpajan ohjaa Katri Heiskala, joka on Lapinlahden Lähteellä toimiva tanssi-liiketerapeutti (Master's degree in Dance Movement Therapy), sertifioitu TRE®-ohjaaja, FM.\n\nKesto: 1 tunti. Ennakkoilmoittautuminen.",
+        "In the Healing Movement workshop, participants are gently guided back to sensing and connecting with their own bodies through movement. Movement becomes a pathway to rest, connection, inner peace and embodied experience. There is no right or wrong way to move — everyone is encouraged to listen to their own body and move according to their own needs. The exercises draw inspiration from modern dance improvisation and Dance Movement Therapy methods.\n\nThe workshop is led by Katri Heiskala, a Dance Movement Therapist (Master's Degree in Dance Movement Therapy), certified TRE® provider and Master of Arts, based at Lapinlahden Lähde.\n\nDuration: 1 hour. Advance registration required.",
+        "I workshopen Helande rörelse får deltagarna varsamt återknyta kontakten med sin kropp och dess rörelser. Rörelsen fungerar framför allt som en väg till vila, närvaro, inre ro och en djupare kroppslig upplevelse. Det finns inget rätt eller fel sätt att röra sig – var och en uppmuntras att lyssna på sin egen kropp och röra sig utifrån sina egna behov. Övningarna har inspirerats av modern dansimprovisation och metoder från dans- och rörelseterapi.\n\nWorkshopen leds av Katri Heiskala, dans- och rörelseterapeut (Master's Degree in Dance Movement Therapy), certifierad TRE®-handledare och filosofie magister, verksam vid Lapinlahden Lähde.\n\nLängd: 1 timme. Förhandsanmälan krävs."
       ),
     }),
     workshopEntry({
@@ -1291,7 +1301,7 @@ export const buildCatalog = (locale) => {
         "Craft Corner — Ilya & Emma",
         "Craft Corner with Ilya and Emma"
       ),
-      img: null,
+      img: imgCraftCorner,
       day: t("su", "Sun"),
       date: "23.8.",
       time: t("klo 13–17 · Puisto", "13–17 · Puisto"),
