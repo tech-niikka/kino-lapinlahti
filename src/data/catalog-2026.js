@@ -303,7 +303,7 @@ export const buildCatalog = (locale) => {
     }),
     film({
       id: "taste-of-cherry",
-      trailer: "https://www.youtube.com/watch?v=H2NhAmDv1dw",
+      trailer: "https://www.youtube.com/watch?v=ukmYdGwVqPg",
       title: t("Kirsikan maku", "Taste of Cherry"),
       originalTitle: t("Taste of Cherry", "Ta'm e guilass"),
       screening: t(
