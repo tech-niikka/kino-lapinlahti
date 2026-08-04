@@ -506,7 +506,7 @@ export const buildCatalog = (locale) => {
     }),
     film({
       id: "taistelu-lapinlahdesta",
-      trailer: "https://vimeo.com/1148336033",
+      trailer: "https://www.youtube.com/watch?v=pLELSwS3I7k",
       title: t("Taistelu Lapinlahdesta", "The Battle for Lapinlahti"),
       originalTitle: t("", "Taistelu Lapinlahdesta"),
       screening: t(
