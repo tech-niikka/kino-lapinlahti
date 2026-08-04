@@ -52,6 +52,18 @@ export const buildVenues = (locale) => {
         ),
         sections: [
           {
+            heading: t(
+              "Päihteetön tapahtuma",
+              "Substance-free event",
+              "Drogfritt evenemang"
+            ),
+            body: t(
+              "Muistathan, että elokuvasalissa ja koko festivaalialueella alkoholin, tupakan tai muiden päihteiden käyttö on kielletty. Olethan lempeä sekä itsellesi että muille. Lämmin kiitos!",
+              "Please note that the use of alcohol, tobacco and other intoxicants is prohibited in the auditorium and throughout the festival area. We kindly ask you to be gentle with yourself and with others. Thank you!",
+              "Observera att användning av alkohol, tobak och andra berusningsmedel är förbjuden i salongen och på hela festivalområdet. Vi ber dig att vara omtänksam både mot dig själv och mot andra. Stort tack!"
+            ),
+          },
+          {
             heading: t("Sisäänkäynti", "Entrance", "Ingång"),
             body: t(
               "Kino Regina sijaitsee Helsingin keskustakirjasto Oodin tiloissa. Sisäänkäynnit teatteriin ovat Oodin sisäänkäyntejä, jotka ovat kaikki esteettömiä, kynnyksettömiä ja varustettu sähköisesti avautuvilla ovilla sekä äänimajakoin. Oodin sisäänkäynnit sijaitsevat Kansalaistorilla, Eero Erkon kadulla sekä Töölönlahdenkadulla.\n\nKirjaston ollessa suljettuna Kino Reginan sisäänkäyntinä toimii rakennuksen pohjoispäädyn ovi (Töölönlahdenkatu 4).",
@@ -114,17 +126,17 @@ export const buildVenues = (locale) => {
           {
             heading: t("Katsomo", "Seating", "Läktaren"),
             body: t(
-              "Lasipalatsin aukiolla on 100 istumapaikkaa, jotka täyttyvät saapumisjärjestyksessä. Ennakkovarauksia ei ole, joten tule ajoissa – tai ota mukaan viltti tai retkituoli ja rakenna oma täydellinen katsomopaikkasi.",
-              "There are 100 seats available at Lasipalatsi Square, and they are allocated on a first come, first served basis. As advance reservations are not available, we recommend arriving early — or bringing along a blanket or a camping chair to create your own perfect spot for the screening.",
-              "På Glaspalatstorget finns 100 sittplatser som fylls enligt principen först till kvarn. Det går inte att boka platser i förväg, så kom gärna i god tid – eller ta med en filt eller campingstol och skapa din egen perfekta plats för filmupplevelsen."
+              "Lasipalatsin aukiolla on 100 istumapaikkaa, jotka täyttyvät saapumisjärjestyksessä. Ennakkovarauksia ei ole, joten tule ajoissa – tai ota mukaan viltti tai retkituoli ja rakenna oma täydellinen katsomopaikkasi.\n\nUlkoilmakatsomo on alkoholiton, savuton ja päihteetön alue.",
+              "This screening is part of the Lapinlahti Film Festival. Admission is free, and no reservation is required. Around 100 seats are available on a first-come, first-served basis. You are also welcome to bring your own blanket, camping chair, or other seating if you wish.\n\nThe outdoor cinema is an alcohol-, smoke-, and substance-free area.",
+              "Filmvisningen är en del av Lappvikens filmfestival. Fri entré och ingen förhandsbokning behövs. Det finns ca 100 sittplatser som fylls enligt principen först till kvarn. Du är också välkommen att ta med en egen filt, campingstol eller annat sittunderlag.\n\nUtomhusbion är ett alkohol-, rök- och drogfritt område."
             ),
           },
           {
             heading: t("Sää", "Weather", "Vädret"),
             body: t(
-              "Lasipalatsin aukion ulkoilmakatsomo elää sään mukana. Tarkistathan ennusteen ennen näytöstä ja pukeuduthan lämpimästi sekä sään mukaisesti.\n\nTämän kesän sää on ollut ailahteleva, joten sadeviitta saattaa pelastaa illan – ja mahdollistaa jopa romanttisen elokuvakokemuksen sateen ropistessa. Sateenvarjon voit sen sijaan jättää kotiin, jotta näkyvyys säilyy hyvänä kaikille.\n\nMuistathan, että ulkoilmakatsomossa ja koko festivaalialueella alkoholin tai muiden päihteiden käyttö on kielletty. Olethan lempeä sekä itsellesi että muille. Lämmin kiitos!",
-              "The outdoor cinema at Lasipalatsi Square embraces the changing weather. Please check the forecast before the screening and dress warmly and appropriately for the conditions.\n\nThis summer's weather has been unpredictable, so a rain poncho might just save the evening – and even make for a wonderfully romantic cinematic experience as the rain gently falls. Please leave umbrellas at home, however, so that everyone can enjoy an unobstructed view.\n\nPlease note that the use of alcohol and other intoxicants is prohibited in the outdoor cinema and throughout the festival area. We kindly ask you to be gentle with yourself and with others. Thank you for helping us create a welcoming atmosphere.",
-              "Utomhusbion på Glaspalats torget lever med vädret. Kontrollera gärna väderprognosen före visningen och klä dig varmt och efter väder.\n\nSommarens väder har varit omväxlande, så en regnponcho kan rädda kvällen – och kanske till och med göra filmupplevelsen extra stämningsfull när regnet stilla faller. Lämna däremot paraplyet hemma så att sikten förblir god för alla.\n\nObservera att användning av alkohol och andra berusningsmedel är förbjuden i utomhusbion och på hela festivalområdet. Vi ber dig att vara omtänksam både mot dig själv och mot andra. Stort tack!"
+              "Lasipalatsin aukion ulkoilmakatsomo elää sään mukana. Tarkistathan ennusteen ennen näytöstä ja pukeuduthan lämpimästi sekä sään mukaisesti.\n\nTämän kesän sää on ollut ailahteleva, joten sadeviitta saattaa pelastaa illan – ja mahdollistaa jopa romanttisen elokuvakokemuksen sateen ropistessa. Sateenvarjon voit sen sijaan jättää kotiin, jotta näkyvyys säilyy hyvänä kaikille.",
+              "The outdoor cinema at Lasipalatsi Square embraces the changing weather. Please check the forecast before the screening and dress warmly and appropriately for the conditions.\n\nThis summer's weather has been unpredictable, so a rain poncho might just save the evening – and even make for a wonderfully romantic cinematic experience as the rain gently falls. Please leave umbrellas at home, however, so that everyone can enjoy an unobstructed view.",
+              "Utomhusbion på Glaspalats torget lever med vädret. Kontrollera gärna väderprognosen före visningen och klä dig varmt och efter väder.\n\nSommarens väder har varit omväxlande, så en regnponcho kan rädda kvällen – och kanske till och med göra filmupplevelsen extra stämningsfull när regnet stilla faller. Lämna däremot paraplyet hemma så att sikten förblir god för alla."
             ),
           },
           {
@@ -164,6 +176,18 @@ export const buildVenues = (locale) => {
               "Lapinlahden elokuvajuhlat järjestetään 20.–23.8.2026 Lapinlahden Lähteen sisätiloissa, Omenapuutalolla sekä ympäröivällä puistoalueella. Lapinlahden Lähde sijaitsee Helsingin Lapinlahdessa, Hietaniemen hautausmaan vieressä.",
               "The Lapinlahti Film Festival takes place from 20–23 August 2026 at Lapinlahden Lähde, including the main building, Omenapuutalo, and the surrounding park area. Lapinlahden Lähde is located in the Lapinlahti district of Helsinki, next to Hietaniemi Cemetery.",
               "Lappvikens filmfestival arrangeras 20–23 augusti 2026 i Lappviks Källans huvudbyggnad, Omenapuutalo samt i det omgivande parkområdet. Lappviks Källan ligger i Lappviken i Helsingfors, intill Sandudds begravningsplats."
+            ),
+          },
+          {
+            heading: t(
+              "Päihteetön tapahtuma",
+              "Substance-free event",
+              "Drogfritt evenemang"
+            ),
+            body: t(
+              "Muistathan, että ulkoilmakatsomossa ja koko festivaalialueella alkoholin, tupakan tai muiden päihteiden käyttö on kielletty. Olethan lempeä sekä itsellesi että muille. Lämmin kiitos!",
+              "Please note that the use of alcohol, tobacco and other intoxicants is prohibited in the outdoor cinema and throughout the festival area. We kindly ask you to be gentle with yourself and with others. Thank you!",
+              "Observera att användning av alkohol, tobak och andra berusningsmedel är förbjuden i utomhusbion och på hela festivalområdet. Vi ber dig att vara omtänksam både mot dig själv och mot andra. Stort tack!"
             ),
           },
           {

@@ -217,7 +217,7 @@ const fi = {
         title: "Tapahtumasta",
         secondaryTitle: "Lapinlahden elokuvajuhlat",
         paragraph:
-          "Lapinlahden elokuvajuhlat on vapaan pääsyn tapahtuma. Festivaalin ohjelma on vierailijoille ilmainen, mutta elokuvanäytökset ja työpajat vaativat ennakkoilmoittautumisen. Lipunvaraus aukeaa maanantaina 3.8. klo 14.00. Loppuunvarattuihin näytöksiin ja työpajoihin voi tulla jonottamaan peruutuspaikkoja paikan päälle.",
+          "Lapinlahden elokuvajuhlat on vapaan pääsyn tapahtuma. Festivaalin ohjelma on vierailijoille ilmainen, mutta elokuvanäytökset ja työpajat vaativat ennakkoilmoittautumisen. Loppuunvarattuihin näytöksiin ja työpajoihin voi tulla jonottamaan peruutuspaikkoja paikan päälle.",
         paragraph2:
           "Lapinlahden elokuvajuhlat levittäytyvät tänä vuonna aiempaa laajemmin Helsinkiin. Maanantaina ja tiistaina näytökset ovat Oodin Kino Reginassa, keskiviikkona vuorossa on tunnelmallinen ulkoilmanäytös Lasipalatsin aukiolla ja torstaina Taiteiden yönä monitaideohjelmaa Lapinlahden Lähteellä. Viikonloppuna kokoonnumme perinteiseen tapaan Lapinlahden alueelle: päivisin elokuvanäytöksiä historiallisessa rakennuksessa ja auringon laskiessa ulkoilmanäytös isolta valkokankaalta kivipihalla.",
         paragraph3:
@@ -265,8 +265,8 @@ const fi = {
     {
       fields: {
         ticketButton: "Liput",
-        // Näytetään lippunapin alla sivun yläosassa
-        ticketNote: "Liput tulevat varattaviksi maanantaina 3.8. klo 14.00.",
+        // Lippujen aukeamishuomautus poistettu 4.8.2026 (liput ovat auki)
+        ticketNote: null,
         open: "Avaa",
         closed: "Suljettu",
       },
@@ -349,7 +349,7 @@ const en = {
         title: "About",
         secondaryTitle: "Lapinlahti Film Festival",
         paragraph:
-          "Lapinlahti Film Festival is a free-admission event. The programme is free to visitors, but films and workshops require registration in advance. Ticket reservations open on Monday 3 August at 14.00. For fully booked screenings and workshops you can come and queue on site for cancelled places.",
+          "Lapinlahti Film Festival is a free-admission event. The programme is free to visitors, but films and workshops require registration in advance. For fully booked screenings and workshops you can come and queue on site for cancelled places.",
         paragraph2:
           "This year the festival spreads more widely across Helsinki. On Monday and Tuesday the screenings are at Kino Regina in Oodi, on Wednesday there is an open-air screening on Lasipalatsi Square, and on Thursday, during the Night of the Arts, a multidisciplinary art programme at Lapinlahden Lähde. At the weekend we gather as always in the Lapinlahti area: screenings inside the historic building during the day, and as the sun sets, an open-air screening on the big screen in the stone yard.",
         paragraph3:
@@ -397,8 +397,7 @@ const en = {
     {
       fields: {
         ticketButton: "Tickets",
-        // Shown under the ticket button at the top of the page
-        ticketNote: "Tickets become available on Monday 3 August at 14.00.",
+        ticketNote: null,
         open: "Open",
         closed: "Closed",
       },
@@ -551,12 +550,35 @@ const buildProgramSection = (locale) => {
       ),
       ca("seitsemas-aalto")
     );
-  const awitha = () =>
+  const awitha = (times) =>
     ongoing(
       "AwithA Body Shop",
       CAT.taide,
-      detail(t("Omenapuutalon nurmikko", "Omenapuutalo lawn", "Omenapuutalos gräsmatta")),
+      detail(
+        t("Omenapuutalon nurmikko", "Omenapuutalo lawn", "Omenapuutalos gräsmatta"),
+        t(`klo ${times}`, times, `kl. ${times}`)
+      ),
       ca("awitha-body-shop")
+    );
+  const elephant = () =>
+    ongoing(
+      "The Elephant in the Room",
+      CAT.taide,
+      detail(
+        t(
+          "Lähteen eteläinen puistoalue",
+          "Southern park area",
+          "Södra parkområdet"
+        )
+      ),
+      ca("elephant-in-the-room")
+    );
+  const stopTheHustle = () =>
+    ongoing(
+      "Stop the Hustle",
+      CAT.taide,
+      detail("Omenapuutalo", t("klo 15–19", "15–19", "kl. 15–19")),
+      ca("stop-the-hustle")
     );
   const exhibitions = () => [
     ongoing(
@@ -659,9 +681,7 @@ const buildProgramSection = (locale) => {
       venue: "Lapinlahden Lähde",
       venueUrl: MAPS.lahde,
       events: [
-        ev("18.00",
-          t("Taiteiden yön ulkoilmanäytökset", "Night of the Arts open-air screenings", "Konstens natt — utomhusvisningar"),
-          CAT.elokuva, detail(ULKOILMA, ends("22.00"))),
+        // Taiteiden yön ulkoilmanäytökset poistettu 4.8.2026 — niitä ei järjestetä
         ev("19.00",
           t("Taiteilijan talo – Maisemamaalarin talo", "The Artist's House – The Landscape Painter's House", "Konstnärens hus – Landskapsmålarens hus"),
           CAT.taide,
@@ -681,19 +701,20 @@ const buildProgramSection = (locale) => {
       events: [
         ev("15.00", "Kapina elämän puolesta", CAT.elokuva,
           detail(PUUTARHAPIHA, ends("17.00"), inclQa, guest("Saku Soukka")), cf("kapina-elaman-puolesta")),
-        ev("15.00", "Whirl to Feel", CAT.tyopaja, detail(PUISTO, ends("17.00")), cw("whirl-to-feel")),
+        ev("15.00", "Whirl to Feel", CAT.tyopaja,
+          detail(t("Omenapuutalon nurmikko", "Omenapuutalo lawn", "Omenapuutalos gräsmatta"), ends("17.00")), cw("whirl-to-feel")),
         ev("15.30", "Nordic Frames: Cold Plunge", CAT.lyhytelokuvat,
           detail(AUDITORIO, ends("17.30"), inclQa), cs("cold-plunge")),
         ev("17.00", "Trauma Release Exercise (TRE)", CAT.tyopaja,
           detail("Wanha Labra", ends("18.30")), cw("trauma-release-exercise")),
         ev("17.00", "Inherited and Silent Stories", CAT.tyopaja,
-          detail(t("Sininen huone", "Sininen huone", "Sininen huone"), ends("19.00")), cw("inherited-and-silent-stories")),
+          detail(t("Sininen Huone", "Sininen Huone", "Sininen Huone"), ends("19.00")), cw("inherited-and-silent-stories")),
         ev("17.20", t("Tyhjiö", "Tyhjiö (Void)", "Tyhjiö (Tomrum)"), CAT.elokuva,
           detail(PUUTARHAPIHA, ends("19.37"), inclQa, guest("Aleksi Salmenperä")), cf("tyhjio")),
         ev("18.00", "Nordic Frames: Vessel Views", CAT.lyhytelokuvat,
           detail(AUDITORIO, ends("20.00"), inclQa), cs("vessel-views")),
         ev("18.00", t("DJ Valoantin vinyylikaraoke", "Vinyl Karaoke — DJ Valoantti", "Vinylkaraoke — DJ Valoantti"),
-          CAT.musiikki, detail(t("Kivipiha ja puutarha", "Stone yard and garden", "Stengården och trädgården"), ends("20.00")),
+          CAT.musiikki, detail(KIVIPIHA, ends("20.00")),
           cm("leffakaraoke")),
         ev("20.00", t("Kirsikan maku", "Taste of Cherry", "Körsbärets smak"), CAT.elokuva,
           detail(PUUTARHAPIHA, ends("21.45")), cf("taste-of-cherry")),
@@ -714,7 +735,9 @@ const buildProgramSection = (locale) => {
         ongoing(
           t("Seitsemäs aalto — ulkoinstallaatio", "Seitsemäs aalto — outdoor installation", "Sjunde vågen — utomhusinstallation"),
           CAT.taide, detail(t("Lapinlahden laituri", "Lapinlahti pier", "Lappvikens brygga"), t("klo 21–23", "21–23", "kl. 21–23")), ca("seitsemas-aalto")),
-        awitha(),
+        awitha("15–21"),
+        stopTheHustle(),
+        elephant(),
         ...exhibitions(),
       ],
     },
@@ -727,8 +750,10 @@ const buildProgramSection = (locale) => {
       venue: "Lapinlahden Lähde",
       venueUrl: MAPS.lahde,
       events: [
+        ev("13.00", t("Olennolliset olennot — stop motion", "Essential Creatures — stop motion", "Väsentliga varelser — stop motion"),
+          CAT.tyopaja, detail(t("Tilajakamon puutarhapiha", "Tilajakamo garden courtyard", "Tilajakamos trädgårdsgård"), ends("15.00")), cw("olennolliset-olennot")),
         ev("13.00", "Release & Relax", CAT.tyopaja,
-          detail(t("puiston eteläpuoli", "south side of the park", "parkens södra sida"), ends("13.55")), cw("release-and-relax")),
+          detail(t("Omenapuutalon nurmikko", "Omenapuutalo lawn", "Omenapuutalos gräsmatta"), ends("13.55")), cw("release-and-relax")),
         ev("14.00", "Nordic Frames: I Love My Car", CAT.lyhytelokuvat,
           detail(AUDITORIO, ends("15.45"), inclQa), cs("i-love-my-car")),
         ev("14.00", "Stinging Nettle Fibre Processing", CAT.tyopaja,
@@ -738,7 +763,7 @@ const buildProgramSection = (locale) => {
         ev("14.45", t("Musta Orfeus", "Black Orpheus", "Svart Orfeus"), CAT.elokuva,
           detail(PUUTARHAPIHA, ends("16.40")), cf("musta-orfeus")),
         ev("15.00", "[Re]membering: A Writing Workshop", CAT.tyopaja,
-          detail(t("Sininen huone", "Sininen huone", "Sininen huone"), ends("17.00")), cw("re-membering")),
+          detail(t("Sininen Huone", "Sininen Huone", "Sininen Huone"), ends("17.00")), cw("re-membering")),
         ev("16.00", "Nordic Frames: Borderland", CAT.lyhytelokuvat,
           detail(AUDITORIO, ends("18.03"), inclQa), cs("borderland")),
         ev("16.00", "DIY DIE (Putting the Fun in Funeral Planning)", CAT.tyopaja,
@@ -763,8 +788,10 @@ const buildProgramSection = (locale) => {
           CAT.taide, detail("Kahvila Lähde", t("klo 18–20", "18–20", "kl. 18–20")), ca("madonsyojat")),
         ongoing(
           t("Seitsemäs aalto — ulkoinstallaatio", "Seitsemäs aalto — outdoor installation", "Sjunde vågen — utomhusinstallation"),
-          CAT.taide, detail(t("Kaikkien laituri", "Kaikkien laituri", "Kaikkien laituri"), t("klo 21–23", "21–23", "kl. 21–23")), ca("seitsemas-aalto")),
-        awitha(),
+          CAT.taide, detail(t("Lapinlahden laituri", "Lapinlahti pier", "Lappvikens brygga"), t("klo 21–23", "21–23", "kl. 21–23")), ca("seitsemas-aalto")),
+        awitha("14–21"),
+        stopTheHustle(),
+        elephant(),
         ...exhibitions(),
       ],
     },
@@ -789,7 +816,7 @@ const buildProgramSection = (locale) => {
         ev("15.00", "Nordic Frames: Generation Zeitgeist", CAT.lyhytelokuvat,
           detail(AUDITORIO, ends("17.00"), inclQa), cs("generation-zeitgeist")),
         ev("15.00", "The End of The Word", CAT.tyopaja,
-          detail(t("Sininen huone", "Sininen huone", "Sininen huone"), ends("17.00")), cw("the-end-of-the-word")),
+          detail(t("Sininen Huone", "Sininen Huone", "Sininen Huone"), ends("17.00")), cw("the-end-of-the-word")),
         ev("16.45", "Christiania", CAT.elokuva, detail(PUUTARHAPIHA, ends("18.27")), cf("christiania")),
         ev("17.30", "Nordic Frames: Weirdly Working", CAT.lyhytelokuvat,
           detail(AUDITORIO, ends("19.38"), inclQa), cs("weirdly-working")),
@@ -806,14 +833,16 @@ const buildProgramSection = (locale) => {
         ongoing(
           t("KAKSI VÄRIÄ", "TWO COLORS", "TVÅ FÄRGER"),
           CAT.taide,
-          detail(t("Lapinlahden laituri", "Lapinlahti pier", "Lappvikens brygga"), t("klo 21–22", "21–22", "kl. 21–22")),
+          detail(t("Purjevene, Lapinlahden laituri", "Sailboat, Lapinlahden laituri", "Segelbåt, Lappvikens brygga"), t("klo 21–22", "21–22", "kl. 21–22")),
           ca("kaksi-varia")),
         ongoing(
           "Pinngortitarlu Oqaloqatigiinneq (Dialogue With Nature)",
           CAT.taide,
-          detail(t("Lapinlahden laituri", "Lapinlahti pier", "Lappvikens brygga"), t("klo 22–23", "22–23", "kl. 22–23")),
+          detail(t("Purjevene, Lapinlahden laituri", "Sailboat, Lapinlahden laituri", "Segelbåt, Lappvikens brygga"), t("klo 22–23", "22–23", "kl. 22–23")),
           ca("dialogue-with-nature")),
-        awitha(),
+        awitha("14–21"),
+        stopTheHustle(),
+        elephant(),
         ...exhibitions(),
       ],
     },
@@ -824,6 +853,12 @@ const buildProgramSection = (locale) => {
         ongoingTitle: t("Koko päivän", "All day", "Hela dagen"),
         weekLabel: t("Koko viikko", "Whole week", "Hela veckan"),
         allLabel: t("Kaikki", "All", "Alla"),
+        // Näytetään kun kategoriasuodatin ei osu valitun päivän ohjelmaan
+        emptyFilter: t(
+          "Tämän kategorian tapahtumia ei ole valittuna päivänä. Kokeile toista päivää tai Koko viikko -näkymää.",
+          "There are no events in this category on the selected day. Try another day or the Whole week view.",
+          "Det finns inga evenemang i den här kategorin den valda dagen. Prova en annan dag eller vyn Hela veckan."
+        ),
         // Oma festivaali -ominaisuuden tekstit
         mine: {
           label: t("Oma festivaali", "My festival", "Min festival"),
@@ -920,7 +955,7 @@ const sv = {
         title: "Om festivalen",
         secondaryTitle: "Lappvikens Filmfestival",
         paragraph:
-          "Lappvikens Filmfestival är ett evenemang med fritt inträde. Programmet är gratis för besökarna, men filmvisningarna och workshopparna kräver förhandsanmälan. Biljettbokningen öppnar måndagen den 3 augusti kl. 14.00. Till fullbokade visningar och workshoppar kan du komma och köa för återbud på plats.",
+          "Lappvikens Filmfestival är ett evenemang med fritt inträde. Programmet är gratis för besökarna, men filmvisningarna och workshopparna kräver förhandsanmälan. Till fullbokade visningar och workshoppar kan du komma och köa för återbud på plats.",
         paragraph2:
           "I år sprider sig festivalen bredare över Helsingfors. På måndagen och tisdagen visas filmerna på Kino Regina i Ode, på onsdagen ordnas en stämningsfull utomhusvisning på Glaspalatsets plats och på torstagen, under Konstens natt, bjuds det på mångkonstprogram på Lapinlahden Lähde. Under veckoslutet samlas vi som traditionen bjuder i Lappviksområdet: på dagarna filmvisningar i den historiska byggnaden och när solen går ner en utomhusvisning på stora duken på stengården.",
         paragraph3:
@@ -941,8 +976,7 @@ const sv = {
     {
       fields: {
         ticketButton: "Biljetter",
-        ticketNote:
-          "Biljetterna blir tillgängliga måndagen den 3 augusti kl. 14.00.",
+        ticketNote: null,
         open: "Öppna",
         closed: "Stängd",
       },

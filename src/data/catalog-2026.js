@@ -48,6 +48,7 @@ import imgKajaMatura from "../assets/catalog/workshops/kaja-matura.jpg";
 import imgAngelicaLewis from "../assets/catalog/workshops/angelica-lewis.jpg";
 import imgOscarZemarti from "../assets/catalog/workshops/oscar-zemarti.jpg";
 import imgAnniPellikka from "../assets/catalog/workshops/anni-pellikka.jpg";
+import imgOlennot from "../assets/catalog/workshops/olennolliset-olennot.jpg";
 
 import imgKenTastaKay from "../assets/catalog/art/ken-tasta-kay.jpg";
 import imgStopTheHustle from "../assets/catalog/art/stop-the-hustle.jpg";
@@ -59,6 +60,7 @@ import imgRuumiillistumia from "../assets/catalog/art/ruumiillistumia.jpg";
 import imgAwithA from "../assets/catalog/art/awitha-body-shop.jpg";
 import imgKaksiVaria from "../assets/catalog/art/kaksi-varia.jpg";
 import imgLeffakaraoke from "../assets/catalog/art/leffakaraoke.jpg";
+import imgElephant from "../assets/catalog/art/elephant-in-the-room.jpg";
 
 // Festivaalijuliste — fallback ohjelmille, joilla ei vielä ole omaa kuvaa
 import imgFestivalPoster from "../assets/catalog/festival-poster.jpg";
@@ -89,11 +91,6 @@ export const buildCatalog = (locale) => {
   const AGE = t("Ikäraja:", "Age limit:", "Åldersgräns:");
   const WS_LANG = t("Työpajan kieli:", "Workshop language:", "Workshopens språk:");
   const FIENTA_LABEL = t("Varaa paikka (Fienta)", "Reserve a seat (Fienta)", "Boka plats (Fienta)");
-  const FIENTA_OPENS = t(
-    "Liput tulevat varattaviksi maanantaina 3.8. klo 14.00.",
-    "Tickets become available on Monday 3 August at 14.00.",
-    "Biljetterna blir tillgängliga måndagen den 3 augusti kl. 14.00."
-  );
   const DIRECTED = t("Ohjaus", "Directed by", "Regissör");
 
   // Elokuvakortti
@@ -105,7 +102,6 @@ export const buildCatalog = (locale) => {
       screening: o.screening,
       fientaUrl: o.fienta ?? null,
       fientaLabel: FIENTA_LABEL,
-      fientaNote: o.fienta ? FIENTA_OPENS : null,
       artwork: artwork(o.img),
       length: o.length,
       languageTitle: LANG,
@@ -126,9 +122,9 @@ export const buildCatalog = (locale) => {
       title: t("Vasenkätinen tyttö", "Left-Handed Girl"),
       originalTitle: t("Left-Handed Girl", ""),
       screening: t(
-        "Ma 17.8. klo 16.30–18.30 · Kino Regina, Oodi",
-        "Mon 17 Aug 16.30–18.30 · Kino Regina, Oodi",
-        "Mån 17 aug 16.30–18.30 · Kino Regina, Ode"
+        "Ma 17.8. klo 16.30–18.28 · Kino Regina, Oodi",
+        "Mon 17 Aug 16.30–18.28 · Kino Regina, Oodi",
+        "Mån 17 aug 16.30–18.28 · Kino Regina, Ode"
       ),
       fienta: fienta("lefthandedgirl-lapinlahti-film-festival", locale),
       img: imgLeftHandedGirl,
@@ -149,8 +145,12 @@ export const buildCatalog = (locale) => {
     }),
     film({
       id: "haxan",
-      title: t("Noita", "Häxan"),
-      originalTitle: t("Häxan", "Witchcraft Through the Ages"),
+      title: t("Europa + Noita (Häxan)", "Europa + Häxan"),
+      originalTitle: t(
+        "Alkukuvana Europa (1931)",
+        "Preceded by Europa (1931)",
+        "Med Europa (1931) som förfilm"
+      ),
       screening: t(
         "Ma 17.8. klo 18.50–20.39 · Kino Regina, Oodi",
         "Mon 17 Aug 18.50–20.39 · Kino Regina, Oodi",
@@ -169,8 +169,8 @@ export const buildCatalog = (locale) => {
       country: t("Ruotsi, Tanska", "Sweden, Denmark"),
       year: "1922",
       desc: t(
-        "Noita (Häxan) on kauhuelokuvien aikainen merkkiteos, jota yleisesti katsotaan ainutlaatuisena ja vaikutusvaltaisena genreteoksena.\n\nVuoden 1922 Benjamin Christensenin mykkäelokuvan katsottiin sisältävän satanistista ja seksuaalista kuvastoa, ja kiellettiin aikoinaan Suomessa. Nykyään teos on kulttiklassikko, joka hämmästyttää tehosteillaan ja yhteiskunnallisella kritiikillään.",
-        "Häxan (Witchcraft Through the Ages) is a landmark early horror film, widely regarded as a unique and influential genre masterpiece.\n\nBenjamin Christensen's 1922 silent film was considered to contain satanic and sexual imagery and was banned in Finland at the time. Today, it is regarded as a cult classic that continues to amaze audiences with its special effects and social criticism."
+        "ALKUKUVANA EUROPA (1931), ohjaus Stefan & Franciszka Themerson, S\n\nEuropa on surrealistipariskunta Stefan ja Franciszka Themersonin ohjaama antifasistinen elokuvaruno, joka oli lähes 80 vuotta kateissa sen jälkeen, kun Saksan armeija varasti sen filmikopiot toisen maailmansodan syttyessä. Lapinlahden elokuvajuhlilla Europan säestää runoilija-elokuvatutkija Aatos Ketvel kokeellisella live-äänikollaasilla. Ketvel tahtoo esityksellään nostaa teoksen arvoonsa paitsi avantgarde-elokuvan unohdettuna merkkiteoksena, myös hyytävän ajankohtaisena kuvauksena fasismin noususta Euroopassa.\n\nNOITA (HÄXAN)\n\nNoita (Häxan) on kauhuelokuvien aikainen merkkiteos, jota yleisesti katsotaan ainutlaatuisena ja vaikutusvaltaisena genreteoksena.\n\nVuoden 1922 Benjamin Christensenin mykkäelokuvan katsottiin sisältävän satanistista ja seksuaalista kuvastoa, ja kiellettiin aikoinaan Suomessa. Nykyään teos on kulttiklassikko, joka hämmästyttää tehosteillaan ja yhteiskunnallisella kritiikillään.",
+        "PRECEDED BY EUROPA (1931), directed by Stefan & Franciszka Themerson, rated S\n\nEuropa is an anti-fascist cine-poem by the surrealist couple Stefan and Franciszka Themerson. It was lost for nearly 80 years after the German army seized its prints at the outbreak of the Second World War. At Lapinlahti Film Festival, Europa is accompanied by poet and film scholar Aatos Ketvel with an experimental live sound collage. With his performance, Ketvel wants to restore the film to its rightful place — not only as a forgotten landmark of avant-garde cinema, but as a chillingly topical portrayal of the rise of fascism in Europe.\n\nHÄXAN\n\nHäxan (Witchcraft Through the Ages) is a landmark early horror film, widely regarded as a unique and influential genre masterpiece.\n\nBenjamin Christensen's 1922 silent film was considered to contain satanic and sexual imagery and was banned in Finland at the time. Today, it is regarded as a cult classic that continues to amaze audiences with its special effects and social criticism."
       ),
     }),
     film({
@@ -178,9 +178,9 @@ export const buildCatalog = (locale) => {
       title: t("Miehen työ", "Miehen työ (Man's Job)"),
       originalTitle: "",
       screening: t(
-        "Ti 18.8. klo 16.00–18.25 · Kino Regina, Oodi",
-        "Tue 18 Aug 16.00–18.25 · Kino Regina, Oodi",
-        "Tis 18 aug 16.00–18.25 · Kino Regina, Ode"
+        "Ti 18.8. klo 16.00–18.23 · Kino Regina, Oodi",
+        "Tue 18 Aug 16.00–18.23 · Kino Regina, Oodi",
+        "Tis 18 aug 16.00–18.23 · Kino Regina, Ode"
       ),
       fienta: fienta("miehentyo-lapinlahti-film-festival", locale),
       img: imgMiehenTyo,
@@ -201,9 +201,9 @@ export const buildCatalog = (locale) => {
       title: t("Häiriötekijä", "Häiriötekijä (Distractions)"),
       originalTitle: "",
       screening: t(
-        "Ti 18.8. klo 18.30–20.40 · Kino Regina, Oodi",
-        "Tue 18 Aug 18.30–20.40 · Kino Regina, Oodi",
-        "Tis 18 aug 18.30–20.40 · Kino Regina, Ode"
+        "Ti 18.8. klo 18.35–20.40 · Kino Regina, Oodi",
+        "Tue 18 Aug 18.35–20.40 · Kino Regina, Oodi",
+        "Tis 18 aug 18.35–20.40 · Kino Regina, Ode"
       ),
       fienta: fienta("hairiotekija-lapinlahti-film-festival", locale),
       img: imgHairiotekija,
@@ -224,9 +224,9 @@ export const buildCatalog = (locale) => {
       title: t("Shoplifters – perhesalaisuuksia", "Shoplifters"),
       originalTitle: "Manbiki Kazoku",
       screening: t(
-        "Ke 19.8. klo 21.00–23.10 · Lasipalatsin aukio",
-        "Wed 19 Aug 21.00–23.10 · Lasipalatsi Square",
-        "Ons 19 aug 21.00–23.10 · Lasipalatset"
+        "Ke 19.8. klo 21.00–23.11 · Lasipalatsin aukio",
+        "Wed 19 Aug 21.00–23.11 · Lasipalatsi Square",
+        "Ons 19 aug 21.00–23.11 · Lasipalatset"
       ),
       fienta: null,
       img: imgShoplifters,
@@ -270,9 +270,9 @@ export const buildCatalog = (locale) => {
       title: t("Tyhjiö", "Tyhjiö (Void)"),
       originalTitle: "",
       screening: t(
-        "Pe 21.8. klo 17.20–19.40 · Puutarhapiha",
-        "Fri 21 Aug 17.20–19.40 · Garden yard",
-        "Fre 21 aug 17.20–19.40 · Trädgården"
+        "Pe 21.8. klo 17.20–19.37 · Puutarhapiha",
+        "Fri 21 Aug 17.20–19.37 · Garden yard",
+        "Fre 21 aug 17.20–19.37 · Trädgården"
       ),
       fienta: fienta("tyhjio-lapinlahti-film-festival", locale),
       img: imgTyhjio,
@@ -316,9 +316,9 @@ export const buildCatalog = (locale) => {
       title: t("Isänpäivä", "Isänpäivä (Father's Day)"),
       originalTitle: "",
       screening: t(
-        "Pe 21.8. klo 21.30–23.20 · Kivipiha, ulkoilmanäytös",
-        "Fri 21 Aug 21.30–23.20 · Stone yard, open-air screening",
-        "Fre 21 aug 21.30–23.20 · Stengården, utomhusvisning"
+        "Pe 21.8. klo 21.00–23.19 · Kivipiha, ulkoilmanäytös",
+        "Fri 21 Aug 21.00–23.19 · Stone yard, open-air screening",
+        "Fre 21 aug 21.00–23.19 · Stengården, utomhusvisning"
       ),
       fienta: fienta("isanpaiva-lapinlahti-film-festival", locale),
       img: imgIsanpaiva,
@@ -339,9 +339,9 @@ export const buildCatalog = (locale) => {
       title: "Love Lies Bleeding",
       originalTitle: "",
       screening: t(
-        "Pe 21.8. klo 22.00–23.55 · Puutarhapiha",
-        "Fri 21 Aug 22.00–23.55 · Garden yard",
-        "Fre 21 aug 22.00–23.55 · Trädgården"
+        "Pe 21.8. klo 22.00–23.54 · Puutarhapiha",
+        "Fri 21 Aug 22.00–23.54 · Garden yard",
+        "Fre 21 aug 22.00–23.54 · Trädgården"
       ),
       fienta: fienta("loveliesbleeding-lapinlahti-film-festival", locale),
       img: imgLoveLiesBleeding,
@@ -394,7 +394,7 @@ export const buildCatalog = (locale) => {
       length: "90 min",
       lang: t("fääri", "Faroese", "färöiska"),
       subs: t("englanti", "English", "engelska"),
-      age: null,
+      age: "S",
       director: "Búi Dam",
       country: t("Färsaaret", "Faroe Islands"),
       year: "2026",
@@ -434,9 +434,9 @@ export const buildCatalog = (locale) => {
       title: t("Turisti", "Force Majeure"),
       originalTitle: t("Force Majeure", "Turist"),
       screening: t(
-        "La 22.8. klo 21.15–23.25 · Kivipiha, ulkoilmanäytös",
-        "Sat 22 Aug 21.15–23.25 · Stone yard, open-air screening",
-        "Lör 22 aug 21.15–23.25 · Stengården, utomhusvisning"
+        "La 22.8. klo 21.00–23.25 · Kivipiha, ulkoilmanäytös",
+        "Sat 22 Aug 21.00–23.25 · Stone yard, open-air screening",
+        "Lör 22 aug 21.00–23.25 · Stengården, utomhusvisning"
       ),
       fienta: fienta("forcemajeure-lapinlahti-film-festival", locale),
       img: imgTuristi,
@@ -489,9 +489,9 @@ export const buildCatalog = (locale) => {
       title: t("Taistelu Lapinlahdesta", "The Battle for Lapinlahti"),
       originalTitle: t("", "Taistelu Lapinlahdesta"),
       screening: t(
-        "Su 23.8. klo 14.30–16.30 · Puutarhapiha",
-        "Sun 23 Aug 14.30–16.30 · Garden yard",
-        "Sön 23 aug 14.30–16.30 · Trädgården"
+        "Su 23.8. klo 14.30–16.25 · Puutarhapiha",
+        "Sun 23 Aug 14.30–16.25 · Garden yard",
+        "Sön 23 aug 14.30–16.25 · Trädgården"
       ),
       fienta: fienta("taistelulapinlahdesta-lapinlahti-film-festival", locale),
       img: imgTaistelu,
@@ -512,16 +512,16 @@ export const buildCatalog = (locale) => {
       title: "Christiania",
       originalTitle: t("Suomen ensi-ilta", "Finnish premiere"),
       screening: t(
-        "Su 23.8. klo 16.45–18.30 · Puutarhapiha",
-        "Sun 23 Aug 16.45–18.30 · Garden yard",
-        "Sön 23 aug 16.45–18.30 · Trädgården"
+        "Su 23.8. klo 16.45–18.27 · Puutarhapiha",
+        "Sun 23 Aug 16.45–18.27 · Garden yard",
+        "Sön 23 aug 16.45–18.27 · Trädgården"
       ),
       fienta: fienta("christiania-lapinlahti-film-festival", locale),
       img: imgChristiania,
       length: "94 min",
       lang: t("tanska", "Danish", "danska"),
       subs: t("englanti", "English", "engelska"),
-      age: null,
+      age: "12",
       director: "Karl Friis Forchhammer",
       country: t("Tanska", "Denmark"),
       year: "2026",
@@ -535,9 +535,9 @@ export const buildCatalog = (locale) => {
       title: "And Then We Danced",
       originalTitle: "",
       screening: t(
-        "Su 23.8. klo 18.45–20.45 · Puutarhapiha",
-        "Sun 23 Aug 18.45–20.45 · Garden yard",
-        "Sön 23 aug 18.45–20.45 · Trädgården"
+        "Su 23.8. klo 18.45–20.43 · Puutarhapiha",
+        "Sun 23 Aug 18.45–20.43 · Garden yard",
+        "Sön 23 aug 18.45–20.43 · Trädgården"
       ),
       fienta: fienta("andthenwedanced-lapinlahti-film-festival", locale),
       img: imgAndThenWeDanced,
@@ -579,6 +579,43 @@ export const buildCatalog = (locale) => {
   ];
 
   // Lyhäriblokki (Nordic Frames) — ShortFilm-kortin kentät
+  // Lyhäriblokin yksittäisten elokuvien maat ja sisältövaroitukset
+  const CO = {
+    FI: t("Suomi", "Finland", "Finland"),
+    SE: t("Ruotsi", "Sweden", "Sverige"),
+    DK: t("Tanska", "Denmark", "Danmark"),
+    NO: t("Norja", "Norway", "Norge"),
+    IS: t("Islanti", "Iceland", "Island"),
+    FO: t("Färsaaret", "Faroe Islands", "Färöarna"),
+    ZA: t("Etelä-Afrikka", "South Africa", "Sydafrika"),
+  };
+  const WARN = {
+    seksi: t("seksi", "sex", "sex"),
+    ahdistus: t("ahdistus", "anxiety", "ångest"),
+    vakivalta: t("väkivalta", "violence", "våld"),
+    paihteet: t("päihteiden käyttö", "substance use", "droganvändning"),
+  };
+  const rating = (age, warn) =>
+    warn?.length ? `${age} (${warn.map((w) => WARN[w]).join(", ")})` : `${age}`;
+
+  // Yksittäinen lyhytelokuva blokin sisällä
+  const sf = (o) => ({
+    title: o.title,
+    originalTitle: o.orig ?? null,
+    director: o.director,
+    meta: `${o.co.map((c) => CO[c]).join(", ")} ${o.year} · ${o.len}`,
+    ageLimit: rating(o.age, o.warn),
+    synopsis: o.synopsis,
+  });
+
+  // Lyhäriblokkien tekstitys — kaikissa esityksissä englanninkielinen tekstitys
+  const SHORTS_SUBS = t(
+    "englanti (kaikki elokuvat)",
+    "English (all films)",
+    "engelska (alla filmer)"
+  );
+  const SHORTS_LIST_TITLE = t("Lyhytelokuvat", "Short films", "Kortfilmer");
+
   const shortBlock = (o) => ({
     id: o.id,
     fields: {
@@ -587,7 +624,6 @@ export const buildCatalog = (locale) => {
       screening: o.screening,
       fientaUrl: o.fienta,
       fientaLabel: FIENTA_LABEL,
-      fientaNote: o.fienta ? FIENTA_OPENS : null,
       artwork: artwork(o.img),
       length: o.films
         ? t(
@@ -596,11 +632,16 @@ export const buildCatalog = (locale) => {
             `${o.films} kortfilmer`
           )
         : "",
-      textTitle: "",
-      textlanguage: "",
+      textTitle: TEXT,
+      textlanguage: SHORTS_SUBS,
       ageLimitTitle: AGE,
       ageLimit: o.age,
       filmDescription: desc(o.id, o.desc),
+      // Blokin sisältämät elokuvat — ShortFilm.jsx renderöi listana
+      shortsTitle: SHORTS_LIST_TITLE,
+      shorts: o.list ?? [],
+      ageLimitLabel: AGE,
+      directedLabel: DIRECTED,
       productionCompany: "Nordic Frames",
       country: "",
     },
@@ -623,13 +664,41 @@ export const buildCatalog = (locale) => {
       fienta: fienta("nordic-frames-cold-plunge", locale),
       img: imgColdPlunge,
       films: 5,
-      age: t("16 (seksi)", "16 (sex)"),
+      age: t("16 (seksi, ahdistus)", "16 (sex, anxiety)"),
       desc: t(
-        "Kuumuus tasapainossa raikkaan ilman kanssa – kokoelma lyhytelokuvia, jotka yhdessä peilaavat saunomisen kokemusta.\n\nLyhytelokuvat: Mixed Sauna (Suomi), No One Owns You (Suomi), Sauna Sickness (Ruotsi), Maybe in March (Tanska), Sauna People (Suomi).\n\n" +
+        "Kuumuus tasapainossa raikkaan ilman kanssa – kokoelma lyhytelokuvia, jotka yhdessä peilaavat saunomisen kokemusta.\n\n" +
           qaShorts,
-        "Heat bursts smoothed out into breaths of fresh air – a selection of short films emulating the sauna experience.\n\nShort films: Mixed Sauna (Finland), No One Owns You (Finland), Sauna Sickness (Sweden), Maybe in March (Denmark), Sauna People (Finland).\n\n" +
+        "Heat bursts smoothed out into breaths of fresh air – a selection of short films emulating the sauna experience.\n\n" +
           qaShorts
       ),
+      list: [
+        sf({ title: "Mixed Sauna",
+          orig: "Sekasauna",
+          co: ["FI"], year: "2026", len: "15 min", age: "S",
+          director: "Juuso Timonen",
+          synopsis: "Introvert Mikko is anxious that he won't be able to come out of his shell during the weekend at his relatively new spouse's cottage. His spouse Hanna is certain that Mikko will make a great first impression on her chosen family. When it's time for the sauna, Mikko has not figured out the sauna dress code of this new social bubble — and realizes he's the only one wearing swimwear." }),
+        sf({ title: "No One Owns You",
+          orig: "Dig Äger Ingen",
+          co: ["FI"], year: "2025", len: "20 min", age: "S",
+          director: "Agnes Koskinen",
+          synopsis: "18-year-old Alicia, a competitive swimmer, spends a day at her summer house during the peak of summer. She swims over to another island and finds Mira, a charming and confusing girl. The meeting ignites a crisis inside Alicia's mind, and now she has to figure out in what direction she wants her life to go." }),
+        sf({ title: "Sauna Sickness",
+          co: ["SE"], year: "2026", len: "15 min", age: "16",
+          warn: ["seksi"],
+          director: "Malin Barr",
+          synopsis: "Struggling to maintain the peace she mistakes for love, Cleo's steamy New Year's Eve plans fissure into a chilling nightmare." }),
+        sf({ title: "Maybe in March",
+          orig: "Måske i Marts",
+          co: ["DK"], year: "2025", len: "25 min", age: "12",
+          warn: ["ahdistus"],
+          director: "Mikkel Bjørn Kehlert",
+          synopsis: "Somewhere in rural Denmark, a house awaits its farewell. A family holds its breath. And something is slipping away." }),
+        sf({ title: "Sauna People",
+          orig: "Saunojat",
+          co: ["FI"], year: "2025", len: "5 min", age: "S",
+          director: "Sanna Taikina",
+          synopsis: "In this hand-drawn 2D pencil animation, the First Sauna arrives on Earth to give birth to the Sauna People. Clashing customs spark conflict in the birthing sauna — but who, in the end, has the right to be a real sauna person?" }),
+      ],
     }),
     shortBlock({
       id: "vessel-views",
@@ -642,13 +711,47 @@ export const buildCatalog = (locale) => {
       fienta: fienta("nordic-frames-vessel-views", locale),
       img: imgVesselViews,
       films: 6,
-      age: t("16 (väkivalta, seksi)", "16 (violence, sex)"),
+      age: t("16 (väkivalta, ahdistus, seksi)", "16 (violence, anxiety, sex)"),
       desc: t(
-        "Tutkimusmatkoja kehollisuuteen ja yhteyksiin – siihen, mikä meitä kaikkia yhdistää: kehoon, jossa elämme. Kehon ja mielen, tutun ja vieraan rajapinnoilla liikkuvat elokuvalliset tutkimusretket kysyvät, millaisia näkökulmia aistiva kehomme voi meille avata.\n\nLyhytelokuvat: Awooga! (Suomi), Flashback – Monstrous Memories (Norja, Tanska), Bodyrave (Suomi), Mother Creature (Färsaaret, Ruotsi), Limerence (Suomi), Out of Order (Suomi).\n\n" +
+        "Tutkimusmatkoja kehollisuuteen ja yhteyksiin – siihen, mikä meitä kaikkia yhdistää: kehoon, jossa elämme. Kehon ja mielen, tutun ja vieraan rajapinnoilla liikkuvat elokuvalliset tutkimusretket kysyvät, millaisia näkökulmia aistiva kehomme voi meille avata.\n\n" +
           qaShorts,
-        "Experiments on corporeality and connections, what we all have in common — the vessel we live in. Somewhere between the body and mind, familiar and unfamiliar, cinematic explorations of what perspectives are possible through our sensing bodies.\n\nShort films: Awooga! (Finland), Flashback – Monstrous Memories (Norway, Denmark), Bodyrave (Finland), Mother Creature (Faroe Islands, Sweden), Limerence (Finland), Out of Order (Finland).\n\n" +
+        "Experiments on corporeality and connections, what we all have in common — the vessel we live in. Somewhere between the body and mind, familiar and unfamiliar, cinematic explorations of what perspectives are possible through our sensing bodies.\n\n" +
           qaShorts
       ),
+      list: [
+        sf({ title: "Awooga!",
+          co: ["FI"], year: "2025", len: "4 min", age: "16",
+          warn: ["seksi"],
+          director: "Sofia Liukonen",
+          synopsis: "Popette is about to perform a striptease on the pole." }),
+        sf({ title: "Flashback – Monstrous Memories",
+          orig: "Flashback – Monstrøse minder",
+          co: ["NO", "DK"], year: "2025", len: "17 min", age: "12",
+          warn: ["ahdistus"],
+          director: "Momo Mentha",
+          synopsis: "A hybrid documentary about dehumanising patients in Danish psychiatry. The film recreates a real experience where what should be a normal part of caring for someone admitted to a psychiatric hospital becomes an act of violence." }),
+        sf({ title: "Bodyrave",
+          co: ["FI"], year: "2025", len: "4 min", age: "16",
+          warn: ["ahdistus"],
+          director: "Harri Connell, Felix Järvenpää, Leo Lindgren",
+          synopsis: "A body wakes up in a mysterious room and begins experiencing processes that have always been present but never noticed – until now." }),
+        sf({ title: "Mother Creature",
+          co: ["FO", "SE"], year: "2025", len: "30 min", age: "12",
+          warn: ["ahdistus"],
+          director: "Maria Tórgarð",
+          synopsis: "A daughter attempts to pull the monster of her childhood out from under the bed in an original, deeply personal and creative film about her mother's mental illness." }),
+        sf({ title: "Limerence",
+          orig: "Limerenssi",
+          co: ["FI"], year: "2026", len: "23 min", age: "16",
+          warn: ["vakivalta"],
+          director: "Jasmin Gummerus",
+          synopsis: "Fresh out of a relationship, Lotta develops a one-sided crush on body modification artist Lennart." }),
+        sf({ title: "Out of Order",
+          co: ["FI"], year: "2025", len: "2 min", age: "12",
+          warn: ["seksi"],
+          director: "Antti Tuomikoski",
+          synopsis: "The male gaze turns around." }),
+      ],
     }),
     shortBlock({
       id: "i-love-my-car",
@@ -661,54 +764,156 @@ export const buildCatalog = (locale) => {
       fienta: fienta("nordic-frames-i-love-my-car", locale),
       img: imgILoveMyCar,
       films: 7,
-      age: t(
-        "12 (viittauksia seksiin ja kuolemaan)",
-        "12 (references to sex and death)"
-      ),
+      age: t("12 (seksi, ahdistus)", "12 (sex, anxiety)"),
       desc: t(
-        "Hyvän tuulen tarinoita ihmisistä autoissa: vauhdilla eteenpäin, hidastellen, joskus jumissa, joskus vailla huolta siitä, minne tie vie. Tärkeintä on itse matka.\n\nLyhytelokuvat: Puolanka Pussy Rally (Suomi), Broken Down (Ruotsi, Tanska), Gravity Racer (Norja), Fiddler's Green (Suomi), Respite (Norja), I should be there, but I'm here (Suomi), The Beauty of Automobiles (Suomi).\n\n" +
+        "Hyvän tuulen tarinoita ihmisistä autoissa: vauhdilla eteenpäin, hidastellen, joskus jumissa, joskus vailla huolta siitä, minne tie vie. Tärkeintä on itse matka.\n\n" +
           qaShorts,
-        "Lighthearted tales of people in cars: moving fast, moving slow, sometimes stuck, sometimes without a worry in the world where one's going. It truly is the journey that matters.\n\nShort films: Puolanka Pussy Rally (Finland), Broken Down (Sweden, Denmark), Gravity Racer (Norway), Fiddler's Green (Finland), Respite (Norway), I should be there, but I'm here (Finland), The Beauty of Automobiles (Finland).\n\n" +
+        "Lighthearted tales of people in cars: moving fast, moving slow, sometimes stuck, sometimes without a worry in the world where one's going. It truly is the journey that matters.\n\n" +
           qaShorts
       ),
+      list: [
+        sf({ title: "Puolanka Pussy Rally",
+          co: ["FI"], year: "2026", len: "5 min", age: "12",
+          warn: ["seksi"],
+          director: "Inka Achté, Einari Paakkanen",
+          synopsis: "Puolanka, a tiny village in Northern Finland, is famous for its population decline — and for its dark sense of humor about it. Teenage boys celebrate their new driver's licences by endlessly circling the same few streets, while an older generation of local gents has parked itself permanently at the petrol station café. The only mystery that seems unsolved: where have all the women gone?" }),
+        sf({ title: "Broken Down",
+          orig: "De Nedbrutna",
+          co: ["SE", "DK"], year: "2025", len: "15 min", age: "12",
+          warn: ["ahdistus"],
+          director: "Victor Cornelius",
+          synopsis: "On a ridiculously long and straight road in the middle of nowhere, a couple's car breaks down. As they wait for roadside assistance, their true selves are unmasked, leading to a breakdown of an entirely different kind." }),
+        sf({ title: "Gravity Racer",
+          co: ["NO"], year: "2025", len: "5 min", age: "S",
+          director: "Finn Walther",
+          synopsis: "A fearless four-year-old sets out to conquer the steepest hill in town with his homemade Gravity Racer, but as bravery meets gravity, he's faced with the consequences of his decision." }),
+        sf({ title: "Fiddler's Green",
+          orig: "Matkalla sukulaisten luo Haminaan",
+          co: ["FI"], year: "2025", len: "11 min", age: "S",
+          director: "Juha Koiranen",
+          synopsis: "A couple travelling to visit relatives — like we all, sooner or later." }),
+        sf({ title: "Respite",
+          co: ["NO"], year: "2026", len: "17 min", age: "7",
+          warn: ["ahdistus"],
+          director: "Mads Toft Hansen, Alma-Oline Weitling",
+          synopsis: "A young Danish man travels to Norway to clear out the house of his late mother, confronting the remains and the place. As he moves through unfamiliar surroundings, the film unfolds a story about family tensions, loss and belonging." }),
+        sf({ title: "I should be there, but I'm here",
+          orig: "Mun pitää olla tuol ja mä oon tässä",
+          co: ["FI"], year: "2025", len: "7 min", age: "S",
+          director: "Oona Julia Pennanen",
+          synopsis: "Voice messages about being late. The hurrying figures battle against time. Some make it, while others must accept the closed gates." }),
+        sf({ title: "The Beauty of Automobiles",
+          orig: "Puskee veemäiseen paikkaan",
+          co: ["FI"], year: "2026", len: "6 min", age: "S",
+          director: "Jukka Kärkkäinen",
+          synopsis: "Intimate moment between a father and son — one night, one car ride, one problem." }),
+      ],
     }),
     shortBlock({
       id: "borderland",
       title: "Nordic Frames: Borderland",
       screening: t(
-        "La 22.8. klo 16.00–18.00 · Auditorio",
-        "Sat 22 Aug 16.00–18.00 · Auditorium",
-        "Lör 22 aug 16.00–18.00 · Auditoriet"
+        "La 22.8. klo 16.00–18.03 · Auditorio",
+        "Sat 22 Aug 16.00–18.03 · Auditorium",
+        "Lör 22 aug 16.00–18.03 · Auditoriet"
       ),
       fienta: fienta("nordic-frames-borderland", locale),
       img: imgBorderland,
       films: 6,
       age: t("16 (ahdistus, väkivalta)", "16 (anxiety, violence)"),
       desc: t(
-        "Jonkin kynnyksellä, katse menneessä ja tulevassa – tiedämmekö, missä olemme? Elokuvia rajojen tältä ja tuolta puolen, kurkistuksia erilaisiin elämiin, toiveisiin ja pelkoihin. Häikäiseviä näkökulmia ajankohtaisiin aiheisiin ja ihmisyyden perimmäisiin kysymyksiin.\n\nLyhytelokuvat: Ritardando (Tanska), 28 Days Left (Suomi), Equal Dust (Suomi), 175 (Ruotsi), Fear Fokol (Ruotsi), Borderline (Suomi, Norja).\n\n" +
+        "Jonkin kynnyksellä, katse menneessä ja tulevassa – tiedämmekö, missä olemme? Elokuvia rajojen tältä ja tuolta puolen, kurkistuksia erilaisiin elämiin, toiveisiin ja pelkoihin. Häikäiseviä näkökulmia ajankohtaisiin aiheisiin ja ihmisyyden perimmäisiin kysymyksiin.\n\n" +
           qaShorts,
-        "On the brink of something, looking back and forth, are we aware where we are? Films on this and the other side of borders, offering insights into different lives, hopes and fears. Dazzling takes on topical matters, dealing with fundamental questions of humanity.\n\nShort films: Ritardando (Denmark), 28 Days Left (Finland), Equal Dust (Finland), 175 (Sweden), Fear Fokol (Sweden), Borderline (Finland, Norway).\n\n" +
+        "On the brink of something, looking back and forth, are we aware where we are? Films on this and the other side of borders, offering insights into different lives, hopes and fears. Dazzling takes on topical matters, dealing with fundamental questions of humanity.\n\n" +
           qaShorts
       ),
+      list: [
+        sf({ title: "Ritardando",
+          co: ["DK"], year: "2025", len: "11 min", age: "16",
+          warn: ["ahdistus"],
+          director: "Selma Sunniva",
+          synopsis: "While the bombs are falling in a war-torn Copenhagen, the harpist David is practicing scales in his barricaded apartment. He believes in art, not war." }),
+        sf({ title: "28 Days Left",
+          orig: "Tj28",
+          co: ["FI"], year: "2026", len: "20 min", age: "16",
+          warn: ["ahdistus", "vakivalta"],
+          director: "Yasmin Najjar",
+          synopsis: "A Finnish-Palestinian woman, Amani Lillak, is completing her voluntary military service in the Finnish Army's medical corps. During a final combat exercise, she learns that the crisis in her father's homeland has further escalated, while tensions within the medical corps reach breaking point." }),
+        sf({ title: "Equal Dust",
+          orig: "Elämä ja yö",
+          co: ["FI"], year: "2025", len: "14 min", age: "12",
+          warn: ["ahdistus"],
+          director: "Jani Peltonen",
+          synopsis: "In November 1983, a camera test was filmed in Helsinki: a 12-minute uninterrupted tracking shot through a nocturnal cityscape. At the same time, NATO's Able Archer 83 exercise is underway in Europe — a scenario of how a nuclear war is believed to begin. The film intervenes in that scenario and turns the camera test into a cinematic land survey of the imagined destruction." }),
+        sf({ title: "175",
+          co: ["SE"], year: "2025", len: "11 min", age: "16",
+          warn: ["ahdistus", "vakivalta"],
+          director: "Sepehr Nosrati",
+          synopsis: "Two revolutionaries kidnap the child of a Swedish politician to prevent a vote on a draconian law that would allow the state to strip people of their citizenship. When the police arrive at the Persian restaurant where the kid is being held, the situation begins to spiral out of control." }),
+        sf({ title: "Fear Fokol",
+          co: ["ZA", "SE"], year: "2025", len: "15 min", age: "12",
+          warn: ["vakivalta"],
+          director: "Tuva Björk",
+          synopsis: "A nightly ride into the fears and anxieties of Johannesburg's wealthy inhabitants, following the work of the private security guards hired to protect them. The illusion of security slowly dissolves as we dig into a fragile climate of inequality, paranoia and masculinity in crisis." }),
+        sf({ title: "Borderline",
+          orig: "På Grensa",
+          co: ["FI", "NO", "SE"], year: "2025", len: "12 min", age: "7",
+          warn: ["vakivalta"],
+          director: "Johannes Vang",
+          synopsis: "A Norwegian customs officer, a Finnish poacher and a mysterious Swedish woman meet at the border between their homelands, becoming entangled in a conflict over laws, language and prejudice." }),
+      ],
     }),
     shortBlock({
       id: "mothers-figures",
       title: "Nordic Frames: Mothers' Figures",
       screening: t(
-        "La 22.8. klo 18.20–20.20 · Auditorio",
-        "Sat 22 Aug 18.20–20.20 · Auditorium",
-        "Lör 22 aug 18.20–20.20 · Auditoriet"
+        "La 22.8. klo 18.20–20.21 · Auditorio",
+        "Sat 22 Aug 18.20–20.21 · Auditorium",
+        "Lör 22 aug 18.20–20.21 · Auditoriet"
       ),
       fienta: fienta("nordic-frames-mothers-figures", locale),
       img: imgMothersFigures,
       films: 6,
-      age: t("16 (seksi, lievä ahdistus)", "16 (sex, light anxiety)"),
+      age: t("16 (seksi, ahdistus, väkivalta)", "16 (sex, anxiety, violence)"),
       desc: t(
-        "Äitihahmot ottavat muotoaan ja etsivät tapoja toimia vanhempina suunnannäyttäjinä. Rakkautta, kipua ja naurua tulvillaan oleva kokonaisuus on kunnianosoitus äitihahmoille kaikista elämän kolkista.\n\nLyhytelokuvat: Family (Ruotsi), Baby Blues (Norja), Without Kelly (Ruotsi), A Part Unwritten (Suomi), SON (Ruotsi), Overtime (Suomi).\n\n" +
+        "Äitihahmot ottavat muotoaan ja etsivät tapoja toimia vanhempina suunnannäyttäjinä. Rakkautta, kipua ja naurua tulvillaan oleva kokonaisuus on kunnianosoitus äitihahmoille kaikista elämän kolkista.\n\n" +
           qaShorts,
-        "Motherly figures taking shape, figuring out ways to act as elders. Full of love, pain and laughter, this is a homage to mother figures from all walks of life.\n\nShort films: Family (Sweden), Baby Blues (Norway), Without Kelly (Sweden), A Part Unwritten (Finland), SON (Sweden), Overtime (Finland).\n\n" +
+        "Motherly figures taking shape, figuring out ways to act as elders. Full of love, pain and laughter, this is a homage to mother figures from all walks of life.\n\n" +
           qaShorts
       ),
+      list: [
+        sf({ title: "Family",
+          orig: "Familj",
+          co: ["SE"], year: "2025", len: "14 min", age: "12",
+          warn: ["ahdistus"],
+          director: "Clara Vida",
+          synopsis: "A man living in a caravan, a woman in social services, and a boy without kidneys. Three fragmented individuals, once a unit, reunite in a beautiful, melancholic and raw confrontation with a family that no longer exists." }),
+        sf({ title: "Baby Blues",
+          co: ["NO"], year: "2025", len: "10 min", age: "S",
+          director: "Helen Komini Knudsen",
+          synopsis: "Sleep-deprived new mom Marte embarks on her very first walk alone with her three-week-old daughter. The goal seems simple — a latte at a café and a brief moment of feeling normal. But along the way, small and large incidents turn into potential threats she must avoid to keep the baby asleep." }),
+        sf({ title: "Without Kelly",
+          co: ["SE"], year: "2025", len: "15 min", age: "16",
+          warn: ["seksi"],
+          director: "Lovisa Sirén",
+          synopsis: "Forced to leave her baby daughter with the child's father, young mother Esther is caught in desperation and longing. Through the night she chases touch and comfort, seeking ways to hold on to who she loves the most." }),
+        sf({ title: "A Part Unwritten",
+          orig: "Vuorosanat",
+          co: ["FI"], year: "2025", len: "18 min", age: "7",
+          warn: ["ahdistus"],
+          director: "Arman Zafari",
+          synopsis: "Niina, a struggling drama teacher, receives an unusual request from her boss: to deliver a eulogy at his father's funeral in his place. Desperate for an opportunity to perform, she finds herself considering the absurd proposition." }),
+        sf({ title: "SON",
+          co: ["SE"], year: "2025", len: "13 min", age: "12",
+          warn: ["ahdistus"],
+          director: "Leona Cauklija",
+          synopsis: "A mother sees her homeless son's tags wherever she goes. She interprets his signatures as signals to her and wants to respond. She starts writing SON under his tags. One day, she suddenly gets a reply." }),
+        sf({ title: "Overtime",
+          co: ["FI"], year: "2025", len: "11 min", age: "12",
+          warn: ["vakivalta"],
+          director: "Siiri Halko",
+          synopsis: "Finland prospers, but with a strict rule: citizens must leave at 70. Annastiina Kankaanrinta, a once-powerful politician, played a key role in creating the Lex 70 law. Now at her own 70th birthday, she must face her own state-approved farewell." }),
+      ],
     }),
     shortBlock({
       id: "generation-zeitgeist",
@@ -721,38 +926,94 @@ export const buildCatalog = (locale) => {
       fienta: fienta("nordic-frames-generation-zeitgeist", locale),
       img: imgGenerationZeitgeist,
       films: 6,
-      age: t(
-        "12 (ahdistus, viittauksia väkivaltaan)",
-        "12 (anxiety, references to violence)"
-      ),
+      age: t("12 (ahdistus, väkivalta, päihteiden käyttö)", "12 (anxiety, violence, substance use)"),
       desc: t(
-        "Sukupolvia yhdistäviä kysymyksiä ja nuoria maailmankuvia. Osa tuntuu ajattomilta, osa juuri tähän aikaan kuuluvilta. Zeitgeist – viimeisellä aakkoskirjaimella nimetyn sukupolven ääntä. Elokuvia siitä, mikä muovaa tapaamme katsoa maailmaa.\n\nLyhytelokuvat: KIELO (Suomi), Major Bag Alert (Suomi), Invisible (Ruotsi), White Room (Suomi), Signals (Islanti), Em assumes death (Ruotsi).\n\n" +
+        "Sukupolvia yhdistäviä kysymyksiä ja nuoria maailmankuvia. Osa tuntuu ajattomilta, osa juuri tähän aikaan kuuluvilta. Zeitgeist – viimeisellä aakkoskirjaimella nimetyn sukupolven ääntä. Elokuvia siitä, mikä muovaa tapaamme katsoa maailmaa.\n\n" +
           qaShorts,
-        "Generational questions and youthful worldviews. Some seem evergreen, some specific to this day and age. Zeitgeist, a generation marked by the last letter of the alphabet. Films diving into what forms our ways of looking at the world.\n\nShort films: KIELO (Finland), Major Bag Alert (Finland), Invisible (Sweden), White Room (Finland), Signals (Iceland), Em assumes death (Sweden).\n\n" +
+        "Generational questions and youthful worldviews. Some seem evergreen, some specific to this day and age. Zeitgeist, a generation marked by the last letter of the alphabet. Films diving into what forms our ways of looking at the world.\n\n" +
           qaShorts
       ),
+      list: [
+        sf({ title: "KIELO",
+          co: ["FI"], year: "2025", len: "4 min", age: "S",
+          director: "Janina Rajakangas, Sinem Kayacan",
+          synopsis: "Kielo finds it hard to sit still in class. She takes a break venturing into the corridors of her imagination." }),
+        sf({ title: "Major Bag Alert",
+          co: ["FI"], year: "2026", len: "15 min", age: "12",
+          warn: ["paihteet"],
+          director: "Viljami Penttilä",
+          synopsis: "2005. Gossip around the school is that 16-year-old Janina's family is having serious financial troubles. Janina and her group of friends plan to prove the rumours wrong by stealing an expensive handbag from the neighbourhood shopping centre." }),
+        sf({ title: "Invisible",
+          orig: "Det Osynliga",
+          co: ["SE"], year: "2025", len: "10 min", age: "7",
+          warn: ["ahdistus", "vakivalta"],
+          director: "Malak Alamari",
+          synopsis: "Adrian and Elias are teenage friends who drift around and live in their own world full of adventure and laughter. What starts as a playful friendship quickly changes when Adrian discovers that not everything is as it seems." }),
+        sf({ title: "White Room",
+          orig: "Valkoinen huone",
+          co: ["FI"], year: "2026", len: "8 min", age: "7",
+          warn: ["ahdistus", "vakivalta"],
+          director: "Heikki Saikkonen",
+          synopsis: "A person is thrown in a white room straight from birth and has to stay there for the rest of their life." }),
+        sf({ title: "Signals",
+          orig: "Merki",
+          co: ["IS"], year: "2025", len: "14 min", age: "S",
+          director: "Rúnar Ingi Einarsson",
+          synopsis: "At her drama school audition, an aspiring young actress must face the emotional turmoil of her grief or else risk not fulfilling her dream." }),
+        sf({ title: "Em assumes death",
+          co: ["DK"], year: "2024", len: "30 min", age: "12",
+          warn: ["ahdistus"],
+          director: "Jacob Schill",
+          synopsis: "Em is drowning in a river. This 18-year-old loner has watched hundreds of hours of content on the Law of Assumption: a popular belief of a new online spirituality that everything you assume will be manifested into reality. Em tries to realize this Law, but his confrontation with Death is unusual." }),
+      ],
     }),
     shortBlock({
       id: "weirdly-working",
       title: "Nordic Frames: Weirdly Working",
       screening: t(
-        "Su 23.8. klo 17.30–19.40 · Auditorio",
-        "Sun 23 Aug 17.30–19.40 · Auditorium",
-        "Sön 23 aug 17.30–19.40 · Auditoriet"
+        "Su 23.8. klo 17.30–19.38 · Auditorio",
+        "Sun 23 Aug 17.30–19.38 · Auditorium",
+        "Sön 23 aug 17.30–19.38 · Auditoriet"
       ),
       fienta: fienta("nordic-frames-weirdly-working", locale),
       img: imgWeirdlyWorking,
       films: 5,
-      age: t(
-        "16 (viittauksia seksiin, lievää väkivaltaa)",
-        "16 (references to sex, light violence)"
-      ),
+      age: t("16 (seksi, ahdistus, päihteiden käyttö, väkivalta)", "16 (sex, anxiety, substance use, violence)"),
       desc: t(
-        "Työelämän oudot kohtaamiset ja erikoiset tunnelmat. Huijareita, puhelinmyyjiä ja uupuneita selviytyjiä, jotka pitävät kulisseja yllä elantonsa vuoksi.\n\nLyhytelokuvat: Dancing Pigeons (Ruotsi), Astro TV (Suomi), Am I calling you at a bad time? (Suomi), Smokebreak (Islanti), Spermatheca (Norja).\n\n" +
+        "Työelämän oudot kohtaamiset ja erikoiset tunnelmat. Huijareita, puhelinmyyjiä ja uupuneita selviytyjiä, jotka pitävät kulisseja yllä elantonsa vuoksi.\n\n" +
           qaShorts,
-        "Working through weird encounters and atmospheres in workplace settings. Con artists, telemarketers and the tired ones keeping up appearances to make a living.\n\nShort films: Dancing Pigeons (Sweden), Astro TV (Finland), Am I calling you at a bad time? (Finland), Smokebreak (Iceland), Spermatheca (Norway).\n\n" +
+        "Working through weird encounters and atmospheres in workplace settings. Con artists, telemarketers and the tired ones keeping up appearances to make a living.\n\n" +
           qaShorts
       ),
+      list: [
+        sf({ title: "Dancing Pigeons",
+          co: ["SE"], year: "2025", len: "23 min", age: "7",
+          warn: ["ahdistus"],
+          director: "Christofer Nilsson",
+          synopsis: "A psychic medium has his grand seance interrupted as an audience member refuses to let him end the show without getting to speak to her deceased ex-husband." }),
+        sf({ title: "Astro TV",
+          co: ["FI"], year: "2025", len: "29 min", age: "S",
+          director: "Magdaleena Jakkila",
+          synopsis: "TV astrologer Sigrid guides people through sleepless nights, but one caller seems worrying. Can Sigrid help them before Jupiter and Pluto align?" }),
+        sf({ title: "Am I calling you at a bad time?",
+          orig: "En kai huonoon aikaan soittele?",
+          co: ["FI"], year: "2025", len: "15 min", age: "16",
+          warn: ["seksi"],
+          director: "Martta Tuomaala",
+          synopsis: "X is growing up in the 1990s. As a child she makes prank calls and gets her first job in telemarketing as a teenager. Office smells, heavy breathers and meaningless greetings follow her from one workplace to another." }),
+        sf({ title: "Smokebreak",
+          orig: "Sígópása",
+          co: ["IS"], year: "2026", len: "2 min", age: "12",
+          warn: ["paihteet"],
+          director: "Rakel Andrésdóttir",
+          synopsis: "A woman working at a fish and chips stand meets a fish during her smoke break and decides to go on an adventure with him." }),
+        sf({ title: "Spermatheca",
+          orig: "Spermateket",
+          co: ["NO"], year: "2025", len: "19 min", age: "7",
+          warn: ["vakivalta"],
+          director: "Silje Baer",
+          synopsis: "The workers at the Spermatheca are struggling with their motivation, and when Pontius makes an unusual discovery, everyday life at the station begins to shift. All the while, department head Morten is daydreaming about far away." }),
+      ],
     }),
   ];
 
@@ -778,13 +1039,13 @@ export const buildCatalog = (locale) => {
       id: "leffakaraoke",
       artist: t("Vinyylikaraoke — DJ Valoantti", "Vinyl Karaoke — DJ Valoantti"),
       img: imgLeffakaraoke,
-      venue: t("Kivipiha ja puutarha", "Stone yard and garden"),
+      venue: t("Kivipiha", "Stone yard", "Stengården"),
       day: t("pe", "Fri"),
       date: "21.8.",
       time: t("klo 18–20", "18–20"),
       desc: t(
         "Vinyylikaraokessa pääset laulamaan tuttuja kappaleita alkuperäisten artistien kanssa. Valitse kappale listalta, niin DJ laittaa vinyylisinglen soimaan ja voit tarttua mikrofoniin ystävien kannustaessa vieressä. Tarvittaessa sanat löytyvät mukaan laulamista varten.\n\nVinyylikaraoke tarjoaa ainutlaatuisen karaoke-elämyksen, jossa vinyylilevyjen lämmin soundi tekee tunnelmasta tavallista erityisemmän.",
-        "Vinyl Karaoke – DJ Valoantti"
+        "Vinyl Karaoke gives you the chance to sing along with your favourite songs performed by the original artists. Choose a song from the playlist, and the DJ will put the vinyl single on the turntable while you take the microphone and perform as your friends cheer you on. Lyrics are available if you need them.\n\nVinyl Karaoke offers a one-of-a-kind karaoke experience, where the warm sound of vinyl records creates a truly special atmosphere."
       ),
     }),
     // Orvokki piilotettu ohjelmistosta 31.7.2026 (tiimin pyyntö).
@@ -852,13 +1113,6 @@ export const buildCatalog = (locale) => {
     "Mer information kommer snart."
   );
 
-  const fientaNote = (size) =>
-    t(
-      `Fienta-ilmoittautuminen, ryhmäkoko ${size}. Ilmoittaudu paikan päällä infopisteelle, josta ohjataan oikeaan paikkaan.`,
-      `Registration via Fienta, group size ${size}. Check in at the info point on site, and you will be guided to the right place.`,
-      `Anmälan via Fienta, gruppstorlek ${size}. Anmäl dig på plats vid infopunkten, därifrån guidas du till rätt ställe.`
-    );
-
   const workshopEntry = (o) => ({
     id: o.id,
     fields: {
@@ -875,7 +1129,6 @@ export const buildCatalog = (locale) => {
       description: desc(o.id, o.desc),
       fientaUrl: o.fienta ?? null,
       fientaLabel: FIENTA_LABEL,
-      fientaNote: o.fienta ? FIENTA_OPENS : null,
     },
   });
 
@@ -888,13 +1141,11 @@ export const buildCatalog = (locale) => {
       handle: "whirling_lifedance",
       day: t("pe", "Fri"),
       date: "21.8.",
-      time: t("klo 15–17 · puisto", "15–17 · park"),
+      time: t("klo 15–17 · Omenapuutalon nurmikko", "15–17 · Omenapuutalon nurmikko"),
       lang: t("englanti", "English", "engelska"),
       desc: t(
-        "Whirl to Feel on kahden tunnin mittainen pyörimiseen keskittyvä työpaja, joka kutsuu tutkimaan ikiaikaista pyörimisen taidetta kehollisen muistin, tunteiden vapauttamisen ja ilon kokemisen väylänä.\n\nTyöpajassa palataan pyörimisen luontaiseen vapauteen – kokemukseen, jonka moni meistä muistaa lapsuudesta, jolloin pyöriminen tapahtui spontaanisti ja leikkisästi. Nyt tätä liikettä lähestytään tietoisesta ja meditatiivisesta näkökulmasta. Aiempaa kokemusta ei tarvita – riittää, että saavut paikalle avoimin mielin, uteliaana ja valmiina liikkumaan. Osallistujille tarjotaan pyörähdyshameet kokeiltaviksi.\n\nSafa Solati on koulutettu psykologi, joka on erikoistunut musiikkipsykoterapiaan. Hän on opiskellut persialaisia tansseja useiden vuosien ajan ja omistautunut viimeisen kymmenen vuoden aikana suufilaisen pyörimisperinteen sekä nykytanssin elementtejä yhdistävän harjoituksen tutkimiselle ja opettamiselle.\n\n" +
-          fientaNote(20),
-        "Whirl to Feel is an immersive 2-hour workshop exploring the ancient art of whirling as a path to embodied memory, emotional release, and joyful celebration. We'll reconnect with the innate freedom of spinning, something most of us experienced spontaneously in childhood, now held within a conscious, meditative container.\n\nNo prior experience is needed, just your presence, curiosity, and willingness to move. Participants will be provided with whirling skirts.\n\nSafa is a trained psychologist specializing in music psychotherapy, with a deep passion for dance as a path of healing and spiritual exploration. She has studied Persian dances for many years and, over the past 10 years, has devoted herself to the study and practice of Sufi whirling combined with contemporary elements.\n\n" +
-          fientaNote(20)
+        "Whirl to Feel on kahden tunnin mittainen pyörimiseen keskittyvä työpaja, joka kutsuu tutkimaan ikiaikaista pyörimisen taidetta kehollisen muistin, tunteiden vapauttamisen ja ilon kokemisen väylänä.\n\nTyöpajassa palataan pyörimisen luontaiseen vapauteen – kokemukseen, jonka moni meistä muistaa lapsuudesta, jolloin pyöriminen tapahtui spontaanisti ja leikkisästi. Nyt tätä liikettä lähestytään tietoisesta ja meditatiivisesta näkökulmasta. Aiempaa kokemusta ei tarvita – riittää, että saavut paikalle avoimin mielin, uteliaana ja valmiina liikkumaan. Osallistujille tarjotaan pyörähdyshameet kokeiltaviksi.\n\nSafa Solati on koulutettu psykologi, joka on erikoistunut musiikkipsykoterapiaan. Hän on opiskellut persialaisia tansseja useiden vuosien ajan ja omistautunut viimeisen kymmenen vuoden aikana suufilaisen pyörimisperinteen sekä nykytanssin elementtejä yhdistävän harjoituksen tutkimiselle ja opettamiselle.",
+        "Whirl to Feel is an immersive 2-hour workshop exploring the ancient art of whirling as a path to embodied memory, emotional release, and joyful celebration. We'll reconnect with the innate freedom of spinning, something most of us experienced spontaneously in childhood, now held within a conscious, meditative container.\n\nNo prior experience is needed, just your presence, curiosity, and willingness to move. Participants will be provided with whirling skirts.\n\nSafa is a trained psychologist specializing in music psychotherapy, with a deep passion for dance as a path of healing and spiritual exploration. She has studied Persian dances for many years and, over the past 10 years, has devoted herself to the study and practice of Sufi whirling combined with contemporary elements."
       ),
     }),
     workshopEntry({
@@ -909,8 +1160,8 @@ export const buildCatalog = (locale) => {
       time: t("klo 17–18.30 · Wanha Labra", "17–18.30 · Wanha Labra"),
       lang: t("suomi", "Finnish", "finska"),
       desc: t(
-        COMING_SOON + "\n\nKesto: 90 min.\n\n" + fientaNote(10),
-        COMING_SOON + "\n\nDuration: 90 min.\n\n" + fientaNote(10)
+        COMING_SOON + "\n\nKesto: 90 min.",
+        COMING_SOON + "\n\nDuration: 90 min."
       ),
     }),
     workshopEntry({
@@ -924,13 +1175,11 @@ export const buildCatalog = (locale) => {
       handle: "Giulialepori2",
       day: t("pe", "Fri"),
       date: "21.8.",
-      time: t("klo 17–19 · Sininen huone", "17–19 · Sininen huone"),
+      time: t("klo 17–19 · Sininen Huone", "17–19 · Sininen Huone"),
       lang: t("englanti", "English", "engelska"),
       desc: t(
-        "Inherited and Silent Stories on kahden tunnin mittainen osallistava työpaja, jossa tutkitaan perintöä ja tabuja leikin, kuvallisen ilmaisun ja yhteisen luovan työskentelyn kautta.\n\nTyöpajassa osallistujia kutsutaan tutkimaan perinnön näkyviä ja näkymättömiä ulottuvuuksia teatteriharjoitteiden, luovan ilmaisun ja yhteisen reflektion avulla. Liikkeen, kollaasin, piirtämisen ja tarinankerronnan keinoin pohditaan niitä perinteitä, arvoja ja tarinoita, joita olemme perineet, sekä hiljaisuutta ja tabuja, jotka muovaavat identiteettiämme ja yhteisöämme. Aiempaa kokemusta taiteesta tai teatterista ei tarvita.\n\nGiulia Lepori on italialainen sosiologi, jonka työ sijoittuu mielenterveyden, taiteen ja luovan tutkimisen rajapintaan.\n\n" +
-          fientaNote(20),
-        "Inherited stories, silence stories: exploring heritage and taboo through play, images and collective creation.\n\nThis interactive 2-hour workshop invites participants to explore the visible and invisible aspects of heritage through theatre games, creative expressions and collective reflection. Using movement, collage, drawing and storytelling, participants will reflect on the tradition, values and stories we inherit as well as the silence and taboos that shape our identities and community. No artistic or theatre experience is required.\n\nGiulia Lepori is an Italian sociologist whose work lives at the intersection of mental health, art, and creative exploration.\n\n" +
-          fientaNote(20)
+        "Inherited and Silent Stories on kahden tunnin mittainen osallistava työpaja, jossa tutkitaan perintöä ja tabuja leikin, kuvallisen ilmaisun ja yhteisen luovan työskentelyn kautta.\n\nTyöpajassa osallistujia kutsutaan tutkimaan perinnön näkyviä ja näkymättömiä ulottuvuuksia teatteriharjoitteiden, luovan ilmaisun ja yhteisen reflektion avulla. Liikkeen, kollaasin, piirtämisen ja tarinankerronnan keinoin pohditaan niitä perinteitä, arvoja ja tarinoita, joita olemme perineet, sekä hiljaisuutta ja tabuja, jotka muovaavat identiteettiämme ja yhteisöämme. Aiempaa kokemusta taiteesta tai teatterista ei tarvita.\n\nGiulia Lepori on italialainen sosiologi, jonka työ sijoittuu mielenterveyden, taiteen ja luovan tutkimisen rajapintaan.",
+        "Inherited stories, silence stories: exploring heritage and taboo through play, images and collective creation.\n\nThis interactive 2-hour workshop invites participants to explore the visible and invisible aspects of heritage through theatre games, creative expressions and collective reflection. Using movement, collage, drawing and storytelling, participants will reflect on the tradition, values and stories we inherit as well as the silence and taboos that shape our identities and community. No artistic or theatre experience is required.\n\nGiulia Lepori is an Italian sociologist whose work lives at the intersection of mental health, art, and creative exploration."
       ),
     }),
     workshopEntry({
@@ -943,11 +1192,11 @@ export const buildCatalog = (locale) => {
       day: t("la", "Sat"),
       date: "22.8.",
       time: t(
-        "klo 13–13.45 · puiston eteläpuoli",
-        "13–13.45 · south side of the park"
+        "klo 13–13.55 · Omenapuutalon nurmikko",
+        "13–13.55 · Omenapuutalon nurmikko"
       ),
       lang: t("suomi", "Finnish", "finska"),
-      desc: COMING_SOON + "\n\n" + fientaNote(15),
+      desc: COMING_SOON,
     }),
     workshopEntry({
       id: "stinging-nettle",
@@ -960,13 +1209,11 @@ export const buildCatalog = (locale) => {
       handle: "designs_by_kick_",
       day: t("la", "Sat"),
       date: "22.8.",
-      time: t("klo 14–16 · puisto", "14–16 · park"),
+      time: t("klo 14–16 · Puisto", "14–16 · Puisto"),
       lang: t("englanti", "English", "engelska"),
       desc: t(
-        "Nokkonen on ollut käytössä kuitukasvina jo tuhansien vuosien ajan köysien ja tekstiilien valmistuksessa. Nykypäivänä sen merkitys on kuitenkin pitkälti unohtunut, ja hyödyllisen sekä lääkinnällisistä ominaisuuksistaan tunnetun kasvin sijaan nokkonen mielletään usein vain ikäväksi rikkaruohoksi.\n\nTässä työpajassa osallistujat oppivat, miten nokkosta valitaan, kerätään ja käsitellään kuitukäyttöön esimerkiksi narujen ja tekstiilien valmistusta varten. Osallistujat käsittelevät itse nokkoskuitua ja valmistavat siitä rannekorun, jonka saavat mukaansa.\n\nJoseph Hallam opiskelee tekstiilisuunnittelun maisteriohjelmassa Aalto-yliopistossa ja on työskennellyt luonnonmateriaalien parissa jo useiden vuosien ajan.\n\n" +
-          fientaNote(15),
-        "Stinging nettle has been used for thousands of years as a fibre plant for rope and textiles but has largely been forgotten in the modern world, maligned as a painful weed, rather than the useful and even medicinal plant it is. In this workshop, the participants are taught the steps for choosing, collecting and processing nettle fibre for use in cordage or textiles. The participants will process the nettle and then make themselves a nettle cordage bracelet to take away with them.\n\nJoseph Hallam is a textile design Masters student at Aalto University and has been working with natural materials for many years.\n\n" +
-          fientaNote(15)
+        "Nokkonen on ollut käytössä kuitukasvina jo tuhansien vuosien ajan köysien ja tekstiilien valmistuksessa. Nykypäivänä sen merkitys on kuitenkin pitkälti unohtunut, ja hyödyllisen sekä lääkinnällisistä ominaisuuksistaan tunnetun kasvin sijaan nokkonen mielletään usein vain ikäväksi rikkaruohoksi.\n\nTässä työpajassa osallistujat oppivat, miten nokkosta valitaan, kerätään ja käsitellään kuitukäyttöön esimerkiksi narujen ja tekstiilien valmistusta varten. Osallistujat käsittelevät itse nokkoskuitua ja valmistavat siitä rannekorun, jonka saavat mukaansa.\n\nJoseph Hallam opiskelee tekstiilisuunnittelun maisteriohjelmassa Aalto-yliopistossa ja on työskennellyt luonnonmateriaalien parissa jo useiden vuosien ajan.",
+        "Stinging nettle has been used for thousands of years as a fibre plant for rope and textiles but has largely been forgotten in the modern world, maligned as a painful weed, rather than the useful and even medicinal plant it is. In this workshop, the participants are taught the steps for choosing, collecting and processing nettle fibre for use in cordage or textiles. The participants will process the nettle and then make themselves a nettle cordage bracelet to take away with them.\n\nJoseph Hallam is a textile design Masters student at Aalto University and has been working with natural materials for many years."
       ),
     }),
     workshopEntry({
@@ -983,10 +1230,8 @@ export const buildCatalog = (locale) => {
       time: t("klo 14–15.15 · Wanha Labra", "14–15.15 · Wanha Labra"),
       lang: t("suomi tai englanti", "Finnish or English", "finska eller engelska"),
       desc: t(
-        "Palaa kehoosi, palaa ääneesi on lempeä, kehollinen työpaja naisille, jotka haluavat hidastaa tahtia, päästää irti kesän intensiteetistä ja löytää uudelleen yhteyden omaan sisäiseen selkeyteensä.\n\nKiinalaisen lääketieteen periaatteisiin pohjautuvassa työpajassa tarkastellaan elokuun loppua siirtymävaiheena – hetkenä, jolloin yin ja yang tasapainottuvat, energiaa voidaan lempeästi palauttaa takaisin itseensä ja oma ääni alkaa jälleen kuulua. Aiempaa kokemusta ei tarvita. Tule juuri sellaisena kuin olet.\n\nTyöpaja on avoin kaikille naisiksi identifioituville. Kesto 75 min. Saavuthan ajoissa – työpajaan ei voi liittyä sen alettua.\n\n" +
-          fientaNote(12),
-        "Come Back to Your Body, Come Back to Your Voice is a gentle body-based workshop for women who want to slow down, release summer's intensity and reconnect with their inner clarity.\n\nRooted in Chinese medicine, we will explore late August as a threshold: a time to harmonize yin and yang, gather your energy back to yourself and gently return to your voice. You don't need any previous experience. Come as you are.\n\nOpen to all who identify as women. Duration 75 minutes. Please arrive on time, no entry once the session has started.\n\n" +
-          fientaNote(12)
+        "Palaa kehoosi, palaa ääneesi on lempeä, kehollinen työpaja naisille, jotka haluavat hidastaa tahtia, päästää irti kesän intensiteetistä ja löytää uudelleen yhteyden omaan sisäiseen selkeyteensä.\n\nKiinalaisen lääketieteen periaatteisiin pohjautuvassa työpajassa tarkastellaan elokuun loppua siirtymävaiheena – hetkenä, jolloin yin ja yang tasapainottuvat, energiaa voidaan lempeästi palauttaa takaisin itseensä ja oma ääni alkaa jälleen kuulua. Aiempaa kokemusta ei tarvita. Tule juuri sellaisena kuin olet.\n\nTyöpaja on avoin kaikille naisiksi identifioituville. Kesto 75 min. Saavuthan ajoissa – työpajaan ei voi liittyä sen alettua.",
+        "Come Back to Your Body, Come Back to Your Voice is a gentle body-based workshop for women who want to slow down, release summer's intensity and reconnect with their inner clarity.\n\nRooted in Chinese medicine, we will explore late August as a threshold: a time to harmonize yin and yang, gather your energy back to yourself and gently return to your voice. You don't need any previous experience. Come as you are.\n\nOpen to all who identify as women. Duration 75 minutes. Please arrive on time, no entry once the session has started."
       ),
     }),
     workshopEntry({
@@ -998,11 +1243,11 @@ export const buildCatalog = (locale) => {
       img: null,
       day: t("la", "Sat"),
       date: "22.8.",
-      time: t("klo 15–17 · Sininen huone", "15–17 · Sininen huone"),
+      time: t("klo 15–17 · Sininen Huone", "15–17 · Sininen Huone"),
       lang: t("englanti", "English", "engelska"),
       desc: t(
-        COMING_SOON + "\n\nKesto: 2 tuntia.\n\n" + fientaNote(20),
-        COMING_SOON + "\n\nDuration: 2 hours.\n\n" + fientaNote(20)
+        COMING_SOON + "\n\nKesto: 2 tuntia.",
+        COMING_SOON + "\n\nDuration: 2 hours."
       ),
     }),
     workshopEntry({
@@ -1019,10 +1264,8 @@ export const buildCatalog = (locale) => {
       time: t("klo 16–17.30 · Wanha Labra", "16–17.30 · Wanha Labra"),
       lang: t("englanti", "English", "engelska"),
       desc: t(
-        "\"Kuolema on vain ovi, aika on vain ikkuna.\" – Vigo Karpaattinen, Ghostbusters (1989)\n\nMitä tapahtuisi, jos suhtautuisimme oman kuolemamme väistämättömyyteen huumorilla ja leikillisyydellä? Voiko luovuus auttaa meitä hyväksymään kuolevaisuutemme? Voisivatko hautajaiset olla tila, jossa suru ja ilo kulkevat rinnakkain?\n\nTule mukaan hyväntuuliseen kuolematyöpajaan, joka kutsuu sinut ajattelemaan laatikon ulkopuolelta – tai pikemminkin mäntyarkun ulkopuolelta – ja pohtimaan, millaisen lähdön haluaisit tehdä tästä kuolevaisesta elämästä.\n\nKaja Matura on Havaijilla kasvanut utelias ja tutkiva taiteilija, joka tasapainoilee ikiaikaisen viisauden ja kehittyvän teknologian rajalla. Mytologian rakkaus ja kiinnostus kasvimaailmaan näkyvät hänen taiteessaan. Ammatiltaan holistinen hierojana hän pyrkii ohjaamaan jokaisen käsiensä alle päätyvän kohti syvempää rentoutta.\n\nKesto: 1,5 tuntia.\n\n" +
-          fientaNote(12),
-        "\"Death is but a door, time is but a window.\" - Vigo the Carpathian, Ghostbusters (1989)\n\nWhat might it mean for us to approach the inevitability of our demise with a sense of humor and play? Can creativity be a catalyst for acceptance? Could a funeral be a space for grief and joy? Join us for this lighthearted death workshop that encourages you to think outside the (pine) box and consider how you want to make your exit from this mortal coil!\n\nKaja Matura is a creature raised in the lush jungles of the Hawaiian islands; a curious, queer, explorative witch balancing on the razor's edge of ancient wisdom and emerging technology. Drawing from her love of mythology and affinity for the botanical world, she weaves art that seeks to mimic the vibrancy of her terrestrial experience. A Holistic Massage Therapist by profession, she seeks to lead each person under her hands to a state of deeper ease.\n\nDuration: 1.5 hours.\n\n" +
-          fientaNote(12)
+        "\"Kuolema on vain ovi, aika on vain ikkuna.\" – Vigo Karpaattinen, Ghostbusters (1989)\n\nMitä tapahtuisi, jos suhtautuisimme oman kuolemamme väistämättömyyteen huumorilla ja leikillisyydellä? Voiko luovuus auttaa meitä hyväksymään kuolevaisuutemme? Voisivatko hautajaiset olla tila, jossa suru ja ilo kulkevat rinnakkain?\n\nTule mukaan hyväntuuliseen kuolematyöpajaan, joka kutsuu sinut ajattelemaan laatikon ulkopuolelta – tai pikemminkin mäntyarkun ulkopuolelta – ja pohtimaan, millaisen lähdön haluaisit tehdä tästä kuolevaisesta elämästä.\n\nKaja Matura on Havaijilla kasvanut utelias ja tutkiva taiteilija, joka tasapainoilee ikiaikaisen viisauden ja kehittyvän teknologian rajalla. Mytologian rakkaus ja kiinnostus kasvimaailmaan näkyvät hänen taiteessaan. Ammatiltaan holistinen hierojana hän pyrkii ohjaamaan jokaisen käsiensä alle päätyvän kohti syvempää rentoutta.\n\nKesto: 1,5 tuntia.",
+        "\"Death is but a door, time is but a window.\" - Vigo the Carpathian, Ghostbusters (1989)\n\nWhat might it mean for us to approach the inevitability of our demise with a sense of humor and play? Can creativity be a catalyst for acceptance? Could a funeral be a space for grief and joy? Join us for this lighthearted death workshop that encourages you to think outside the (pine) box and consider how you want to make your exit from this mortal coil!\n\nKaja Matura is a creature raised in the lush jungles of the Hawaiian islands; a curious, queer, explorative witch balancing on the razor's edge of ancient wisdom and emerging technology. Drawing from her love of mythology and affinity for the botanical world, she weaves art that seeks to mimic the vibrancy of her terrestrial experience. A Holistic Massage Therapist by profession, she seeks to lead each person under her hands to a state of deeper ease.\n\nDuration: 1.5 hours."
       ),
     }),
     workshopEntry({
@@ -1037,8 +1280,8 @@ export const buildCatalog = (locale) => {
       time: t("klo 13–14 · Wanha Labra", "13–14 · Wanha Labra"),
       lang: t("suomi", "Finnish", "finska"),
       desc: t(
-        COMING_SOON + "\n\nKesto: 1 tunti.\n\n" + fientaNote(10),
-        COMING_SOON + "\n\nDuration: 1 hour.\n\n" + fientaNote(10)
+        COMING_SOON + "\n\nKesto: 1 tunti.",
+        COMING_SOON + "\n\nDuration: 1 hour."
       ),
     }),
     workshopEntry({
@@ -1051,16 +1294,14 @@ export const buildCatalog = (locale) => {
       img: null,
       day: t("su", "Sun"),
       date: "23.8.",
-      time: t("klo 13–17 · puisto", "13–17 · park"),
+      time: t("klo 13–17 · Puisto", "13–17 · Puisto"),
       lang: t(
         "suomi, englanti ja ruotsi",
         "Finnish, English and Swedish", "finska, engelska och svenska"
       ),
       desc: t(
-        "Lämpimästi tervetuloa tekstiilikäsityöpajaamme, jossa hidastamme hetkeksi, työstämme käsillä ja tutkimme luonnonmateriaaleja sekä perinteisiä käsityötekniikoita. Festivaalin teemojen PERINTÖ ja TABUT hengessä haluamme tuoda esiin luonnonmateriaalien kauneutta ja herättää uutta arvostusta perinteisiä käsityötaitoja kohtaan, kuten huovutusta, neulomista ja virkkausta.\n\nTyöpajassa saat luoda vapaasti ja antaa mielikuvituksesi johdattaa. Aiempaa kokemusta ei tarvita – kaikki ovat tervetulleita kokeilemaan, oppimaan ja nauttimaan käsillä tekemisen ilosta. Kaikki tarvittavat materiaalit ja työvälineet löytyvät paikan päältä.\n\n" +
-          fientaNote(6),
-        "Warmly welcome to our textile craft workshop, where we take a moment to slow down, create with our hands and explore natural materials and traditional craft techniques. As part of the festival's themes HERITAGE and TABOO, we want to highlight the beauty of natural materials and bring new appreciation to traditional practices such as felting, knitting and crocheting.\n\nDuring the workshop, you are invited to create freely and let your imagination guide you. No previous experience is needed! Materials and tools will be available on site.\n\n" +
-          fientaNote(6)
+        "Lämpimästi tervetuloa tekstiilikäsityöpajaamme, jossa hidastamme hetkeksi, työstämme käsillä ja tutkimme luonnonmateriaaleja sekä perinteisiä käsityötekniikoita. Festivaalin teemojen PERINTÖ ja TABUT hengessä haluamme tuoda esiin luonnonmateriaalien kauneutta ja herättää uutta arvostusta perinteisiä käsityötaitoja kohtaan, kuten huovutusta, neulomista ja virkkausta.\n\nTyöpajassa saat luoda vapaasti ja antaa mielikuvituksesi johdattaa. Aiempaa kokemusta ei tarvita – kaikki ovat tervetulleita kokeilemaan, oppimaan ja nauttimaan käsillä tekemisen ilosta. Kaikki tarvittavat materiaalit ja työvälineet löytyvät paikan päältä.",
+        "Warmly welcome to our textile craft workshop, where we take a moment to slow down, create with our hands and explore natural materials and traditional craft techniques. As part of the festival's themes HERITAGE and TABOO, we want to highlight the beauty of natural materials and bring new appreciation to traditional practices such as felting, knitting and crocheting.\n\nDuring the workshop, you are invited to create freely and let your imagination guide you. No previous experience is needed! Materials and tools will be available on site."
       ),
     }),
     workshopEntry({
@@ -1077,10 +1318,8 @@ export const buildCatalog = (locale) => {
       time: t("klo 14–16 · Osasto 5", "14–16 · Osasto 5"),
       lang: t("suomi tai englanti", "Finnish or English", "finska eller engelska"),
       desc: t(
-        "Surun keskellä -työpajan tarkoituksena on luoda tila, jossa osallistujat voivat rauhassa ja harkiten kokea teemaa suru (kuolema, ihmissuhteet, luonto). Pohditaan mitkä ja ketkä saavat kodin tuntumaan kodilta sekä kodin tärkeyttä ja merkitystä itselle.\n\nTyöpajan aikana keskustellaan teemasta, kirjoitetaan blackout-runoja ja tehdään zinejä teemoihin liittyen.\n\nKesto: 2 tuntia.\n\n" +
-          fientaNote(20),
-        "Sitting with Grief is a workshop where participants can deliberately and in peace explore the theme of GRIEF (death, relationships, nature). We'll reflect on the idea of home, its meaning and importance to you, and what or who turns a house into a home. The workshop includes discussing the theme with the help of prompts, writing blackout poetry and creating zines.\n\nDuration: 2 hours.\n\n" +
-          fientaNote(20)
+        "Surun keskellä -työpajan tarkoituksena on luoda tila, jossa osallistujat voivat rauhassa ja harkiten kokea teemaa suru (kuolema, ihmissuhteet, luonto). Pohditaan mitkä ja ketkä saavat kodin tuntumaan kodilta sekä kodin tärkeyttä ja merkitystä itselle.\n\nTyöpajan aikana keskustellaan teemasta, kirjoitetaan blackout-runoja ja tehdään zinejä teemoihin liittyen.\n\nKesto: 2 tuntia.",
+        "Sitting with Grief is a workshop where participants can deliberately and in peace explore the theme of GRIEF (death, relationships, nature). We'll reflect on the idea of home, its meaning and importance to you, and what or who turns a house into a home. The workshop includes discussing the theme with the help of prompts, writing blackout poetry and creating zines.\n\nDuration: 2 hours."
       ),
     }),
     workshopEntry({
@@ -1093,32 +1332,32 @@ export const buildCatalog = (locale) => {
       img: imgOscarZemarti,
       day: t("su", "Sun"),
       date: "23.8.",
-      time: t("klo 15–17 · Sininen huone", "15–17 · Sininen huone"),
+      time: t("klo 15–17 · Sininen Huone", "15–17 · Sininen Huone"),
       lang: t(
         "englanti (kaikki kielet tervetulleita)",
         "English-facilitated, all languages welcome", "leds på engelska, alla språk välkomna"
       ),
       desc: t(
-        "Maailma on loppumassa, ja samalla kieli katoaa. Sanoja unohdetaan nopeammin kuin niitä ehditään lausua.\n\nJokainen osallistuja toimii pienen sanajoukon vartijana. Nämä sanat valitaan pelastettaviksi unohdukselta: perheeltä perityt, äidinkielestä valitut, lapsuudesta tutut sekä sanat, jotka kuiskattiin, kiellettiin tai joita ei koskaan lausuttu ääneen – tai yksinkertaisesti sanat, jotka merkitsevät meille niin paljon, ettemme voi päästää niistä irti.\n\nOscar Zemarti on perulainen elokuvantekijä ja poikkitaiteellinen taiteilija, jonka työskentely kiertyy muistojen, perinnön ja niiden tarinoiden ympärille, joita yhteisöt kertovat selviytyäkseen.\n\nKesto: noin 90–120 min.\n\n" +
-          fientaNote(20),
-        "The world is ending, and language is dying with it. Words are being forgotten faster than anyone can speak them.\n\nEach guest becomes the Gatekeeper of a handful of words, chosen to be rescued from oblivion: words inherited from family, from a mother tongue, from a childhood, and words that were whispered, forbidden, or never said aloud — or just words that mean so much we cannot let go.\n\nOscar Zemarti is a Peruvian filmmaker and transdisciplinary artist working across film, photography, poetry, theatre and participatory formats. His practice circles the same fire: memory, heritage, and the stories communities tell to survive.\n\nDuration: approx. 90–120 min.\n\n" +
-          fientaNote(20)
+        "Maailma on loppumassa, ja samalla kieli katoaa. Sanoja unohdetaan nopeammin kuin niitä ehditään lausua.\n\nJokainen osallistuja toimii pienen sanajoukon vartijana. Nämä sanat valitaan pelastettaviksi unohdukselta: perheeltä perityt, äidinkielestä valitut, lapsuudesta tutut sekä sanat, jotka kuiskattiin, kiellettiin tai joita ei koskaan lausuttu ääneen – tai yksinkertaisesti sanat, jotka merkitsevät meille niin paljon, ettemme voi päästää niistä irti.\n\nOscar Zemarti on perulainen elokuvantekijä ja poikkitaiteellinen taiteilija, jonka työskentely kiertyy muistojen, perinnön ja niiden tarinoiden ympärille, joita yhteisöt kertovat selviytyäkseen.\n\nKesto: noin 90–120 min.",
+        "The world is ending, and language is dying with it. Words are being forgotten faster than anyone can speak them.\n\nEach guest becomes the Gatekeeper of a handful of words, chosen to be rescued from oblivion: words inherited from family, from a mother tongue, from a childhood, and words that were whispered, forbidden, or never said aloud — or just words that mean so much we cannot let go.\n\nOscar Zemarti is a Peruvian filmmaker and transdisciplinary artist working across film, photography, poetry, theatre and participatory formats. His practice circles the same fire: memory, heritage, and the stories communities tell to survive.\n\nDuration: approx. 90–120 min."
       ),
     }),
     workshopEntry({
-      id: "stop-motion-pop-up",
+      id: "olennolliset-olennot",
       name: t(
-        "Stop-motion pop-up — Hanna Toiviainen",
-        "Stop-motion pop-up by Hanna Toiviainen"
+        "Olennolliset olennot — stop motion -animaatiotyöpaja",
+        "Essential Creatures — stop motion animation workshop",
+        "Väsentliga varelser — workshop i stop motion-animation"
       ),
-      img: null,
-      day: t("pe–su", "Fri–Sun"),
-      date: "21.–23.8.",
-      time: t("Tilajakamo, puutarhapuoli", "Tilajakamo, garden side"),
-      lang: "",
+      img: imgOlennot,
+      day: t("la", "Sat", "lör"),
+      date: "22.8.",
+      time: t("klo 13–15 · Tilajakamon puutarhapiha", "13–15 · Tilajakamo garden courtyard", "kl. 13–15 · Tilajakamos trädgårdsgård"),
+      lang: t("suomi", "Finnish", "finska"),
       desc: t(
-        COMING_SOON + "\n\nEi ennakkoilmoittautumista – tule mukaan paikan päällä.",
-        COMING_SOON + "\n\nNo advance registration – drop in on site."
+        "Työpajassa luomme omia mielikuvitusolentoja ja herätämme ne eloon stop motion -animaation avulla itse rakennetuissa pienoisympäristöissä.\n\nOlentoja ja niiden ympäristöjä tehdään piirtäen, maalaten ja kollaasitekniikalla. Tarjolla on paperia, piirustus- ja maalaustarvikkeita, kangastilkkuja, liimaa sekä muuta askartelumateriaalia. Voit halutessasi tuoda myös omia materiaalejasi, kuten kangastilkkuja tai muita elementtejä, joita haluat käyttää työskentelyssä. Jos mahdollista, ota mukaasi älypuhelin, johon on asennettu Stop Motion Studio -sovellus.\n\nTyöpajan ohjaajina toimivat animaatiotaiteilija Leena Jääskeläinen ja monitaiteilija Hanna Toiviainen-Conteh.\n\nTyöpaja järjestetään Tilajakamon puutarhapihan perällä sijaitsevan Päämaja-installaation luona.\n\nKesto: 2 tuntia. Ei ennakkoilmoittautumista.",
+        "In this workshop, we will create our own imaginary creatures and bring them to life through stop motion animation in self-made miniature environments.\n\nThe creatures and their surroundings will be created using drawing, painting and collage techniques. Paper, drawing and painting materials, fabric scraps, glue and other craft supplies will be provided. You are also welcome to bring your own materials, such as fabric scraps or other items you would like to incorporate into your creations. If possible, please bring a smartphone with the Stop Motion Studio app installed.\n\nThe workshop is led by animation artist Leena Jääskeläinen and multidisciplinary artist Hanna Toiviainen-Conteh.\n\nThe workshop takes place at the Päämaja installation, located at the back of the Tilajakamo garden courtyard.\n\nDuration: 2 hours. No registration required.",
+        "Under workshopen skapar vi våra egna fantasivarelser och väcker dem till liv med hjälp av stop motion-animation i egenbyggda miljöer.\n\nVarelserna och deras miljöer skapas genom teckning, målning och collageteknik. Papper, rit- och målningsmaterial, tygbitar, lim och annat pysselmaterial finns på plats. Du är också välkommen att ta med egna material, till exempel tygbitar eller annat som du vill använda i ditt skapande. Om möjligt, ta gärna med en smartphone med appen Stop Motion Studio installerad.\n\nWorkshopen leds av animationskonstnären Leena Jääskeläinen och den mångkonstnärliga konstnären Hanna Toiviainen-Conteh.\n\nWorkshopen hålls vid installationen Päämaja, längst in på Tilajakamos trädgårdsgård.\n\nLängd: 2 timmar. Ingen förhandsanmälan krävs."
       ),
     }),
   ];
@@ -1133,9 +1372,12 @@ export const buildCatalog = (locale) => {
       photoCredit: o.photoCredit ?? null,
       location: o.location,
       description: desc(o.id, o.desc),
+      // Instagram-tunnus ja/tai taiteilijan nettisivu (Art.jsx renderöi linkit)
+      handle: o.handle ?? null,
+      website: o.website ?? null,
+      websiteLabel: o.websiteLabel ?? null,
       fientaUrl: o.fienta ?? null,
       fientaLabel: FIENTA_LABEL,
-      fientaNote: o.fienta ? FIENTA_OPENS : null,
     },
   });
 
@@ -1148,14 +1390,15 @@ export const buildCatalog = (locale) => {
         "KEN TÄSTÄ KÄY... blind cinema screening"
       ),
       artist: "Pauliina Kauppila",
+      handle: "px3kauppila",
       img: imgKenTastaKay,
       photoCredit: t("Grafiikka: Matti Sampela", "Artwork: Matti Sampela"),
       location: t(
-        "Valo-tila, 2. krs · Näytökset (47 min): pe klo 15, 18 ja 20 · la–su klo 13, 15, 18 ja 20 · Fienta-ilmoittautuminen, ryhmäkoko 8",
-        "Valo-tila, 2nd floor · Screenings (47 min): Fri 15, 18 and 20 · Sat–Sun 13, 15, 18 and 20 · Registration via Fienta, group size 8"
+        "Valo-tila, 2. krs · Näytökset (47 min): pe klo 15, 18 ja 20 · la–su klo 13, 15, 18 ja 20 · Fienta-ilmoittautuminen",
+        "Valo-tila, 2nd floor · Screenings (47 min): Fri 15, 18 and 20 · Sat–Sun 13, 15, 18 and 20 · Registration via Fienta"
       ),
       desc: t(
-        "KEN TÄSTÄ KÄY... on Pauliina Kauppilan toinen sooloalbumi, joka ammentaa suomalaisen psykiatrian historiasta, erityisesti Seilin saaren naishospitaalin vaiheista (1889–1962), sekä naisen asemasta 1800–1900-lukujen taitteessa ja näiden ilmiöiden jatkumoista nykypäivään. Teos käsittelee rakenteellista epätasa-arvoa, psykiatrian stigmaa ja kehollisuuteen liittyviä uskomuksia sekä kutsuu pohtimaan, miten menneisyyden ajattelutavat näkyvät yhä nyky-yhteiskunnassa.\n\nMusiikillisesti albumi on kokeellinen ja tarinallinen kokonaisuus, jossa laulun, lyömäsoitinten ja improvisaation rinnalla kuullaan kenttänauhoituksia arkisista ja yllättävistä äänimaisemista – magneettikuvauslaitteesta junan kolkkeeseen ja Seilin ruokakelloon.\n\nPauliina Kauppila on näyttämöllinen lyömäsoittaja, säveltäjä ja nuorisopsykiatri. KEN TÄSTÄ KÄY... kutsuu pysähtymään mielensisäiselle näyttämölle ja tarkastelemaan niitä tarinoita, joista yhteiskunnassa on liian usein vaiettu.",
+        "KEN TÄSTÄ KÄY... on Pauliina Kauppilan toinen sooloalbumi, joka ammentaa suomalaisen psykiatrian historiasta, erityisesti Seilin saaren naishospitaalin vaiheista (1889–1962), sekä naisen asemasta 1800–1900-lukujen taitteessa ja näiden ilmiöiden jatkumoista nykypäivään. Teos käsittelee rakenteellista epätasa-arvoa, psykiatrian stigmaa ja kehollisuuteen liittyviä uskomuksia sekä kutsuu pohtimaan, miten menneisyyden ajattelutavat näkyvät yhä nyky-yhteiskunnassa. Erityisen tärkeänä tausta-aineistona levyntekoprosessissa ovat olleet dosentti Jutta Ahlbeckin julkaisut sekä professori Petteri Pietikäisen kirjat.\n\nMusiikillisesti albumi on kokeellinen ja tarinallinen kokonaisuus, jossa laulun, lyömäsoitinten ja improvisaation rinnalla kuullaan kenttänauhoituksia arkisista ja yllättävistä äänimaisemista – magneettikuvauslaitteesta junan kolkkeeseen ja Seilin ruokakelloon.\n\nPauliina Kauppila on näyttämöllinen lyömäsoittaja, säveltäjä ja nuorisopsykiatri. KEN TÄSTÄ KÄY... kutsuu pysähtymään mielensisäiselle näyttämölle ja tarkastelemaan niitä tarinoita, joista yhteiskunnassa on liian usein vaiettu.",
         "KEN TÄSTÄ KÄY... is Pauliina Kauppila's second solo album, drawing on the history of Finnish psychiatry, especially the women's hospital on the island of Seili (1889–1962), and on the position of women at the turn of the 20th century and the continuation of these phenomena into the present day. The work deals with structural inequality, the stigma of psychiatry and beliefs about the body, inviting the audience to consider how the mindsets of the past still appear in today's society.\n\nMusically the album is an experimental, narrative whole where song, percussion and improvisation are joined by field recordings of everyday and surprising soundscapes – from an MRI machine to the clatter of a train and the Seili dinner bell.\n\nPauliina Kauppila is a performing percussionist, composer and adolescent psychiatrist. KEN TÄSTÄ KÄY... invites you to pause on the stage of the mind and examine the stories our society has too often silenced."
       ),
     }),
@@ -1163,10 +1406,12 @@ export const buildCatalog = (locale) => {
       id: "seitsemas-aalto",
       title: t("Seitsemäs aalto", "Seitsemäs aalto (The Seventh Wave)"),
       artist: "Jukka Rapo",
+      website: "https://www.jukkarapo.com",
+      websiteLabel: "jukkarapo.com",
       img: imgSeitsemasAalto,
       location: t(
-        "Valokuvanäyttely: Käytävägalleria 1.–31.8. · Avajaiset pe 21.8. klo 19 · Elokuva: Venetsia-talo, 1. krs (pe 15–18, la–su 13–21) · Ulkoinstallaatio purjeeseen: Kaikkien laituri pe–la klo 21–23",
-        "Photo exhibition: Käytävägalleria 1–31 Aug · Opening Fri 21 Aug at 19 · Film: Venetsia building, 1st floor (Fri 15–18, Sat–Sun 13–21) · Outdoor sail installation: Kaikkien laituri Fri–Sat 21–23"
+        "Valokuvanäyttely: Käytävägalleria 1.–31.8. · Avajaiset pe 21.8. klo 19 · Elokuva: Venetsia-talo, 1. krs (pe 15–18, la–su 13–21) · Ulkoinstallaatio purjeeseen: Lapinlahden laituri pe–la klo 21–23",
+        "Photo exhibition: Käytävägalleria 1–31 Aug · Opening Fri 21 Aug at 19 · Film: Venetsia building, 1st floor (Fri 15–18, Sat–Sun 13–21) · Outdoor sail installation: Lapinlahden laituri Fri–Sat 21–23"
       ),
       desc: t(
         "Seitsemäs aalto on matka Itämeren pinnan alle – meren rytmiin ja sen hengitykseen. Pinnan alla maailma muuttuu: valo siivilöityy veden läpi, värit katoavat ja palaavat, aallot ja virtaukset muovaavat maisemaa lakkaamatta.\n\nKaikki näyttelyn kuvat ja Seitsemäs aalto -elokuvan vedenalaiset kohtaukset on kuvattu henkeä pidättäen vapaasukeltaen. \"En kuvaa sitä, miltä meri näyttää. Kuvaan sitä, miltä meri tuntuu.\"\n\nJukka Rapo on helsinkiläinen valokuvaaja, mediataiteilija ja vedenalaiskuvaaja. Hän on työskennellyt ammattivalokuvaajana vuodesta 1995 lähtien ja kuvannut Itämerta veden alla vuodesta 1993.",
@@ -1177,6 +1422,9 @@ export const buildCatalog = (locale) => {
       id: "madonsyojat",
       title: t("Madonsyöjät", "Madonsyöjät (Worm Eaters)"),
       artist: "Joona Möttö",
+      handle: "triljoona",
+      website: "https://www.triljoona.com",
+      websiteLabel: "triljoona.com",
       img: imgMadonsyojat,
       location: t(
         "Kahvila Lähde · 1.–31.8. · ma–la 11–17, su 12–17 · Avajaiset la 22.8. klo 18–20",
@@ -1222,6 +1470,8 @@ export const buildCatalog = (locale) => {
       id: "stop-the-hustle",
       title: "Stop the Hustle",
       artist: "Julia Sand",
+      website: "https://www.juliasand.com/experimental",
+      websiteLabel: "juliasand.com/experimental",
       img: imgStopTheHustle,
       location: t(
         "Omenapuutalo · pe–su klo 15–19",
@@ -1236,10 +1486,13 @@ export const buildCatalog = (locale) => {
       id: "awitha-body-shop",
       title: "AwithA Body Shop",
       artist: "Agita Maračkovska & Andris Maračkovskis",
+      handle: "a_with_a_workshop",
+      website: "https://awitha.art/",
+      websiteLabel: "awitha.art",
       img: imgAwithA,
       location: t(
-        "Omenapuutalon edusta · la–su",
-        "In front of Omenapuutalo · Sat–Sun"
+        "Omenapuutalon nurmikko · pe klo 15–21, la–su klo 14–21",
+        "Omenapuutalo lawn · Fri 15–21, Sat–Sun 14–21"
       ),
       desc: t(
         "AwithA Body Shop ei ole vain valmiiden teosten näyttely, vaan jatkuvasti muotoutuva ympäristö – samanaikaisesti työpaja, laboratorio, kauppa ja installaatio. Kehot ja kehon osat ovat eri valmistumisen ja muodonmuutoksen vaiheissa, hämärtäen tekemisen prosessin ja näyttelyn välistä rajaa.\n\nAwithA on latvialainen taiteilijaduo, jonka muodostavat Agita Maračkovska ja Andris Maračkovskis. Heidän työskentelynsä yhdistää nykytaidetta, kuvanveistoa, materiaalikokeiluja ja elokuva-alan kokemusta. Silikonin, muottien ja valujen sekä hyperrealististen kehon esitysten parissa työskennellessään he tutkivat ihmiskehoa, sen esittämistä ja muodonmuutosta materiaalin kautta.",
@@ -1250,10 +1503,11 @@ export const buildCatalog = (locale) => {
       id: "kaksi-varia",
       title: t("KAKSI VÄRIÄ", "TWO COLORS"),
       artist: "Ella Männikkö",
+      handle: "ellamannikko",
       img: imgKaksiVaria,
       location: t(
-        "Purjevene, Kaikkien laituri · su 23.8. klo 21–22",
-        "Sailboat, Kaikkien laituri · Sun 23 Aug 21–22"
+        "Purjevene, Lapinlahden laituri · su 23.8. klo 21–22",
+        "Sailboat, Lapinlahden laituri · Sun 23 Aug 21–22"
       ),
       desc: t(
         "Ella Männikkö on audiovisuaalinen runoilija, jonka koulutus ja juuret kumpuavat länsimaisesta taidemusiikista. Teoskokonaisuus KAKSI VÄRIÄ koostuu kahdesta klassisen musiikin kulttuuria ja sen epäkohtia kommentoivasta, runoa ja sooloalttoviulua yhdistelevästä videoinstallaatiosta: PERHOSET ja ORANSSI. Teokset näyttäytyvät taiteilijalle itselleen nimenomaan värien kautta ja symboloivat hänelle värien palautumista elämään.\n\nMännikkö pyrkii teosten myötä räjäyttämään kokemuksen eri genrejen tai taiteenlajien kahlitsevuudesta niin, että jäljelle jää paljas, humaani ilmaisu. Teos tuo vaihtoehdon alan koville ja kilpailullisille arvoille, joissa suoritus menee henkilökohtaisen hyvinvoinnin edelle.",
@@ -1264,14 +1518,33 @@ export const buildCatalog = (locale) => {
       id: "dialogue-with-nature",
       title: "Pinngortitarlu Oqaloqatigiinneq (Dialogue With Nature)",
       artist: "Dennis Tulugaq",
+      website: "https://film.gl/portfolio-item/dennis-moller/",
+      websiteLabel: "film.gl",
       img: imgDialogueWithNature,
       location: t(
-        "Purjevene, Kaikkien laituri · su 23.8. klo 22–23",
-        "Sailboat, Kaikkien laituri · Sun 23 Aug 22–23"
+        "Purjevene, Lapinlahden laituri · su 23.8. klo 22–23",
+        "Sailboat, Lapinlahden laituri · Sun 23 Aug 22–23"
       ),
       desc: t(
         "Super 8 -filmille kuvattua visuaalista runoutta – kutsu toimintaan luonnon suojelemiseksi. Nostalgian tuntua, aitouden makua keinotekoisuuden maailmassa. Unenomainen tunnelma, leijuva olo ja kaipaus kahden maailman – kaupungin ja maaseudun – välissä. Kerrottu kalaallisutiksi (grönlanniksi), englanninkielisellä tekstityksellä.\n\nDennis Tulugaq on grönlantilainen elokuvaohjaaja, kuvaaja ja tuottaja, joka asuu Nesoddenissa Norjassa. Tuotantoyhtiönsä Tulugaq Filmsin kautta hän kehittää dokumentti- ja fiktioprojekteja, joiden juuret ovat alkuperäiskansojen ja arktisen alueen tarinankerronnassa. Häntä ohjaa motto: \"Strengthening Indigenous stories, one story at a time.\"",
         "Visual poetry shot on super 8, a call for action on preservation of nature. A sense of nostalgia, a taste of realness in a world of artificiality. Dreamlike atmosphere, floaty feeling and longing in between two worlds, urban and rural. Narrated in Kalaallisut (Greenlandic) with English subtitles.\n\nDennis Tulugaq is a Greenlandic film director, cinematographer and producer based in Nesodden, Norway. Through his production company Tulugaq Films, he develops documentary and fiction projects rooted in Indigenous and Arctic storytelling. He is guided by his personal motto: \"Strengthening Indigenous stories, one story at a time.\""
+      ),
+    }),
+    artEntry({
+      id: "elephant-in-the-room",
+      title: "The Elephant in the Room",
+      artist: "Maria Teplykh",
+      handle: "maria_teplykh_art",
+      img: imgElephant,
+      location: t(
+        "Lapinlahden Lähteen eteläinen puistoalue · pe–su",
+        "Southern park area of Lapinlahden Lähde · Fri–Sun",
+        "Södra parkområdet vid Lappvikskällan · fre–sön"
+      ),
+      desc: t(
+        "Viisi tuolia seisoo nurmikolla. Jokainen niistä on merkitty vuosiluvulla: 1910, 1940, 1970, 2000 ja 2026. Ne edustavat eri sukupolvia, eri aikakausia sekä hiljaista perintöä siitä, mistä puhutaan – ja mistä vaietaan.\n\nTuolit ovat pehmeitä, pehmustettuja ja tuttuja. Niiden istuimissa näkyy kuitenkin kuivuneen kuukautisveren jälkiä: tavallinen ja luonnollinen ruumiillinen ilmiö, jonka sukupolvet naisiksi ja kuukautisia kokeviksi ihmisiksi identifioituvia ovat kokeneet, mutta joka on pitkään pysynyt suljettujen ovien takana, kiertoilmaisujen, häpeän ja hiljaisuuden peitossa.\n\nInstallaatio tuo tämän hiljaisuuden näkyväksi. Tuolien tahrat muuttuvat fyysisiksi jäljiksi sukupolvelta toiselle siirtyvästä perinnöstä – ei pelkästään biologisesta kokemuksesta, vaan myös siihen liittyvästä peritystä vaikenemisesta, epämukavuudesta ja häpeästä. Viimeinen tuoli, vuodelta 2026, makaa maassa. Ehkä hiljaisuus on jatkunut tarpeeksi kauan.\n\nMaria Teplykh (she/they) on kuvanveistäjä ja mielenterveystietoisuutta edistävä taiteilija. Hän toimii Helsinki International Artists' Association ry:n puheenjohtajana, jossa hän järjestää näyttelymahdollisuuksia Suomessa asuville kansainvälisille ja marginaaliasemassa oleville taiteilijoille.",
+        "Five chairs stand on the grass, each marked with a year: 1910, 1940, 1970, 2000, 2026. They represent different generations, different moments in time, and the quiet inheritance of what is spoken about — and what is not.\n\nThe chairs are soft, cushioned and familiar. Yet their seats bear the traces of dried menstrual blood: an ordinary, natural bodily occurrence experienced by generations of women and people who menstruate, but one that has so often remained hidden behind closed doors, euphemisms, embarrassment and silence.\n\nThe installation brings this silence into the open. The stains on the chairs become physical traces of a heritage passed from one generation to another — not only the biological experience itself, but also the inherited discomfort, secrecy and silence surrounding it. The final chair, marked 2026, lies on the ground. Perhaps the silence has lasted long enough.\n\nMaria Teplykh (she/they) is a sculptor and mental health awareness artist. She is the chairperson of the Helsinki International Artists' Association ry, where she arranges exhibition opportunities for marginalised international artists living in Finland.",
+        "Fem stolar står på gräset. Var och en är märkt med ett årtal: 1910, 1940, 1970, 2000 och 2026. De representerar olika generationer, olika tidsperioder och det tysta arv som handlar om vad vi talar om – och vad vi väljer att tiga om.\n\nStolarna är mjuka, stoppade och välbekanta. På sitsarna syns dock spår av torkat menstruationsblod – en vanlig och naturlig kroppslig erfarenhet som generationer av kvinnor och personer som menstruerar har delat, men som länge har dolts bakom stängda dörrar, omskrivningar, skam och tystnad.\n\nInstallationen gör denna tystnad synlig. Fläckarna på stolarna blir fysiska spår av ett arv som förs vidare mellan generationer – inte bara den biologiska erfarenheten, utan också den nedärvda tystnaden, skammen och obehaget. Den sista stolen, märkt 2026, ligger omkullvältd på marken. Kanske har tystnaden varat tillräckligt länge.\n\nMaria Teplykh (she/they) är skulptör och konstnär med fokus på psykisk hälsa. Hon är ordförande för Helsinki International Artists' Association rf, där hon arbetar för att skapa utställningsmöjligheter för internationella och marginaliserade konstnärer bosatta i Finland."
       ),
     }),
   ];

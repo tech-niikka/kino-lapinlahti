@@ -34,6 +34,32 @@ export const Art = ({ art, anchorId }) => {
             <h4 className="text-base sm:py-[0.25rem] font-light font-serif">
               {art.fields.originalTitle}
             </h4>
+
+            {/* Taiteilijan Instagram ja/tai nettisivu */}
+            {(art.fields.handle || art.fields.website) && (
+              <div className="flex flex-row flex-wrap gap-x-4 pt-[0.15rem]">
+                {art.fields.handle && (
+                  <a
+                    href={`https://www.instagram.com/${art.fields.handle}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-light underline hover:no-underline"
+                  >
+                    @{art.fields.handle}
+                  </a>
+                )}
+                {art.fields.website && (
+                  <a
+                    href={art.fields.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-light underline hover:no-underline"
+                  >
+                    {art.fields.websiteLabel ?? art.fields.website}
+                  </a>
+                )}
+              </div>
+            )}
           </div>
 
           <div className="text-sm pt-[0.1rem] pb-[0rem] font-light">

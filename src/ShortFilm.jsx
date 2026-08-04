@@ -69,6 +69,32 @@ export const ShortFilm = ({ shortFilm, anchorId }) => {
             {shortFilm.fields.filmDescription}
           </p>
 
+          {/* Blokin lyhytelokuvat: ohjaaja, maa, vuosi, kesto, ikäraja, synopsis */}
+          {shortFilm.fields.shorts?.length > 0 && (
+            <div className="pt-[0.75rem]">
+              <h4 className="text-base font-semibold font-serif pb-[0.4rem]">
+                {shortFilm.fields.shortsTitle}
+              </h4>
+              <ol className="flex flex-col gap-[0.9rem] list-none">
+                {shortFilm.fields.shorts.map((s, i) => (
+                  <li key={s.title}>
+                    <div className="text-sm font-semibold">
+                      {i + 1}. {s.title}
+                      {s.originalTitle ? ` (${s.originalTitle})` : ""}
+                    </div>
+                    <div className="text-xs font-light">
+                      {shortFilm.fields.directedLabel}: {s.director} · {s.meta} ·{" "}
+                      {shortFilm.fields.ageLimitLabel} {s.ageLimit}
+                    </div>
+                    <p className="text-sm font-light pt-[0.15rem]">
+                      {s.synopsis}
+                    </p>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          )}
+
           <div className="flex flex-row text-xs pt-[0.25rem] custom-588:pt-[1rem] pb-[0.5rem] custom-588:pb-[0.5rem]">
             {shortFilm.fields.productionCompany}
             {shortFilm.fields.productionCompany && shortFilm.fields.country

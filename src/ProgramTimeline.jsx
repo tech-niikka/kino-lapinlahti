@@ -392,12 +392,27 @@ function ProgramTimeline({ data, onOpenCatalog }) {
     return [...seen].map(([id, label]) => ({ id, label }));
   }, [days]);
 
+  // Kategoriat päivittäin — suodatinnapit himmennetään päiviltä joilta
+  // kategoria puuttuu, jottei nappi näytä rikkinäiseltä (tyhjä näkymä)
+  const categoriesByDay = useMemo(() => {
+    const map = {};
+    days.forEach((d) => {
+      map[d.id] = new Set(
+        [...d.events, ...(d.ongoing ?? [])].map((e) => e.categoryId)
+      );
+    });
+    return map;
+  }, [days]);
+
   if (days.length === 0) return null;
 
   const mine = data.mine;
   const isWeekView = selectedId === WEEK;
   const isMineView = selectedId === MINE;
   const day = days.find((d) => d.id === selectedId) ?? days[0];
+  // Onko valitulla päivällä lainkaan suodattimen mukaisia tapahtumia
+  const dayMatchesFilter =
+    !activeCategory || (categoriesByDay[day.id]?.has(activeCategory) ?? false);
 
   const toggleEvent = (key) => {
     setSelection((prev) => {
@@ -501,11 +516,20 @@ function ProgramTimeline({ data, onOpenCatalog }) {
           </button>
           {categories.map((c) => {
             const active = activeCategory === c.id;
+            // Viikkonäkymässä kaikki kategoriat ovat käytettävissä
+            const available =
+              isWeekView || (categoriesByDay[day.id]?.has(c.id) ?? false);
             return (
               <button
                 key={c.id}
                 onClick={() => setActiveCategory(active ? null : c.id)}
-                className="px-3 py-0.5 text-xs xsm:text-sm uppercase rounded-full border-2 border-solid hover:cursor-pointer whitespace-nowrap"
+                disabled={!available}
+                title={available ? undefined : data.emptyFilter}
+                className={`px-3 py-0.5 text-xs xsm:text-sm uppercase rounded-full border-2 border-solid whitespace-nowrap ${
+                  available
+                    ? "hover:cursor-pointer"
+                    : "opacity-30 cursor-not-allowed"
+                }`}
                 style={{
                   borderColor: categoryColor(c.id),
                   backgroundColor: active ? categoryColor(c.id) : "transparent",
@@ -593,6 +617,8 @@ function ProgramTimeline({ data, onOpenCatalog }) {
               />
             ))}
           </div>
+        ) : !dayMatchesFilter ? (
+          <p className="text-sm xsm:text-base text-plum">{data.emptyFilter}</p>
         ) : (
           <DayBlock
             day={day}
