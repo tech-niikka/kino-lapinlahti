@@ -833,12 +833,12 @@ const buildProgramSection = (locale) => {
         ongoing(
           t("KAKSI VÄRIÄ", "TWO COLORS", "TVÅ FÄRGER"),
           CAT.taide,
-          detail(t("Purjevene, Lapinlahden laituri", "Sailboat, Lapinlahden laituri", "Segelbåt, Lappvikens brygga"), t("klo 21–22", "21–22", "kl. 21–22")),
+          detail(t("Ulkoinstallaatio, Lapinlahden laituri", "Outdoor installation, Lapinlahden laituri", "Utomhusinstallation, Lappvikens brygga"), t("klo 21–22", "21–22", "kl. 21–22")),
           ca("kaksi-varia")),
         ongoing(
           "Pinngortitarlu Oqaloqatigiinneq (Dialogue With Nature)",
           CAT.taide,
-          detail(t("Purjevene, Lapinlahden laituri", "Sailboat, Lapinlahden laituri", "Segelbåt, Lappvikens brygga"), t("klo 22–23", "22–23", "kl. 22–23")),
+          detail(t("Ulkoinstallaatio, Lapinlahden laituri", "Outdoor installation, Lapinlahden laituri", "Utomhusinstallation, Lappvikens brygga"), t("klo 22–23", "22–23", "kl. 22–23")),
           ca("dialogue-with-nature")),
         awitha("14–21"),
         stopTheHustle(),

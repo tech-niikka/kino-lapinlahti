@@ -1442,8 +1442,8 @@ export const buildCatalog = (locale) => {
       websiteLabel: "jukkarapo.com",
       img: imgSeitsemasAalto,
       location: t(
-        "Valokuvanäyttely: Käytävägalleria 1.–31.8. · Avajaiset pe 21.8. klo 19 · Elokuva: Venetsia-talo, 1. krs (pe 15–18, la–su 13–21) · Ulkoinstallaatio purjeeseen: Lapinlahden laituri pe–la klo 21–23",
-        "Photo exhibition: Käytävägalleria 1–31 Aug · Opening Fri 21 Aug at 19 · Film: Venetsia building, 1st floor (Fri 15–18, Sat–Sun 13–21) · Outdoor sail installation: Lapinlahden laituri Fri–Sat 21–23"
+        "Valokuvanäyttely: Käytävägalleria 1.–31.8. · Avajaiset pe 21.8. klo 19 · Elokuva: Venetsia-talo, 1. krs (pe 15–18, la–su 13–21) · Ulkoinstallaatio: Lapinlahden laituri pe–la klo 21–23",
+        "Photo exhibition: Käytävägalleria 1–31 Aug · Opening Fri 21 Aug at 19 · Film: Venetsia building, 1st floor (Fri 15–18, Sat–Sun 13–21) · Outdoor installation: Lapinlahden laituri Fri–Sat 21–23"
       ),
       desc: t(
         "Seitsemäs aalto on matka Itämeren pinnan alle – meren rytmiin ja sen hengitykseen. Pinnan alla maailma muuttuu: valo siivilöityy veden läpi, värit katoavat ja palaavat, aallot ja virtaukset muovaavat maisemaa lakkaamatta.\n\nKaikki näyttelyn kuvat ja Seitsemäs aalto -elokuvan vedenalaiset kohtaukset on kuvattu henkeä pidättäen vapaasukeltaen. \"En kuvaa sitä, miltä meri näyttää. Kuvaan sitä, miltä meri tuntuu.\"\n\nJukka Rapo on helsinkiläinen valokuvaaja, mediataiteilija ja vedenalaiskuvaaja. Hän on työskennellyt ammattivalokuvaajana vuodesta 1995 lähtien ja kuvannut Itämerta veden alla vuodesta 1993.",
@@ -1538,8 +1538,9 @@ export const buildCatalog = (locale) => {
       handle: "ellamannikko",
       img: imgKaksiVaria,
       location: t(
-        "Purjevene, Lapinlahden laituri · su 23.8. klo 21–22",
-        "Sailboat, Lapinlahden laituri · Sun 23 Aug 21–22"
+        "Ulkoinstallaatio, Lapinlahden laituri · su 23.8. klo 21–22",
+        "Outdoor installation, Lapinlahden laituri · Sun 23 Aug 21–22",
+        "Utomhusinstallation, Lappvikens brygga · sön 23.8. kl. 21–22"
       ),
       desc: t(
         "Ella Männikkö on audiovisuaalinen runoilija, jonka koulutus ja juuret kumpuavat länsimaisesta taidemusiikista. Teoskokonaisuus KAKSI VÄRIÄ koostuu kahdesta klassisen musiikin kulttuuria ja sen epäkohtia kommentoivasta, runoa ja sooloalttoviulua yhdistelevästä videoinstallaatiosta: PERHOSET ja ORANSSI. Teokset näyttäytyvät taiteilijalle itselleen nimenomaan värien kautta ja symboloivat hänelle värien palautumista elämään.\n\nMännikkö pyrkii teosten myötä räjäyttämään kokemuksen eri genrejen tai taiteenlajien kahlitsevuudesta niin, että jäljelle jää paljas, humaani ilmaisu. Teos tuo vaihtoehdon alan koville ja kilpailullisille arvoille, joissa suoritus menee henkilökohtaisen hyvinvoinnin edelle.",
@@ -1554,8 +1555,9 @@ export const buildCatalog = (locale) => {
       websiteLabel: "film.gl",
       img: imgDialogueWithNature,
       location: t(
-        "Purjevene, Lapinlahden laituri · su 23.8. klo 22–23",
-        "Sailboat, Lapinlahden laituri · Sun 23 Aug 22–23"
+        "Ulkoinstallaatio, Lapinlahden laituri · su 23.8. klo 22–23",
+        "Outdoor installation, Lapinlahden laituri · Sun 23 Aug 22–23",
+        "Utomhusinstallation, Lappvikens brygga · sön 23.8. kl. 22–23"
       ),
       desc: t(
         "Super 8 -filmille kuvattua visuaalista runoutta – kutsu toimintaan luonnon suojelemiseksi. Nostalgian tuntua, aitouden makua keinotekoisuuden maailmassa. Unenomainen tunnelma, leijuva olo ja kaipaus kahden maailman – kaupungin ja maaseudun – välissä. Kerrottu kalaallisutiksi (grönlanniksi), englanninkielisellä tekstityksellä.\n\nDennis Tulugaq on grönlantilainen elokuvaohjaaja, kuvaaja ja tuottaja, joka asuu Nesoddenissa Norjassa. Tuotantoyhtiönsä Tulugaq Filmsin kautta hän kehittää dokumentti- ja fiktioprojekteja, joiden juuret ovat alkuperäiskansojen ja arktisen alueen tarinankerronnassa. Häntä ohjaa motto: \"Strengthening Indigenous stories, one story at a time.\"",
