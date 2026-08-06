@@ -1326,7 +1326,9 @@ export const buildCatalog = (locale) => {
       img: imgCraftCorner,
       day: t("su", "Sun"),
       date: "23.8.",
-      time: t("klo 13–17 · Puisto", "13–17 · Puisto"),
+      time: t("klo 13–17 · Omenapuutalon nurmikko",
+        "13–17 · Omenapuutalo lawn",
+        "13–17 · Omenapuutalos gräsmatta"),
       lang: t(
         "suomi, englanti ja ruotsi",
         "Finnish, English and Swedish", "finska, engelska och svenska"

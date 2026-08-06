@@ -807,7 +807,12 @@ const buildProgramSection = (locale) => {
         ev("13.00", t("Hoitava liike", "Hoitava liike", "Hoitava liike"), CAT.tyopaja,
           detail("Wanha Labra", ends("14.00")), cw("hoitava-liike")),
         ev("13.00", t("Craft Corner — Emma ja Ilya", "Craft Corner with Emma and Ilya", "Craft Corner med Emma och Ilya"),
-          CAT.tyopaja, detail(PUISTO, ends("17.00")), cw("craft-corner")),
+          CAT.tyopaja,
+          detail(
+            t("Omenapuutalon nurmikko", "Omenapuutalo lawn", "Omenapuutalos gräsmatta"),
+            ends("17.00")
+          ),
+          cw("craft-corner")),
         ev("14.00", "Los Pan Pan", CAT.musiikki, detail(KIVIPIHA, ends("14.45")), cm("los-pan-pan")),
         ev("14.00", t("Surun keskellä", "Sitting with Grief", "Mitt i sorgen"), CAT.tyopaja,
           detail("Osasto 5", ends("16.00")), cw("sitting-with-grief")),

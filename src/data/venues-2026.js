@@ -100,7 +100,16 @@ export const buildVenues = (locale) => {
             ),
           },
         ],
-        links: [],
+        links: [
+          {
+            href: SAFER_SPACE,
+            label: t(
+              "MYÖS:n turvallisemman tilan periaatteet",
+              "Safer space principles by MYÖS",
+              "Tryggare rum-principer av MYÖS"
+            ),
+          },
+        ],
       },
       {
         id: "lasipalatsi",
@@ -148,7 +157,16 @@ export const buildVenues = (locale) => {
             ),
           },
         ],
-        links: [],
+        links: [
+          {
+            href: SAFER_SPACE,
+            label: t(
+              "MYÖS:n turvallisemman tilan periaatteet",
+              "Safer space principles by MYÖS",
+              "Tryggare rum-principer av MYÖS"
+            ),
+          },
+        ],
       },
       {
         id: "lahde",
