@@ -49,6 +49,7 @@ import imgAngelicaLewis from "../assets/catalog/workshops/angelica-lewis.jpg";
 import imgOscarZemarti from "../assets/catalog/workshops/oscar-zemarti.jpg";
 import imgAnniPellikka from "../assets/catalog/workshops/anni-pellikka.jpg";
 import imgKatriHeiskala from "../assets/catalog/workshops/katri-heiskala.jpg";
+import imgHoitavaLiike from "../assets/catalog/workshops/hoitava-liike.jpg";
 import imgCraftCorner from "../assets/catalog/workshops/craft-corner.jpg";
 import imgOlennot from "../assets/catalog/workshops/olennolliset-olennot.jpg";
 
@@ -1304,7 +1305,7 @@ export const buildCatalog = (locale) => {
         "Healing Movement by Katri Heiskala",
         "Helande rörelse med Katri Heiskala"
       ),
-      img: imgKatriHeiskala,
+      img: imgHoitavaLiike,
       handle: "katriheiskala",
       day: t("su", "Sun", "sön"),
       date: "23.8.",
