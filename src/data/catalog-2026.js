@@ -44,6 +44,7 @@ import imgLosPanPan from "../assets/catalog/music/los-pan-pan.jpg";
 import imgSafaSolati from "../assets/catalog/workshops/safa-solati.jpg";
 import imgGiuliaLepori from "../assets/catalog/workshops/giulia-lepori.jpg";
 import imgJosephHallam from "../assets/catalog/workshops/joseph-hallam.jpg";
+import imgMinnaMustapaa from "../assets/catalog/workshops/minna-mustapaa.jpg";
 import imgKajaMatura from "../assets/catalog/workshops/kaja-matura.jpg";
 import imgAngelicaLewis from "../assets/catalog/workshops/angelica-lewis.jpg";
 import imgOscarZemarti from "../assets/catalog/workshops/oscar-zemarti.jpg";
@@ -1148,6 +1149,8 @@ export const buildCatalog = (locale) => {
       day: o.day,
       date: o.date,
       time: o.time,
+      website: o.website ?? null,
+      websiteLabel: o.websiteLabel ?? null,
       workshopLanguageTitle: WS_LANG,
       workshopLanguage: o.lang,
       description: desc(o.id, o.desc),
@@ -1212,19 +1215,28 @@ export const buildCatalog = (locale) => {
     }),
     workshopEntry({
       id: "release-and-relax",
+      fienta: fienta("releaseandrelax-lapinlahti-film-festival", locale),
       name: t(
         "Release & Relax — Minna Mustapää",
-        "Release & Relax by Minna Mustapää"
+        "Release & Relax by Minna Mustapää",
+        "Release & Relax med Minna Mustapää"
       ),
-      img: null,
-      day: t("la", "Sat"),
+      img: imgMinnaMustapaa,
+      website: "https://www.linkedin.com/in/minnamelaniemustapaa/",
+      websiteLabel: "LinkedIn",
+      day: t("la", "Sat", "lör"),
       date: "22.8.",
       time: t(
         "klo 13–13.55 · Omenapuutalon nurmikko",
-        "13–13.55 · Omenapuutalon nurmikko"
+        "13–13.55 · Omenapuutalon nurmikko",
+        "13–13.55 · Omenapuutalos gräsmatta"
       ),
       lang: t("suomi", "Finnish", "finska"),
-      desc: COMING_SOON,
+      desc: t(
+        "Tämä meditaatiomatka alkaa liikkeen ja hengityksen aktivoinnilla, jonka tarkoituksena on auttaa vapauttamaan kehoon kertynyttä jännitystä. Ravistelemme, tömistelemme ja käytämme ääntämme. Liike on ohjattua, mutta voit liikkua myös vapaasti ja kuunnella omaa kehoasi – juuri sillä tavalla kuin sinusta tuntuu hyvältä (tietenkin muita osallistujia kunnioittaen).\n\nLiikkeen jälkeen pysähdymme hetkeksi yhteyteen itsemme ja toistemme kanssa. Tämä meditaatiomatka sopii erinomaisesti niin pidempään meditaatiota harjoittaneille kuin ensikertalaisillekin. Alun liike-, hengitys- ja ääniharjoitukset tekevät meditaatioon laskeutumisesta huomattavasti helpompaa ja luonnollisempaa kuin moni osaisi odottaa. Harjoituksen jälkeen olo on rauhallinen ja rentoutunut, ja yhteys sekä itseen että muihin tuntuu syvemmältä.\n\nMinna Mustapää on varhaisen vaiheen yrittäjyyden, henkilökohtaisen kasvun ja meditaation kouluttaja sekä työpajaohjaaja. Hän opiskeli meditaatiota Mahima Mindsetin Mahiman johdolla ja on ohjannut meditaatiokokemuksia monenlaisille ryhmille teknologiayrityksistä ODDFestin kävijöihin.\n\nKesto: 55 min.",
+        "This meditation journey begins by movement and breath activation to help release tension. We will shake, stomp and shout. The movement will be guided but you are welcome to freeflow at any point, whatever feels best for you (respecting all your fellow participants of course).\n\nWe settle in for a moment of connecting with ourselves and each other. This meditation journey is a great fit whether you are seasoned in your meditation practice or have never meditated before. The movement, breath and voice activation in the beginning make settling in for meditation far easier and more natural than most of us could ever imagine. You will leave feeling calm and relaxed, with a deeper connection to yourself and each other.\n\nMinna Mustapää is a trainer and workshop facilitator in early stage entrepreneurship, personal development and meditation. She trained in meditation under Mahima of Mahima Mindset and has facilitated meditation experiences for groups ranging from tech scale-ups to ODDFest.\n\nDuration: 55 min.",
+        "Den här meditationsresan börjar med rörelse- och andningsövningar som hjälper till att frigöra spänningar i kroppen. Vi skakar, stampar och använder rösten. Rörelserna är guidade, men du är också välkommen att röra dig fritt och följa det som känns bäst för dig – alltid med respekt för de andra deltagarna.\n\nDärefter landar vi i en stund av närvaro och kontakt med oss själva och varandra. Den här meditationsresan passar både dig som har erfarenhet av meditation och dig som aldrig har mediterat tidigare. Rörelse-, andnings- och röstövningarna i början gör det betydligt lättare och mer naturligt att komma till ro i meditation än de flesta av oss kan föreställa sig. Efter meditationen känner du dig lugn och avslappnad, med en djupare kontakt både med dig själv och med andra.\n\nMinna Mustapää är utbildare och workshopledare inom entreprenörskap i tidiga skeden, personlig utveckling och meditation. Hon utbildade sig i meditation under Mahima från Mahima Mindset och har lett meditationsupplevelser för många olika grupper, från snabbväxande teknikföretag till besökare på ODDFest.\n\nLängd: 55 min."
+      ),
     }),
     workshopEntry({
       id: "stinging-nettle",

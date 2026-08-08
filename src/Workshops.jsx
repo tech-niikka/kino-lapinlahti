@@ -34,6 +34,20 @@ export const Workshops = ({ workshop, anchorId }) => {
               {workshop.fields.workshopName}
             </h3>
 
+            {/* Ohjaajan nettisivu tai profiili */}
+            {workshop.fields.website && (
+              <h4 className="text-base sm:py-[0.25rem] font-light font-serif">
+                <a
+                  href={workshop.fields.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:no-underline"
+                >
+                  {workshop.fields.websiteLabel ?? workshop.fields.website}
+                </a>
+              </h4>
+            )}
+
             {/* one instagram handle */}
             {workshop.fields.handle && !workshop.fields.handle2 && (
               <h4 className="text-base sm:py-[0.25rem] font-light font-serif hover:underline">
