@@ -51,6 +51,7 @@ import imgOscarZemarti from "../assets/catalog/workshops/oscar-zemarti.jpg";
 import imgAnniPellikka from "../assets/catalog/workshops/anni-pellikka.jpg";
 import imgKatriHeiskala from "../assets/catalog/workshops/katri-heiskala.jpg";
 import imgHoitavaLiike from "../assets/catalog/workshops/hoitava-liike.jpg";
+import imgHananMahbouba from "../assets/catalog/workshops/hanan-mahbouba.jpg";
 import imgCraftCorner from "../assets/catalog/workshops/craft-corner.jpg";
 import imgOlennot from "../assets/catalog/workshops/olennolliset-olennot.jpg";
 
@@ -1276,18 +1277,20 @@ export const buildCatalog = (locale) => {
     }),
     workshopEntry({
       id: "re-membering",
+      fienta: fienta("remembering-lapinlahti-film-festival", locale),
       name: t(
-        "[Re]membering: A Writing Workshop — Hanan Mahbouba",
-        "[Re]membering: A Writing Workshop by Hanan Mahbouba"
+        "[Re]membering: kirjoitustyöpaja — Hanan Mahbouba",
+        "[Re]membering: A Writing Workshop by Hanan Mahbouba",
+        "[Re]membering: en skrivworkshop med Hanan Mahbouba"
       ),
-      img: null,
-      day: t("la", "Sat"),
+      img: imgHananMahbouba,
+      day: t("la", "Sat", "lör"),
       date: "22.8.",
-      time: t("klo 15–17 · Sininen Huone", "15–17 · Sininen Huone"),
+      time: t("klo 15–17 · Sininen Huone", "15–17 · Sininen Huone", "kl. 15–17 · Sininen Huone"),
       lang: t("englanti", "English", "engelska"),
       desc: t(
-        COMING_SOON + "\n\nKesto: 2 tuntia.",
-        COMING_SOON + "\n\nDuration: 2 hours."
+        "Lukeminen ja kirjoittaminen ovat keskeisiä välineitä maailman ymmärtämisessä, ja tarinankerronta sen monissa muodoissa luo perustan myös oman itsen ymmärtämiselle. Kun kirjoitat ajatuksen paperille, siitä tulee konkreettisempi kuin pelkkä ajatus, ja sitä voi tarkastella, kyseenalaistaa ja tutkia.\n\nTyöpajassa luemme muutamia lyhyitä omaelämäkerrallisia tekstejä ja kirjoitamme niiden pohjalta harjoituksia, jotka keskittyvät niihin tarinoihin, joita kerromme itsellemme itsestämme. Tavoitteena on luoda turvallinen ja kannustava ilmapiiri, jossa jokainen voi halutessaan jakaa tekstejään ja inspiroitua yhteisestä keskustelusta ja ajatustenvaihdosta.\n\nKirjoittaminen voi olla nautinnollista, selkeyttävää, tylsää, haavoittuvaa – tai kaikkea tätä yhtä aikaa. Työpajan tavoitteena on, että osallistujat lähtevät kotiin luottaen siihen, että kirjoittaminen on väline, johon voi palata milloin tahansa. Ota mukaan muistikirja ja kirjoitusväline. Aiempaa kirjoituskokemusta ei tarvita.\n\nTyöpajan ohjaa Hanan Mahbouba, kirjailija, taiteilija ja opettaja, jonka työskentely käsittelee siirtolaisuuden jälkeisiä kokemuksia sekä diasporan kulttuuriperintöä. Häntä kiinnostaa epävirallisten arkistojen rakentaminen ja se, miten niiden avulla voidaan monipuolistaa vallitsevia valtavirran kertomuksia.\n\nKesto: 2 tuntia. Työpaja fasilitoidaan englanniksi.",
+        "Reading and writing are essential tools for navigating an understanding of the world and storytelling in its myriad forms is the foundation of understanding oneself. When you commit an idea to paper it exists more concretely than as a thought and can then be interrogated for its truthfulness.\n\nIn this workshop we will look at several brief memoiristic texts and then work through writing prompts that focus on the stories we tell ourselves about ourselves. I hope to cultivate an environment where everyone feels comfortable sharing work and benefits from some of the excitement that comes from exchange. Writing can be pleasurable, clarifying, boring, vulnerable and a million other things but my wish is for workshop participants to leave with the confidence of knowing that writing is a tool they can access at any time. Please bring a notebook and something to write with. No prior experience with writing is needed to participate!\n\nThe workshop is led by Hanan Mahbouba, a writer, artist, and teacher who works with themes of post-migration and diasporic cultural legacy. She's interested in building informal archives and how cultivating them can diversify dominant mainstream narratives.\n\nDuration: 2 hours. The workshop is facilitated in English."
       ),
     }),
     workshopEntry({
