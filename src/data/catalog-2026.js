@@ -1073,22 +1073,20 @@ export const buildCatalog = (locale) => {
         "Vinyl Karaoke gives you the chance to sing along with your favourite songs performed by the original artists. Choose a song from the playlist, and the DJ will put the vinyl single on the turntable while you take the microphone and perform as your friends cheer you on. Lyrics are available if you need them.\n\nVinyl Karaoke offers a one-of-a-kind karaoke experience, where the warm sound of vinyl records creates a truly special atmosphere."
       ),
     }),
-    // Orvokki piilotettu ohjelmistosta 31.7.2026 (tiimin pyyntö).
-    // Palauta poistamalla kommenttimerkit ja lisäämällä cm("orvokki")
-    // takaisin perjantain aikatauluriville content.js:ssä.
-    // musicEntry({
-    //   id: "orvokki",
-    //   artist: "Orvokki",
-    //   img: imgOrvokki,
-    //   venue: t("Kivipiha", "Stone yard"),
-    //   day: t("pe", "Fri"),
-    //   date: "21.8.",
-    //   time: t("klo 20.00", "20.00"),
-    //   desc: t(
-    //     "Orvokki on helsinkiläinen artisti, jonka musiikissa yhdistyvät elektroninen musiikki, indiepop ja lo-fi-estetiikka tavanomaisia poprakenteita kaihtaen. Hän tuottaa, säveltää, sanoittaa ja miksaa musiikkinsa itse. Esikoisalbumi Kasvotusten (2023) oli ehdolla Teosto-palkinnon saajaksi, ja toinen albumi Malus ilmestyi 2025.",
-    //     "Orvokki is a Helsinki-based artist blending electronic music, indie pop and lo-fi aesthetics while sidestepping conventional pop structures. Orvokki produces, composes, writes and mixes all the music independently. The debut album Kasvotusten (2023) was nominated for the Teosto Prize, and the second album Malus was released in 2025."
-    //   ),
-    // }),
+    musicEntry({
+      id: "orvokki",
+      artist: "Orvokki",
+      img: imgOrvokki,
+      venue: t("Kivipiha", "Stone yard", "Stengården"),
+      day: t("pe", "Fri", "fre"),
+      date: "21.8.",
+      time: t("klo 20.00", "20.00", "kl. 20.00"),
+      desc: t(
+        "Jos tunnetta on vaikea kuvailla, sen voi muuttaa musiikiksi. Orvokin musiikkiin voi upota ja se vie hetkeksi johonkin muualle – paikkaan, jonka voi kokea turvalliseksi. Kappaleissa epätavalliset rakenteet ja rytmilliset yllätykset kietoutuvat sähköisenä sykkiväksi uneksi.\n\nOrvokin debyyttialbumi Kasvotusten sai Helsingin Sanomien arviossa täydet viisi tähteä. Levyä kehuttiin taiteellisilta ratkaisuiltaan rohkeaksi ja ajatuksella rakennetuksi kokonaisuudeksi. Keikoilla kuullaan nyt myös Orvokin kehutun toisen albumin, Maluksen, kappaleita.",
+        "When a feeling is hard to put into words, it can be turned into music. Orvokki's music is something to sink into — it carries you somewhere else for a while, to a place that can feel safe. Unusual structures and rhythmic surprises weave together into an electric, pulsing dream.\n\nOrvokki's debut album Kasvotusten received a full five stars in Helsingin Sanomat, praised as a bold and carefully considered whole. Live shows now also feature songs from the acclaimed second album, Malus.",
+        "När en känsla är svår att beskriva kan den förvandlas till musik. Orvokkis musik är något att sjunka in i — den för dig en stund någon annanstans, till en plats som kan kännas trygg. Ovanliga strukturer och rytmiska överraskningar vävs samman till en elektrisk, pulserande dröm.\n\nOrvokkis debutalbum Kasvotusten fick fulla fem stjärnor i Helsingin Sanomat och hyllades som en djärv och genomtänkt helhet. På spelningarna hörs nu också låtar från det hyllade andra albumet Malus."
+      ),
+    }),
     musicEntry({
       id: "joni-ekman",
       artist: "Joni Ekman",
@@ -1124,8 +1122,9 @@ export const buildCatalog = (locale) => {
       date: "23.8.",
       time: t("klo 20.00", "20.00"),
       desc: t(
-        "Lyyti on neljä albumia julkaissut lauluntekijä, joka tunnetaan sukupolvia yhdistävistä kappaleistaan ja eläväisestä esiintymisestään. Puhuttelevat tekstit yhdistyvät värikkäisiin sävellyksiin ja tuotantoon. Lyytin albumit ovat saaneet Emma-ehdokkuuksia, ja syyskuussa 2025 ilmestynyt neljäs albumi Pidän sulle paikkaa on ehdolla vuoden 2026 Teosto-palkinnon saajaksi.",
-        "Lyyti is a songwriter with four albums, known for songs that bring generations together and for a vivid live presence. Thought-provoking lyrics meet colourful compositions and production. Lyyti's albums have earned Emma nominations, and the fourth album Pidän sulle paikkaa (September 2025) is nominated for the 2026 Teosto Prize."
+        "Lyyti on laulaja-lauluntekijä, joka tunnetaan värikkään runollisesta musiikistaan sekä eläväisestä esiintymisestään. Palkitut kappaleet kuten Mihin voi soittaa? ja Ennätyshelteet ovat nousseet kuvaamaan nuoren sukupolven kokemusta epävarmaan maailmantilanteeseen kasvamisesta. Silti toivon löytäminen vaikka pohjamutaan uponneista siemenistä on Lyytin musiikin pohjimmainen sanoma.",
+        "Lyyti is a singer-songwriter known for vividly poetic music and a lively stage presence. Award-winning songs such as Mihin voi soittaa? and Ennätyshelteet have come to capture a young generation's experience of growing up into an uncertain world. Still, the underlying message of Lyyti's music is finding hope — even in seeds that have sunk deep into the mud.",
+        "Lyyti är en singer-songwriter känd för sin färgstarkt poetiska musik och sitt livfulla scenframträdande. Prisbelönta låtar som Mihin voi soittaa? och Ennätyshelteet har kommit att skildra en ung generations erfarenhet av att växa upp i en osäker omvärld. Ändå är budskapet i Lyytis musik att hitta hopp — även i frön som sjunkit ner i bottenslammet."
       ),
     }),
   ];

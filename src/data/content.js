@@ -718,9 +718,7 @@ const buildProgramSection = (locale) => {
           cm("leffakaraoke")),
         ev("20.00", t("Kirsikan maku", "Taste of Cherry", "Körsbärets smak"), CAT.elokuva,
           detail(PUUTARHAPIHA, ends("21.45")), cf("taste-of-cherry")),
-        // Orvokki piilotettu 31.7.2026 (tiimin pyyntö) — palauta poistamalla
-        // kommenttimerkit ja lisäämällä cm("orvokki") viimeiseksi argumentiksi.
-        // ev("20.00", "Orvokki", CAT.musiikki, detail(KIVIPIHA, ends("20.45"))),
+        ev("20.00", "Orvokki", CAT.musiikki, detail(KIVIPIHA, ends("20.45")), cm("orvokki")),
         ev("21.00", t("Isänpäivä", "Isänpäivä (Father's Day)", "Isänpäivä (Farsdag)"), CAT.elokuva,
           detail(ULKOILMA, ends("23.19"), guest("Aleksi Salmenperä")), cf("isanpaiva")),
         ev("22.00", "Love Lies Bleeding", CAT.elokuva,
