@@ -827,8 +827,8 @@ const buildProgramSection = (locale) => {
           detail(PUUTARHAPIHA, ends("20.43")), cf("and-then-we-danced")),
         ev("20.00", "Lyyti", CAT.musiikki, detail(KIVIPIHA, ends("20.45")), cm("lyyti")),
         ev("21.00", "Aftersun", CAT.elokuva, detail(ULKOILMA, ends("23.00")), cf("aftersun")),
-        ev("22.00", t("NØW-työpajan elokuvanäytös", "NØW workshop film screening", "NØW-workshopens filmvisning"),
-          CAT.elokuva, detail(PUUTARHAPIHA, ends("23.30"))),
+        ev("22.00", t("Nordic Frames: NØW-työpajan näytös", "Nordic Frames: NØW Workshop Screening", "Nordic Frames: NØW-Workshop visning"),
+          CAT.lyhytelokuvat, detail(PUUTARHAPIHA, ends("23.30")), cs("now-workshop")),
       ],
       ongoing: [
         blindCinema(t("13, 15, 18 ja 20", "13, 15, 18 and 20", "13, 15, 18 och 20")),

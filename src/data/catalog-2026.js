@@ -35,6 +35,7 @@ import imgBorderland from "../assets/catalog/shorts/borderland.jpg";
 import imgMothersFigures from "../assets/catalog/shorts/mothers-figures.jpg";
 import imgGenerationZeitgeist from "../assets/catalog/shorts/generation-zeitgeist.jpg";
 import imgWeirdlyWorking from "../assets/catalog/shorts/weirdly-working.jpg";
+import imgNowWorkshop from "../assets/catalog/shorts/now-workshop.jpg";
 
 import imgJoniEkman from "../assets/catalog/music/joni-ekman.jpg";
 import imgLyyti from "../assets/catalog/music/lyyti.jpg";
@@ -660,7 +661,8 @@ export const buildCatalog = (locale) => {
           )
         : "",
       textTitle: TEXT,
-      textlanguage: SHORTS_SUBS,
+      // subs: null piilottaa tekstitysrivin (esim. NØW-työpajan tuoreet elokuvat)
+      textlanguage: o.subs === undefined ? SHORTS_SUBS : o.subs,
       ageLimitTitle: AGE,
       ageLimit: o.age,
       filmDescription: desc(o.id, o.desc),
@@ -1041,6 +1043,26 @@ export const buildCatalog = (locale) => {
           director: "Silje Baer",
           synopsis: "The workers at the Spermatheca are struggling with their motivation, and when Pontius makes an unusual discovery, everyday life at the station begins to shift. All the while, department head Morten is daydreaming about far away." }),
       ],
+    }),
+    shortBlock({
+      id: "now-workshop",
+      title: t(
+        "Nordic Frames: NØW-työpajan näytös",
+        "Nordic Frames: NØW Workshop Screening",
+        "Nordic Frames: NØW-Workshop visning"
+      ),
+      screening: t(
+        "Su 23.8. klo 22–23.30 · Puutarhapiha",
+        "Sun 23 Aug 22–23.30 · Puutarhapiha",
+        "Sön 23 aug 22–23.30 · Puutarhapiha"
+      ),
+      fienta: fienta("nordic-frames-now-2026", locale),
+      img: imgNowWorkshop,
+      subs: null,
+      desc: t(
+        "Tässä näytöksessä esitetään viikonlopun aikana NØW-työpajassa syntyneet lyhytelokuvat.\n\nNØW on Lapinlahden elokuvajuhlien yhteydessä järjestettävä viikonlopun mittainen työpaja, joka toimii osana Nordic Frames -kokonaisuutta. Työpaja on suunnattu elokuvantekijöille, jotka haluavat työskennellä intuitiivisesti, kollektiivisesti ja prosessilähtöisesti. NØW sai alkunsa elokuvantekijöiden tarpeesta luoda tila, jossa elokuvaa voi tehdä ilman kilpailua tai muotovalmiita tavoitteita.\n\nTyöpajan aikana osallistujat toteuttavat lyhytelokuvia, jotka esitetään festivaalin päätösiltana yleisölle. Työpajan tavoitteena on tarjota tila, jossa voi kokeilla, horjua ja onnistua yhdessä muiden kanssa. Vuoden 2026 teemoina ovat perintö ja tabu.\n\nLapinlahden elokuvajuhlien Nordic Frames -ohjelma tuo Helsinkiin näytille uutta lyhytelokuvaa ympäri Pohjoismaita.\n\nMaksimissaan kaksi lippua per varaus. Älä tee montaa varausta samaan näytökseen. Jos varaat lipun, mutta myöhemmin ilmeneekin este, peruuta lippu hyvissä ajoin sähköpostilipun ohessa olevasta linkistä.\n\nPuutarhapihan teltta on pimeä, ja tilaan on rakennettu nouseva katsomo. Teltta pitää lämmön tehokkaasti sisällään, joten huolehdi riittävästä nesteytyksestä ja ota tarvittaessa mukaan kuulosuojaimet.\n\nMuistathan, että salissa ja koko festivaalialueella alkoholin tai muiden päihteiden käyttö on kielletty. Olethan lempeä sekä itsellesi että muille. Lämmin kiitos!",
+        "This screening features short films that were produced during the NØW workshop over the weekend.\n\nNØW is a weekend-long film workshop held in connection with the Lapinlahti Film Festival and forms part of the Nordic Frames programme. The workshop is aimed at filmmakers who want to work intuitively, collectively, and through a process-driven approach. NØW was born out of a desire among filmmakers to create a space for making films without competition or pre-defined outcomes.\n\nDuring the workshop, participants create short films that will be screened to the public on the final evening of the festival. The aim is to offer a space where participants can experiment, stumble, and succeed together. The themes for 2026 are heritage and taboo.\n\nLapinlahti Film Festival's Nordic Frames program brings new short films from all over the Nordics to Helsinki.\n\nMaximum of two tickets per booking. Do not make multiple bookings for the same show. If you book a ticket but later encounter an obstacle, cancel the ticket well in advance using the link included in the email.\n\nThe Garden Courtyard screening tent is dark and features elevated seating. The tent retains heat well, so please remember to stay hydrated and bring hearing protection if needed.\n\nPlease note that the use of alcohol or other intoxicating substances is prohibited inside the venue and throughout the festival area. Please be kind to yourself and to those around you. Thank you!"
+      ),
     }),
   ];
 
