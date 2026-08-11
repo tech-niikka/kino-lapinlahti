@@ -9,15 +9,6 @@ import { Catalog } from "./Catalog.jsx";
 import Footer from "./Footer.jsx";
 import Event from "./Event.jsx";
 import Teaser from "./Teaser.jsx";
-import Decor from "./Decor.jsx";
-import illMoth from "./assets/illustrations/moth.png";
-import illMoth2 from "./assets/illustrations/moth2.png";
-import illFlower2 from "./assets/illustrations/flower2.png";
-import illFlower5 from "./assets/illustrations/flower5.png";
-import illCherry from "./assets/illustrations/cherry.png";
-import illGrass from "./assets/illustrations/grass.png";
-import illFlowers2 from "./assets/illustrations/flowers2.png";
-import illLeaf from "./assets/illustrations/leaf.png";
 import Venues from "./Venues.jsx";
 import Contacts from "./Contacts.jsx";
 
@@ -110,9 +101,7 @@ function App() {
         ticketButton={content.navBar[0]?.fields.ticketButton}
       />
 
-      <div className="bg-grape pt-[0.25rem] text-plum text-center relative">
-        <Decor img={illMoth} side="right" className="w-24 lg:w-32 top-10 right-[6%] -rotate-6" />
-        <Decor img={illFlower2} side="left" className="w-20 lg:w-28 top-16 left-[7%] rotate-3" />
+      <div className="bg-grape pt-[0.25rem] text-plum text-center">
         <div className="flex flex-col items-center justify-between">
           <h2 className="pt-16 font-serif font-semibold text-xl leading-7 xsm:text-2xl md:text-3xl">
             {content.landingPage[0]?.fields.date} {/* festival date above site main heading */}
@@ -220,9 +209,8 @@ function App() {
 
       <div
         ref={info}
-        className="pt-[6rem] custom-710:pt-[4rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%] relative"
+        className="pt-[6rem] custom-710:pt-[4rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
       >
-        <Decor img={illCherry} side="right" className="w-20 lg:w-24 -top-2 rotate-6" />
         <div className="flex flex-row items-center justify-center ">
           <div className=" bg-plum w-[100%] h-0.5"></div>
           <div className="px-[2rem]">
@@ -244,9 +232,8 @@ function App() {
 
       <div
         ref={aikataulu}
-        className="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%] relative"
+        className="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
       >
-        <Decor img={illFlower5} side="left" className="w-16 lg:w-20 top-[4.5rem] -rotate-3" />
         <div className="flex flex-row items-center justify-center ">
           <div className="bg-plum w-[100%] h-0.5"></div>
           <div className="px-[2rem]">
@@ -281,9 +268,8 @@ function App() {
 
       <div
         ref={ohjelmisto}
-        className="pt-[4rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%] relative"
+        className="pt-[4rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
       >
-        <Decor img={illMoth2} side="right" className="w-20 lg:w-28 top-[4rem] rotate-6" />
         <div className="flex flex-row items-center justify-center ">
           <div className="bg-plum w-[100%] h-0.5"></div>
           <div className="px-[2rem]">
@@ -322,9 +308,8 @@ function App() {
 
       <div
         ref={alue}
-        className="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%] relative"
+        className="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
       >
-        <Decor img={illGrass} side="left" className="w-16 lg:w-24 top-[4.5rem] rotate-2" />
         <div className="flex flex-row items-center justify-center ">
           <div className=" bg-plum w-[100%] h-0.5"></div>
           <div className="px-[2rem]">
@@ -342,10 +327,8 @@ function App() {
 
       <div
         ref={yhteystiedot}
-        className="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%] relative"
+        className="pt-[8rem] pb-[4rem] mx-auto w-full max-w-[88%] sm:max-w-[85%]"
       >
-        <Decor img={illFlowers2} side="right" className="w-16 lg:w-20 top-[4rem] -rotate-3" />
-        <Decor img={illLeaf} side="left" className="w-20 lg:w-24 top-[5rem] rotate-6" />
         <div className="flex flex-row items-center justify-center ">
           <div className="bg-plum w-[100%] h-0.5"></div>
           <div className="px-[2rem]">
