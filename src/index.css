@@ -25,10 +25,24 @@
   height: auto;
   /* Keskitä siiven kärkien sijaan runko seurantapisteeseen */
   transform: translate(-50%, -50%);
+  /* Levossa siivet värähtelevät verkkaisesti */
+  animation: moth-flutter 1.6s ease-in-out infinite;
 }
 
-/* Siipien räpäytys klikatessa: nopea kavennus ja palautus */
-.moth-flap img {
+/* Lennossa siivet värisevät tiheämmin */
+.moth-flying img {
+  animation: moth-flutter 0.35s ease-in-out infinite;
+}
+
+@keyframes moth-flutter {
+  0%, 100% { scale: 1 1; }
+  50% { scale: 0.93 1.04; }
+}
+
+/* Siipien räpäytys klikatessa tai omia aikojaan: nopea kavennus ja
+   palautus. Ohittaa värinäanimaation keston ajaksi. */
+.moth-flap img,
+.moth-flap.moth-flying img {
   animation: moth-flap 0.32s ease-out;
 }
 
