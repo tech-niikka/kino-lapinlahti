@@ -323,7 +323,7 @@ function App() {
 
       <Venues data={content.venuesSection} />
 
-      <Teaser />
+      <Teaser language={language} />
 
       <div
         ref={yhteystiedot}

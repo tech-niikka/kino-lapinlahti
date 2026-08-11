@@ -24,6 +24,7 @@ import kinosRentalsLogo from "../assets/sponsors/kinos-rentals.png";
 import mutteriKahvilaLogo from "../assets/sponsors/mutteri-kahvila.png";
 import kahvilaLahdeLogo from "../assets/sponsors/kahvila-lahde.svg";
 import rikiyakiLogo from "../assets/sponsors/rikiyaki.jpg";
+import angelFilmsLogo from "../assets/sponsors/angel-films.png";
 
 // Sponsorilistan rakenne mukailee aiempaa Contentful-rakennetta:
 //   - Footer.jsx ohittaa indeksin [0] festivaalin omana logona
@@ -118,6 +119,11 @@ const sponsorEntries = [
     logoUrl: rikiyakiLogo,
     url: null,
     altText: "RikiYaki",
+  },
+  {
+    logoUrl: angelFilmsLogo,
+    url: "https://angelfilms.fi/",
+    altText: "Angel Films",
   },
 ];
 
