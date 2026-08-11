@@ -76,15 +76,6 @@ function MothCursor() {
     };
 
     const tick = (t) => {
-      // Verkkainen seuraaminen — yökkönen lentelee osoittimen perässä
-      const px = x;
-      const py = y;
-      x += (targetX - x) * 0.05;
-      y += (targetY - y) * 0.05;
-      const vx = x - px;
-      const vy = y - py;
-      const speed = Math.hypot(vx, vy);
-
       const dx = targetX - x;
       const dy = targetY - y;
       const dist = Math.hypot(dx, dy);
@@ -97,15 +88,29 @@ function MothCursor() {
       // kohti kursoria. Hidas tasoitus tekee kääntymisestä
       // liidokkimaisen.
       let bank = 0;
+      let heading = 1;
       if (dist > 28) {
         const targetAngle = (Math.atan2(dy, dx) * 180) / Math.PI + 180;
         let diff = targetAngle - angle;
         while (diff > 180) diff -= 360;
         while (diff < -180) diff += 360;
-        angle += diff * 0.07;
+        angle += diff * 0.09;
         // Kallistus kaarroksen suuntaan tuo lentämisen tuntua
         bank = Math.max(-14, Math.min(14, diff * 0.3));
+        // Lennä vasta kun nokka osoittaa kohti kursoria: kohtisuoraan
+        // sivulle tai taakse ei lennetä, vaan käännytään ensin
+        // paikallaan ja kiihdytetään suunnan tarkentuessa.
+        heading = Math.max(0, Math.cos((diff * Math.PI) / 180));
       }
+
+      // Verkkainen seuraaminen — nopeus riippuu suunnan osumisesta
+      const px = x;
+      const py = y;
+      x += dx * 0.05 * heading;
+      y += dy * 0.05 * heading;
+      const vx = x - px;
+      const vy = y - py;
+      const speed = Math.hypot(vx, vy);
 
       // Paikallaan leijunta: hidas pieni kaari kursorin vieressä
       const idle = dist < 40;
