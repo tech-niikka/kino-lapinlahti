@@ -53,6 +53,40 @@
   100% { scale: 1 1; }
 }
 
+/* Kun yöperhosefekti on aktiivinen, natiiviosoitin on piilossa ja
+   valopallo toimii kursorina */
+.moth-cursor-active,
+.moth-cursor-active * {
+  cursor: none !important;
+}
+
+/* Valopallo-kursori jota yöperhonen seuraa: kirkas ydin ja pehmeä
+   lepattava hehku */
+.moth-light {
+  position: fixed;
+  left: -20px;
+  top: -20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 253, 240, 0.95) 0%,
+    rgba(255, 244, 200, 0.8) 16%,
+    rgba(255, 236, 170, 0.3) 48%,
+    rgba(255, 236, 170, 0) 72%
+  );
+  will-change: transform;
+  transition: opacity 0.2s;
+  animation: moth-light-flicker 2.3s ease-in-out infinite;
+}
+
+@keyframes moth-light-flicker {
+  0%, 100% { filter: brightness(1); }
+  40% { filter: brightness(0.9); }
+  65% { filter: brightness(1.12); }
+}
+
 /* Ilmavirtapöllähdys: häipyvä pallo joka ajautuu yökkösen taakse */
 .moth-puff {
   position: absolute;
