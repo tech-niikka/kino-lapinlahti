@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Kustomoitu kursori: yökkönen (moth3-kuvitus). Interaktiiviset
+   elementit säilyttävät selaimen pointer-kursorin. */
+body {
+  cursor: url("/cursor-moth.png") 6 4, auto;
+}
