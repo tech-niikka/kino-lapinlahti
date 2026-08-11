@@ -91,12 +91,14 @@ function MothCursor() {
 
       // Käänny kohti kursoria (ei liikesuuntaan — se värähtelee ja
       // näyttää pyörimiseltä). Lähellä osoitinta asento säilyy, ettei
-      // yökkönen pyörähtele paikallaan. Kuva osoittaa vasemmalle-ylös
-      // (~200°), offset kohdistaa pään kohti kursoria. Hidas tasoitus
-      // tekee kääntymisestä liidokkimaisen.
+      // yökkönen pyörähtele paikallaan. Kuvassa pää ja tuntosarvet
+      // osoittavat suoraan vasemmalle (180°, varmistettu rotaatio-
+      // vertailukuvista), joten offset +180 kohdistaa tuntosarvet
+      // kohti kursoria. Hidas tasoitus tekee kääntymisestä
+      // liidokkimaisen.
       let bank = 0;
       if (dist > 28) {
-        const targetAngle = (Math.atan2(dy, dx) * 180) / Math.PI + 200;
+        const targetAngle = (Math.atan2(dy, dx) * 180) / Math.PI + 180;
         let diff = targetAngle - angle;
         while (diff > 180) diff -= 360;
         while (diff < -180) diff += 360;
