@@ -16,6 +16,14 @@ import lahdeLogo from "../assets/sponsors/lapinlahden-lahde.png";
 import mesLogo from "../assets/sponsors/mes.svg";
 import pagaLogo from "../assets/sponsors/paga.png";
 import frikutLogo from "../assets/sponsors/frikut.svg";
+import oodiLogo from "../assets/sponsors/oodi.png";
+import mieliLogo from "../assets/sponsors/mieli.png";
+import cosaLogo from "../assets/sponsors/cosa.png";
+import purewasteLogo from "../assets/sponsors/purewaste.png";
+import kinosRentalsLogo from "../assets/sponsors/kinos-rentals.png";
+import mutteriKahvilaLogo from "../assets/sponsors/mutteri-kahvila.png";
+import kahvilaLahdeLogo from "../assets/sponsors/kahvila-lahde.svg";
+import rikiyakiLogo from "../assets/sponsors/rikiyaki.jpg";
 
 // Sponsorilistan rakenne mukailee aiempaa Contentful-rakennetta:
 //   - Footer.jsx ohittaa indeksin [0] festivaalin omana logona
@@ -67,6 +75,49 @@ const sponsorEntries = [
     logoUrl: frikutLogo,
     url: null,
     altText: "Frikut",
+  },
+  {
+    logoUrl: oodiLogo,
+    url: "https://oodihelsinki.fi/",
+    altText: "Helsingin keskustakirjasto Oodi",
+  },
+  {
+    logoUrl: mieliLogo,
+    url: "https://mieli.fi/",
+    altText: "MIELI Suomen Mielenterveys ry",
+    size: "large",
+  },
+  {
+    logoUrl: cosaLogo,
+    url: "https://cosa.fi/",
+    altText: "Cosa Vuokrakalusteet",
+  },
+  {
+    logoUrl: purewasteLogo,
+    url: "https://purewaste.com/",
+    altText: "Pure Waste",
+    size: "large",
+  },
+  {
+    logoUrl: kinosRentalsLogo,
+    url: "https://kinosrentals.fi/",
+    altText: "Kinos Rentals",
+    size: "large",
+  },
+  {
+    logoUrl: mutteriKahvilaLogo,
+    url: null,
+    altText: "Mutteri-Kahvila",
+  },
+  {
+    logoUrl: kahvilaLahdeLogo,
+    url: "https://lapinlahdenlahde.fi/",
+    altText: "Kahvila Lähde",
+  },
+  {
+    logoUrl: rikiyakiLogo,
+    url: null,
+    altText: "RikiYaki",
   },
 ];
 

@@ -1,29 +1,19 @@
 import React from "react";
 
-// Teaser-video koko ruudun levyisenä.
-// Mobiili (alle md = 868px): pystyversio. Desktop (md ja yli): vaakaversio.
+// Festivaalitraileri koko ruudun levyisenä sivun lopussa.
+// Yksi vaakaversio kaikille näyttöko'oille (2026-traileri).
 function Teaser() {
   return (
     <div className="w-full pt-8">
       <video
-        className="block md:hidden w-full h-auto"
-        src="/teaser-pysty.mp4"
+        className="w-full h-auto"
+        src="/trailer-2026.mp4"
         autoPlay
         loop
         muted
         playsInline
         preload="metadata"
-        aria-label="Lapinlahden elokuvajuhlat -teaser"
-      />
-      <video
-        className="hidden md:block w-full h-auto"
-        src="/teaser-vaaka.mp4"
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="metadata"
-        aria-label="Lapinlahden elokuvajuhlat -teaser"
+        aria-label="Lapinlahden elokuvajuhlat 2026 -traileri"
       />
     </div>
   );
