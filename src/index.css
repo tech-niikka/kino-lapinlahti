@@ -2,8 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Kustomoitu kursori: yökkönen (moth3-kuvitus). Interaktiiviset
-   elementit säilyttävät selaimen pointer-kursorin. */
-body {
-  cursor: url("/cursor-moth.png") 6 4, auto;
+/* Yökkönen lentää osoittimen perässä (MothCursor.jsx).
+   Hiiren oma osoitin pysyy selaimen oletuksena kaikkialla. */
+.moth-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 60;
+  overflow: hidden;
+}
+
+.moth-follower {
+  position: fixed;
+  left: 0;
+  top: 0;
+  will-change: transform;
+  transition: opacity 0.2s;
+}
+
+.moth-follower img {
+  width: 52px;
+  height: auto;
+  /* Keskitä siiven kärkien sijaan runko seurantapisteeseen */
+  transform: translate(-50%, -50%);
+}
+
+/* Siipien räpäytys klikatessa: nopea kavennus ja palautus */
+.moth-flap img {
+  animation: moth-flap 0.32s ease-out;
+}
+
+@keyframes moth-flap {
+  0% { scale: 1 1; }
+  30% { scale: 0.5 1.12; }
+  60% { scale: 1.18 0.94; }
+  100% { scale: 1 1; }
+}
+
+/* Ilmavirtapöllähdys: häipyvä pallo joka ajautuu yökkösen taakse */
+.moth-puff {
+  position: absolute;
+  border-radius: 9999px;
+  background: rgba(68, 23, 82, 0.22);
+  animation: moth-puff 0.65s ease-out forwards;
+}
+
+@keyframes moth-puff {
+  from {
+    opacity: 0.65;
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translate(var(--dx), var(--dy)) scale(0.35);
+  }
 }

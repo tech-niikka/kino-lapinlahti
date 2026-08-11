@@ -9,6 +9,7 @@ import { Catalog } from "./Catalog.jsx";
 import Footer from "./Footer.jsx";
 import Event from "./Event.jsx";
 import Teaser from "./Teaser.jsx";
+import MothCursor from "./MothCursor.jsx";
 import Venues from "./Venues.jsx";
 import Contacts from "./Contacts.jsx";
 
@@ -343,6 +344,8 @@ function App() {
       <Contacts contacts={content.contactsSection[0]?.fields.contacts} />
 
       <Footer data={content.footer[0]?.fields}/>
+
+      <MothCursor />
     </div>
   );
 }
