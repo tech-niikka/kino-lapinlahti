@@ -1624,7 +1624,11 @@ export const buildCatalog = (locale) => {
       artEntry({
       id: "poljin",
       title: "Poljin",
-      artist: "Pepe Hakala",
+      artist: t(
+        "Pepe Hakala, Bruno Baer ja Amos Brotherus",
+        "Pepe Hakala, Bruno Baer and Amos Brotherus",
+        "Pepe Hakala, Bruno Baer och Amos Brotherus"
+      ),
       img: imgPoljin,
       location: t(
         "Kivipiha · su 23.8. klo 17",
