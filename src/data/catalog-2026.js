@@ -67,6 +67,7 @@ import imgAwithA from "../assets/catalog/art/awitha-body-shop.jpg";
 import imgKaksiVaria from "../assets/catalog/art/kaksi-varia.jpg";
 import imgLeffakaraoke from "../assets/catalog/art/leffakaraoke.jpg";
 import imgElephant from "../assets/catalog/art/elephant-in-the-room.jpg";
+import imgPoljin from "../assets/catalog/art/poljin.jpg";
 
 // Festivaalijuliste — fallback ohjelmille, joilla ei vielä ole omaa kuvaa
 import imgFestivalPoster from "../assets/catalog/festival-poster.jpg";
@@ -1620,7 +1621,23 @@ export const buildCatalog = (locale) => {
         "Fem stolar står på gräset. Var och en är märkt med ett årtal: 1910, 1940, 1970, 2000 och 2026. De representerar olika generationer, olika tidsperioder och det tysta arv som handlar om vad vi talar om – och vad vi väljer att tiga om.\n\nStolarna är mjuka, stoppade och välbekanta. På sitsarna syns dock spår av torkat menstruationsblod – en vanlig och naturlig kroppslig erfarenhet som generationer av kvinnor och personer som menstruerar har delat, men som länge har dolts bakom stängda dörrar, omskrivningar, skam och tystnad.\n\nInstallationen gör denna tystnad synlig. Fläckarna på stolarna blir fysiska spår av ett arv som förs vidare mellan generationer – inte bara den biologiska erfarenheten, utan också den nedärvda tystnaden, skammen och obehaget. Den sista stolen, märkt 2026, ligger omkullvältd på marken. Kanske har tystnaden varat tillräckligt länge.\n\nMaria Teplykh (she/they) är skulptör och konstnär med fokus på psykisk hälsa. Hon är ordförande för Helsinki International Artists' Association rf, där hon arbetar för att skapa utställningsmöjligheter för internationella och marginaliserade konstnärer bosatta i Finland."
       ),
     }),
-  ];
+      artEntry({
+      id: "poljin",
+      title: "Poljin",
+      artist: "Pepe Hakala",
+      img: imgPoljin,
+      location: t(
+        "Kivipiha · su 23.8. klo 17",
+        "Stone yard · Sun 23 Aug at 17.00",
+        "Stengården · sön 23 aug kl. 17"
+      ),
+      desc: t(
+        "Poljin on kahden näyttelijän absurdi näytelmä kommunikaatiosta ja kohtaamisesta, jaetusta tilasta, hetkestä ja tunteesta. Se kysyy, minkä pituinen on yksi hetki, mitä se merkitsee ja onko sillä lopulta väliä?\n\nKäsikirjoitus ja ohjaus: Pepe Hakala\nNäyttämöllä: Bruno Baer ja Amos Brotherus.",
+        "Poljin is an absurdist play for two actors about communication and encounter — about shared space, a shared moment and a shared feeling. It asks how long a single moment lasts, what it means, and whether it matters in the end.\n\nWritten and directed by Pepe Hakala\nOn stage: Bruno Baer and Amos Brotherus.",
+        "Poljin är en absurd pjäs för två skådespelare om kommunikation och möten — om ett delat rum, ett delat ögonblick och en delad känsla. Den frågar hur långt ett ögonblick är, vad det betyder och om det till slut spelar någon roll.\n\nManus och regi: Pepe Hakala\nPå scenen: Bruno Baer och Amos Brotherus."
+      ),
+    }),
+];
 
   return { films, shortFilms, music, workshops, art, now: null };
 };

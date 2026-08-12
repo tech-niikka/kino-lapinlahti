@@ -878,6 +878,8 @@ const buildProgramSection = (locale) => {
         ev("15.00", "The End of The Word", CAT.tyopaja,
           detail(t("Sininen Huone", "Sininen Huone", "Sininen Huone"), ends("17.00")), cw("the-end-of-the-word")),
         ev("16.45", "Christiania", CAT.elokuva, detail(PUUTARHAPIHA, ends("18.27")), cf("christiania")),
+        ev("17.00", "Poljin", CAT.taide,
+          detail(KIVIPIHA), ca("poljin")),
         ev("17.30", "Nordic Frames: Weirdly Working", CAT.lyhytelokuvat,
           detail(AUDITORIO, ends("19.38"), inclQa), cs("weirdly-working")),
         ev("18.45", "And Then We Danced", CAT.elokuva,
