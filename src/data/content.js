@@ -185,12 +185,12 @@ const contactsByLocale = {
     },
     {
       name: "Moritz Sebastian Müller",
-      title: "Nordic Frames -kuraattori",
+      title: "Lyhytelokuvien kuraattori",
       email: "lapinlahti.nordic.frames@gmail.com",
     },
     {
       name: "Nellie Rajala",
-      title: "Nordic Frames -kuraattori",
+      title: "Lyhytelokuvien kuraattori",
       email: "lapinlahti.nordic.frames@gmail.com",
     },
     {
@@ -227,12 +227,12 @@ const contactsByLocale = {
     },
     {
       name: "Moritz Sebastian Müller",
-      title: "Nordic Frames curator",
+      title: "Short film curator",
       email: "lapinlahti.nordic.frames@gmail.com",
     },
     {
       name: "Nellie Rajala",
-      title: "Nordic Frames curator",
+      title: "Short film curator",
       email: "lapinlahti.nordic.frames@gmail.com",
     },
     {
