@@ -74,6 +74,7 @@ import imgFestivalPoster from "../assets/catalog/festival-poster.jpg";
 
 // Ohjelmat ilman omaa kuvaa saavat festivaalijulisteen
 import { SV_DESCRIPTIONS } from "./catalog-sv.js";
+import { SHORT_STILLS } from "./shorts-stills.js";
 
 const artwork = (url) => ({ fields: { file: { url: url ?? imgFestivalPoster } } });
 
@@ -669,7 +670,10 @@ export const buildCatalog = (locale) => {
       filmDescription: desc(o.id, o.desc),
       // Blokin sisältämät elokuvat — ShortFilm.jsx renderöi listana
       shortsTitle: SHORTS_LIST_TITLE,
-      shorts: o.list ?? [],
+      shorts: (o.list ?? []).map((s, si) => ({
+        ...s,
+        img: SHORT_STILLS[o.id]?.[si] ?? null,
+      })),
       ageLimitLabel: AGE,
       directedLabel: DIRECTED,
       productionCompany: "Nordic Frames",

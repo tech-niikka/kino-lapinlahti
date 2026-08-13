@@ -78,6 +78,15 @@ export const ShortFilm = ({ shortFilm, anchorId }) => {
               <ol className="flex flex-col gap-[0.9rem] list-none">
                 {shortFilm.fields.shorts.map((s, i) => (
                   <li key={s.title}>
+                    {/* Lyhärin still-kuva pystyrivissä otsikon yllä */}
+                    {s.img && (
+                      <img
+                        src={s.img}
+                        alt={s.title}
+                        className="w-full h-auto max-h-[16rem] object-cover mb-[0.4rem]"
+                        loading="lazy"
+                      />
+                    )}
                     <div className="text-sm font-semibold">
                       {i + 1}. {s.title}
                       {s.originalTitle ? ` (${s.originalTitle})` : ""}
