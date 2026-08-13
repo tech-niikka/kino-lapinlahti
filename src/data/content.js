@@ -184,6 +184,16 @@ const contactsByLocale = {
       email: "hanna.hovitie@kinolapinlahti.fi",
     },
     {
+      name: "Moritz Sebastian Müller",
+      title: "Nordic Frames -kuraattori",
+      email: "lapinlahti.nordic.frames@gmail.com",
+    },
+    {
+      name: "Nellie Rajala",
+      title: "Nordic Frames -kuraattori",
+      email: "lapinlahti.nordic.frames@gmail.com",
+    },
+    {
       name: "Anna Lehtonen",
       title: "NØW-työpajan tuottaja",
       email: "anna.lehtonen@kinolapinlahti.fi",
@@ -214,6 +224,16 @@ const contactsByLocale = {
       name: "Hanna Hovitie",
       title: "Curator",
       email: "hanna.hovitie@kinolapinlahti.fi",
+    },
+    {
+      name: "Moritz Sebastian Müller",
+      title: "Nordic Frames curator",
+      email: "lapinlahti.nordic.frames@gmail.com",
+    },
+    {
+      name: "Nellie Rajala",
+      title: "Nordic Frames curator",
+      email: "lapinlahti.nordic.frames@gmail.com",
     },
     {
       name: "Anna Lehtonen",

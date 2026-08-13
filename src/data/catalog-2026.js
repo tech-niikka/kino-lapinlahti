@@ -1623,6 +1623,7 @@ export const buildCatalog = (locale) => {
     }),
       artEntry({
       id: "poljin",
+      fienta: fienta("poljin-lapinlahti-film-festival", locale),
       title: "Poljin",
       artist: t(
         "Pepe Hakala, Bruno Baer ja Amos Brotherus",
