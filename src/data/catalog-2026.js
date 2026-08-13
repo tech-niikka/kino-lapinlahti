@@ -132,8 +132,8 @@ export const buildCatalog = (locale) => {
     film({
       id: "left-handed-girl",
       trailer: "https://www.youtube.com/watch?v=0rXnpfzpk8s",
-      title: t("Vasenkätinen tyttö", "Left-Handed Girl"),
-      originalTitle: t("Left-Handed Girl", ""),
+      title: t("Vasenkätinen tyttö", "Left-Handed Girl", "Vänsterhänta flickan"),
+      originalTitle: t("Left-Handed Girl", "", "Left-Handed Girl"),
       screening: t(
         "Ma 17.8. klo 16.30–18.28 · Kino Regina, Oodi",
         "Mon 17 Aug 16.30–18.28 · Kino Regina, Oodi",
@@ -148,7 +148,8 @@ export const buildCatalog = (locale) => {
       director: "Shih-Ching Tsou",
       country: t(
         "Taiwan, Ranska, Yhdysvallat, Iso-Britannia",
-        "Taiwan, France, USA, UK"
+        "Taiwan, France, USA, UK",
+        "Taiwan, Frankrike, USA, Storbritannien"
       ),
       year: "2025",
       desc: t(
@@ -180,7 +181,7 @@ export const buildCatalog = (locale) => {
       subs: t("suomi", "Finnish", "finska"),
       age: "12",
       director: "Benjamin Christensen",
-      country: t("Ruotsi, Tanska", "Sweden, Denmark"),
+      country: t("Ruotsi, Tanska", "Sweden, Denmark", "Sverige, Danmark"),
       year: "1922",
       desc: t(
         "ALKUKUVANA EUROPA (1931), ohjaus Stefan & Franciszka Themerson, S\n\nEuropa on surrealistipariskunta Stefan ja Franciszka Themersonin ohjaama antifasistinen elokuvaruno, joka oli lähes 80 vuotta kateissa sen jälkeen, kun Saksan armeija varasti sen filmikopiot toisen maailmansodan syttyessä. Lapinlahden elokuvajuhlilla Europan säestää runoilija-elokuvatutkija Aatos Ketvel kokeellisella live-äänikollaasilla. Ketvel tahtoo esityksellään nostaa teoksen arvoonsa paitsi avantgarde-elokuvan unohdettuna merkkiteoksena, myös hyytävän ajankohtaisena kuvauksena fasismin noususta Euroopassa.\n\nNOITA (HÄXAN)\n\nNoita (Häxan) on kauhuelokuvien aikainen merkkiteos, jota yleisesti katsotaan ainutlaatuisena ja vaikutusvaltaisena genreteoksena.\n\nVuoden 1922 Benjamin Christensenin mykkäelokuvan katsottiin sisältävän satanistista ja seksuaalista kuvastoa, ja kiellettiin aikoinaan Suomessa. Nykyään teos on kulttiklassikko, joka hämmästyttää tehosteillaan ja yhteiskunnallisella kritiikillään.",
@@ -190,7 +191,7 @@ export const buildCatalog = (locale) => {
     film({
       id: "miehen-tyo",
       trailer: "https://www.youtube.com/watch?v=OVZFIIr43Go",
-      title: t("Miehen työ", "Miehen työ (Man's Job)"),
+      title: t("Miehen työ", "Miehen työ (Man's Job)", "Miehen työ (Mansarbete)"),
       originalTitle: "",
       screening: t(
         "Ti 18.8. klo 16.00–18.23 · Kino Regina, Oodi",
@@ -214,7 +215,7 @@ export const buildCatalog = (locale) => {
     film({
       id: "hairiotekija",
       trailer: "https://www.youtube.com/watch?v=CfQ1CncwByU",
-      title: t("Häiriötekijä", "Häiriötekijä (Distractions)"),
+      title: t("Häiriötekijä", "Häiriötekijä (Distractions)", "Häiriötekijä (Distraktioner)"),
       originalTitle: "",
       screening: t(
         "Ti 18.8. klo 18.35–20.40 · Kino Regina, Oodi",
@@ -286,7 +287,7 @@ export const buildCatalog = (locale) => {
     film({
       id: "tyhjio",
       trailer: "https://www.youtube.com/watch?v=GY9OTJqahiE",
-      title: t("Tyhjiö", "Tyhjiö (Void)"),
+      title: t("Tyhjiö", "Tyhjiö (Void)", "Tyhjiö (Tomrum)"),
       originalTitle: "",
       screening: t(
         "Pe 21.8. klo 17.20–19.37 · Puutarhapiha",
@@ -310,7 +311,7 @@ export const buildCatalog = (locale) => {
     film({
       id: "taste-of-cherry",
       trailer: "https://www.youtube.com/watch?v=ukmYdGwVqPg",
-      title: t("Kirsikan maku", "Taste of Cherry"),
+      title: t("Kirsikan maku", "Taste of Cherry", "Körsbärets smak"),
       originalTitle: t("Taste of Cherry", "Ta'm e guilass"),
       screening: t(
         "Pe 21.8. klo 20.00–21.45 · Puutarhapiha",
@@ -334,7 +335,7 @@ export const buildCatalog = (locale) => {
     film({
       id: "isanpaiva",
       trailer: "https://www.youtube.com/watch?v=JnjDq8QIDu8",
-      title: t("Isänpäivä", "Isänpäivä (Father's Day)"),
+      title: t("Isänpäivä", "Isänpäivä (Father's Day)", "Isänpäivä (Farsdag)"),
       originalTitle: "",
       screening: t(
         "Pe 21.8. klo 21.00–23.19 · Kivipiha, ulkoilmanäytös",
@@ -372,7 +373,7 @@ export const buildCatalog = (locale) => {
       subs: t("ei tekstityksiä", "no subtitles", "ingen textning"),
       age: "16",
       director: "Rose Glass",
-      country: t("Yhdysvallat, Iso-Britannia", "USA, UK"),
+      country: t("Yhdysvallat, Iso-Britannia", "USA, UK", "USA, Storbritannien"),
       year: "2024",
       desc: t(
         "A24-studion ilmiöksi noussut Love Lies Bleeding on äärimmäisen latautunut ja toiminnantäyteinen rakkaustarina, joka sijoittuu nuhjuiseen New Mexicon pikkukaupunkiin vuonna 1989. Vastentahtoinen kuntosalinpyörittäjä Lou (Kristen Stewart) tapaa Las Vegasin neon-valoista haaveilevan kehonrakentaja Jackien (Katy O'Brian) kämäisellä kuntosalilla kasarimusan lyödessä tahtia taustalla. Verkko alkaa kiristyä Loun rikollisen perheen toimien ympärillä, ja pinnan alla kytenyt konflikti Loun rikollispomoisän (Ed Harris) kanssa eskaloituu täysin odottamattomilla tavoilla, sotkien Loun ja Jackien lupaavasti alkaneen yhteisen tulevaisuuden.",
@@ -382,7 +383,7 @@ export const buildCatalog = (locale) => {
     film({
       id: "musta-orfeus",
       trailer: "https://www.youtube.com/watch?v=FbcxQRuOa4o",
-      title: t("Musta Orfeus", "Black Orpheus"),
+      title: t("Musta Orfeus", "Black Orpheus", "Svarta Orfeus"),
       originalTitle: "Orfeu Negro",
       screening: t(
         "La 22.8. klo 14.45–16.40 · Puutarhapiha",
@@ -396,7 +397,7 @@ export const buildCatalog = (locale) => {
       subs: t("suomi", "Finnish", "finska"),
       age: "12",
       director: "Marcel Camus",
-      country: t("Brasilia, Ranska, Italia", "Brazil, France, Italy"),
+      country: t("Brasilia, Ranska, Italia", "Brazil, France, Italy", "Brasilien, Frankrike, Italien"),
       year: "1959",
       desc: t(
         "Cannesin Kultaisen palmun, ulkomaisen elokuvan Oscarin sekä Golden Globe -voittaja Musta Orfeus on jättänyt jälkensä elokuvan historiaan.\n\nNuori kitarataituri Orfeo (Breno Mello) on solminut avioliiton Miran (Lourdes de Oliveira) kanssa. Orfeo kohtaa kuitenkin Rio de Janeiron karnevaaleissa Eurydicen (Marpessa Dawn), todellisen rakkautensa. Esteenä Orfeon ja Eurydicen onnelle ovat kuitenkin moraalisäännöt sekä väkijoukossa vaaniva Kuolema.\n\nMarcel Camus'n Musta Orfeus (1959) on uudelleentulkinta antiikin Orfeus-myytistä. Elokuva perustuu Vinicius de Moraesin näytelmään Orfeo do Carnaval ja tunnetaan erityisesti tunteikkaasta musiikistaan, joka kuljettaa vahvasti elokuvaa.",
@@ -406,7 +407,7 @@ export const buildCatalog = (locale) => {
     film({
       id: "birita",
       title: "Birita",
-      originalTitle: t("Suomen ensi-ilta", "Finnish premiere"),
+      originalTitle: t("Suomen ensi-ilta", "Finnish premiere", "Finländsk premiär"),
       screening: t(
         "La 22.8. klo 17.00–19.10 · Puutarhapiha",
         "Sat 22 Aug 17.00–19.10 · Garden yard",
@@ -419,7 +420,7 @@ export const buildCatalog = (locale) => {
       subs: t("englanti", "English", "engelska"),
       age: "S",
       director: "Búi Dam",
-      country: t("Färsaaret", "Faroe Islands"),
+      country: t("Färsaaret", "Faroe Islands", "Färöarna"),
       year: "2026",
       desc: t(
         "Thorshavnissa kokonainen teatterialan perhe valmistautuu William Shakespearen Kuningas Learin esitykseen. Tällä kertaa kaikki on kuitenkin toisin. Kaikki ovat kokoontuneet ympyräksi Birita Mohrin ympärille. Rakastettu näyttelijä ja äiti kärsii nyt vaikeasta Alzheimerin taudista. Kaikki valmistautuvat siihen, joka todennäköisesti tulee olemaan hänen viimeinen roolinsa – hänen poikansa Búi Damin toimiessa ohjaajana.\n\nBúi Dam on myös elokuvan tekijä. Hän kuvaa vaikeaa prosessia läsnä olevalla ja rakastavalla otteella. Hän on onnistunut luomaan elokuvan, joka on yhtä aikaa syvästi koskettava ja täysin vailla sentimentaalisuutta. Birita on elokuva, joka menee suoraan sydämeen – ja jää sinne asumaan.\n\nNäytöksen jälkeen on luvassa 30 minuutin Q&A-keskustelu.",
@@ -456,8 +457,8 @@ export const buildCatalog = (locale) => {
     film({
       id: "turisti",
       trailer: "https://www.youtube.com/watch?v=skQk2nVaAsI",
-      title: t("Turisti", "Force Majeure"),
-      originalTitle: t("Force Majeure", "Turist"),
+      title: t("Turisti", "Force Majeure", "Turist"),
+      originalTitle: t("Force Majeure", "Turist", ""),
       screening: t(
         "La 22.8. klo 21.00–23.25 · Kivipiha, ulkoilmanäytös",
         "Sat 22 Aug 21.00–23.25 · Stone yard, open-air screening",
@@ -475,7 +476,8 @@ export const buildCatalog = (locale) => {
       director: "Ruben Östlund",
       country: t(
         "Ruotsi, Ranska, Tanska, Norja",
-        "Sweden, France, Denmark, Norway"
+        "Sweden, France, Denmark, Norway",
+        "Sverige, Frankrike, Danmark, Norge"
       ),
       year: "2014",
       desc: t(
@@ -502,7 +504,8 @@ export const buildCatalog = (locale) => {
       director: "Emilie Blichfeldt",
       country: t(
         "Norja, Ruotsi, Tanska, Puola",
-        "Norway, Sweden, Denmark, Poland"
+        "Norway, Sweden, Denmark, Poland",
+        "Norge, Sverige, Danmark, Polen"
       ),
       year: "2025",
       desc: t(
@@ -513,7 +516,7 @@ export const buildCatalog = (locale) => {
     film({
       id: "taistelu-lapinlahdesta",
       trailer: "https://www.youtube.com/watch?v=pLELSwS3I7k",
-      title: t("Taistelu Lapinlahdesta", "The Battle for Lapinlahti"),
+      title: t("Taistelu Lapinlahdesta", "The Battle for Lapinlahti", "Kampen om Lappviken"),
       originalTitle: t("", "Taistelu Lapinlahdesta"),
       screening: t(
         "Su 23.8. klo 14.30–16.25 · Puutarhapiha",
@@ -538,7 +541,7 @@ export const buildCatalog = (locale) => {
       id: "christiania",
       trailer: "https://www.youtube.com/watch?v=vvAi0qO0qiE",
       title: "Christiania",
-      originalTitle: t("Suomen ensi-ilta", "Finnish premiere"),
+      originalTitle: t("Suomen ensi-ilta", "Finnish premiere", "Finländsk premiär"),
       screening: t(
         "Su 23.8. klo 16.45–18.27 · Puutarhapiha",
         "Sun 23 Aug 16.45–18.27 · Garden yard",
@@ -551,7 +554,7 @@ export const buildCatalog = (locale) => {
       subs: t("englanti", "English", "engelska"),
       age: "12",
       director: "Karl Friis Forchhammer",
-      country: t("Tanska", "Denmark"),
+      country: t("Tanska", "Denmark", "Danmark"),
       year: "2026",
       desc: t(
         "Vuonna 1971 sadat nuoret valtasivat hylätyt sotilaskasarmit Bådsmandsstrædellä Kööpenhaminan sydämessä. Hetkessä syntyi Christiania: radikaali vapauden ja yhteisöllisyyden kokeilu, josta muodostui todellinen vaihtoehto valtavirran yhteiskunnalle.\n\nChristiania on yksi maailman villeimmistä yhteiskunnallisista kokeiluista. Yli 50 vuoden suurten unelmien, vahvan tupakan ja anarkististen ihanteiden jälkeen värikäs kaupunginosa saa viimein elokuvan, jonka sen myrskyisä historia ansaitsee. Christiania on rehellinen, omalaatuinen ja humoristinen dokumenttielokuva, joka elävän ja ainutlaatuisen arkistomateriaalin kautta jäljittää tarinan sen alkuvaiheista nykypäivään ja maalaa muotokuvan jatkuvassa muutoksessa olevasta pienoismaailmasta.",
@@ -575,7 +578,7 @@ export const buildCatalog = (locale) => {
       subs: t("suomi, ruotsi", "Finnish, Swedish", "finska, svenska"),
       age: "12",
       director: "Levan Akin",
-      country: t("Georgia, Ruotsi, Ranska", "Georgia, Sweden, France"),
+      country: t("Georgia, Ruotsi, Ranska", "Georgia, Sweden, France", "Georgien, Sverige, Frankrike"),
       year: "2019",
       desc: t(
         "Merab tanssii Georgian kansallisessa tanssiryhmässä partnerinsa Maryn kanssa ja unelmoi paikasta pääryhmässä. Hänen elämänsä mullistuu, kun karismaattinen Irakli liittyy ryhmään ja alkaa kilpailla samasta paikasta, herättäen myös uusia tunteita Merabissa. Merab on ennen pitkää päätöksen edessä: seuratako sydäntänsä ja lähteä vanhoillisesta maailmasta jossa hän on kasvanut ja samalla riskeerata kaikki minkä vuoksi hän on taistellut.",
@@ -599,7 +602,7 @@ export const buildCatalog = (locale) => {
       subs: t("suomi, ruotsi", "Finnish, Swedish", "finska, svenska"),
       age: "7",
       director: "Charlotte Wells",
-      country: t("Iso-Britannia, Yhdysvallat", "UK, USA"),
+      country: t("Iso-Britannia, Yhdysvallat", "UK, USA", "Storbritannien, USA"),
       year: "2023",
       desc: t(
         "Aftersun – päivämme auringossa on kriitikoiden ylistämä Charlotte Wellsin debyyttielokuva vanhemmuudesta, muistojen ohimenevyydestä ja aikuiseksi kasvamisesta. Cannesin elokuvajuhlilla huomiota herättäneen elokuvan päärooleissa loistavat Paul Mescal ja Francesca Corio, joiden kemia nuorena isänä ja tyttärenä on käsinkosketeltavan aitoa. Paul Mescal huomioitiin roolistaan parhaan miespääosan Oscar-ehdokkuudella.\n\nEronnut isä (Paul Mescal) lähtee pienen tyttärensä kanssa vaatimattomalle pakettimatkalle, jossa he jakavat ilon auringosta, uima-altaasta ja yhdessäolosta. Muistikuvia kuitenkin värittää selittämätön melankolia, kun Sophie kaksikymmentä vuotta myöhemmin ajattelee yhteistä lomaa. Kuka olikaan se isä, jonka Sophie luuli tuntevansa?",
@@ -698,7 +701,7 @@ export const buildCatalog = (locale) => {
       fienta: fienta("nordic-frames-cold-plunge", locale),
       img: imgColdPlunge,
       films: 5,
-      age: t("16 (seksi, ahdistus)", "16 (sex, anxiety)"),
+      age: t("16 (seksi, ahdistus)", "16 (sex, anxiety)", "16 (sex, ångest)"),
       desc: t(
         "Kuumuus tasapainossa raikkaan ilman kanssa – kokoelma lyhytelokuvia, jotka yhdessä peilaavat saunomisen kokemusta.\n\n" +
           qaShorts,
@@ -745,7 +748,7 @@ export const buildCatalog = (locale) => {
       fienta: fienta("nordic-frames-vessel-views", locale),
       img: imgVesselViews,
       films: 6,
-      age: t("16 (väkivalta, ahdistus, seksi)", "16 (violence, anxiety, sex)"),
+      age: t("16 (väkivalta, ahdistus, seksi)", "16 (violence, anxiety, sex)", "16 (våld, ångest, sex)"),
       desc: t(
         "Tutkimusmatkoja kehollisuuteen ja yhteyksiin – siihen, mikä meitä kaikkia yhdistää: kehoon, jossa elämme. Kehon ja mielen, tutun ja vieraan rajapinnoilla liikkuvat elokuvalliset tutkimusretket kysyvät, millaisia näkökulmia aistiva kehomme voi meille avata.\n\n" +
           qaShorts,
@@ -798,7 +801,7 @@ export const buildCatalog = (locale) => {
       fienta: fienta("nordic-frames-i-love-my-car", locale),
       img: imgILoveMyCar,
       films: 7,
-      age: t("12 (seksi, ahdistus)", "12 (sex, anxiety)"),
+      age: t("12 (seksi, ahdistus)", "12 (sex, anxiety)", "12 (sex, ångest)"),
       desc: t(
         "Hyvän tuulen tarinoita ihmisistä autoissa: vauhdilla eteenpäin, hidastellen, joskus jumissa, joskus vailla huolta siitä, minne tie vie. Tärkeintä on itse matka.\n\n" +
           qaShorts,
@@ -854,7 +857,7 @@ export const buildCatalog = (locale) => {
       fienta: fienta("nordic-frames-borderland", locale),
       img: imgBorderland,
       films: 6,
-      age: t("16 (ahdistus, väkivalta)", "16 (anxiety, violence)"),
+      age: t("16 (ahdistus, väkivalta)", "16 (anxiety, violence)", "16 (ångest, våld)"),
       desc: t(
         "Jonkin kynnyksellä, katse menneessä ja tulevassa – tiedämmekö, missä olemme? Elokuvia rajojen tältä ja tuolta puolen, kurkistuksia erilaisiin elämiin, toiveisiin ja pelkoihin. Häikäiseviä näkökulmia ajankohtaisiin aiheisiin ja ihmisyyden perimmäisiin kysymyksiin.\n\n" +
           qaShorts,
@@ -908,7 +911,7 @@ export const buildCatalog = (locale) => {
       fienta: fienta("nordic-frames-mothers-figures", locale),
       img: imgMothersFigures,
       films: 6,
-      age: t("16 (seksi, ahdistus, väkivalta)", "16 (sex, anxiety, violence)"),
+      age: t("16 (seksi, ahdistus, väkivalta)", "16 (sex, anxiety, violence)", "16 (sex, ångest, våld)"),
       desc: t(
         "Äitihahmot ottavat muotoaan ja etsivät tapoja toimia vanhempina suunnannäyttäjinä. Rakkautta, kipua ja naurua tulvillaan oleva kokonaisuus on kunnianosoitus äitihahmoille kaikista elämän kolkista.\n\n" +
           qaShorts,
@@ -960,7 +963,7 @@ export const buildCatalog = (locale) => {
       fienta: fienta("nordic-frames-generation-zeitgeist", locale),
       img: imgGenerationZeitgeist,
       films: 6,
-      age: t("12 (ahdistus, väkivalta, päihteiden käyttö)", "12 (anxiety, violence, substance use)"),
+      age: t("12 (ahdistus, väkivalta, päihteiden käyttö)", "12 (anxiety, violence, substance use)", "12 (ångest, våld, droganvändning)"),
       desc: t(
         "Sukupolvia yhdistäviä kysymyksiä ja nuoria maailmankuvia. Osa tuntuu ajattomilta, osa juuri tähän aikaan kuuluvilta. Zeitgeist – viimeisellä aakkoskirjaimella nimetyn sukupolven ääntä. Elokuvia siitä, mikä muovaa tapaamme katsoa maailmaa.\n\n" +
           qaShorts,
@@ -1012,7 +1015,7 @@ export const buildCatalog = (locale) => {
       fienta: fienta("nordic-frames-weirdly-working", locale),
       img: imgWeirdlyWorking,
       films: 5,
-      age: t("16 (seksi, ahdistus, päihteiden käyttö, väkivalta)", "16 (sex, anxiety, substance use, violence)"),
+      age: t("16 (seksi, ahdistus, päihteiden käyttö, väkivalta)", "16 (sex, anxiety, substance use, violence)", "16 (sex, ångest, droganvändning, våld)"),
       desc: t(
         "Työelämän oudot kohtaamiset ja erikoiset tunnelmat. Huijareita, puhelinmyyjiä ja uupuneita selviytyjiä, jotka pitävät kulisseja yllä elantonsa vuoksi.\n\n" +
           qaShorts,
@@ -1091,15 +1094,16 @@ export const buildCatalog = (locale) => {
   const music = [
     musicEntry({
       id: "leffakaraoke",
-      artist: t("Vinyylikaraoke — DJ Valoantti", "Vinyl Karaoke — DJ Valoantti"),
+      artist: t("Vinyylikaraoke — DJ Valoantti", "Vinyl Karaoke — DJ Valoantti", "Vinylkaraoke — DJ Valoantti"),
       img: imgLeffakaraoke,
       venue: t("Kivipiha", "Stone yard", "Stengården"),
-      day: t("pe", "Fri"),
+      day: t("pe", "Fri", "fre"),
       date: "21.8.",
-      time: t("klo 18–20", "18–20"),
+      time: t("klo 18–20", "18–20", "kl. 18–20"),
       desc: t(
         "Vinyylikaraokessa pääset laulamaan tuttuja kappaleita alkuperäisten artistien kanssa. Valitse kappale listalta, niin DJ laittaa vinyylisinglen soimaan ja voit tarttua mikrofoniin ystävien kannustaessa vieressä. Tarvittaessa sanat löytyvät mukaan laulamista varten.\n\nVinyylikaraoke tarjoaa ainutlaatuisen karaoke-elämyksen, jossa vinyylilevyjen lämmin soundi tekee tunnelmasta tavallista erityisemmän.",
-        "Vinyl Karaoke gives you the chance to sing along with your favourite songs performed by the original artists. Choose a song from the playlist, and the DJ will put the vinyl single on the turntable while you take the microphone and perform as your friends cheer you on. Lyrics are available if you need them.\n\nVinyl Karaoke offers a one-of-a-kind karaoke experience, where the warm sound of vinyl records creates a truly special atmosphere."
+        "Vinyl Karaoke gives you the chance to sing along with your favourite songs performed by the original artists. Choose a song from the playlist, and the DJ will put the vinyl single on the turntable while you take the microphone and perform as your friends cheer you on. Lyrics are available if you need them.\n\nVinyl Karaoke offers a one-of-a-kind karaoke experience, where the warm sound of vinyl records creates a truly special atmosphere.",
+        "I vinylkaraoken får du sjunga välbekanta låtar tillsammans med originalartisterna. Välj en låt från listan, så lägger DJ:n på vinylsingeln och du kan ta mikrofonen medan vännerna hejar på bredvid. Texterna finns till hands om du behöver dem.\n\nVinylkaraoken bjuder på en unik karaokeupplevelse där vinylskivornas varma sound gör stämningen extra speciell."
       ),
     }),
     musicEntry({
@@ -1120,13 +1124,14 @@ export const buildCatalog = (locale) => {
       id: "joni-ekman",
       artist: "Joni Ekman",
       img: imgJoniEkman,
-      venue: t("Kivipiha", "Stone yard"),
-      day: t("la", "Sat"),
+      venue: t("Kivipiha", "Stone yard", "Stengården"),
+      day: t("la", "Sat", "lör"),
       date: "22.8.",
-      time: t("klo 20.00", "20.00"),
+      time: t("klo 20.00", "20.00", "kl. 20.00"),
       desc: t(
         "Joni Ekman on tamperelaistunut rokkari Somerolta. Hänen musiikissaan kuuluu kaikuja menneiden vuosikymmenten musiikista mutta hän tuo samalla siihen jotain ainutlaatuista ja omaa. Soolokeikoilla kuullaan lähinnä soolotuotantoa mutta myös lisäksi otteita Joni Ekman Group ja Joni Ekman & Koira -yhtyeiden materiaalista.",
-        "Joni Ekman is a Tampere-based rocker originally from Somero. His music echoes past decades while bringing something unique and personal to the mix. His solo shows feature mainly solo material, along with selections from the Joni Ekman Group and Joni Ekman & Koira."
+        "Joni Ekman is a Tampere-based rocker originally from Somero. His music echoes past decades while bringing something unique and personal to the mix. His solo shows feature mainly solo material, along with selections from the Joni Ekman Group and Joni Ekman & Koira.",
+        "Joni Ekman är en rockare från Somero, numera bosatt i Tammerfors. I hans musik hörs ekon av gångna årtiondens musik, samtidigt som han tillför något unikt och eget. På solospelningarna hörs främst solomaterial, men också inslag ur materialet från banden Joni Ekman Group och Joni Ekman & Koira."
       ),
     }),
     musicEntry({
@@ -1139,17 +1144,18 @@ export const buildCatalog = (locale) => {
       time: t("klo 14.00", "14.00", "kl. 14.00"),
       desc: t(
         "Pannut kuumina – Los Pan Pan, johtajana Satu Jämsä. Kirkkonummen Steel Band ry täyttää tänä vuonna komeat 30 vuotta!\n\nSteel panit eli \"pannut\" ovat Trinidad & Tobagosta kotoisin olevia melodisia lyömäsoittimia, jotka taipuvat moneen musatyyliin. Jokainen soitin taotaan käsityönä kierrätetyistä 200 litran tynnyreistä. Los Pan Panin soittimet ovat kuljettaneet entisessä elämässään mm. öljyä ja omenamehua. Kirkkonummelainen Los Pan Pan on yksi harvoista Suomessa toimivista steelbändeistä. Tällä kertaa soi Lapinlahden elokuvajuhlilla Kivipihalla – luvassa leffabiisejä ja lattareita.",
-        "Los Pan Pan, led by Satu Jämsä. The Kirkkonummi Steel Band celebrates its 30th anniversary this year!\n\nSteel pans are melodic percussion instruments originating from Trinidad & Tobago, each hand-hammered from recycled 200-litre barrels. In their former lives, Los Pan Pan's instruments carried oil and apple juice. Los Pan Pan is one of the few steel bands active in Finland. At Lapinlahti Film Festival they play the Stone yard with movie tunes and Latin rhythms."
+        "Los Pan Pan, led by Satu Jämsä. The Kirkkonummi Steel Band celebrates its 30th anniversary this year!\n\nSteel pans are melodic percussion instruments originating from Trinidad & Tobago, each hand-hammered from recycled 200-litre barrels. In their former lives, Los Pan Pan's instruments carried oil and apple juice. Los Pan Pan is one of the few steel bands active in Finland. At Lapinlahti Film Festival they play the Stone yard with movie tunes and Latin rhythms.",
+        "Los Pan Pan under ledning av Satu Jämsä. Kirkkonummen Steel Band ry från Kyrkslätt fyller ståtliga 30 år i år!\n\nSteel pans är melodiska slagverksinstrument med ursprung i Trinidad & Tobago som passar många musikstilar. Varje instrument hamras för hand av återvunna 200-litersfat. I sina tidigare liv har Los Pan Pans instrument fraktat bland annat olja och äppeljuice. Los Pan Pan är ett av de få steelband som är verksamma i Finland. På Lappvikens filmfestival spelar de på Stengården – filmmusik och latinamerikanska rytmer utlovas."
       ),
     }),
     musicEntry({
       id: "lyyti",
       artist: "Lyyti",
       img: imgLyyti,
-      venue: t("Kivipiha", "Stone yard"),
-      day: t("su", "Sun"),
+      venue: t("Kivipiha", "Stone yard", "Stengården"),
+      day: t("su", "Sun", "sön"),
       date: "23.8.",
-      time: t("klo 20.00", "20.00"),
+      time: t("klo 20.00", "20.00", "kl. 20.00"),
       desc: t(
         "Lyyti on laulaja-lauluntekijä, joka tunnetaan värikkään runollisesta musiikistaan sekä eläväisestä esiintymisestään. Palkitut kappaleet kuten Mihin voi soittaa? ja Ennätyshelteet ovat nousseet kuvaamaan nuoren sukupolven kokemusta epävarmaan maailmantilanteeseen kasvamisesta. Silti toivon löytäminen vaikka pohjamutaan uponneista siemenistä on Lyytin musiikin pohjimmainen sanoma.",
         "Lyyti is a singer-songwriter known for vividly poetic music and a lively stage presence. Award-winning songs such as Mihin voi soittaa? and Ennätyshelteet have come to capture a young generation's experience of growing up into an uncertain world. Still, the underlying message of Lyyti's music is finding hope — even in seeds that have sunk deep into the mud.",
@@ -1191,12 +1197,12 @@ export const buildCatalog = (locale) => {
     workshopEntry({
       id: "whirl-to-feel",
       fienta: fienta("whirltofeel-lapinlahti-film-festival", locale),
-      name: t("Whirl to Feel — Safa Solati", "Whirl to Feel by Safa Solati"),
+      name: t("Whirl to Feel — Safa Solati", "Whirl to Feel by Safa Solati", "Whirl to Feel med Safa Solati"),
       img: imgSafaSolati,
       handle: "whirling_lifedance",
-      day: t("pe", "Fri"),
+      day: t("pe", "Fri", "fre"),
       date: "21.8.",
-      time: t("klo 15–17 · Omenapuutalon nurmikko", "15–17 · Omenapuutalon nurmikko"),
+      time: t("klo 15–17 · Omenapuutalon nurmikko", "15–17 · Omenapuutalon nurmikko", "kl. 15–17 · Omenapuutalos gräsmatta"),
       lang: t("englanti", "English", "engelska"),
       desc: t(
         "Whirl to Feel on kahden tunnin mittainen pyörimiseen keskittyvä työpaja, joka kutsuu tutkimaan ikiaikaista pyörimisen taidetta kehollisen muistin, tunteiden vapauttamisen ja ilon kokemisen väylänä.\n\nTyöpajassa palataan pyörimisen luontaiseen vapauteen – kokemukseen, jonka moni meistä muistaa lapsuudesta, jolloin pyöriminen tapahtui spontaanisti ja leikkisästi. Nyt tätä liikettä lähestytään tietoisesta ja meditatiivisesta näkökulmasta. Aiempaa kokemusta ei tarvita – riittää, että saavut paikalle avoimin mielin, uteliaana ja valmiina liikkumaan. Osallistujille tarjotaan pyörähdyshameet kokeiltaviksi.\n\nSafa Solati on koulutettu psykologi, joka on erikoistunut musiikkipsykoterapiaan. Hän on opiskellut persialaisia tansseja useiden vuosien ajan ja omistautunut viimeisen kymmenen vuoden aikana suufilaisen pyörimisperinteen sekä nykytanssin elementtejä yhdistävän harjoituksen tutkimiselle ja opettamiselle.",
@@ -1228,13 +1234,14 @@ export const buildCatalog = (locale) => {
       fienta: fienta("inheritedandsilentstories-lapinlahti-film-festival", locale),
       name: t(
         "Inherited and Silent Stories — Giulia Lepori",
-        "Inherited and Silent Stories by Giulia Lepori"
+        "Inherited and Silent Stories by Giulia Lepori",
+        "Inherited and Silent Stories med Giulia Lepori"
       ),
       img: imgGiuliaLepori,
       handle: "Giulialepori2",
-      day: t("pe", "Fri"),
+      day: t("pe", "Fri", "fre"),
       date: "21.8.",
-      time: t("klo 17–19 · Sininen Huone", "17–19 · Sininen Huone"),
+      time: t("klo 17–19 · Sininen Huone", "17–19 · Sininen Huone", "kl. 17–19 · Sininen Huone"),
       lang: t("englanti", "English", "engelska"),
       desc: t(
         "Inherited and Silent Stories on kahden tunnin mittainen osallistava työpaja, jossa tutkitaan perintöä ja tabuja leikin, kuvallisen ilmaisun ja yhteisen luovan työskentelyn kautta.\n\nTyöpajassa osallistujia kutsutaan tutkimaan perinnön näkyviä ja näkymättömiä ulottuvuuksia teatteriharjoitteiden, luovan ilmaisun ja yhteisen reflektion avulla. Liikkeen, kollaasin, piirtämisen ja tarinankerronnan keinoin pohditaan niitä perinteitä, arvoja ja tarinoita, joita olemme perineet, sekä hiljaisuutta ja tabuja, jotka muovaavat identiteettiämme ja yhteisöämme. Aiempaa kokemusta taiteesta tai teatterista ei tarvita.\n\nGiulia Lepori on italialainen sosiologi, jonka työ sijoittuu mielenterveyden, taiteen ja luovan tutkimisen rajapintaan.",
@@ -1257,7 +1264,7 @@ export const buildCatalog = (locale) => {
       time: t(
         "klo 13–13.55 · Omenapuutalon nurmikko",
         "13–13.55 · Omenapuutalon nurmikko",
-        "13–13.55 · Omenapuutalos gräsmatta"
+        "kl. 13–13.55 · Omenapuutalos gräsmatta"
       ),
       lang: t("suomi", "Finnish", "finska"),
       desc: t(
@@ -1271,13 +1278,14 @@ export const buildCatalog = (locale) => {
       fienta: fienta("stingingnettlefibreprocessing-lapinlahti-film-festival", locale),
       name: t(
         "Stinging Nettle Fibre Processing — Joseph Hallam",
-        "Stinging Nettle Fibre Processing by Joseph Hallam"
+        "Stinging Nettle Fibre Processing by Joseph Hallam",
+        "Stinging Nettle Fibre Processing med Joseph Hallam"
       ),
       img: imgJosephHallam,
       handle: "designs_by_kick_",
-      day: t("la", "Sat"),
+      day: t("la", "Sat", "lör"),
       date: "22.8.",
-      time: t("klo 14–16 · Puisto", "14–16 · Puisto"),
+      time: t("klo 14–16 · Puisto", "14–16 · Puisto", "kl. 14–16 · Parken"),
       lang: t("englanti", "English", "engelska"),
       desc: t(
         "Nokkonen on ollut käytössä kuitukasvina jo tuhansien vuosien ajan köysien ja tekstiilien valmistuksessa. Nykypäivänä sen merkitys on kuitenkin pitkälti unohtunut, ja hyödyllisen sekä lääkinnällisistä ominaisuuksistaan tunnetun kasvin sijaan nokkonen mielletään usein vain ikäväksi rikkaruohoksi.\n\nTässä työpajassa osallistujat oppivat, miten nokkosta valitaan, kerätään ja käsitellään kuitukäyttöön esimerkiksi narujen ja tekstiilien valmistusta varten. Osallistujat käsittelevät itse nokkoskuitua ja valmistavat siitä rannekorun, jonka saavat mukaansa.\n\nJoseph Hallam opiskelee tekstiilisuunnittelun maisteriohjelmassa Aalto-yliopistossa ja on työskennellyt luonnonmateriaalien parissa jo useiden vuosien ajan.",
@@ -1289,13 +1297,14 @@ export const buildCatalog = (locale) => {
       fienta: fienta("comebacktoyourbody-lapinlahti-film-festival", locale),
       name: t(
         "Palaa kehoosi, palaa ääneesi — Anni Pellikka",
-        "Come Back to Your Body, Come Back to Your Voice by Anni Pellikka"
+        "Come Back to Your Body, Come Back to Your Voice by Anni Pellikka",
+        "Återvänd till din kropp, återvänd till din röst med Anni Pellikka"
       ),
       img: imgAnniPellikka,
-      photoCredit: t("Kuva: Aino Luukkanen", "Photo: Aino Luukkanen"),
-      day: t("la", "Sat"),
+      photoCredit: t("Kuva: Aino Luukkanen", "Photo: Aino Luukkanen", "Foto: Aino Luukkanen"),
+      day: t("la", "Sat", "lör"),
       date: "22.8.",
-      time: t("klo 14–15.15 · Wanha Labra", "14–15.15 · Wanha Labra"),
+      time: t("klo 14–15.15 · Wanha Labra", "14–15.15 · Wanha Labra", "kl. 14–15.15 · Wanha Labra"),
       lang: t("suomi tai englanti", "Finnish or English", "finska eller engelska"),
       desc: t(
         "Palaa kehoosi, palaa ääneesi on lempeä, kehollinen työpaja naisille, jotka haluavat hidastaa tahtia, päästää irti kesän intensiteetistä ja löytää uudelleen yhteyden omaan sisäiseen selkeyteensä.\n\nKiinalaisen lääketieteen periaatteisiin pohjautuvassa työpajassa tarkastellaan elokuun loppua siirtymävaiheena – hetkenä, jolloin yin ja yang tasapainottuvat, energiaa voidaan lempeästi palauttaa takaisin itseensä ja oma ääni alkaa jälleen kuulua. Aiempaa kokemusta ei tarvita. Tule juuri sellaisena kuin olet.\n\nTyöpaja on avoin kaikille naisiksi identifioituville. Kesto 75 min. Saavuthan ajoissa – työpajaan ei voi liittyä sen alettua.",
@@ -1325,13 +1334,14 @@ export const buildCatalog = (locale) => {
       fienta: fienta("diydie-lapinlahti-film-festival", locale),
       name: t(
         "DIY DIE (Putting the Fun in Funeral Planning) — Kaja Matura",
-        "DIY DIE (Putting the Fun in Funeral Planning) by Kaja Matura"
+        "DIY DIE (Putting the Fun in Funeral Planning) by Kaja Matura",
+        "DIY DIE (Putting the Fun in Funeral Planning) med Kaja Matura"
       ),
       img: imgKajaMatura,
       handle: "relanoita",
-      day: t("la", "Sat"),
+      day: t("la", "Sat", "lör"),
       date: "22.8.",
-      time: t("klo 16–17.30 · Wanha Labra", "16–17.30 · Wanha Labra"),
+      time: t("klo 16–17.30 · Wanha Labra", "16–17.30 · Wanha Labra", "kl. 16–17.30 · Wanha Labra"),
       lang: t("englanti", "English", "engelska"),
       desc: t(
         "\"Kuolema on vain ovi, aika on vain ikkuna.\" – Vigo Karpaattinen, Ghostbusters (1989)\n\nMitä tapahtuisi, jos suhtautuisimme oman kuolemamme väistämättömyyteen huumorilla ja leikillisyydellä? Voiko luovuus auttaa meitä hyväksymään kuolevaisuutemme? Voisivatko hautajaiset olla tila, jossa suru ja ilo kulkevat rinnakkain?\n\nTule mukaan hyväntuuliseen kuolematyöpajaan, joka kutsuu sinut ajattelemaan laatikon ulkopuolelta – tai pikemminkin mäntyarkun ulkopuolelta – ja pohtimaan, millaisen lähdön haluaisit tehdä tästä kuolevaisesta elämästä.\n\nKaja Matura on Havaijilla kasvanut utelias ja tutkiva taiteilija, joka tasapainoilee ikiaikaisen viisauden ja kehittyvän teknologian rajalla. Mytologian rakkaus ja kiinnostus kasvimaailmaan näkyvät hänen taiteessaan. Ammatiltaan holistinen hierojana hän pyrkii ohjaamaan jokaisen käsiensä alle päätyvän kohti syvempää rentoutta.\n\nKesto: 1,5 tuntia.",
@@ -1363,14 +1373,15 @@ export const buildCatalog = (locale) => {
       fienta: fienta("craftcorner-lapinlahti-film-festival", locale),
       name: t(
         "Craft Corner — Ilya & Emma",
-        "Craft Corner with Ilya and Emma"
+        "Craft Corner with Ilya and Emma",
+        "Craft Corner med Ilya och Emma"
       ),
       img: imgCraftCorner,
-      day: t("su", "Sun"),
+      day: t("su", "Sun", "sön"),
       date: "23.8.",
       time: t("klo 13–17 · Omenapuutalon nurmikko",
         "13–17 · Omenapuutalo lawn",
-        "13–17 · Omenapuutalos gräsmatta"),
+        "kl. 13–17 · Omenapuutalos gräsmatta"),
       lang: t(
         "suomi, englanti ja ruotsi",
         "Finnish, English and Swedish", "finska, engelska och svenska"
@@ -1385,13 +1396,14 @@ export const buildCatalog = (locale) => {
       fienta: fienta("sittingwithgrief-lapinlahti-film-festival", locale),
       name: t(
         "Surun keskellä — Angelica Lewis",
-        "Sitting with Grief by Angelica Lewis"
+        "Sitting with Grief by Angelica Lewis",
+        "Mitt i sorgen med Angelica Lewis"
       ),
       img: imgAngelicaLewis,
       handle: "angelicalewis.illustrates",
-      day: t("su", "Sun"),
+      day: t("su", "Sun", "sön"),
       date: "23.8.",
-      time: t("klo 14–16 · Osasto 5", "14–16 · Osasto 5"),
+      time: t("klo 14–16 · Osasto 5", "14–16 · Osasto 5", "kl. 14–16 · Osasto 5"),
       lang: t("suomi tai englanti", "Finnish or English", "finska eller engelska"),
       desc: t(
         "Surun keskellä -työpajan tarkoituksena on luoda tila, jossa osallistujat voivat rauhassa ja harkiten kokea teemaa suru (kuolema, ihmissuhteet, luonto). Pohditaan mitkä ja ketkä saavat kodin tuntumaan kodilta sekä kodin tärkeyttä ja merkitystä itselle.\n\nTyöpajan aikana keskustellaan teemasta, kirjoitetaan blackout-runoja ja tehdään zinejä teemoihin liittyen.\n\nKesto: 2 tuntia.",
@@ -1403,12 +1415,13 @@ export const buildCatalog = (locale) => {
       fienta: fienta("theendoftheword-lapinlahti-film-festival", locale),
       name: t(
         "The End of the Word — Oscar Zemarti",
-        "The End of the Word by Oscar Zemarti"
+        "The End of the Word by Oscar Zemarti",
+        "The End of the Word med Oscar Zemarti"
       ),
       img: imgOscarZemarti,
-      day: t("su", "Sun"),
+      day: t("su", "Sun", "sön"),
       date: "23.8.",
-      time: t("klo 15–17 · Sininen Huone", "15–17 · Sininen Huone"),
+      time: t("klo 15–17 · Sininen Huone", "15–17 · Sininen Huone", "kl. 15–17 · Sininen Huone"),
       lang: t(
         "englanti (kaikki kielet tervetulleita)",
         "English-facilitated, all languages welcome", "leds på engelska, alla språk välkomna"
@@ -1463,40 +1476,45 @@ export const buildCatalog = (locale) => {
       fienta: fienta("ken-tasta-kay-blind-cinema-naytos", locale),
       title: t(
         "KEN TÄSTÄ KÄY... blind cinema -näytös",
-        "KEN TÄSTÄ KÄY... blind cinema screening"
+        "KEN TÄSTÄ KÄY... blind cinema screening",
+        "KEN TÄSTÄ KÄY... blind cinema-visning"
       ),
       artist: "Pauliina Kauppila",
       handle: "px3kauppila",
       img: imgKenTastaKay,
-      photoCredit: t("Grafiikka: Matti Sampela", "Artwork: Matti Sampela"),
+      photoCredit: t("Grafiikka: Matti Sampela", "Artwork: Matti Sampela", "Grafik: Matti Sampela"),
       location: t(
         "Valo-tila, 2. krs · Näytökset (47 min): pe klo 15, 18 ja 20 · la–su klo 13, 15, 18 ja 20 · Fienta-ilmoittautuminen",
-        "Valo-tila, 2nd floor · Screenings (47 min): Fri 15, 18 and 20 · Sat–Sun 13, 15, 18 and 20 · Registration via Fienta"
+        "Valo-tila, 2nd floor · Screenings (47 min): Fri 15, 18 and 20 · Sat–Sun 13, 15, 18 and 20 · Registration via Fienta",
+        "Valo-tila, 2 vån. · Visningar (47 min): fre kl. 15, 18 och 20 · lör–sön kl. 13, 15, 18 och 20 · Anmälan via Fienta"
       ),
       desc: t(
         "KEN TÄSTÄ KÄY... on Pauliina Kauppilan toinen sooloalbumi, joka ammentaa suomalaisen psykiatrian historiasta, erityisesti Seilin saaren naishospitaalin vaiheista (1889–1962), sekä naisen asemasta 1800–1900-lukujen taitteessa ja näiden ilmiöiden jatkumoista nykypäivään. Teos käsittelee rakenteellista epätasa-arvoa, psykiatrian stigmaa ja kehollisuuteen liittyviä uskomuksia sekä kutsuu pohtimaan, miten menneisyyden ajattelutavat näkyvät yhä nyky-yhteiskunnassa. Erityisen tärkeänä tausta-aineistona levyntekoprosessissa ovat olleet dosentti Jutta Ahlbeckin julkaisut sekä professori Petteri Pietikäisen kirjat.\n\nMusiikillisesti albumi on kokeellinen ja tarinallinen kokonaisuus, jossa laulun, lyömäsoitinten ja improvisaation rinnalla kuullaan kenttänauhoituksia arkisista ja yllättävistä äänimaisemista – magneettikuvauslaitteesta junan kolkkeeseen ja Seilin ruokakelloon.\n\nPauliina Kauppila on näyttämöllinen lyömäsoittaja, säveltäjä ja nuorisopsykiatri. KEN TÄSTÄ KÄY... kutsuu pysähtymään mielensisäiselle näyttämölle ja tarkastelemaan niitä tarinoita, joista yhteiskunnassa on liian usein vaiettu.",
-        "KEN TÄSTÄ KÄY... is Pauliina Kauppila's second solo album, drawing on the history of Finnish psychiatry, especially the women's hospital on the island of Seili (1889–1962), and on the position of women at the turn of the 20th century and the continuation of these phenomena into the present day. The work deals with structural inequality, the stigma of psychiatry and beliefs about the body, inviting the audience to consider how the mindsets of the past still appear in today's society.\n\nMusically the album is an experimental, narrative whole where song, percussion and improvisation are joined by field recordings of everyday and surprising soundscapes – from an MRI machine to the clatter of a train and the Seili dinner bell.\n\nPauliina Kauppila is a performing percussionist, composer and adolescent psychiatrist. KEN TÄSTÄ KÄY... invites you to pause on the stage of the mind and examine the stories our society has too often silenced."
+        "KEN TÄSTÄ KÄY... is Pauliina Kauppila's second solo album, drawing on the history of Finnish psychiatry, especially the women's hospital on the island of Seili (1889–1962), and on the position of women at the turn of the 20th century and the continuation of these phenomena into the present day. The work deals with structural inequality, the stigma of psychiatry and beliefs about the body, inviting the audience to consider how the mindsets of the past still appear in today's society.\n\nMusically the album is an experimental, narrative whole where song, percussion and improvisation are joined by field recordings of everyday and surprising soundscapes – from an MRI machine to the clatter of a train and the Seili dinner bell.\n\nPauliina Kauppila is a performing percussionist, composer and adolescent psychiatrist. KEN TÄSTÄ KÄY... invites you to pause on the stage of the mind and examine the stories our society has too often silenced.",
+        "KEN TÄSTÄ KÄY... är Pauliina Kauppilas andra soloalbum. Det öser ur den finländska psykiatrins historia, särskilt kvinnohospitalet på ön Själö (1889–1962), samt ur kvinnans ställning vid sekelskiftet 1900 och dessa fenomens fortsättning in i vår tid. Verket behandlar strukturell ojämlikhet, psykiatrins stigma och föreställningar om kroppen, och bjuder in till reflektion över hur det förflutnas tankesätt fortfarande syns i dagens samhälle.\n\nMusikaliskt är albumet en experimentell och berättande helhet där sång, slagverk och improvisation möter fältinspelningar av vardagliga och överraskande ljudlandskap – från en magnetkamera till tågets dunkande och Själös matklocka.\n\nPauliina Kauppila är en scenisk slagverkare, kompositör och ungdomspsykiater. KEN TÄSTÄ KÄY... bjuder in dig att stanna upp på sinnets inre scen och betrakta de berättelser som samhället alltför ofta har tigit om."
       ),
     }),
     artEntry({
       id: "seitsemas-aalto",
-      title: t("Seitsemäs aalto", "Seitsemäs aalto (The Seventh Wave)"),
+      title: t("Seitsemäs aalto", "Seitsemäs aalto (The Seventh Wave)", "Seitsemäs aalto (Sjunde vågen)"),
       artist: "Jukka Rapo",
       website: "https://www.jukkarapo.com",
       websiteLabel: "jukkarapo.com",
       img: imgSeitsemasAalto,
       location: t(
         "Valokuvanäyttely: Käytävägalleria 1.–31.8. · Avajaiset pe 21.8. klo 19 · Elokuva: Venetsia-talo, 1. krs (pe 15–18, la–su 13–21) · Ulkoinstallaatio: Lapinlahden laituri pe–la klo 21–23",
-        "Photo exhibition: Käytävägalleria 1–31 Aug · Opening Fri 21 Aug at 19 · Film: Venetsia building, 1st floor (Fri 15–18, Sat–Sun 13–21) · Outdoor installation: Lapinlahden laituri Fri–Sat 21–23"
+        "Photo exhibition: Käytävägalleria 1–31 Aug · Opening Fri 21 Aug at 19 · Film: Venetsia building, 1st floor (Fri 15–18, Sat–Sun 13–21) · Outdoor installation: Lapinlahden laituri Fri–Sat 21–23",
+        "Fotoutställning: Käytävägalleria 1–31.8 · Vernissage fre 21.8 kl. 19 · Film: Venetsia-huset, 1 vån. (fre 15–18, lör–sön 13–21) · Utomhusinstallation: Lappvikens brygga fre–lör kl. 21–23"
       ),
       desc: t(
         "Seitsemäs aalto on matka Itämeren pinnan alle – meren rytmiin ja sen hengitykseen. Pinnan alla maailma muuttuu: valo siivilöityy veden läpi, värit katoavat ja palaavat, aallot ja virtaukset muovaavat maisemaa lakkaamatta.\n\nKaikki näyttelyn kuvat ja Seitsemäs aalto -elokuvan vedenalaiset kohtaukset on kuvattu henkeä pidättäen vapaasukeltaen. \"En kuvaa sitä, miltä meri näyttää. Kuvaan sitä, miltä meri tuntuu.\"\n\nJukka Rapo on helsinkiläinen valokuvaaja, mediataiteilija ja vedenalaiskuvaaja. Hän on työskennellyt ammattivalokuvaajana vuodesta 1995 lähtien ja kuvannut Itämerta veden alla vuodesta 1993.",
-        "The Seventh Wave is a journey beneath the surface of the Baltic Sea – into the rhythm of the sea and its breath. Beneath the surface, the world transforms: light filters through the water, colours disappear and return, while waves and currents continuously reshape the landscape.\n\nAll photographs in the exhibition, as well as the underwater scenes in The Seventh Wave film, were captured while freediving on a single breath. \"I do not photograph what the sea looks like. I photograph what the sea feels like.\"\n\nJukka Rapo is a Helsinki-based photographer, media artist and underwater photographer. He has worked as a professional photographer since 1995 and has been photographing the Baltic Sea underwater since 1993."
+        "The Seventh Wave is a journey beneath the surface of the Baltic Sea – into the rhythm of the sea and its breath. Beneath the surface, the world transforms: light filters through the water, colours disappear and return, while waves and currents continuously reshape the landscape.\n\nAll photographs in the exhibition, as well as the underwater scenes in The Seventh Wave film, were captured while freediving on a single breath. \"I do not photograph what the sea looks like. I photograph what the sea feels like.\"\n\nJukka Rapo is a Helsinki-based photographer, media artist and underwater photographer. He has worked as a professional photographer since 1995 and has been photographing the Baltic Sea underwater since 1993.",
+        "Sjunde vågen är en resa under Östersjöns yta – in i havets rytm och dess andning. Under ytan förvandlas världen: ljuset silas genom vattnet, färgerna försvinner och återvänder, och vågor och strömmar formar landskapet utan uppehåll.\n\nAlla bilder i utställningen och undervattensscenerna i filmen Sjunde vågen har fotograferats fridykande, på ett enda andetag. \"Jag fotograferar inte hur havet ser ut. Jag fotograferar hur havet känns.\"\n\nJukka Rapo är en helsingforsbaserad fotograf, mediekonstnär och undervattensfotograf. Han har arbetat som professionell fotograf sedan 1995 och fotograferat Östersjön under vattnet sedan 1993."
       ),
     }),
     artEntry({
       id: "madonsyojat",
-      title: t("Madonsyöjät", "Madonsyöjät (Worm Eaters)"),
+      title: t("Madonsyöjät", "Madonsyöjät (Worm Eaters)", "Madonsyöjät (Maskätarna)"),
       artist: "Joona Möttö",
       handle: "triljoona",
       website: "https://www.triljoona.com",
@@ -1504,42 +1522,49 @@ export const buildCatalog = (locale) => {
       img: imgMadonsyojat,
       location: t(
         "Kahvila Lähde · 1.–31.8. · ma–la 11–17, su 12–17 · Avajaiset la 22.8. klo 18–20",
-        "Café Lähde · 1–31 Aug · Mon–Sat 11–17, Sun 12–17 · Opening Sat 22 Aug 18–20"
+        "Café Lähde · 1–31 Aug · Mon–Sat 11–17, Sun 12–17 · Opening Sat 22 Aug 18–20",
+        "Kahvila Lähde · 1–31.8 · mån–lör 11–17, sön 12–17 · Vernissage lör 22.8 kl. 18–20"
       ),
       desc: t(
         "\"Minulla on sukulainen, joka katosi 50-luvulla jättämättä jälkeäkään. Hänen tavaroidensa seassa oli salkku, jonka sisällä oli negatiiveja, päiväkirjoja sekä erinäisiä pieniä esineitä. Kukaan ei raaskinut heittää salkkua pois, mutta kukaan ei myöskään vaivautunut tutkimaan sen sisältöä, kunnes salkku päätyi minun käsiini. Tässä näyttelyssä tuon esille ensimmäisen otoksen kuvamateriaalia ja todistusaineistoa kadonneen sukulaiseni löytämästä maanalaisesta yhteisöstä.\"\n\nMadonsyöjät rakentaa immersiivisen narratiivin, joka ammentaa taiteilijan mielikuvituksesta sekä lapsuudessa mieleenpainuneista tarinoista. Osa kuvista on toteutettu Lapinlahden ullakoilla ja vanhalla ruumishuoneella.\n\nJoona Möttö (s. 1995) on valokuvataiteilija ja ohjaaja, joka suhtautuu intohimoisesti surrealismiin, fiktiiviseen tarinankerrontaan ja analogisiin tekniikoihin.",
-        "\"I have a relative who disappeared without a trace in the 1950s. Among his belongings was a briefcase containing negatives, diaries, and various small objects. No one bothered to throw the briefcase away, but no one bothered to examine its contents either, until the briefcase ended up in my hands. In this exhibition, I present the first part of footage and evidence of an underground community discovered by my missing relative.\"\n\nWorm Eaters builds an immersive photographic narrative drawing from the artist's imagination and stories from his childhood. Some of the images have been shot in the attics and the old morgue in Lapinlahti.\n\nJoona Möttö (b. 1995) is a photographic artist and director with a passion for surrealism, fictional storytelling and analogue techniques."
+        "\"I have a relative who disappeared without a trace in the 1950s. Among his belongings was a briefcase containing negatives, diaries, and various small objects. No one bothered to throw the briefcase away, but no one bothered to examine its contents either, until the briefcase ended up in my hands. In this exhibition, I present the first part of footage and evidence of an underground community discovered by my missing relative.\"\n\nWorm Eaters builds an immersive photographic narrative drawing from the artist's imagination and stories from his childhood. Some of the images have been shot in the attics and the old morgue in Lapinlahti.\n\nJoona Möttö (b. 1995) is a photographic artist and director with a passion for surrealism, fictional storytelling and analogue techniques.",
+        "\"Jag har en släkting som försvann spårlöst på 1950-talet. Bland hans tillhörigheter fanns en portfölj med negativ, dagböcker och diverse små föremål. Ingen nändes slänga portföljen, men ingen brydde sig heller om att undersöka dess innehåll – tills den hamnade i mina händer. I den här utställningen visar jag det första urvalet bilder och bevismaterial från det underjordiska samfund som min försvunna släkting upptäckte.\"\n\nMadonsyöjät bygger ett immersivt fotografiskt narrativ som öser ur konstnärens fantasi och ur berättelser som etsat sig fast i barndomen. En del av bilderna har tagits på Lappvikens vindar och i det gamla bårhuset.\n\nJoona Möttö (f. 1995) är fotokonstnär och regissör med en passion för surrealism, fiktivt berättande och analoga tekniker."
       ),
     }),
     artEntry({
       id: "taiteilijan-talo",
       title: t(
         "Taiteilijan talo – Maisemamaalarin talo",
-        "The Artist's House – The Landscape Painter's House"
+        "The Artist's House – The Landscape Painter's House",
+        "Konstnärens hus – Landskapsmålarens hus"
       ),
       artist: "Kasper Muttonen",
       img: imgTaiteilijanTalo,
       location: t(
         "Venetsian niemi · 20.–30.8. · Avajaiset Taiteiden yönä to 20.8. klo 19–21",
-        "Venetsia Peninsula · 20–30 Aug · Opening on the Night of the Arts, Thu 20 Aug 19–21"
+        "Venetsia Peninsula · 20–30 Aug · Opening on the Night of the Arts, Thu 20 Aug 19–21",
+        "Venetsia-udden · 20–30.8 · Vernissage under Konstens natt tors 20.8 kl. 19–21"
       ),
       desc: t(
         "Kasper Muttosen Taiteilijan talo on monivuotinen taideprojekti, jossa taiteilija tavoittelee sitä, mitä hänen taiteilijan talonsa voisi olla. Hankkeessa taiteilija tutkii, miten taiteilija voisi olla myös arkkitehti – kuten tapahtui muinoin historiassa, kun taiteilijan ja arkkitehdin ammattia ei eroteltu niin tarkasti kuin nykyaikana – sekä millä logiikalla ja tarpeilla taiteilija loisi oman talonsa muodot ja toiminnot.\n\nHanke toteutetaan sarjana erilaisia näyttelyitä, joissa taiteilijan talon mallit kasvattavat kokoaan. Nyt esitetään maisemamaalarin talo osana kaupunkimerimaisemaa Lapinlahden Venetsia-talon merenpuoleisella kalliolla.\n\nHanke toteutetaan Suomen Kulttuurirahaston kolmivuotisen apurahan turvin.",
-        "The Artist's House by Kasper Muttonen is a multi-year art project in which the artist explores what his own artist's house could be. Through this project, Muttonen investigates how an artist might also take on the role of an architect, as was often the case throughout history when the professions of artist and architect were not as clearly separated as they are today.\n\nThe project unfolds as a series of exhibitions in which different models of the Artist's House gradually increase in scale. The current exhibition presents The Landscape Painter's House, situated as part of the urban seascape on the seaside cliffs beside the Venetsia House in Lapinlahti.\n\nThe project is supported by a three-year grant from the Finnish Cultural Foundation."
+        "The Artist's House by Kasper Muttonen is a multi-year art project in which the artist explores what his own artist's house could be. Through this project, Muttonen investigates how an artist might also take on the role of an architect, as was often the case throughout history when the professions of artist and architect were not as clearly separated as they are today.\n\nThe project unfolds as a series of exhibitions in which different models of the Artist's House gradually increase in scale. The current exhibition presents The Landscape Painter's House, situated as part of the urban seascape on the seaside cliffs beside the Venetsia House in Lapinlahti.\n\nThe project is supported by a three-year grant from the Finnish Cultural Foundation.",
+        "Konstnärens hus av Kasper Muttonen är ett flerårigt konstprojekt där konstnären söker det som hans eget konstnärshus kunde vara. I projektet utforskar han hur en konstnär också kunde vara arkitekt – så som det ofta var i historien, då konstnärens och arkitektens yrken inte skildes åt lika tydligt som i dag – samt med vilken logik och utifrån vilka behov en konstnär skulle skapa sitt hus former och funktioner.\n\nProjektet genomförs som en serie utställningar där modellerna av konstnärens hus växer i skala. Nu visas landskapsmålarens hus som en del av stadens havslandskap på klipporna vid Venetsia-husets havssida i Lappviken.\n\nProjektet genomförs med stöd av ett treårigt stipendium från Finska Kulturfonden."
       ),
     }),
     artEntry({
       id: "ruumiillistumia",
-      title: t("Ruumiillistumia", "Ruumiillistumia (Embodiments)"),
+      title: t("Ruumiillistumia", "Ruumiillistumia (Embodiments)", "Ruumiillistumia (Förkroppsliganden)"),
       artist: "Mikko Kelloniemi",
       img: imgRuumiillistumia,
       location: t(
         "Osasto 5 · 6.8.–11.9. · ma–la 11–17, su 12–17",
-        "Osasto 5 · 6 Aug–11 Sep · Mon–Sat 11–17, Sun 12–17"
+        "Osasto 5 · 6 Aug–11 Sep · Mon–Sat 11–17, Sun 12–17",
+        "Osasto 5 · 6.8–11.9 · mån–lör 11–17, sön 12–17"
       ),
       desc: t(
         "Ilmassa leijaileva aalto. Huokoisuus. Ohikiitävä selkeyden hetki. Jokin syntyy. Kaunis vahinko, uusi suunta. Tunne siitä, kun yhdestä tulee kaksi.\n\nRuumiillistumia tarkastelee identiteettiä, kehollista intuitiota ja taiteellisen työskentelyn somatiikkaa. Keraamiset veistokset ovat syntyneet intuitiivisessa prosessissa, jossa ilman tarkkaa suunnitelmaa toistuvat muodot syntyvät käden ja saven rytmisestä vuorovaikutuksesta. Musteilla värjätyt kankaat ja puulevyt ovat pitkäkestoisen prosessoinnin, omanlaisensa järjestelmällisen satunnaisuuden tulosta.\n\nMikko Kelloniemi on luovien alojen ammattilainen ja monialainen taiteilija. Hän on työskennellyt kuvaajana ja valokuvaajana kohta 20 vuotta, keskittyen dokumentaariseen sisältöön ja erityisesti luovaan dokumenttielokuvaan.",
-        "A wave drifting through the air. Porosity. A fleeting moment of clarity. Something comes into being. A beautiful accident, a new direction. The feeling of one becoming two.\n\nRuumiillistumia explores identity, bodily intuition, and the somatics of artistic practice. The ceramic sculptures have emerged through an intuitive process in which recurring forms take shape through the rhythmic interaction of hand and clay, without a predetermined plan. The ink-dyed textiles and wooden panels are the result of a long-term process – a kind of methodical randomness.\n\nMikko Kelloniemi is a multidisciplinary artist and creative professional. He has worked as a cinematographer and photographer for nearly twenty years, focusing on documentary work, particularly creative documentary filmmaking."
+        "A wave drifting through the air. Porosity. A fleeting moment of clarity. Something comes into being. A beautiful accident, a new direction. The feeling of one becoming two.\n\nRuumiillistumia explores identity, bodily intuition, and the somatics of artistic practice. The ceramic sculptures have emerged through an intuitive process in which recurring forms take shape through the rhythmic interaction of hand and clay, without a predetermined plan. The ink-dyed textiles and wooden panels are the result of a long-term process – a kind of methodical randomness.\n\nMikko Kelloniemi is a multidisciplinary artist and creative professional. He has worked as a cinematographer and photographer for nearly twenty years, focusing on documentary work, particularly creative documentary filmmaking.",
+        "En våg som svävar i luften. Porositet. Ett flyktigt ögonblick av klarhet. Något föds. En vacker olyckshändelse, en ny riktning. Känslan av att en blir två.\n\nRuumiillistumia utforskar identitet, kroppslig intuition och det konstnärliga arbetets somatik. De keramiska skulpturerna har vuxit fram i en intuitiv process där återkommande former föds ur handens och lerans rytmiska samspel, utan någon exakt plan. Tygerna och träskivorna som färgats med bläck är resultatet av en långvarig process – en sorts metodisk slumpmässighet.\n\nMikko Kelloniemi är en mångsidig konstnär och yrkesverksam inom de kreativa branscherna. Han har arbetat som filmfotograf och fotograf i snart tjugo år med fokus på dokumentärt innehåll, särskilt kreativ dokumentärfilm."
       ),
     }),
     artEntry({
@@ -1551,11 +1576,13 @@ export const buildCatalog = (locale) => {
       img: imgStopTheHustle,
       location: t(
         "Omenapuutalo · pe–su klo 15–19",
-        "Omenapuutalo · Fri–Sun 15–19"
+        "Omenapuutalo · Fri–Sun 15–19",
+        "Omenapuutalo · fre–sön kl. 15–19"
       ),
       desc: t(
         "Paine kehittyä jatkuvasti, ansaita enemmän, edetä uralla ja päivittää itseään vaanii meitä kaikkia suorituskeskeisessä järjestelmässä. Pelkkä oleminen – ei minkään tekeminen – on lähes radikaali teko kulttuurissa, jossa ahkeruus on istutettu meihin lapsuudesta asti. Levosta on tullut tabu. Samaan aikaan juuri sitä meidän tulisi tehdä, jos haluamme elää kestävästi.\n\nTämä installaatio kapinoi suorituskulttuuria vastaan ja palkitsee sinut hitaasta liikkeestä ja paikallaan pysymisestä. Vain siten pysyt sopusoinnussa sen herkän, valoon perustuvan ekosysteemin kanssa. Ryömi verhoteltan sisään ja rentoudu niin pitkäksi aikaa kuin haluat.\n\nJulia Sand on monialainen taiteilija ja muotoilija pääkaupunkiseudulta. Hän kokeilee uusia medioita ja interaktiivisia teknologioita leikkisällä ja tutkivalla otteella.",
-        "The pressure to constantly level up, earn more money, advance one's career and continuously improve oneself is preying on all of us living in this profit-driven, performative system. To just be — do nothing, take it easy — is a controversial, almost radical act in a system rooted in a cultural heritage of diligence and hard work instilled from childhood. Against this backdrop, rest has become taboo. At the same time, if we want to live sustainably, that is exactly what we should do.\n\nThis installation rebels against hustle culture and rewards you for moving slowly and staying still. Only in this way can you remain in harmony with its delicate, light-based ecosystem. Crawl into the tent of curtains and relax for as long as you like.\n\nJulia Sand is a multidisciplinary artist and designer based in the Helsinki region, experimenting with new media and interactive technologies through a playful and exploratory approach."
+        "The pressure to constantly level up, earn more money, advance one's career and continuously improve oneself is preying on all of us living in this profit-driven, performative system. To just be — do nothing, take it easy — is a controversial, almost radical act in a system rooted in a cultural heritage of diligence and hard work instilled from childhood. Against this backdrop, rest has become taboo. At the same time, if we want to live sustainably, that is exactly what we should do.\n\nThis installation rebels against hustle culture and rewards you for moving slowly and staying still. Only in this way can you remain in harmony with its delicate, light-based ecosystem. Crawl into the tent of curtains and relax for as long as you like.\n\nJulia Sand is a multidisciplinary artist and designer based in the Helsinki region, experimenting with new media and interactive technologies through a playful and exploratory approach.",
+        "Pressen att ständigt utvecklas, tjäna mer, göra karriär och uppgradera sig själv lurar på oss alla i ett prestationsinriktat system. Att bara vara – att inte göra någonting – är en nästan radikal handling i en kultur där fliten har planterats i oss sedan barndomen. Vilan har blivit tabu. Samtidigt är det just vila vi borde ägna oss åt om vi vill leva hållbart.\n\nDen här installationen gör uppror mot prestationskulturen och belönar dig för långsamma rörelser och stillhet. Bara så förblir du i samklang med dess känsliga, ljusbaserade ekosystem. Kryp in i gardintältet och slappna av så länge du vill.\n\nJulia Sand är en mångsidig konstnär och formgivare från huvudstadsregionen. Hon experimenterar med nya medier och interaktiva teknologier med ett lekfullt och utforskande grepp."
       ),
     }),
     artEntry({
@@ -1568,16 +1595,18 @@ export const buildCatalog = (locale) => {
       img: imgAwithA,
       location: t(
         "Omenapuutalon nurmikko · pe klo 15–21, la–su klo 14–21",
-        "Omenapuutalo lawn · Fri 15–21, Sat–Sun 14–21"
+        "Omenapuutalo lawn · Fri 15–21, Sat–Sun 14–21",
+        "Omenapuutalos gräsmatta · fre kl. 15–21, lör–sön kl. 14–21"
       ),
       desc: t(
         "AwithA Body Shop ei ole vain valmiiden teosten näyttely, vaan jatkuvasti muotoutuva ympäristö – samanaikaisesti työpaja, laboratorio, kauppa ja installaatio. Kehot ja kehon osat ovat eri valmistumisen ja muodonmuutoksen vaiheissa, hämärtäen tekemisen prosessin ja näyttelyn välistä rajaa.\n\nAwithA on latvialainen taiteilijaduo, jonka muodostavat Agita Maračkovska ja Andris Maračkovskis. Heidän työskentelynsä yhdistää nykytaidetta, kuvanveistoa, materiaalikokeiluja ja elokuva-alan kokemusta. Silikonin, muottien ja valujen sekä hyperrealististen kehon esitysten parissa työskennellessään he tutkivat ihmiskehoa, sen esittämistä ja muodonmuutosta materiaalin kautta.",
-        "AwithA Body Shop is not simply an exhibition of finished objects, but an evolving environment — simultaneously a workshop, laboratory, shop, and installation. Bodies and body fragments exist at different stages of creation and transformation, blurring the boundary between the process of making and the exhibition itself.\n\nAwithA is a Latvian artist duo formed by Agita Maračkovska and Andris Maračkovskis. Their practice brings together contemporary art, sculpture, material experimentation, and experience within the film industry. Working with silicone, moulds, casting, and hyperrealistic representations of the body, they explore the human body, its representation, and its transformation through material."
+        "AwithA Body Shop is not simply an exhibition of finished objects, but an evolving environment — simultaneously a workshop, laboratory, shop, and installation. Bodies and body fragments exist at different stages of creation and transformation, blurring the boundary between the process of making and the exhibition itself.\n\nAwithA is a Latvian artist duo formed by Agita Maračkovska and Andris Maračkovskis. Their practice brings together contemporary art, sculpture, material experimentation, and experience within the film industry. Working with silicone, moulds, casting, and hyperrealistic representations of the body, they explore the human body, its representation, and its transformation through material.",
+        "AwithA Body Shop är inte bara en utställning av färdiga verk, utan en miljö i ständig förvandling – på samma gång verkstad, laboratorium, butik och installation. Kroppar och kroppsdelar befinner sig i olika skeden av tillblivelse och förvandling och suddar ut gränsen mellan skapandeprocessen och utställningen.\n\nAwithA är en lettisk konstnärsduo bestående av Agita Maračkovska och Andris Maračkovskis. Deras arbete förenar samtidskonst, skulptur, materialexperiment och erfarenhet från filmbranschen. Genom att arbeta med silikon, formar och avgjutningar samt hyperrealistiska framställningar av kroppen utforskar de människokroppen, dess representation och dess förvandling genom materialet."
       ),
     }),
     artEntry({
       id: "kaksi-varia",
-      title: t("KAKSI VÄRIÄ", "TWO COLORS"),
+      title: t("KAKSI VÄRIÄ", "TWO COLORS", "TVÅ FÄRGER"),
       artist: "Ella Männikkö",
       handle: "ellamannikko",
       img: imgKaksiVaria,
@@ -1588,7 +1617,8 @@ export const buildCatalog = (locale) => {
       ),
       desc: t(
         "Ella Männikkö on audiovisuaalinen runoilija, jonka koulutus ja juuret kumpuavat länsimaisesta taidemusiikista. Teoskokonaisuus KAKSI VÄRIÄ koostuu kahdesta klassisen musiikin kulttuuria ja sen epäkohtia kommentoivasta, runoa ja sooloalttoviulua yhdistelevästä videoinstallaatiosta: PERHOSET ja ORANSSI. Teokset näyttäytyvät taiteilijalle itselleen nimenomaan värien kautta ja symboloivat hänelle värien palautumista elämään.\n\nMännikkö pyrkii teosten myötä räjäyttämään kokemuksen eri genrejen tai taiteenlajien kahlitsevuudesta niin, että jäljelle jää paljas, humaani ilmaisu. Teos tuo vaihtoehdon alan koville ja kilpailullisille arvoille, joissa suoritus menee henkilökohtaisen hyvinvoinnin edelle.",
-        "Ella Männikkö is an audiovisual poet whose training and roots lie in western classical music. Her work TWO COLORS comprises two video installations combining poetry and solo viola, BUTTERFLIES and ORANGE, which comment on classical music culture and its shortcomings. To the artist herself, the works manifest primarily through color, symbolizing the return of color to life.\n\nThrough these works, she seeks to shatter the experience of being constrained by specific genres or art forms, leaving behind only raw, human expression. The work offers an alternative to the field's harsh, competitive values, where performance often takes over personal well-being."
+        "Ella Männikkö is an audiovisual poet whose training and roots lie in western classical music. Her work TWO COLORS comprises two video installations combining poetry and solo viola, BUTTERFLIES and ORANGE, which comment on classical music culture and its shortcomings. To the artist herself, the works manifest primarily through color, symbolizing the return of color to life.\n\nThrough these works, she seeks to shatter the experience of being constrained by specific genres or art forms, leaving behind only raw, human expression. The work offers an alternative to the field's harsh, competitive values, where performance often takes over personal well-being.",
+        "Ella Männikkö är en audiovisuell poet vars utbildning och rötter finns i den västerländska konstmusiken. Verkhelheten TVÅ FÄRGER består av två videoinstallationer som förenar poesi och soloaltfiol och kommenterar den klassiska musikens kultur och dess missförhållanden: FJÄRILARNA och ORANGE. För konstnären själv framträder verken uttryckligen genom färger och symboliserar hur färgerna återvänder till livet.\n\nMed verken vill Männikkö spränga upplevelsen av att vara fjättrad vid enskilda genrer eller konstformer, så att det som återstår är ett naket, mänskligt uttryck. Verket erbjuder ett alternativ till branschens hårda och tävlingsinriktade värderingar, där prestationen går före det personliga välbefinnandet."
       ),
     }),
     artEntry({
@@ -1605,7 +1635,8 @@ export const buildCatalog = (locale) => {
       ),
       desc: t(
         "Super 8 -filmille kuvattua visuaalista runoutta – kutsu toimintaan luonnon suojelemiseksi. Nostalgian tuntua, aitouden makua keinotekoisuuden maailmassa. Unenomainen tunnelma, leijuva olo ja kaipaus kahden maailman – kaupungin ja maaseudun – välissä. Kerrottu kalaallisutiksi (grönlanniksi), englanninkielisellä tekstityksellä.\n\nDennis Tulugaq on grönlantilainen elokuvaohjaaja, kuvaaja ja tuottaja, joka asuu Nesoddenissa Norjassa. Tuotantoyhtiönsä Tulugaq Filmsin kautta hän kehittää dokumentti- ja fiktioprojekteja, joiden juuret ovat alkuperäiskansojen ja arktisen alueen tarinankerronnassa. Häntä ohjaa motto: \"Strengthening Indigenous stories, one story at a time.\"",
-        "Visual poetry shot on super 8, a call for action on preservation of nature. A sense of nostalgia, a taste of realness in a world of artificiality. Dreamlike atmosphere, floaty feeling and longing in between two worlds, urban and rural. Narrated in Kalaallisut (Greenlandic) with English subtitles.\n\nDennis Tulugaq is a Greenlandic film director, cinematographer and producer based in Nesodden, Norway. Through his production company Tulugaq Films, he develops documentary and fiction projects rooted in Indigenous and Arctic storytelling. He is guided by his personal motto: \"Strengthening Indigenous stories, one story at a time.\""
+        "Visual poetry shot on super 8, a call for action on preservation of nature. A sense of nostalgia, a taste of realness in a world of artificiality. Dreamlike atmosphere, floaty feeling and longing in between two worlds, urban and rural. Narrated in Kalaallisut (Greenlandic) with English subtitles.\n\nDennis Tulugaq is a Greenlandic film director, cinematographer and producer based in Nesodden, Norway. Through his production company Tulugaq Films, he develops documentary and fiction projects rooted in Indigenous and Arctic storytelling. He is guided by his personal motto: \"Strengthening Indigenous stories, one story at a time.\"",
+        "Visuell poesi filmad på super 8 – en uppmaning till handling för att skydda naturen. En känsla av nostalgi, en smak av äkthet i en konstgjord värld. Drömlik stämning, en svävande känsla och längtan mellan två världar – staden och landsbygden. Berättad på kalaallisut (grönländska) med engelsk textning.\n\nDennis Tulugaq är en grönländsk filmregissör, filmfotograf och producent bosatt i Nesodden i Norge. Genom sitt produktionsbolag Tulugaq Films utvecklar han dokumentär- och fiktionsprojekt med rötter i urfolkens och Arktis berättartradition. Han vägleds av sitt motto: \"Strengthening Indigenous stories, one story at a time.\""
       ),
     }),
     artEntry({

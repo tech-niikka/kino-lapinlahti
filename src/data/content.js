@@ -241,6 +241,48 @@ const contactsByLocale = {
       email: "anna.lehtonen@kinolapinlahti.fi",
     },
   ],
+  sv: [
+    {
+      name: "Sveta Sirin",
+      title: "Ansvarig producent",
+      email: "sveta.sirin@kinolapinlahti.fi",
+    },
+    {
+      name: "Anton Baer",
+      title: "Konstnärlig ledare",
+      email: "anton.baer@kinolapinlahti.fi",
+    },
+    {
+      name: "Lars M. Huldén",
+      title: "Kommunikationsansvarig",
+      email: "lars@kinolapinlahti.fi",
+    },
+    {
+      name: "Siiri Siltala",
+      title: "Kurator",
+      email: "siiri.siltala@kinolapinlahti.fi",
+    },
+    {
+      name: "Hanna Hovitie",
+      title: "Kurator",
+      email: "hanna.hovitie@kinolapinlahti.fi",
+    },
+    {
+      name: "Moritz Sebastian Müller",
+      title: "Kortfilmskurator",
+      email: "lapinlahti.nordic.frames@gmail.com",
+    },
+    {
+      name: "Nellie Rajala",
+      title: "Kortfilmskurator",
+      email: "lapinlahti.nordic.frames@gmail.com",
+    },
+    {
+      name: "Anna Lehtonen",
+      title: "Producent för NØW-workshoppen",
+      email: "anna.lehtonen@kinolapinlahti.fi",
+    },
+  ],
 };
 
 const fi = {
@@ -607,7 +649,11 @@ const buildProgramSection = (locale) => {
 
   const blindCinema = (times) =>
     ongoing(
-      "KEN TÄSTÄ KÄY... blind cinema -näytös",
+      t(
+        "KEN TÄSTÄ KÄY... blind cinema -näytös",
+        "KEN TÄSTÄ KÄY... blind cinema screening",
+        "KEN TÄSTÄ KÄY... blind cinema-visning"
+      ),
       CAT.taide,
       detail(
         t("Valo-tila, 2. krs", "Valo-tila, 2nd floor", "Valo-tila, 2 vån."),
@@ -835,7 +881,7 @@ const buildProgramSection = (locale) => {
           detail(PUISTO, ends("16.00")), cw("stinging-nettle")),
         ev("14.00", t("Palaa kehoosi, palaa ääneesi", "Come Back to Your Body, Come Back to Your Voice", "Återvänd till din kropp, återvänd till din röst"),
           CAT.tyopaja, detail("Wanha Labra", ends("15.15")), cw("come-back-to-your-body")),
-        ev("14.45", t("Musta Orfeus", "Black Orpheus", "Svart Orfeus"), CAT.elokuva,
+        ev("14.45", t("Musta Orfeus", "Black Orpheus", "Svarta Orfeus"), CAT.elokuva,
           detail(PUUTARHAPIHA, ends("16.40")), cf("musta-orfeus")),
         ev("15.00", "[Re]membering: A Writing Workshop", CAT.tyopaja,
           detail(t("Sininen Huone", "Sininen Huone", "Sininen Huone"), ends("17.00")), cw("re-membering")),
@@ -1026,7 +1072,7 @@ const sv = {
     {
       fields: {
         title: "Kontakt",
-        contacts: contactsByLocale["en-US"],
+        contacts: contactsByLocale.sv,
       },
     },
   ],
