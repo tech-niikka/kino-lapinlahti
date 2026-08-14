@@ -198,6 +198,11 @@ const contactsByLocale = {
       title: "NØW-työpajan tuottaja",
       email: "anna.lehtonen@kinolapinlahti.fi",
     },
+    {
+      name: "Iikka Lipponen",
+      title: "Vapaaehtoiskoordinaattori",
+      email: "iikka.lipponen@kinolapinlahti.fi",
+    },
   ],
   "en-US": [
     {
@@ -240,6 +245,11 @@ const contactsByLocale = {
       title: "NØW workshop producer",
       email: "anna.lehtonen@kinolapinlahti.fi",
     },
+    {
+      name: "Iikka Lipponen",
+      title: "Volunteer Coordinator",
+      email: "iikka.lipponen@kinolapinlahti.fi",
+    },
   ],
   sv: [
     {
@@ -281,6 +291,11 @@ const contactsByLocale = {
       name: "Anna Lehtonen",
       title: "Producent för NØW-workshoppen",
       email: "anna.lehtonen@kinolapinlahti.fi",
+    },
+    {
+      name: "Iikka Lipponen",
+      title: "Frivilligkoordinator",
+      email: "iikka.lipponen@kinolapinlahti.fi",
     },
   ],
 };
