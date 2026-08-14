@@ -25,6 +25,9 @@ import mutteriKahvilaLogo from "../assets/sponsors/mutteri-kahvila.png";
 import kahvilaLahdeLogo from "../assets/sponsors/kahvila-lahde.svg";
 import rikiyakiLogo from "../assets/sponsors/rikiyaki.jpg";
 import angelFilmsLogo from "../assets/sponsors/angel-films.png";
+import embassyOfSwedenLogo from "../assets/sponsors/embassy-of-sweden.png";
+import sevanLogo from "../assets/sponsors/sevan.png";
+import lasipalatsiKortteliLogo from "../assets/sponsors/lasipalatsi-kortteli.png";
 
 // Sponsorilistan rakenne mukailee aiempaa Contentful-rakennetta:
 //   - Footer.jsx ohittaa indeksin [0] festivaalin omana logona
@@ -124,6 +127,22 @@ const sponsorEntries = [
     logoUrl: angelFilmsLogo,
     url: "https://angelfilms.fi/",
     altText: "Angel Films",
+  },
+  {
+    logoUrl: embassyOfSwedenLogo,
+    url: "https://www.swedenabroad.se/fi/utlandsmyndigheter/suomi-helsinki/",
+    altText: "Embassy of Sweden Helsinki",
+    size: "large",
+  },
+  {
+    logoUrl: sevanLogo,
+    url: "https://sevan.se/",
+    altText: "Sevan",
+  },
+  {
+    logoUrl: lasipalatsiKortteliLogo,
+    url: "https://lasipalatsikortteli.fi/",
+    altText: "Lasipalatsin kortteli 90",
   },
 ];
 
