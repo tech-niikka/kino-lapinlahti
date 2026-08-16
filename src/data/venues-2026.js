@@ -19,7 +19,7 @@ const MAPS = {
 const ACCESSIBILITY_GUIDE =
   "https://docs.google.com/document/d/18mhspc47rtUlAMXKDayj_F4Q89gykPB0-dy2PHDo1nQ/edit?usp=sharing";
 const SAFER_SPACE =
-  "https://docs.google.com/document/d/10dpNEoE-QhiHLJlxvdOWfAuNVkOw_jykU1H5D1sCh3w/edit?usp=sharing";
+  "https://docs.google.com/document/d/1yPCzqYWl3fPYGKIjLmgHRfbgoPX3sFbTzevmHfhelZM/edit?usp=sharing";
 
 export const buildVenues = (locale) => {
   const isEn = locale === "en-US";
