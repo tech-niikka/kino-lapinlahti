@@ -226,7 +226,7 @@ export const buildCatalog = (locale) => {
       img: imgHairiotekija,
       length: "85 min",
       lang: t("suomi", "Finnish", "finska"),
-      subs: t("varmistuu pian", "confirmed soon", "bekräftas snart"),
+      subs: t("englanti", "English", "engelska"),
       age: "12",
       director: "Aleksi Salmenperä",
       country: t("Suomi", "Finland"),
@@ -298,7 +298,7 @@ export const buildCatalog = (locale) => {
       img: imgTyhjio,
       length: "97 min",
       lang: t("suomi, englanti, venäjä", "Finnish, English, Russian", "finska, engelska, ryska"),
-      subs: t("tekstitys vahvistuu pian", "subtitles confirmed soon", "textningen bekräftas snart"),
+      subs: t("englanti", "English", "engelska"),
       age: "12",
       director: "Aleksi Salmenperä",
       country: t("Suomi", "Finland", "Finland"),
@@ -346,7 +346,7 @@ export const buildCatalog = (locale) => {
       img: imgIsanpaiva,
       length: "99 min",
       lang: t("suomi", "Finnish", "finska"),
-      subs: t("tekstitys vahvistuu pian", "subtitles confirmed soon", "textningen bekräftas snart"),
+      subs: t("englanti", "English", "engelska"),
       age: "7",
       director: "Aleksi Salmenperä",
       country: t("Suomi", "Finland", "Finland"),
@@ -713,28 +713,48 @@ export const buildCatalog = (locale) => {
           orig: "Sekasauna",
           co: ["FI"], year: "2026", len: "15 min", age: "S",
           director: "Juuso Timonen",
-          synopsis: "Introvert Mikko is anxious that he won't be able to come out of his shell during the weekend at his relatively new spouse's cottage. His spouse Hanna is certain that Mikko will make a great first impression on her chosen family. When it's time for the sauna, Mikko has not figured out the sauna dress code of this new social bubble — and realizes he's the only one wearing swimwear." }),
+          synopsis: t(
+            "Introvertti Mikko jännittää, ettei osaa tulla kuorestaan viikonloppuna uudehkon puolisonsa mökillä. Puoliso Hanna on varma, että Mikko tekee loistavan ensivaikutelman hänen valittuun perheeseensä. Kun on saunan aika, Mikko ei ole selvittänyt uuden sosiaalisen kuplan saunapukukoodia – ja tajuaa olevansa ainoa uikkareissa.",
+            "Introvert Mikko is anxious that he won't be able to come out of his shell during the weekend at his relatively new spouse's cottage. His spouse Hanna is certain that Mikko will make a great first impression on her chosen family. When it's time for the sauna, Mikko has not figured out the sauna dress code of this new social bubble — and realizes he's the only one wearing swimwear.",
+            "Introverta Mikko är nervös över att han inte ska våga komma ur sitt skal under veckoslutet på sin ganska nya partners stuga. Partnern Hanna är säker på att Mikko kommer att göra ett strålande första intryck på hennes valda familj. När det är dags för bastu har Mikko inte listat ut den nya sociala bubblans klädkod – och inser att han är den enda i badkläder."
+          ) }),
         sf({ title: "No One Owns You",
           orig: "Dig Äger Ingen",
           co: ["FI"], year: "2025", len: "20 min", age: "S",
           director: "Agnes Koskinen",
-          synopsis: "18-year-old Alicia, a competitive swimmer, spends a day at her summer house during the peak of summer. She swims over to another island and finds Mira, a charming and confusing girl. The meeting ignites a crisis inside Alicia's mind, and now she has to figure out in what direction she wants her life to go." }),
+          synopsis: t(
+            "18-vuotias kilpauimari Alicia viettää päivää kesäasunnollaan keskellä parasta kesää. Hän ui viereiselle saarelle ja kohtaa Miran, viehättävän ja hämmentävän tytön. Kohtaaminen sytyttää Alician mielessä kriisin, ja nyt hänen on selvitettävä, mihin suuntaan hän haluaa elämänsä viedä.",
+            "18-year-old Alicia, a competitive swimmer, spends a day at her summer house during the peak of summer. She swims over to another island and finds Mira, a charming and confusing girl. The meeting ignites a crisis inside Alicia's mind, and now she has to figure out in what direction she wants her life to go.",
+            "18-åriga Alicia, en tävlingssimmare, tillbringar en dag vid sitt sommarhus mitt i högsommaren. Hon simmar över till en annan ö och möter Mira, en charmig och förbryllande flicka. Mötet tänder en kris i Alicias sinne, och nu måste hon lista ut i vilken riktning hon vill att hennes liv ska gå."
+          ) }),
         sf({ title: "Sauna Sickness",
           co: ["SE"], year: "2026", len: "15 min", age: "16",
           warn: ["seksi"],
           director: "Malin Barr",
-          synopsis: "Struggling to maintain the peace she mistakes for love, Cleo's steamy New Year's Eve plans fissure into a chilling nightmare." }),
+          synopsis: t(
+            "Cleo yrittää ylläpitää rauhaa, jota luulee rakkaudeksi, kun höyryävät uudenvuodenaaton suunnitelmat säröilevät hyytäväksi painajaiseksi.",
+            "Struggling to maintain the peace she mistakes for love, Cleo's steamy New Year's Eve plans fissure into a chilling nightmare.",
+            "Cleo kämpar för att bevara den frid hon misstar för kärlek, när hennes ångande nyårsplaner spricker till en kylig mardröm."
+          ) }),
         sf({ title: "Maybe in March",
           orig: "Måske i Marts",
           co: ["DK"], year: "2025", len: "25 min", age: "12",
           warn: ["ahdistus"],
           director: "Mikkel Bjørn Kehlert",
-          synopsis: "Somewhere in rural Denmark, a house awaits its farewell. A family holds its breath. And something is slipping away." }),
+          synopsis: t(
+            "Jossain Tanskan maaseudulla talo odottaa jäähyväisiään. Perhe pidättää hengitystään. Ja jokin on lipumassa pois.",
+            "Somewhere in rural Denmark, a house awaits its farewell. A family holds its breath. And something is slipping away.",
+            "Någonstans på den danska landsbygden väntar ett hus på sitt farväl. En familj håller andan. Och något håller på att glida bort."
+          ) }),
         sf({ title: "Sauna People",
           orig: "Saunojat",
           co: ["FI"], year: "2025", len: "5 min", age: "S",
           director: "Sanna Taikina",
-          synopsis: "In this hand-drawn 2D pencil animation, the First Sauna arrives on Earth to give birth to the Sauna People. Clashing customs spark conflict in the birthing sauna — but who, in the end, has the right to be a real sauna person?" }),
+          synopsis: t(
+            "Käsin piirretyssä 2D-lyijykynäanimaatiossa Ensimmäinen Sauna saapuu Maahan synnyttämään Saunakansan. Törmäävät tavat sytyttävät riidan synnytyssaunassa – mutta kenellä lopulta on oikeus olla oikea saunoja?",
+            "In this hand-drawn 2D pencil animation, the First Sauna arrives on Earth to give birth to the Sauna People. Clashing customs spark conflict in the birthing sauna — but who, in the end, has the right to be a real sauna person?",
+            "I denna handritade 2D-blyertsanimation anländer den Första Bastun till jorden för att föda Bastufolket. Krockande seder tänder en konflikt i födelsebastun – men vem har till slut rätten att vara en riktig bastubadare?"
+          ) }),
       ],
     }),
     shortBlock({
@@ -760,34 +780,58 @@ export const buildCatalog = (locale) => {
           co: ["FI"], year: "2025", len: "4 min", age: "16",
           warn: ["seksi"],
           director: "Sofia Liukonen",
-          synopsis: "Popette is about to perform a striptease on the pole." }),
+          synopsis: t(
+            "Popette valmistautuu esittämään striptease-numeron tangolla.",
+            "Popette is about to perform a striptease on the pole.",
+            "Popette ska just framföra en striptease på stången."
+          ) }),
         sf({ title: "Flashback – Monstrous Memories",
           orig: "Flashback – Monstrøse minder",
           co: ["NO", "DK"], year: "2025", len: "17 min", age: "12",
           warn: ["ahdistus"],
           director: "Momo Mentha",
-          synopsis: "A hybrid documentary about dehumanising patients in Danish psychiatry. The film recreates a real experience where what should be a normal part of caring for someone admitted to a psychiatric hospital becomes an act of violence." }),
+          synopsis: t(
+            "Hybrididokumentti potilaiden epäinhimillistämisestä tanskalaisessa psykiatriassa. Elokuva rekonstruoi todellisen kokemuksen, jossa asiasta, jonka pitäisi olla normaali osa psykiatriseen sairaalaan otetun ihmisen hoitoa, tulee väkivallanteko.",
+            "A hybrid documentary about dehumanising patients in Danish psychiatry. The film recreates a real experience where what should be a normal part of caring for someone admitted to a psychiatric hospital becomes an act of violence.",
+            "En hybriddokumentär om avhumaniseringen av patienter inom dansk psykiatri. Filmen återskapar en verklig upplevelse där det som borde vara en normal del av vården av någon som tagits in på ett psykiatriskt sjukhus blir en våldshandling."
+          ) }),
         sf({ title: "Bodyrave",
           co: ["FI"], year: "2025", len: "4 min", age: "16",
           warn: ["ahdistus"],
           director: "Harri Connell, Felix Järvenpää, Leo Lindgren",
-          synopsis: "A body wakes up in a mysterious room and begins experiencing processes that have always been present but never noticed – until now." }),
+          synopsis: t(
+            "Keho herää salaperäisessä huoneessa ja alkaa kokea prosesseja, jotka ovat aina olleet läsnä mutta jääneet huomaamatta – tähän asti.",
+            "A body wakes up in a mysterious room and begins experiencing processes that have always been present but never noticed – until now.",
+            "En kropp vaknar i ett mystiskt rum och börjar uppleva processer som alltid funnits där men aldrig uppmärksammats – förrän nu."
+          ) }),
         sf({ title: "Mother Creature",
           co: ["FO", "SE"], year: "2025", len: "30 min", age: "12",
           warn: ["ahdistus"],
           director: "Maria Tórgarð",
-          synopsis: "A daughter attempts to pull the monster of her childhood out from under the bed in an original, deeply personal and creative film about her mother's mental illness." }),
+          synopsis: t(
+            "Tytär yrittää vetää lapsuutensa hirviön esiin sängyn alta omaperäisessä, syvästi henkilökohtaisessa ja luovassa elokuvassa äitinsä psyykkisestä sairaudesta.",
+            "A daughter attempts to pull the monster of her childhood out from under the bed in an original, deeply personal and creative film about her mother's mental illness.",
+            "En dotter försöker dra fram sin barndoms monster under sängen i en originell, djupt personlig och kreativ film om sin mammas psykiska sjukdom."
+          ) }),
         sf({ title: "Limerence",
           orig: "Limerenssi",
           co: ["FI"], year: "2026", len: "23 min", age: "16",
           warn: ["vakivalta"],
           director: "Jasmin Gummerus",
-          synopsis: "Fresh out of a relationship, Lotta develops a one-sided crush on body modification artist Lennart." }),
+          synopsis: t(
+            "Tuoreeltaan erosta toipuva Lotta ihastuu yksipuolisesti kehonmuokkaustaiteilija Lennartiin.",
+            "Fresh out of a relationship, Lotta develops a one-sided crush on body modification artist Lennart.",
+            "Nyss ute ur ett förhållande utvecklar Lotta en ensidig förälskelse i kroppsmodifieringskonstnären Lennart."
+          ) }),
         sf({ title: "Out of Order",
           co: ["FI"], year: "2025", len: "2 min", age: "12",
           warn: ["seksi"],
           director: "Antti Tuomikoski",
-          synopsis: "The male gaze turns around." }),
+          synopsis: t(
+            "Miehinen katse kääntyy ympäri.",
+            "The male gaze turns around.",
+            "Den manliga blicken vänds om."
+          ) }),
       ],
     }),
     shortBlock({
@@ -813,37 +857,65 @@ export const buildCatalog = (locale) => {
           co: ["FI"], year: "2026", len: "5 min", age: "12",
           warn: ["seksi"],
           director: "Inka Achté, Einari Paakkanen",
-          synopsis: "Puolanka, a tiny village in Northern Finland, is famous for its population decline — and for its dark sense of humor about it. Teenage boys celebrate their new driver's licences by endlessly circling the same few streets, while an older generation of local gents has parked itself permanently at the petrol station café. The only mystery that seems unsolved: where have all the women gone?" }),
+          synopsis: t(
+            "Puolanka, pieni kylä Pohjois-Suomessa, on kuuluisa väestökadostaan – ja sitä koskevasta mustasta huumoristaan. Teinipojat juhlivat tuoreita ajokorttejaan kiertämällä loputtomasti samoja katuja, kun taas paikallisten herrojen vanhempi polvi on pysäköinyt itsensä pysyvästi huoltoaseman kahvilaan. Yksi mysteeri näyttää jäävän ratkaisematta: minne kaikki naiset ovat kadonneet?",
+            "Puolanka, a tiny village in Northern Finland, is famous for its population decline — and for its dark sense of humor about it. Teenage boys celebrate their new driver's licences by endlessly circling the same few streets, while an older generation of local gents has parked itself permanently at the petrol station café. The only mystery that seems unsolved: where have all the women gone?",
+            "Puolanka, en liten by i norra Finland, är känd för sin befolkningsminskning – och för sin svarta humor kring den. Tonårspojkar firar sina färska körkort genom att i det oändliga cirkla runt samma få gator, medan en äldre generation lokala herrar har parkerat sig permanent på bensinstationens kafé. Det enda mysteriet som verkar olöst: vart har alla kvinnor tagit vägen?"
+          ) }),
         sf({ title: "Broken Down",
           orig: "De Nedbrutna",
           co: ["SE", "DK"], year: "2025", len: "15 min", age: "12",
           warn: ["ahdistus"],
           director: "Victor Cornelius",
-          synopsis: "On a ridiculously long and straight road in the middle of nowhere, a couple's car breaks down. As they wait for roadside assistance, their true selves are unmasked, leading to a breakdown of an entirely different kind." }),
+          synopsis: t(
+            "Naurettavan pitkällä ja suoralla tiellä keskellä ei-mitään pariskunnan auto hajoaa. Tiepalvelua odotellessa heidän todelliset minänsä paljastuvat, ja edessä on aivan toisenlainen romahdus.",
+            "On a ridiculously long and straight road in the middle of nowhere, a couple's car breaks down. As they wait for roadside assistance, their true selves are unmasked, leading to a breakdown of an entirely different kind.",
+            "På en löjligt lång och rak väg mitt i ingenstans går ett pars bil sönder. Medan de väntar på vägassistans avslöjas deras sanna jag, vilket leder till ett haveri av ett helt annat slag."
+          ) }),
         sf({ title: "Gravity Racer",
           co: ["NO"], year: "2025", len: "5 min", age: "S",
           director: "Finn Walther",
-          synopsis: "A fearless four-year-old sets out to conquer the steepest hill in town with his homemade Gravity Racer, but as bravery meets gravity, he's faced with the consequences of his decision." }),
+          synopsis: t(
+            "Peloton nelivuotias lähtee valloittamaan kaupungin jyrkintä mäkeä itse rakentamallaan mäkiautolla, mutta kun rohkeus kohtaa painovoiman, hän joutuu kohtaamaan päätöksensä seuraukset.",
+            "A fearless four-year-old sets out to conquer the steepest hill in town with his homemade Gravity Racer, but as bravery meets gravity, he's faced with the consequences of his decision.",
+            "En orädd fyraåring ger sig ut för att erövra stadens brantaste backe med sin hemmabyggda lådbil, men när mod möter gravitation ställs han inför följderna av sitt beslut."
+          ) }),
         sf({ title: "Fiddler's Green",
           orig: "Matkalla sukulaisten luo Haminaan",
           co: ["FI"], year: "2025", len: "11 min", age: "S",
           director: "Juha Koiranen",
-          synopsis: "A couple travelling to visit relatives — like we all, sooner or later." }),
+          synopsis: t(
+            "Pariskunta matkalla sukulaisten luo – kuten me kaikki, ennemmin tai myöhemmin.",
+            "A couple travelling to visit relatives — like we all, sooner or later.",
+            "Ett par på väg för att besöka släktingar – som vi alla, förr eller senare."
+          ) }),
         sf({ title: "Respite",
           co: ["NO"], year: "2026", len: "17 min", age: "7",
           warn: ["ahdistus"],
           director: "Mads Toft Hansen, Alma-Oline Weitling",
-          synopsis: "A young Danish man travels to Norway to clear out the house of his late mother, confronting the remains and the place. As he moves through unfamiliar surroundings, the film unfolds a story about family tensions, loss and belonging." }),
+          synopsis: t(
+            "Nuori tanskalaismies matkustaa Norjaan tyhjentämään edesmenneen äitinsä taloa ja kohtaa sekä jäämistön että paikan. Kun hän liikkuu vieraassa ympäristössä, elokuva avaa tarinan perheen jännitteistä, menetyksestä ja kuulumisesta.",
+            "A young Danish man travels to Norway to clear out the house of his late mother, confronting the remains and the place. As he moves through unfamiliar surroundings, the film unfolds a story about family tensions, loss and belonging.",
+            "En ung dansk man reser till Norge för att tömma sin bortgångna mors hus och konfronteras med både kvarlåtenskapen och platsen. Medan han rör sig i främmande omgivningar vecklar filmen ut en berättelse om spänningar i familjen, förlust och tillhörighet."
+          ) }),
         sf({ title: "I should be there, but I'm here",
           orig: "Mun pitää olla tuol ja mä oon tässä",
           co: ["FI"], year: "2025", len: "7 min", age: "S",
           director: "Oona Julia Pennanen",
-          synopsis: "Voice messages about being late. The hurrying figures battle against time. Some make it, while others must accept the closed gates." }),
+          synopsis: t(
+            "Ääniviestejä myöhästymisestä. Kiiruhtavat hahmot taistelevat aikaa vastaan. Osa ehtii perille, toisten on hyväksyttävä sulkeutuneet portit.",
+            "Voice messages about being late. The hurrying figures battle against time. Some make it, while others must accept the closed gates.",
+            "Röstmeddelanden om att vara sen. De skyndande gestalterna kämpar mot tiden. Några hinner fram, medan andra får acceptera de stängda grindarna."
+          ) }),
         sf({ title: "The Beauty of Automobiles",
           orig: "Puskee veemäiseen paikkaan",
           co: ["FI"], year: "2026", len: "6 min", age: "S",
           director: "Jukka Kärkkäinen",
-          synopsis: "Intimate moment between a father and son — one night, one car ride, one problem." }),
+          synopsis: t(
+            "Intiimi hetki isän ja pojan välillä – yksi yö, yksi automatka, yksi ongelma.",
+            "Intimate moment between a father and son — one night, one car ride, one problem.",
+            "Ett intimt ögonblick mellan far och son – en natt, en bilfärd, ett problem."
+          ) }),
       ],
     }),
     shortBlock({
@@ -869,35 +941,59 @@ export const buildCatalog = (locale) => {
           co: ["DK"], year: "2025", len: "11 min", age: "16",
           warn: ["ahdistus"],
           director: "Selma Sunniva",
-          synopsis: "While the bombs are falling in a war-torn Copenhagen, the harpist David is practicing scales in his barricaded apartment. He believes in art, not war." }),
+          synopsis: t(
+            "Kun pommit putoavat sodan runtelemassa Kööpenhaminassa, harpisti David harjoittelee asteikkoja barrikadoidussa asunnossaan. Hän uskoo taiteeseen, ei sotaan.",
+            "While the bombs are falling in a war-torn Copenhagen, the harpist David is practicing scales in his barricaded apartment. He believes in art, not war.",
+            "Medan bomberna faller över ett krigshärjat Köpenhamn övar harpisten David skalor i sin barrikaderade lägenhet. Han tror på konsten, inte på kriget."
+          ) }),
         sf({ title: "28 Days Left",
           orig: "Tj28",
           co: ["FI"], year: "2026", len: "20 min", age: "16",
           warn: ["ahdistus", "vakivalta"],
           director: "Yasmin Najjar",
-          synopsis: "A Finnish-Palestinian woman, Amani Lillak, is completing her voluntary military service in the Finnish Army's medical corps. During a final combat exercise, she learns that the crisis in her father's homeland has further escalated, while tensions within the medical corps reach breaking point." }),
+          synopsis: t(
+            "Suomalais-palestiinalainen Amani Lillak suorittaa vapaaehtoista asepalvelustaan Suomen armeijan lääkintäjoukoissa. Viimeisen taisteluharjoituksen aikana hän saa tietää, että kriisi hänen isänsä kotimaassa on kärjistynyt entisestään, samalla kun jännitteet lääkintäjoukkueen sisällä kiristyvät äärimmilleen.",
+            "A Finnish-Palestinian woman, Amani Lillak, is completing her voluntary military service in the Finnish Army's medical corps. During a final combat exercise, she learns that the crisis in her father's homeland has further escalated, while tensions within the medical corps reach breaking point.",
+            "Den finsk-palestinska kvinnan Amani Lillak fullgör sin frivilliga militärtjänst i finska arméns sjukvårdstrupper. Under en sista stridsövning får hon veta att krisen i hennes fars hemland har eskalerat ytterligare, samtidigt som spänningarna inom sjukvårdstruppen når bristningsgränsen."
+          ) }),
         sf({ title: "Equal Dust",
           orig: "Elämä ja yö",
           co: ["FI"], year: "2025", len: "14 min", age: "12",
           warn: ["ahdistus"],
           director: "Jani Peltonen",
-          synopsis: "In November 1983, a camera test was filmed in Helsinki: a 12-minute uninterrupted tracking shot through a nocturnal cityscape. At the same time, NATO's Able Archer 83 exercise is underway in Europe — a scenario of how a nuclear war is believed to begin. The film intervenes in that scenario and turns the camera test into a cinematic land survey of the imagined destruction." }),
+          synopsis: t(
+            "Marraskuussa 1983 Helsingissä kuvattiin kameratesti: 12 minuutin yhtäjaksoinen ajo halki öisen kaupunkimaiseman. Samaan aikaan Euroopassa on käynnissä Naton Able Archer 83 -harjoitus – skenaario siitä, miten ydinsodan uskotaan alkavan. Elokuva puuttuu tuohon skenaarioon ja muuttaa kameratestin elokuvalliseksi maastonmittaukseksi kuvitellusta tuhosta.",
+            "In November 1983, a camera test was filmed in Helsinki: a 12-minute uninterrupted tracking shot through a nocturnal cityscape. At the same time, NATO's Able Archer 83 exercise is underway in Europe — a scenario of how a nuclear war is believed to begin. The film intervenes in that scenario and turns the camera test into a cinematic land survey of the imagined destruction.",
+            "I november 1983 filmades ett kameratest i Helsingfors: en tolv minuter lång oavbruten åkning genom ett nattligt stadslandskap. Samtidigt pågår Natos övning Able Archer 83 i Europa – ett scenario för hur ett kärnvapenkrig tros börja. Filmen ingriper i det scenariot och förvandlar kameratestet till en filmisk lantmätning av den föreställda förstörelsen."
+          ) }),
         sf({ title: "175",
           co: ["SE"], year: "2025", len: "11 min", age: "16",
           warn: ["ahdistus", "vakivalta"],
           director: "Sepehr Nosrati",
-          synopsis: "Two revolutionaries kidnap the child of a Swedish politician to prevent a vote on a draconian law that would allow the state to strip people of their citizenship. When the police arrive at the Persian restaurant where the kid is being held, the situation begins to spiral out of control." }),
+          synopsis: t(
+            "Kaksi vallankumouksellista sieppaa ruotsalaispoliitikon lapsen estääkseen äänestyksen ankarasta laista, joka sallisi valtion riistää ihmisiltä kansalaisuuden. Kun poliisi saapuu persialaiseen ravintolaan, jossa lasta pidetään, tilanne alkaa riistäytyä käsistä.",
+            "Two revolutionaries kidnap the child of a Swedish politician to prevent a vote on a draconian law that would allow the state to strip people of their citizenship. When the police arrive at the Persian restaurant where the kid is being held, the situation begins to spiral out of control.",
+            "Två revolutionärer kidnappar en svensk politikers barn för att förhindra en omröstning om en drakonisk lag som skulle låta staten frånta människor deras medborgarskap. När polisen anländer till den persiska restaurang där barnet hålls börjar situationen spinna ur kontroll."
+          ) }),
         sf({ title: "Fear Fokol",
           co: ["ZA", "SE"], year: "2025", len: "15 min", age: "12",
           warn: ["vakivalta"],
           director: "Tuva Björk",
-          synopsis: "A nightly ride into the fears and anxieties of Johannesburg's wealthy inhabitants, following the work of the private security guards hired to protect them. The illusion of security slowly dissolves as we dig into a fragile climate of inequality, paranoia and masculinity in crisis." }),
+          synopsis: t(
+            "Öinen matka Johannesburgin varakkaiden asukkaiden pelkoihin ja ahdistuksiin, heitä suojelemaan palkattujen yksityisten vartijoiden työtä seuraten. Turvallisuuden illuusio liukenee hitaasti, kun kaivaudumme eriarvoisuuden, vainoharhan ja kriisissä olevan maskuliinisuuden hauraaseen ilmapiiriin.",
+            "A nightly ride into the fears and anxieties of Johannesburg's wealthy inhabitants, following the work of the private security guards hired to protect them. The illusion of security slowly dissolves as we dig into a fragile climate of inequality, paranoia and masculinity in crisis.",
+            "En nattlig färd in i Johannesburgs välbärgade invånares rädslor och oro, i spåren av de privata säkerhetsvakter som anlitats för att skydda dem. Illusionen av trygghet löses långsamt upp när vi gräver i ett skört klimat av ojämlikhet, paranoia och maskulinitet i kris."
+          ) }),
         sf({ title: "Borderline",
           orig: "På Grensa",
           co: ["FI", "NO", "SE"], year: "2025", len: "12 min", age: "7",
           warn: ["vakivalta"],
           director: "Johannes Vang",
-          synopsis: "A Norwegian customs officer, a Finnish poacher and a mysterious Swedish woman meet at the border between their homelands, becoming entangled in a conflict over laws, language and prejudice." }),
+          synopsis: t(
+            "Norjalainen tullivirkailija, suomalainen salametsästäjä ja salaperäinen ruotsalaisnainen kohtaavat kotimaidensa rajalla ja sotkeutuvat kiistaan laeista, kielestä ja ennakkoluuloista.",
+            "A Norwegian customs officer, a Finnish poacher and a mysterious Swedish woman meet at the border between their homelands, becoming entangled in a conflict over laws, language and prejudice.",
+            "En norsk tulltjänsteman, en finsk tjuvjägare och en mystisk svensk kvinna möts vid gränsen mellan sina hemländer och trasslar in sig i en konflikt om lagar, språk och fördomar."
+          ) }),
       ],
     }),
     shortBlock({
@@ -924,32 +1020,56 @@ export const buildCatalog = (locale) => {
           co: ["SE"], year: "2025", len: "14 min", age: "12",
           warn: ["ahdistus"],
           director: "Clara Vida",
-          synopsis: "A man living in a caravan, a woman in social services, and a boy without kidneys. Three fragmented individuals, once a unit, reunite in a beautiful, melancholic and raw confrontation with a family that no longer exists." }),
+          synopsis: t(
+            "Asuntovaunussa asuva mies, sosiaalihuollon piirissä oleva nainen ja poika ilman munuaisia. Kolme sirpaloitunutta ihmistä, jotka joskus olivat yhtä, kohtaavat jälleen kauniissa, melankolisessa ja rosoisessa yhteenotossa perheen kanssa, jota ei enää ole.",
+            "A man living in a caravan, a woman in social services, and a boy without kidneys. Three fragmented individuals, once a unit, reunite in a beautiful, melancholic and raw confrontation with a family that no longer exists.",
+            "En man som bor i husvagn, en kvinna inom socialtjänsten och en pojke utan njurar. Tre splittrade individer, en gång en enhet, återförenas i en vacker, melankolisk och rå konfrontation med en familj som inte längre finns."
+          ) }),
         sf({ title: "Baby Blues",
           co: ["NO"], year: "2025", len: "10 min", age: "S",
           director: "Helen Komini Knudsen",
-          synopsis: "Sleep-deprived new mom Marte embarks on her very first walk alone with her three-week-old daughter. The goal seems simple — a latte at a café and a brief moment of feeling normal. But along the way, small and large incidents turn into potential threats she must avoid to keep the baby asleep." }),
+          synopsis: t(
+            "Univajeinen tuore äiti Marte lähtee ensimmäiselle kävelylleen kahdestaan kolmeviikkoisen tyttärensä kanssa. Tavoite vaikuttaa yksinkertaiselta – latte kahvilassa ja lyhyt hetki normaaliuden tunnetta. Mutta matkan varrella pienet ja suuret sattumukset muuttuvat mahdollisiksi uhiksi, joita hänen on väisteltävä pitääkseen vauvan unessa.",
+            "Sleep-deprived new mom Marte embarks on her very first walk alone with her three-week-old daughter. The goal seems simple — a latte at a café and a brief moment of feeling normal. But along the way, small and large incidents turn into potential threats she must avoid to keep the baby asleep.",
+            "Den sömnlösa nyblivna mamman Marte ger sig ut på sin allra första promenad ensam med sin tre veckor gamla dotter. Målet verkar enkelt – en latte på ett kafé och en kort stund av att känna sig normal. Men längs vägen förvandlas små och stora händelser till potentiella hot som hon måste undvika för att hålla bebisen sovande."
+          ) }),
         sf({ title: "Without Kelly",
           co: ["SE"], year: "2025", len: "15 min", age: "16",
           warn: ["seksi"],
           director: "Lovisa Sirén",
-          synopsis: "Forced to leave her baby daughter with the child's father, young mother Esther is caught in desperation and longing. Through the night she chases touch and comfort, seeking ways to hold on to who she loves the most." }),
+          synopsis: t(
+            "Nuori äiti Esther joutuu jättämään vauvaikäisen tyttärensä lapsen isälle ja jää epätoivon ja kaipauksen valtaan. Läpi yön hän etsii kosketusta ja lohtua – tapoja pitää kiinni siitä, jota rakastaa eniten.",
+            "Forced to leave her baby daughter with the child's father, young mother Esther is caught in desperation and longing. Through the night she chases touch and comfort, seeking ways to hold on to who she loves the most.",
+            "Tvingad att lämna sin lilla dotter hos barnets far fångas den unga mamman Esther i desperation och längtan. Genom natten jagar hon beröring och tröst och söker sätt att hålla fast vid den hon älskar mest."
+          ) }),
         sf({ title: "A Part Unwritten",
           orig: "Vuorosanat",
           co: ["FI"], year: "2025", len: "18 min", age: "7",
           warn: ["ahdistus"],
           director: "Arman Zafari",
-          synopsis: "Niina, a struggling drama teacher, receives an unusual request from her boss: to deliver a eulogy at his father's funeral in his place. Desperate for an opportunity to perform, she finds herself considering the absurd proposition." }),
+          synopsis: t(
+            "Niina, vaikeuksissa kamppaileva draamanopettaja, saa pomoltaan epätavallisen pyynnön: pitää muistopuhe tämän isän hautajaisissa hänen sijastaan. Esiintymismahdollisuutta epätoivoisesti kaipaava Niina huomaa harkitsevansa absurdia ehdotusta.",
+            "Niina, a struggling drama teacher, receives an unusual request from her boss: to deliver a eulogy at his father's funeral in his place. Desperate for an opportunity to perform, she finds herself considering the absurd proposition.",
+            "Niina, en kämpande dramalärare, får en ovanlig förfrågan av sin chef: att hålla minnestalet på hans fars begravning i hans ställe. Desperat efter en chans att uppträda kommer hon på sig själv med att överväga det absurda förslaget."
+          ) }),
         sf({ title: "SON",
           co: ["SE"], year: "2025", len: "13 min", age: "12",
           warn: ["ahdistus"],
           director: "Leona Cauklija",
-          synopsis: "A mother sees her homeless son's tags wherever she goes. She interprets his signatures as signals to her and wants to respond. She starts writing SON under his tags. One day, she suddenly gets a reply." }),
+          synopsis: t(
+            "Äiti näkee kodittoman poikansa tagejä kaikkialla, minne meneekin. Hän tulkitsee poikansa signeeraukset viesteiksi itselleen ja haluaa vastata: hän alkaa kirjoittaa tagien alle SON. Eräänä päivänä hän saa yllättäen vastauksen.",
+            "A mother sees her homeless son's tags wherever she goes. She interprets his signatures as signals to her and wants to respond. She starts writing SON under his tags. One day, she suddenly gets a reply.",
+            "En mamma ser sin hemlösa sons tags vart hon än går. Hon tolkar hans signaturer som signaler till henne och vill svara. Hon börjar skriva SON under hans tags. En dag får hon plötsligt ett svar."
+          ) }),
         sf({ title: "Overtime",
           co: ["FI"], year: "2025", len: "11 min", age: "12",
           warn: ["vakivalta"],
           director: "Siiri Halko",
-          synopsis: "Finland prospers, but with a strict rule: citizens must leave at 70. Annastiina Kankaanrinta, a once-powerful politician, played a key role in creating the Lex 70 law. Now at her own 70th birthday, she must face her own state-approved farewell." }),
+          synopsis: t(
+            "Suomi kukoistaa, mutta tiukalla säännöllä: kansalaisten on poistuttava 70-vuotiaina. Annastiina Kankaanrinta, aikanaan mahtava poliitikko, oli avainasemassa Lex 70 -lain synnyssä. Nyt omilla 70-vuotisjuhlillaan hänen on kohdattava omat valtion hyväksymät jäähyväisensä.",
+            "Finland prospers, but with a strict rule: citizens must leave at 70. Annastiina Kankaanrinta, a once-powerful politician, played a key role in creating the Lex 70 law. Now at her own 70th birthday, she must face her own state-approved farewell.",
+            "Finland blomstrar, men med en sträng regel: medborgarna måste lämna vid 70. Annastiina Kankaanrinta, en gång en mäktig politiker, spelade en nyckelroll i skapandet av lagen Lex 70. Nu, på sin egen 70-årsdag, måste hon möta sitt eget statligt godkända farväl."
+          ) }),
       ],
     }),
     shortBlock({
@@ -974,34 +1094,58 @@ export const buildCatalog = (locale) => {
         sf({ title: "KIELO",
           co: ["FI"], year: "2025", len: "4 min", age: "S",
           director: "Janina Rajakangas, Sinem Kayacan",
-          synopsis: "Kielo finds it hard to sit still in class. She takes a break venturing into the corridors of her imagination." }),
+          synopsis: t(
+            "Kielon on vaikea istua paikallaan tunnilla. Hän ottaa tauon ja seikkailee mielikuvituksensa käytävillä.",
+            "Kielo finds it hard to sit still in class. She takes a break venturing into the corridors of her imagination.",
+            "Kielo har svårt att sitta stilla på lektionen. Hon tar en paus och ger sig ut i sin fantasis korridorer."
+          ) }),
         sf({ title: "Major Bag Alert",
           co: ["FI"], year: "2026", len: "15 min", age: "12",
           warn: ["paihteet"],
           director: "Viljami Penttilä",
-          synopsis: "2005. Gossip around the school is that 16-year-old Janina's family is having serious financial troubles. Janina and her group of friends plan to prove the rumours wrong by stealing an expensive handbag from the neighbourhood shopping centre." }),
+          synopsis: t(
+            "Vuosi 2005. Koulussa juoruillaan, että 16-vuotiaan Janinan perheellä on vakavia rahavaikeuksia. Janina ja hänen kaveriporukkansa aikovat todistaa huhut vääriksi varastamalla kalliin käsilaukun lähiön ostoskeskuksesta.",
+            "2005. Gossip around the school is that 16-year-old Janina's family is having serious financial troubles. Janina and her group of friends plan to prove the rumours wrong by stealing an expensive handbag from the neighbourhood shopping centre.",
+            "2005. Skvallret i skolan säger att 16-åriga Janinas familj har allvarliga ekonomiska problem. Janina och hennes kompisgäng planerar att motbevisa ryktena genom att stjäla en dyr handväska från köpcentret i grannskapet."
+          ) }),
         sf({ title: "Invisible",
           orig: "Det Osynliga",
           co: ["SE"], year: "2025", len: "10 min", age: "7",
           warn: ["ahdistus", "vakivalta"],
           director: "Malak Alamari",
-          synopsis: "Adrian and Elias are teenage friends who drift around and live in their own world full of adventure and laughter. What starts as a playful friendship quickly changes when Adrian discovers that not everything is as it seems." }),
+          synopsis: t(
+            "Adrian ja Elias ovat teini-ikäisiä ystäviä, jotka kuljeskelevat ja elävät omassa, seikkailua ja naurua täynnä olevassa maailmassaan. Leikkisänä alkanut ystävyys muuttuu nopeasti, kun Adrian huomaa, ettei kaikki ole sitä miltä näyttää.",
+            "Adrian and Elias are teenage friends who drift around and live in their own world full of adventure and laughter. What starts as a playful friendship quickly changes when Adrian discovers that not everything is as it seems.",
+            "Adrian och Elias är tonårsvänner som driver omkring och lever i sin egen värld full av äventyr och skratt. Det som börjar som en lekfull vänskap förändras snabbt när Adrian upptäcker att allt inte är som det verkar."
+          ) }),
         sf({ title: "White Room",
           orig: "Valkoinen huone",
           co: ["FI"], year: "2026", len: "8 min", age: "7",
           warn: ["ahdistus", "vakivalta"],
           director: "Heikki Saikkonen",
-          synopsis: "A person is thrown in a white room straight from birth and has to stay there for the rest of their life." }),
+          synopsis: t(
+            "Ihminen heitetään valkoiseen huoneeseen suoraan syntymästä, ja hänen on pysyttävä siellä loppuelämänsä.",
+            "A person is thrown in a white room straight from birth and has to stay there for the rest of their life.",
+            "En människa kastas in i ett vitt rum direkt från födseln och måste stanna där resten av sitt liv."
+          ) }),
         sf({ title: "Signals",
           orig: "Merki",
           co: ["IS"], year: "2025", len: "14 min", age: "S",
           director: "Rúnar Ingi Einarsson",
-          synopsis: "At her drama school audition, an aspiring young actress must face the emotional turmoil of her grief or else risk not fulfilling her dream." }),
+          synopsis: t(
+            "Teatterikoulun pääsykokeessa nuoren näyttelijänalun on kohdattava surunsa tunnemyrsky – tai muuten hän on vaarassa jäädä ilman unelmaansa.",
+            "At her drama school audition, an aspiring young actress must face the emotional turmoil of her grief or else risk not fulfilling her dream.",
+            "Vid sin audition till teaterskolan måste en ung blivande skådespelerska möta sin sorgs känslostorm – annars riskerar hon att inte förverkliga sin dröm."
+          ) }),
         sf({ title: "Em assumes death",
           co: ["DK"], year: "2024", len: "30 min", age: "12",
           warn: ["ahdistus"],
           director: "Jacob Schill",
-          synopsis: "Em is drowning in a river. This 18-year-old loner has watched hundreds of hours of content on the Law of Assumption: a popular belief of a new online spirituality that everything you assume will be manifested into reality. Em tries to realize this Law, but his confrontation with Death is unusual." }),
+          synopsis: t(
+            "Em on hukkumassa jokeen. Tämä 18-vuotias yksinäinen on katsonut satoja tunteja sisältöä Law of Assumptionista: uuden verkkohenkisyyden suositusta uskomuksesta, jonka mukaan kaikki, minkä oletat, manifestoituu todeksi. Em yrittää toteuttaa tätä lakia, mutta hänen kohtaamisensa Kuoleman kanssa on epätavallinen.",
+            "Em is drowning in a river. This 18-year-old loner has watched hundreds of hours of content on the Law of Assumption: a popular belief of a new online spirituality that everything you assume will be manifested into reality. Em tries to realize this Law, but his confrontation with Death is unusual.",
+            "Em håller på att drunkna i en flod. Denna 18-åriga ensamvarg har sett hundratals timmar av innehåll om Law of Assumption: en populär föreställning inom en ny nätspiritualitet om att allt du antar kommer att manifesteras i verkligheten. Em försöker förverkliga denna lag, men hans möte med Döden är ovanligt."
+          ) }),
       ],
     }),
     shortBlock({
@@ -1027,29 +1171,49 @@ export const buildCatalog = (locale) => {
           co: ["SE"], year: "2025", len: "23 min", age: "7",
           warn: ["ahdistus"],
           director: "Christofer Nilsson",
-          synopsis: "A psychic medium has his grand seance interrupted as an audience member refuses to let him end the show without getting to speak to her deceased ex-husband." }),
+          synopsis: t(
+            "Meedion suuri spiritistinen istunto keskeytyy, kun yleisön jäsen ei suostu antamaan hänen lopettaa esitystä, ennen kuin pääsee puhumaan edesmenneelle ex-miehelleen.",
+            "A psychic medium has his grand seance interrupted as an audience member refuses to let him end the show without getting to speak to her deceased ex-husband.",
+            "Ett mediums stora seans avbryts när en person i publiken vägrar låta honom avsluta föreställningen innan hon fått tala med sin avlidne exman."
+          ) }),
         sf({ title: "Astro TV",
           co: ["FI"], year: "2025", len: "29 min", age: "S",
           director: "Magdaleena Jakkila",
-          synopsis: "TV astrologer Sigrid guides people through sleepless nights, but one caller seems worrying. Can Sigrid help them before Jupiter and Pluto align?" }),
+          synopsis: t(
+            "TV-astrologi Sigrid luotsaa ihmisiä unettomien öiden läpi, mutta yksi soittaja vaikuttaa huolestuttavalta. Ehtiikö Sigrid auttaa, ennen kuin Jupiter ja Pluto asettuvat linjaan?",
+            "TV astrologer Sigrid guides people through sleepless nights, but one caller seems worrying. Can Sigrid help them before Jupiter and Pluto align?",
+            "TV-astrologen Sigrid lotsar människor genom sömnlösa nätter, men en inringare verkar oroväckande. Hinner Sigrid hjälpa innan Jupiter och Pluto står i linje?"
+          ) }),
         sf({ title: "Am I calling you at a bad time?",
           orig: "En kai huonoon aikaan soittele?",
           co: ["FI"], year: "2025", len: "15 min", age: "16",
           warn: ["seksi"],
           director: "Martta Tuomaala",
-          synopsis: "X is growing up in the 1990s. As a child she makes prank calls and gets her first job in telemarketing as a teenager. Office smells, heavy breathers and meaningless greetings follow her from one workplace to another." }),
+          synopsis: t(
+            "X kasvaa 1990-luvulla. Lapsena hän soittelee pilapuheluita ja saa teininä ensimmäisen työpaikkansa puhelinmyynnistä. Toimistojen hajut, puhelinhengittäjät ja merkityksettömät tervehdykset seuraavat häntä työpaikasta toiseen.",
+            "X is growing up in the 1990s. As a child she makes prank calls and gets her first job in telemarketing as a teenager. Office smells, heavy breathers and meaningless greetings follow her from one workplace to another.",
+            "X växer upp på 1990-talet. Som barn ringer hon busringningar och som tonåring får hon sitt första jobb inom telefonförsäljning. Kontorslukter, tunga andetag i luren och meningslösa hälsningsfraser följer henne från en arbetsplats till en annan."
+          ) }),
         sf({ title: "Smokebreak",
           orig: "Sígópása",
           co: ["IS"], year: "2026", len: "2 min", age: "12",
           warn: ["paihteet"],
           director: "Rakel Andrésdóttir",
-          synopsis: "A woman working at a fish and chips stand meets a fish during her smoke break and decides to go on an adventure with him." }),
+          synopsis: t(
+            "Fish and chips -kojulla työskentelevä nainen tapaa tupakkatauollaan kalan ja päättää lähteä tämän kanssa seikkailulle.",
+            "A woman working at a fish and chips stand meets a fish during her smoke break and decides to go on an adventure with him.",
+            "En kvinna som jobbar vid ett fish and chips-stånd träffar en fisk under sin rökpaus och bestämmer sig för att ge sig ut på äventyr med honom."
+          ) }),
         sf({ title: "Spermatheca",
           orig: "Spermateket",
           co: ["NO"], year: "2025", len: "19 min", age: "7",
           warn: ["vakivalta"],
           director: "Silje Baer",
-          synopsis: "The workers at the Spermatheca are struggling with their motivation, and when Pontius makes an unusual discovery, everyday life at the station begins to shift. All the while, department head Morten is daydreaming about far away." }),
+          synopsis: t(
+            "Spermatekan työntekijät kamppailevat motivaationsa kanssa, ja kun Pontius tekee epätavallisen löydön, aseman arki alkaa muuttua. Samaan aikaan osastopäällikkö Morten haaveilee kaukomaista.",
+            "The workers at the Spermatheca are struggling with their motivation, and when Pontius makes an unusual discovery, everyday life at the station begins to shift. All the while, department head Morten is daydreaming about far away.",
+            "Arbetarna på Spermateket kämpar med motivationen, och när Pontius gör en ovanlig upptäckt börjar vardagen på stationen förändras. Under tiden dagdrömmer avdelningschefen Morten om fjärran platser."
+          ) }),
       ],
     }),
     shortBlock({

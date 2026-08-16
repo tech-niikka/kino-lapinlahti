@@ -3,6 +3,29 @@ import React, { useState } from "react";
 // Festivaalin näyttämöt: kuva, osoite, karttalinkki ja käytännön tiedot.
 // Osiot avautuvat klikkaamalla, jotta pitkät esteettömyystekstit eivät
 // hukuta sivua — ensimmäinen paikka on auki oletuksena.
+
+// Leipäteksti voi sisältää [teksti](url)-muotoisia linkkejä, jotka
+// renderöidään tekstin sisään (esim. turvallisemman tilan periaatteet)
+const renderBody = (text) =>
+  String(text)
+    .split(/(\[[^\]]+\]\([^)]+\))/g)
+    .map((part, i) => {
+      const m = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+      return m ? (
+        <a
+          key={i}
+          href={m[2]}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-semibold underline hover:no-underline"
+        >
+          {m[1]}
+        </a>
+      ) : (
+        part
+      );
+    });
+
 function Venues({ data }) {
   const venues = data?.venues ?? [];
   const [openId, setOpenId] = useState(venues[0]?.id ?? null);
@@ -62,7 +85,7 @@ function Venues({ data }) {
                           {section.heading}
                         </h3>
                         <p className="whitespace-pre-line leading-7">
-                          {section.body}
+                          {renderBody(section.body)}
                         </p>
                       </div>
                     ))}

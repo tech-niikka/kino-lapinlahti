@@ -222,6 +222,11 @@ const contactsByLocale = {
       title: "Vapaaehtoiskoordinaattori",
       email: "iikka.lipponen@kinolapinlahti.fi",
     },
+    {
+      name: "Häirintäyhdyshenkilö",
+      title: "ma–su",
+      phone: "+358 40 042 1955",
+    },
   ],
   "en-US": [
     {
@@ -269,6 +274,11 @@ const contactsByLocale = {
       title: "Volunteer Coordinator",
       email: "iikka.lipponen@kinolapinlahti.fi",
     },
+    {
+      name: "Harassment contact person",
+      title: "Mon–Sun",
+      phone: "+358 40 042 1955",
+    },
   ],
   sv: [
     {
@@ -315,6 +325,11 @@ const contactsByLocale = {
       name: "Iikka Lipponen",
       title: "Frivilligkoordinator",
       email: "iikka.lipponen@kinolapinlahti.fi",
+    },
+    {
+      name: "Kontaktperson vid trakasserier",
+      title: "mån–sön",
+      phone: "+358 40 042 1955",
     },
   ],
 };
@@ -568,7 +583,7 @@ const en = {
   footer: [
     {
       fields: {
-        logos: [],
+        logos: sponsorLogos,
         address: "Lapinlahdenpolku 8, 00180 Helsinki, Finland",
         emailAddress: "kinolapinlahti@gmail.com",
         privacyNotice: "Privacy notice",

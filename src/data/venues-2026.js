@@ -1,5 +1,7 @@
 // Festivaalin näyttämöt ja niiden käytännön tiedot (saapuminen, esteettömyys,
-// katsomon kapasiteetti). Tekstit tuotannolta 31.7.2026, kolmella kielellä.
+// katsomon kapasiteetti). Tekstit tuotannolta 16.8.2026 ("Sijaintien
+// päivitykset" -docs), kolmella kielellä. Leipätekstin [teksti](url)-linkit
+// renderöidään tekstin sisään (Venues.jsx renderBody).
 
 import imgLasipalatsi from "../assets/venues/lasipalatsi.jpg";
 import imgOodi from "../assets/venues/oodi.jpg";
@@ -25,6 +27,13 @@ export const buildVenues = (locale) => {
   const t = (fi, en, sv) => (isSv ? sv ?? en ?? fi : isEn ? en : fi);
 
   const mapLabel = t("Näytä kartalla", "View on map", "Visa på kartan");
+
+  // "Sitoudumme turvallisemman tilan periaatteisiin" — linkki tekstin sisällä
+  const saferSpaceSentence = t(
+    `Sitoudumme [turvallisemman tilan periaatteisiin](${SAFER_SPACE}).`,
+    `We are committed to [safer space principles](${SAFER_SPACE}).`,
+    `Vi förbinder oss till [principerna för tryggare rum](${SAFER_SPACE}).`
+  );
 
   return {
     title: t("Paikat", "Venues", "Platser"),
@@ -58,17 +67,37 @@ export const buildVenues = (locale) => {
               "Drogfritt evenemang"
             ),
             body: t(
-              "Muistathan, että elokuvasalissa ja koko festivaalialueella alkoholin, tupakan tai muiden päihteiden käyttö on kielletty. Olethan lempeä sekä itsellesi että muille. Lämmin kiitos!",
-              "Please note that the use of alcohol, tobacco and other intoxicants is prohibited in the auditorium and throughout the festival area. We kindly ask you to be gentle with yourself and with others. Thank you!",
-              "Observera att användning av alkohol, tobak och andra berusningsmedel är förbjuden i salongen och på hela festivalområdet. Vi ber dig att vara omtänksam både mot dig själv och mot andra. Stort tack!"
+              `Muistathan, että elokuvasalissa ja koko festivaalialueella alkoholin, tupakan tai muiden päihteiden käyttö on kielletty. ${saferSpaceSentence} Olethan lempeä sekä itsellesi että muille. Lämmin kiitos!`,
+              `Please note that the use of alcohol, tobacco and other intoxicants is prohibited in the auditorium and throughout the festival area. ${saferSpaceSentence} We kindly ask you to be gentle with yourself and with others. Thank you!`,
+              `Observera att användning av alkohol, tobak och andra berusningsmedel är förbjuden i salongen och på hela festivalområdet. ${saferSpaceSentence} Vi ber dig att vara omtänksam både mot dig själv och mot andra. Stort tack!`
             ),
           },
           {
-            heading: t("Sisäänkäynti", "Entrance", "Ingång"),
+            heading: t("Sijainti", "Location", "Plats"),
             body: t(
               "Kino Regina sijaitsee Helsingin keskustakirjasto Oodin tiloissa. Sisäänkäynnit teatteriin ovat Oodin sisäänkäyntejä, jotka ovat kaikki esteettömiä, kynnyksettömiä ja varustettu sähköisesti avautuvilla ovilla sekä äänimajakoin. Oodin sisäänkäynnit sijaitsevat Kansalaistorilla, Eero Erkon kadulla sekä Töölönlahdenkadulla.\n\nKirjaston ollessa suljettuna Kino Reginan sisäänkäyntinä toimii rakennuksen pohjoispäädyn ovi (Töölönlahdenkatu 4).",
               "Kino Regina is located inside the Helsinki Central Library Oodi. The entrances to the cinema are the same as the entrances to Oodi, all of which are accessible, step-free, equipped with automatic doors, and fitted with audio beacons. Oodi can be entered from Kansalaistori Square, Eero Erko Street, and Töölönlahdenkatu.\n\nWhen the library is closed, Kino Regina can be accessed through the entrance at the northern end of the building (Töölönlahdenkatu 4).",
               "Kino Regina ligger i Helsingfors centrumbibliotek Ode. Ingångarna till biografen är desamma som till Ode. Samtliga är tillgängliga, tröskelfria, utrustade med automatiska dörrar och ljudfyrar. Ingångar finns från Medborgartorget, Eero Erkos gata och Tölöviksgatan.\n\nNär biblioteket är stängt sker entrén till Kino Regina via ingången vid byggnadens norra gavel (Tölöviksgatan 4)."
+            ),
+          },
+          {
+            heading: t("Saapuminen", "Arrival", "Ankomst"),
+            body: t(
+              "Keskustakirjasto Oodi sijaitsee Helsingin keskustassa Kansalaistorilla, Eduskuntataloa vastapäätä, Rautatieaseman välittömässä läheisyydessä. Pääset Oodiin julkisilla liikennevälineillä helposti mistä tahansa pääkaupunkiseudulta.\n\nMetro: Rautatientorin pysäkki\nRaitiovaunu: Kaivokadun pysäkki, linjat 3, 5, 7, 6 ja 9; Lasipalatsin pysäkki, linjat 1, 2, 4 ja 10\nBussi: Rautatientori, Elielinaukion pysäkki\nJuna: Rautatieaseman pysäkki",
+              "The Helsinki Central Library Oodi is located in the centre of Helsinki on Kansalaistori Square, opposite the Parliament House and right next to the Central Railway Station. Oodi is easy to reach by public transport from anywhere in the Helsinki metropolitan area.\n\nMetro: Rautatientori stop\nTram: Kaivokatu stop, lines 3, 5, 7, 6 and 9; Lasipalatsi stop, lines 1, 2, 4 and 10\nBus: Rautatientori and Elielinaukio stops\nTrain: Central Railway Station",
+              "Centrumbiblioteket Ode ligger i centrala Helsingfors vid Medborgartorget, mittemot Riksdagshuset och alldeles intill Järnvägsstationen. Du når Ode enkelt med kollektivtrafik från hela huvudstadsregionen.\n\nMetro: hållplats Järnvägstorget\nSpårvagn: hållplats Kaivokatu, linjerna 3, 5, 7, 6 och 9; hållplats Glaspalatset, linjerna 1, 2, 4 och 10\nBuss: hållplatserna Järnvägstorget och Elielplatsen\nTåg: Järnvägsstationen"
+            ),
+          },
+          {
+            heading: t(
+              "Pyöräillen Oodiin",
+              "By bike to Oodi",
+              "Med cykel till Ode"
+            ),
+            body: t(
+              "Kevyen liikenteen väylä Baana kulkee Ruoholahdesta Kiasmalle, ihan Oodin naapuriin. Pohjois-Helsingistä pääsee Oodiin kätevästi keskuspuistoa ja Töölönlahden reunaa pitkin. Polkupyörätelineitä löytyy kaikkien kolmen sisäänkäynnin luota ja lähin kaupunkipyöräasema sijaitsee vieressä aivan junaradan tuntumassa.",
+              "The Baana pedestrian and cycling corridor runs from Ruoholahti to Kiasma, right next to Oodi. From northern Helsinki you can reach Oodi conveniently via the Central Park and along Töölönlahti Bay. Bicycle racks can be found by all three entrances, and the nearest city bike station is right next door, by the railway tracks.",
+              "Cykel- och gångleden Baana löper från Gräsviken till Kiasma, alldeles intill Ode. Från norra Helsingfors når du Ode smidigt via Centralparken och längs Tölöviken. Cykelställ finns vid alla tre ingångarna, och närmaste stadscykelstation ligger strax intill, alldeles vid järnvägen."
             ),
           },
           {
@@ -100,16 +129,7 @@ export const buildVenues = (locale) => {
             ),
           },
         ],
-        links: [
-          {
-            href: SAFER_SPACE,
-            label: t(
-              "MYÖS:n turvallisemman tilan periaatteet",
-              "Safer space principles by MYÖS",
-              "Tryggare rum-principer av MYÖS"
-            ),
-          },
-        ],
+        links: [],
       },
       {
         id: "lasipalatsi",
@@ -133,11 +153,35 @@ export const buildVenues = (locale) => {
         ),
         sections: [
           {
+            heading: t(
+              "Päihteetön tapahtuma",
+              "Substance-free event",
+              "Drogfritt evenemang"
+            ),
+            body: t(
+              `Muistathan, että ulkoilmakatsomo on alkoholiton, savuton ja päihteetön alue. ${saferSpaceSentence} Olethan lempeä sekä itsellesi että muille. Lämmin kiitos!`,
+              `Please note that the outdoor cinema is an alcohol-, smoke- and substance-free area. ${saferSpaceSentence} We kindly ask you to be gentle with yourself and with others. Thank you!`,
+              `Observera att utomhusbion är ett alkohol-, rök- och drogfritt område. ${saferSpaceSentence} Vi ber dig att vara omtänksam både mot dig själv och mot andra. Stort tack!`
+            ),
+          },
+          {
+            heading: t(
+              "Sijainti & saapuminen",
+              "Location & arrival",
+              "Plats & ankomst"
+            ),
+            body: t(
+              "Lasipalatsikortteli sijaitsee aivan Helsingin ydinkeskustassa, jossa se rajautuu Simonkadun, Mannerheimintien, Salomonkadun ja Kampin Narinkkatorin keskelle.\n\nLähimmät metropysäkit ovat Kamppi ja Rautatientori, joista molemmista pääsee ylittämättä ruuhkaisia teitä. Lähimmät raitiovaunupysäkit ovat Lasipalatsi sekä Simonkatu.\n\nPyörätelineitä löydät Mannerheimintien varrelta, Simonkadun puolelta ja Lasipalatsin sisäpihalta. Lähin kaupunkipyöräteline on Narinkkatorilla.",
+              "Located in the heart of Helsinki, Lasipalatsi block is bordered by Simonkatu, Mannerheimintie, Salomonkatu and Kamppi.\n\nThe closest metro stations are Kamppi and Central Railway Station, both of which can be reached without crossing busy roads. The nearest tram stops are Lasipalatsi and Simonkatu.\n\nBicycle racks are located along Mannerheimintie, on the Simonkatu side and at Lasipalatsi square. The nearest city bike rack is at Narinkkatori in Kamppi.",
+              "Glaspalatskvarteret ligger mitt i hjärtat av Helsingfors och gränsar till Simonsgatan, Mannerheimvägen, Salomonsgatan och Narinken i Kampen.\n\nDe närmaste tunnelbanestationerna är Kampen och Järnvägstorget, som båda kan nås utan att korsa trafikerade vägar. De närmaste spårvagnshållplatserna är Glaspalatset och Simonsgatan.\n\nCykelställ finns längs Mannerheimvägen, på Simonsgatans sida och på Glaspalatstorget. Närmaste stadscykelställ finns på Narinken."
+            ),
+          },
+          {
             heading: t("Katsomo", "Seating", "Läktaren"),
             body: t(
-              "Lasipalatsin aukiolla on 100 istumapaikkaa, jotka täyttyvät saapumisjärjestyksessä. Ennakkovarauksia ei ole, joten tule ajoissa – tai ota mukaan viltti tai retkituoli ja rakenna oma täydellinen katsomopaikkasi.\n\nUlkoilmakatsomo on alkoholiton, savuton ja päihteetön alue.",
-              "This screening is part of the Lapinlahti Film Festival. Admission is free, and no reservation is required. Around 100 seats are available on a first-come, first-served basis. You are also welcome to bring your own blanket, camping chair, or other seating if you wish.\n\nThe outdoor cinema is an alcohol-, smoke-, and substance-free area.",
-              "Filmvisningen är en del av Lappvikens filmfestival. Fri entré och ingen förhandsbokning behövs. Det finns ca 100 sittplatser som fylls enligt principen först till kvarn. Du är också välkommen att ta med en egen filt, campingstol eller annat sittunderlag.\n\nUtomhusbion är ett alkohol-, rök- och drogfritt område."
+              "Lasipalatsin aukiolla on 100 istumapaikkaa, jotka täyttyvät saapumisjärjestyksessä. Ennakkovarauksia ei ole, joten tule ajoissa – tai ota mukaan viltti tai retkituoli ja rakenna oma täydellinen katsomopaikkasi.",
+              "Lasipalatsi Square has 100 seats, filled on a first-come, first-served basis. There are no advance reservations, so come early – or bring a blanket or camping chair and build your own perfect spot.",
+              "På Glaspalatsets plats finns 100 sittplatser som fylls i ankomstordning. Ingen förhandsbokning behövs – kom i god tid, eller ta med en filt eller campingstol och bygg din egen perfekta läktarplats."
             ),
           },
           {
@@ -149,24 +193,15 @@ export const buildVenues = (locale) => {
             ),
           },
           {
-            heading: t("Saapuminen", "Arrival", "Ankomst"),
+            heading: t("WC-tilat", "Restrooms", "Toaletter"),
             body: t(
-              "Lasipalatsikortteli sijaitsee aivan Helsingin ydinkeskustassa, jossa se rajautuu Simonkadun, Mannerheimintien, Salomonkadun ja Kampin Narinkkatorin keskelle.\n\nLähimmät metropysäkit ovat Kamppi ja Rautatientori, joista molemmista pääsee ylittämättä ruuhkaisia teitä. Lähimmät raitiovaunupysäkit ovat Lasipalatsi sekä Simonkatu.\n\nPyörätelineitä löydät Mannerheimintien varrelta, Simonkadun puolelta ja Lasipalatsin sisäpihalta. Lähin kaupunkipyöräteline on Narinkkatorilla.",
-              "Located in the heart of Helsinki, Lasipalatsi block is bordered by Simonkatu, Mannerheimintie, Salomonkatu and Kamppi.\n\nThe closest metro stations are Kamppi and Central Railway Station, both of which can be reached without crossing busy roads. The nearest tram stops are Lasipalatsi and Simonkatu.\n\nBicycle racks are located along Mannerheimintie, on the Simonkatu side and at Lasipalatsi square. The nearest city bike rack is at Narinkkatori in Kamppi.",
-              "Glaspalatskvarteret ligger mitt i hjärtat av Helsingfors och gränsar till Simonsgatan, Mannerheimvägen, Salomonsgatan och Narinken i Kampen.\n\nDe närmaste tunnelbanestationerna är Kampen och Järnvägstorget, som båda kan nås utan att korsa trafikerade vägar. De närmaste spårvagnshållplatserna är Glaspalatset och Simonsgatan.\n\nCykelställ finns längs Mannerheimvägen, på Simonsgatans sida och på Glaspalatstorget. Närmaste stadscykelställ finns på Narinken."
+              "Lähin sisätiloissa sijaitseva WC on Kampin keskuksen 1. kerroksessa. Lähin ulko-WC sijaitsee kivenheiton päässä Kiasman ja Postitalon välisessä puistossa, Baanan risteyksessä.",
+              "The nearest indoor toilet is on the 1st floor of the Kamppi shopping centre. The nearest outdoor toilet is a stone's throw away in the park between Kiasma and Postitalo, at the crossing of the Baana corridor.",
+              "Närmaste inomhustoalett finns på första våningen i köpcentret Kampen. Närmaste utomhustoalett ligger ett stenkast bort i parken mellan Kiasma och Posthuset, vid Baanas korsning."
             ),
           },
         ],
-        links: [
-          {
-            href: SAFER_SPACE,
-            label: t(
-              "MYÖS:n turvallisemman tilan periaatteet",
-              "Safer space principles by MYÖS",
-              "Tryggare rum-principer av MYÖS"
-            ),
-          },
-        ],
+        links: [],
       },
       {
         id: "lahde",
@@ -189,23 +224,31 @@ export const buildVenues = (locale) => {
         photoCredit: null,
         sections: [
           {
-            heading: t("Sijainti", "Location", "Plats"),
-            body: t(
-              "Lapinlahden elokuvajuhlat järjestetään 20.–23.8.2026 Lapinlahden Lähteen sisätiloissa, Omenapuutalolla sekä ympäröivällä puistoalueella. Lapinlahden Lähde sijaitsee Helsingin Lapinlahdessa, Hietaniemen hautausmaan vieressä.",
-              "The Lapinlahti Film Festival takes place from 20–23 August 2026 at Lapinlahden Lähde, including the main building, Omenapuutalo, and the surrounding park area. Lapinlahden Lähde is located in the Lapinlahti district of Helsinki, next to Hietaniemi Cemetery.",
-              "Lappvikens filmfestival arrangeras 20–23 augusti 2026 i Lappviks Källans huvudbyggnad, Omenapuutalo samt i det omgivande parkområdet. Lappviks Källan ligger i Lappviken i Helsingfors, intill Sandudds begravningsplats."
-            ),
-          },
-          {
             heading: t(
               "Päihteetön tapahtuma",
               "Substance-free event",
               "Drogfritt evenemang"
             ),
             body: t(
-              "Muistathan, että ulkoilmakatsomossa ja koko festivaalialueella alkoholin, tupakan tai muiden päihteiden käyttö on kielletty. Olethan lempeä sekä itsellesi että muille. Lämmin kiitos!",
-              "Please note that the use of alcohol, tobacco and other intoxicants is prohibited in the outdoor cinema and throughout the festival area. We kindly ask you to be gentle with yourself and with others. Thank you!",
-              "Observera att användning av alkohol, tobak och andra berusningsmedel är förbjuden i utomhusbion och på hela festivalområdet. Vi ber dig att vara omtänksam både mot dig själv och mot andra. Stort tack!"
+              `Muistathan, että ulkoilmakatsomossa ja koko festivaalialueella alkoholin, tupakan tai muiden päihteiden käyttö on kielletty. ${saferSpaceSentence} Olethan lempeä sekä itsellesi että muille. Lämmin kiitos!`,
+              `Please note that the use of alcohol, tobacco and other intoxicants is prohibited in the outdoor cinema and throughout the festival area. ${saferSpaceSentence} We kindly ask you to be gentle with yourself and with others. Thank you!`,
+              `Observera att användning av alkohol, tobak och andra berusningsmedel är förbjuden i utomhusbion och på hela festivalområdet. ${saferSpaceSentence} Vi ber dig att vara omtänksam både mot dig själv och mot andra. Stort tack!`
+            ),
+          },
+          {
+            heading: t("Sijainti", "Location", "Plats"),
+            body: t(
+              "Lapinlahden elokuvajuhlat järjestetään 20.–23.8.2026 Lapinlahden Lähteen sisätiloissa, Omenapuutalolla sekä Lapinlahden ulkotiloissa. Lapinlahden Lähde sijaitsee Helsingin Lapinlahdessa, Hietaniemen hautausmaan vieressä.",
+              "The Lapinlahti Film Festival takes place from 20–23 August 2026 at Lapinlahden Lähde, including the main building, Omenapuutalo, and the outdoor areas of Lapinlahti. Lapinlahden Lähde is located in the Lapinlahti district of Helsinki, next to Hietaniemi Cemetery.",
+              "Lappvikens filmfestival arrangeras 20–23 augusti 2026 i Lappviks Källans huvudbyggnad, Omenapuutalo samt i Lappvikens utomhusområden. Lappviks Källan ligger i Lappviken i Helsingfors, intill Sandudds begravningsplats."
+            ),
+          },
+          {
+            heading: t("Saapuminen", "Arrival", "Ankomst"),
+            body: t(
+              "Lapinlahden Lähde sijaitsee noin kymmenen minuutin kävelymatkan päässä Ruoholahden metroasemalta. Pääset paikalle myös polkupyörällä ja raitiovaunulla. Raitiovaunun lähimmät pysäkit ovat Marian Sairaala ja Ruoholahti. Suosittelemme välttämään autolla ajamista festivaalialueelle.",
+              "Lapinlahden Lähde is approximately a ten-minute walk from Ruoholahti Metro Station. You can also reach the venue by bicycle or tram. The nearest tram stops are Marian Sairaala (Maria Hospital) and Ruoholahti. We recommend avoiding travelling to the festival area by car.",
+              "Lappvikskällan ligger cirka tio minuters promenad från Gräsvikens metrostation. Du kan också ta dig hit med cykel eller spårvagn. De närmaste spårvagnshållplatserna är Maria sjukhus och Gräsviken. Vi rekommenderar att du undviker att köra bil till festivalområdet."
             ),
           },
           {
@@ -230,35 +273,30 @@ export const buildVenues = (locale) => {
           },
           {
             heading: t(
+              "Ulkoilmakatsomo & sää",
+              "Open-air cinema & weather",
+              "Utomhusbio & väder"
+            ),
+            body: t(
+              "Kivipihan ulkoilmakatsomo elää sään mukana. Tarkistathan ennusteen ennen näytöstä ja pukeuduthan lämpimästi sekä sään mukaisesti.\n\nTämän kesän sää on ollut ailahteleva, joten sadeviitta saattaa pelastaa illan – ja mahdollistaa jopa romanttisen elokuvakokemuksen sateen ropistessa. Sateenvarjon voit sen sijaan jättää kotiin, jotta näkyvyys säilyy hyvänä kaikille.",
+              "The open-air cinema in the stone yard embraces the changing weather. Please check the forecast before the screening and dress warmly and appropriately for the conditions.\n\nThis summer's weather has been unpredictable, so a rain poncho might just save the evening – and even make for a wonderfully romantic cinematic experience as the rain gently falls. Please leave umbrellas at home, however, so that everyone can enjoy an unobstructed view.",
+              "Utomhusbion på Stengården lever med vädret. Kontrollera gärna väderprognosen före visningen och klä dig varmt och efter väder.\n\nSommarens väder har varit omväxlande, så en regnponcho kan rädda kvällen – och kanske till och med göra filmupplevelsen extra stämningsfull när regnet stilla faller. Lämna däremot paraplyet hemma så att sikten förblir god för alla."
+            ),
+          },
+          {
+            heading: t(
               "Esteettömyys ja saavutettavuus",
               "Accessibility",
               "Tillgänglighet"
             ),
             body: t(
-              "Lapinlahden Lähde sijaitsee noin kymmenen minuutin kävelymatkan päässä Ruoholahden metroasemalta. Pääset paikalle myös polkupyörällä, raitiovaunulla ja Lapinlahden elokuvajuhlien festivaalibussilla.\n\nTällä hetkellä esteettömin pääsy on päärakennuksen ensimmäiseen kerrokseen, jossa sijaitsevat muun muassa kahvila, Mental Museum, taidenäyttelytiloja ja inva-wc.",
-              "Lapinlahden Lähde is approximately a ten-minute walk from Ruoholahti Metro Station. The venue can also be reached by bicycle, tram, and the Lapinlahti Film Festival shuttle bus.\n\nAt the moment, the most accessible entrance is located on the ground floor of the main building (Q-door, on the left side of the building), where you will find the café, the Mental Museum, exhibition spaces, and an accessible toilet.",
-              "Lappvikskällan ligger cirka tio minuters promenad från Gräsvikens metrostation. Du kan också ta dig hit med cykel, spårvagn eller Lappvikens filmfestivals festivalbuss.\n\nFör närvarande finns den mest tillgängliga entrén till huvudbyggnadens första våning, där bland annat caféet, Mental Museum, konstutställningslokaler och en tillgänglig toalett finns."
+              `Tutustu Lapinlahden Lähteen osalta laadittuun esteettömyysoppaaseen [tästä](${ACCESSIBILITY_GUIDE}). Tällä hetkellä esteettömin pääsy on päärakennuksen ensimmäiseen kerrokseen, jossa sijaitsevat muun muassa kahvila, Mental Museum, taidenäyttelytiloja ja inva-wc.\n\nLöydät kätevästi INFO-pisteen päärakennuksen edustalla, sekä alueella kiertää useampi hyvinvointi-, ensiapu-, info- ja häirintäyhdyshenkilö. Älä epäröi kysyä apua!\n\nNähdään festivaalilla!`,
+              `You can find the accessibility guide for Lapinlahden Lähde [here](${ACCESSIBILITY_GUIDE}). At the moment, the most accessible entrance is located on the ground floor of the main building, where you will find the café, the Mental Museum, exhibition spaces, and an accessible toilet.\n\nYou will find the INFO point in front of the main building, and several well-being, first aid, info and harassment contact persons circulate the festival area. Don't hesitate to ask for help!\n\nSee you at the festival!`,
+              `Bekanta dig med Lappvikskällans tillgänglighetsguide [här](${ACCESSIBILITY_GUIDE}). För närvarande finns den mest tillgängliga entrén till huvudbyggnadens första våning, där bland annat caféet, Mental Museum, konstutställningslokaler och en tillgänglig toalett finns.\n\nINFO-punkten hittar du framför huvudbyggnaden, och på området rör sig flera personer som ansvarar för välmående, första hjälpen, information och trakasserikontakt. Tveka inte att be om hjälp!\n\nVi ses på festivalen!`
             ),
           },
         ],
-        links: [
-          {
-            href: ACCESSIBILITY_GUIDE,
-            label: t(
-              "Lapinlahden Lähteen esteettömyysopas",
-              "Lapinlahden Lähde accessibility guide",
-              "Lappvikskällans tillgänglighetsguide"
-            ),
-          },
-          {
-            href: SAFER_SPACE,
-            label: t(
-              "MYÖS:n turvallisemman tilan periaatteet",
-              "Safer space principles by MYÖS",
-              "Tryggare rum-principer av MYÖS"
-            ),
-          },
-        ],
+        links: [],
       },
     ],
   };

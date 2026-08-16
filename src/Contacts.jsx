@@ -25,6 +25,14 @@ function Contacts({ contacts }) {
                   {person.email}
                 </a>
               )}
+              {person.phone && (
+                <a
+                  href={`tel:${person.phone.replace(/\s/g, "")}`}
+                  className="hover:underline break-all"
+                >
+                  {person.phone}
+                </a>
+              )}
             </div>
           ))}
         </div>
