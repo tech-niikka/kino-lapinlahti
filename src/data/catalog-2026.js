@@ -711,7 +711,7 @@ export const buildCatalog = (locale) => {
       list: [
         sf({ title: "Mixed Sauna",
           orig: "Sekasauna",
-          co: ["FI"], year: "2026", len: "15 min", age: "S",
+          co: ["FI"], year: "2026", len: "15 min", age: t("7 (kevyt alastomuus)", "7 (mild nudity)", "7 (lätt nakenhet)"),
           director: "Juuso Timonen",
           synopsis: t(
             "Introvertti Mikko jännittää, ettei osaa tulla kuorestaan viikonloppuna uudehkon puolisonsa mökillä. Puoliso Hanna on varma, että Mikko tekee loistavan ensivaikutelman hänen valittuun perheeseensä. Kun on saunan aika, Mikko ei ole selvittänyt uuden sosiaalisen kuplan saunapukukoodia – ja tajuaa olevansa ainoa uikkareissa.",
@@ -738,8 +738,7 @@ export const buildCatalog = (locale) => {
           ) }),
         sf({ title: "Maybe in March",
           orig: "Måske i Marts",
-          co: ["DK"], year: "2025", len: "25 min", age: "12",
-          warn: ["ahdistus"],
+          co: ["DK"], year: "2025", len: "25 min", age: t("12 (lievä ahdistus)", "12 (light anxiety)", "12 (lätt ångest)"),
           director: "Mikkel Bjørn Kehlert",
           synopsis: t(
             "Jossain Tanskan maaseudulla talo odottaa jäähyväisiään. Perhe pidättää hengitystään. Ja jokin on lipumassa pois.",
@@ -777,8 +776,7 @@ export const buildCatalog = (locale) => {
       ),
       list: [
         sf({ title: "Awooga!",
-          co: ["FI"], year: "2025", len: "4 min", age: "16",
-          warn: ["seksi"],
+          co: ["FI"], year: "2025", len: "4 min", age: t("16 (vahvat viittaukset seksiin)", "16 (strong references to sex)", "16 (starka sexuella referenser)"),
           director: "Sofia Liukonen",
           synopsis: t(
             "Popette valmistautuu esittämään striptease-numeron tangolla.",
@@ -796,8 +794,7 @@ export const buildCatalog = (locale) => {
             "En hybriddokumentär om avhumaniseringen av patienter inom dansk psykiatri. Filmen återskapar en verklig upplevelse där det som borde vara en normal del av vården av någon som tagits in på ett psykiatriskt sjukhus blir en våldshandling."
           ) }),
         sf({ title: "Bodyrave",
-          co: ["FI"], year: "2025", len: "4 min", age: "16",
-          warn: ["ahdistus"],
+          co: ["FI"], year: "2025", len: "4 min", age: t("16 (kuolema, ahdistus)", "16 (death, anxiety)", "16 (död, ångest)"),
           director: "Harri Connell, Felix Järvenpää, Leo Lindgren",
           synopsis: t(
             "Keho herää salaperäisessä huoneessa ja alkaa kokea prosesseja, jotka ovat aina olleet läsnä mutta jääneet huomaamatta – tähän asti.",
@@ -805,8 +802,7 @@ export const buildCatalog = (locale) => {
             "En kropp vaknar i ett mystiskt rum och börjar uppleva processer som alltid funnits där men aldrig uppmärksammats – förrän nu."
           ) }),
         sf({ title: "Mother Creature",
-          co: ["FO", "SE"], year: "2025", len: "30 min", age: "12",
-          warn: ["ahdistus"],
+          co: ["FO", "SE"], year: "2025", len: "30 min", age: t("12 (lievä ahdistus)", "12 (light anxiety)", "12 (lätt ångest)"),
           director: "Maria Tórgarð",
           synopsis: t(
             "Tytär yrittää vetää lapsuutensa hirviön esiin sängyn alta omaperäisessä, syvästi henkilökohtaisessa ja luovassa elokuvassa äitinsä psyykkisestä sairaudesta.",
@@ -815,8 +811,7 @@ export const buildCatalog = (locale) => {
           ) }),
         sf({ title: "Limerence",
           orig: "Limerenssi",
-          co: ["FI"], year: "2026", len: "23 min", age: "16",
-          warn: ["vakivalta"],
+          co: ["FI"], year: "2026", len: "23 min", age: t("16 (väkivalta, ahdistus)", "16 (violence, anxiety)", "16 (våld, ångest)"),
           director: "Jasmin Gummerus",
           synopsis: t(
             "Tuoreeltaan erosta toipuva Lotta ihastuu yksipuolisesti kehonmuokkaustaiteilija Lennartiin.",
@@ -824,8 +819,7 @@ export const buildCatalog = (locale) => {
             "Nyss ute ur ett förhållande utvecklar Lotta en ensidig förälskelse i kroppsmodifieringskonstnären Lennart."
           ) }),
         sf({ title: "Out of Order",
-          co: ["FI"], year: "2025", len: "2 min", age: "12",
-          warn: ["seksi"],
+          co: ["FI"], year: "2025", len: "2 min", age: t("12 (seksuaaliset viittaukset)", "12 (sexual references)", "12 (sexuella referenser)"),
           director: "Antti Tuomikoski",
           synopsis: t(
             "Miehinen katse kääntyy ympäri.",
@@ -845,7 +839,7 @@ export const buildCatalog = (locale) => {
       fienta: fienta("nordic-frames-i-love-my-car", locale),
       img: imgILoveMyCar,
       films: 7,
-      age: t("12 (seksi, ahdistus)", "12 (sex, anxiety)", "12 (sex, ångest)"),
+      age: t("12 (viittauksia seksiin ja kuolemaan)", "12 (references to sex and death)", "12 (referenser till sex och döden)"),
       desc: t(
         "Hyvän tuulen tarinoita ihmisistä autoissa: vauhdilla eteenpäin, hidastellen, joskus jumissa, joskus vailla huolta siitä, minne tie vie. Tärkeintä on itse matka.\n\n" +
           qaShorts,
@@ -854,8 +848,7 @@ export const buildCatalog = (locale) => {
       ),
       list: [
         sf({ title: "Puolanka Pussy Rally",
-          co: ["FI"], year: "2026", len: "5 min", age: "12",
-          warn: ["seksi"],
+          co: ["FI"], year: "2026", len: "5 min", age: t("12 (seksuaaliset viittaukset)", "12 (sexual references)", "12 (sexuella referenser)"),
           director: "Inka Achté, Einari Paakkanen",
           synopsis: t(
             "Puolanka, pieni kylä Pohjois-Suomessa, on kuuluisa väestökadostaan – ja sitä koskevasta mustasta huumoristaan. Teinipojat juhlivat tuoreita ajokorttejaan kiertämällä loputtomasti samoja katuja, kun taas paikallisten herrojen vanhempi polvi on pysäköinyt itsensä pysyvästi huoltoaseman kahvilaan. Yksi mysteeri näyttää jäävän ratkaisematta: minne kaikki naiset ovat kadonneet?",
@@ -864,8 +857,7 @@ export const buildCatalog = (locale) => {
           ) }),
         sf({ title: "Broken Down",
           orig: "De Nedbrutna",
-          co: ["SE", "DK"], year: "2025", len: "15 min", age: "12",
-          warn: ["ahdistus"],
+          co: ["SE", "DK"], year: "2025", len: "15 min", age: t("12 (lievä ahdistus)", "12 (light anxiety)", "12 (lätt ångest)"),
           director: "Victor Cornelius",
           synopsis: t(
             "Naurettavan pitkällä ja suoralla tiellä keskellä ei-mitään pariskunnan auto hajoaa. Tiepalvelua odotellessa heidän todelliset minänsä paljastuvat, ja edessä on aivan toisenlainen romahdus.",
@@ -890,8 +882,7 @@ export const buildCatalog = (locale) => {
             "Ett par på väg för att besöka släktingar – som vi alla, förr eller senare."
           ) }),
         sf({ title: "Respite",
-          co: ["NO"], year: "2026", len: "17 min", age: "7",
-          warn: ["ahdistus"],
+          co: ["NO"], year: "2026", len: "17 min", age: t("7 (viittaukset kuolemaan)", "7 (references to death)", "7 (referenser till döden)"),
           director: "Mads Toft Hansen, Alma-Oline Weitling",
           synopsis: t(
             "Nuori tanskalaismies matkustaa Norjaan tyhjentämään edesmenneen äitinsä taloa ja kohtaa sekä jäämistön että paikan. Kun hän liikkuu vieraassa ympäristössä, elokuva avaa tarinan perheen jännitteistä, menetyksestä ja kuulumisesta.",
@@ -976,8 +967,7 @@ export const buildCatalog = (locale) => {
             "Två revolutionärer kidnappar en svensk politikers barn för att förhindra en omröstning om en drakonisk lag som skulle låta staten frånta människor deras medborgarskap. När polisen anländer till den persiska restaurang där barnet hålls börjar situationen spinna ur kontroll."
           ) }),
         sf({ title: "Fear Fokol",
-          co: ["ZA", "SE"], year: "2025", len: "15 min", age: "12",
-          warn: ["vakivalta"],
+          co: ["ZA", "SE"], year: "2025", len: "15 min", age: t("12 (viittaukset väkivaltaan)", "12 (references to violence)", "12 (referenser till våld)"),
           director: "Tuva Björk",
           synopsis: t(
             "Öinen matka Johannesburgin varakkaiden asukkaiden pelkoihin ja ahdistuksiin, heitä suojelemaan palkattujen yksityisten vartijoiden työtä seuraten. Turvallisuuden illuusio liukenee hitaasti, kun kaivaudumme eriarvoisuuden, vainoharhan ja kriisissä olevan maskuliinisuuden hauraaseen ilmapiiriin.",
@@ -986,8 +976,7 @@ export const buildCatalog = (locale) => {
           ) }),
         sf({ title: "Borderline",
           orig: "På Grensa",
-          co: ["FI", "NO", "SE"], year: "2025", len: "12 min", age: "7",
-          warn: ["vakivalta"],
+          co: ["FI", "NO", "SE"], year: "2025", len: "12 min", age: t("7 (lievät viittaukset väkivaltaan)", "7 (mild references to violence)", "7 (lätta referenser till våld)"),
           director: "Johannes Vang",
           synopsis: t(
             "Norjalainen tullivirkailija, suomalainen salametsästäjä ja salaperäinen ruotsalaisnainen kohtaavat kotimaidensa rajalla ja sotkeutuvat kiistaan laeista, kielestä ja ennakkoluuloista.",
@@ -1044,8 +1033,7 @@ export const buildCatalog = (locale) => {
           ) }),
         sf({ title: "A Part Unwritten",
           orig: "Vuorosanat",
-          co: ["FI"], year: "2025", len: "18 min", age: "7",
-          warn: ["ahdistus"],
+          co: ["FI"], year: "2025", len: "18 min", age: t("7 (viittaukset kuolemaan)", "7 (references to death)", "7 (referenser till döden)"),
           director: "Arman Zafari",
           synopsis: t(
             "Niina, vaikeuksissa kamppaileva draamanopettaja, saa pomoltaan epätavallisen pyynnön: pitää muistopuhe tämän isän hautajaisissa hänen sijastaan. Esiintymismahdollisuutta epätoivoisesti kaipaava Niina huomaa harkitsevansa absurdia ehdotusta.",
@@ -1062,8 +1050,7 @@ export const buildCatalog = (locale) => {
             "En mamma ser sin hemlösa sons tags vart hon än går. Hon tolkar hans signaturer som signaler till henne och vill svara. Hon börjar skriva SON under hans tags. En dag får hon plötsligt ett svar."
           ) }),
         sf({ title: "Overtime",
-          co: ["FI"], year: "2025", len: "11 min", age: "12",
-          warn: ["vakivalta"],
+          co: ["FI"], year: "2025", len: "11 min", age: t("12 (viittaukset väkivaltaan, kuolemaan)", "12 (references to violence and death)", "12 (referenser till våld och döden)"),
           director: "Siiri Halko",
           synopsis: t(
             "Suomi kukoistaa, mutta tiukalla säännöllä: kansalaisten on poistuttava 70-vuotiaina. Annastiina Kankaanrinta, aikanaan mahtava poliitikko, oli avainasemassa Lex 70 -lain synnyssä. Nyt omilla 70-vuotisjuhlillaan hänen on kohdattava omat valtion hyväksymät jäähyväisensä.",
@@ -1100,8 +1087,7 @@ export const buildCatalog = (locale) => {
             "Kielo har svårt att sitta stilla på lektionen. Hon tar en paus och ger sig ut i sin fantasis korridorer."
           ) }),
         sf({ title: "Major Bag Alert",
-          co: ["FI"], year: "2026", len: "15 min", age: "12",
-          warn: ["paihteet"],
+          co: ["FI"], year: "2026", len: "15 min", age: t("12 (alaikäinen polttaminen)", "12 (underage smoking)", "12 (minderårig rökning)"),
           director: "Viljami Penttilä",
           synopsis: t(
             "Vuosi 2005. Koulussa juoruillaan, että 16-vuotiaan Janinan perheellä on vakavia rahavaikeuksia. Janina ja hänen kaveriporukkansa aikovat todistaa huhut vääriksi varastamalla kalliin käsilaukun lähiön ostoskeskuksesta.",
@@ -1110,8 +1096,7 @@ export const buildCatalog = (locale) => {
           ) }),
         sf({ title: "Invisible",
           orig: "Det Osynliga",
-          co: ["SE"], year: "2025", len: "10 min", age: "7",
-          warn: ["ahdistus", "vakivalta"],
+          co: ["SE"], year: "2025", len: "10 min", age: t("12 (ahdistus, väkivalta)", "12 (anxiety, violence)", "12 (ångest, våld)"),
           director: "Malak Alamari",
           synopsis: t(
             "Adrian ja Elias ovat teini-ikäisiä ystäviä, jotka kuljeskelevat ja elävät omassa, seikkailua ja naurua täynnä olevassa maailmassaan. Leikkisänä alkanut ystävyys muuttuu nopeasti, kun Adrian huomaa, ettei kaikki ole sitä miltä näyttää.",
@@ -1120,8 +1105,7 @@ export const buildCatalog = (locale) => {
           ) }),
         sf({ title: "White Room",
           orig: "Valkoinen huone",
-          co: ["FI"], year: "2026", len: "8 min", age: "7",
-          warn: ["ahdistus", "vakivalta"],
+          co: ["FI"], year: "2026", len: "8 min", age: t("7 (lievä ahdistus)", "7 (light anxiety)", "7 (lätt ångest)"),
           director: "Heikki Saikkonen",
           synopsis: t(
             "Ihminen heitetään valkoiseen huoneeseen suoraan syntymästä, ja hänen on pysyttävä siellä loppuelämänsä.",
@@ -1138,8 +1122,7 @@ export const buildCatalog = (locale) => {
             "Vid sin audition till teaterskolan måste en ung blivande skådespelerska möta sin sorgs känslostorm – annars riskerar hon att inte förverkliga sin dröm."
           ) }),
         sf({ title: "Em assumes death",
-          co: ["DK"], year: "2024", len: "30 min", age: "12",
-          warn: ["ahdistus"],
+          co: ["DK"], year: "2024", len: "30 min", age: t("12 (ahdistus, viittaukset kuolemaan)", "12 (anxiety, references to death)", "12 (ångest, referenser till döden)"),
           director: "Jacob Schill",
           synopsis: t(
             "Em on hukkumassa jokeen. Tämä 18-vuotias yksinäinen on katsonut satoja tunteja sisältöä Law of Assumptionista: uuden verkkohenkisyyden suositusta uskomuksesta, jonka mukaan kaikki, minkä oletat, manifestoituu todeksi. Em yrittää toteuttaa tätä lakia, mutta hänen kohtaamisensa Kuoleman kanssa on epätavallinen.",
