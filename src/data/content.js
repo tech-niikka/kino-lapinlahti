@@ -772,6 +772,12 @@ const buildProgramSection = (locale) => {
       ca("taiteilijan-talo")
     ),
     ongoing(
+      "ANTIVIRAL MACABRE – Sketches for an Unknown Future",
+      CAT.taide,
+      detail(t("Pääkäytävä", "Main Hall", "Huvudkorridor")),
+      ca("antiviral-macabre")
+    ),
+    ongoing(
       t("Ruumiillistumia", "Ruumiillistumia (Embodiments)", "Ruumiillistumia"),
       CAT.taide,
       detail("Osasto 5", t("ma–la 11–17, su 12–17", "Mon–Sat 11–17, Sun 12–17", "mån–lör 11–17, sön 12–17")),
@@ -854,6 +860,11 @@ const buildProgramSection = (locale) => {
       venueUrl: MAPS.lahde,
       events: [
         // Taiteiden yön ulkoilmanäytökset poistettu 4.8.2026 — niitä ei järjestetä
+        ev("14.30",
+          t("Ambience & house tanssiaiset", "Ambience & House Music", "Ambient och housemusik"),
+          CAT.musiikki,
+          detail(ends("22.00")),
+          cm("ambience-house")),
         ev("19.00",
           t("Taiteilijan talo – Maisemamaalarin talo", "The Artist's House – The Landscape Painter's House", "Konstnärens hus – Landskapsmålarens hus"),
           CAT.taide,
@@ -920,6 +931,11 @@ const buildProgramSection = (locale) => {
       venue: "Lapinlahden Lähde",
       venueUrl: MAPS.lahde,
       events: [
+        ev("11.00",
+          t("Huolituoli päivystää", "Huolituoli – A Listening Chair", "Huolituoli – en plats för att bli hörd"),
+          CAT.tyopaja,
+          detail(ends("13.00")),
+          cw("huolituoli")),
         ev("13.00", t("Olennolliset olennot — stop motion", "Essential Creatures — stop motion", "Väsentliga varelser — stop motion"),
           CAT.tyopaja, detail(t("Tilajakamon puutarhapiha", "Tilajakamo garden courtyard", "Tilajakamos trädgårdsgård"), ends("15.00")), cw("olennolliset-olennot")),
         ev("13.00", "Release & Relax", CAT.tyopaja,

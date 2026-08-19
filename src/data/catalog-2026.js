@@ -38,6 +38,7 @@ import imgWeirdlyWorking from "../assets/catalog/shorts/weirdly-working.jpg";
 import imgNowWorkshop from "../assets/catalog/shorts/now-workshop.jpg";
 
 import imgJoniEkman from "../assets/catalog/music/joni-ekman.jpg";
+import imgAmbienceHouse from "../assets/catalog/music/ambience-house.jpg";
 import imgLyyti from "../assets/catalog/music/lyyti.jpg";
 import imgOrvokki from "../assets/catalog/music/orvokki.jpg";
 import imgLosPanPan from "../assets/catalog/music/los-pan-pan.jpg";
@@ -55,6 +56,7 @@ import imgHoitavaLiike from "../assets/catalog/workshops/hoitava-liike.jpg";
 import imgHananMahbouba from "../assets/catalog/workshops/hanan-mahbouba.jpg";
 import imgCraftCorner from "../assets/catalog/workshops/craft-corner.jpg";
 import imgOlennot from "../assets/catalog/workshops/olennolliset-olennot.jpg";
+import imgHuolituoli from "../assets/catalog/workshops/huolituoli.jpg";
 
 import imgKenTastaKay from "../assets/catalog/art/ken-tasta-kay.jpg";
 import imgStopTheHustle from "../assets/catalog/art/stop-the-hustle.jpg";
@@ -68,6 +70,7 @@ import imgKaksiVaria from "../assets/catalog/art/kaksi-varia.jpg";
 import imgLeffakaraoke from "../assets/catalog/art/leffakaraoke.jpg";
 import imgElephant from "../assets/catalog/art/elephant-in-the-room.jpg";
 import imgPoljin from "../assets/catalog/art/poljin.jpg";
+import imgAntiviralMacabre from "../assets/catalog/art/antiviral-macabre.jpg";
 
 // Festivaalijuliste — fallback ohjelmille, joilla ei vielä ole omaa kuvaa
 import imgFestivalPoster from "../assets/catalog/festival-poster.jpg";
@@ -1240,6 +1243,24 @@ export const buildCatalog = (locale) => {
 
   const music = [
     musicEntry({
+      id: "ambience-house",
+      artist: t(
+        "Ambience & house tanssiaiset",
+        "Ambience & House Music",
+        "Ambient och housemusik"
+      ),
+      img: imgAmbienceHouse,
+      venue: "Lapinlahden Lähde",
+      day: t("to", "Thu", "tors"),
+      date: "20.8.",
+      time: t("klo 14.30–22", "14.30–22", "kl. 14.30–22"),
+      desc: t(
+        "Klo 14.30–17.30: CLLID, sinedd ja Tito Cascara\nKlo 18–20: Ishan Regmi\nKlo 20–22: Mitic\n\nCLLID\nNuori tyyppi korttelista. Elän ruoalle ja musiikille. Kerään kiviä ja taidetta.\ninstagram.com/clli.est\n\nsinedd\ninstagram.com/sin.sinedd\n\nTito Cascara\nMonialainen taiteilija ja Planet Banyanin perustaja. Planet Banyan on itsenäisten äänituottajien, muusikoiden ja DJ:iden muodostama kollektiivi, joka rakentuu ajatukselle as above, so below.\nsoundcloud.com/planetbanyanstudios\n\nIshan Regmi\nTampereella asuva Ishan Regmi on yhteisöjen rakentaja ja DJ. Hän on Collider Collectiven ja 9th Districtin jäsen ja on soittanut Tampereella ja sen ympäristössä kesäisiltä terasseilta pimeisiin kellareihin. Taiteiden yössä hän tarjoilee meille syvää ja groovaavaa housea.\n\nMitic\nElektronisen musiikin projekti, joka keskittyy underground-klubimusiikin syvään, hypnoottiseen ja rakenteelliseen puoleen. Projektin ytimessä on tunnistettava minimalistisen deep techin ja stripped-back-rytmien yhdistelmä, jota täydentävät vyöryvät bassolinjat ja monikerroksiset perkussiot – kokonaisuus on suunniteltu ennen kaikkea tanssilattialle.\ninstagram.com/mitic.grooves\nyoutube.com/@miticgrooves",
+        "14.30–17.30: CLLID, sinedd and Tito Cascara\n18–20: Ishan Regmi\n20–22: Mitic\n\nCLLID\nYung bloke from the block. I live for food & music. I collect rocks and art.\ninstagram.com/clli.est\n\nsinedd\ninstagram.com/sin.sinedd\n\nTito Cascara\nInterdisciplinary artist, founder of Planet Banyan, an as above, so below collective of independent audio producers, musicians and DJs.\nsoundcloud.com/planetbanyanstudios\n\nIshan Regmi\nTampere-based Ishan Regmi is a community builder and DJ. Member of Collider Collective and 9th District, he has played in and around Tampere from summery terraces to dark basements. At the Night of the Arts he is treating us with deep yet groovy house tunes.\n\nMitic\nAn electronic music project dedicated to the deep, hypnotic, and structural side of underground club music. Built around a signature framework of minimal deep tech, the project centers on stripped-back rhythms, rolling low-end pressure, and intricate percussive movement designed entirely for the dancefloor.\ninstagram.com/mitic.grooves\nyoutube.com/@miticgrooves",
+        "Kl. 14.30–17.30: CLLID, sinedd och Tito Cascara\nKl. 18–20: Ishan Regmi\nKl. 20–22: Mitic\n\nCLLID\nUng kille från kvarteret. Jag lever för mat och musik. Jag samlar på stenar och konst.\ninstagram.com/clli.est\n\nsinedd\ninstagram.com/sin.sinedd\n\nTito Cascara\nTvärdisciplinär konstnär och grundare av Planet Banyan, ett kollektiv av självständiga ljudproducenter, musiker och DJ:ar, byggt kring idén as above, so below.\nsoundcloud.com/planetbanyanstudios\n\nIshan Regmi\nDen Tammerforsbaserade Ishan Regmi är communitybyggare och DJ. Han är medlem i Collider Collective och 9th District och har spelat runt om i Tammerfors, från somriga terrasser till mörka källare. Under Konstens natt bjuder han på djup och groovig house.\n\nMitic\nEtt elektroniskt musikprojekt som fokuserar på den djupa, hypnotiska och strukturella sidan av undergroundklubbmusik. Projektet bygger på en egen kombination av minimalistisk deep tech och avskalade rytmer, kompletterade av rullande basgångar och intrikata perkussioner – ett sound som framför allt är skapat för dansgolvet.\ninstagram.com/mitic.grooves\nyoutube.com/@miticgrooves"
+      ),
+    }),
+    musicEntry({
       id: "leffakaraoke",
       artist: t("Vinyylikaraoke — DJ Valoantti", "Vinyl Karaoke — DJ Valoantti", "Vinylkaraoke — DJ Valoantti"),
       img: imgLeffakaraoke,
@@ -1393,6 +1414,24 @@ export const buildCatalog = (locale) => {
       desc: t(
         "Inherited and Silent Stories on kahden tunnin mittainen osallistava työpaja, jossa tutkitaan perintöä ja tabuja leikin, kuvallisen ilmaisun ja yhteisen luovan työskentelyn kautta.\n\nTyöpajassa osallistujia kutsutaan tutkimaan perinnön näkyviä ja näkymättömiä ulottuvuuksia teatteriharjoitteiden, luovan ilmaisun ja yhteisen reflektion avulla. Liikkeen, kollaasin, piirtämisen ja tarinankerronnan keinoin pohditaan niitä perinteitä, arvoja ja tarinoita, joita olemme perineet, sekä hiljaisuutta ja tabuja, jotka muovaavat identiteettiämme ja yhteisöämme. Aiempaa kokemusta taiteesta tai teatterista ei tarvita.\n\nGiulia Lepori on italialainen sosiologi, jonka työ sijoittuu mielenterveyden, taiteen ja luovan tutkimisen rajapintaan.",
         "Inherited stories, silence stories: exploring heritage and taboo through play, images and collective creation.\n\nThis interactive 2-hour workshop invites participants to explore the visible and invisible aspects of heritage through theatre games, creative expressions and collective reflection. Using movement, collage, drawing and storytelling, participants will reflect on the tradition, values and stories we inherit as well as the silence and taboos that shape our identities and community. No artistic or theatre experience is required.\n\nGiulia Lepori is an Italian sociologist whose work lives at the intersection of mental health, art, and creative exploration."
+      ),
+    }),
+    workshopEntry({
+      id: "huolituoli",
+      name: t(
+        "Huolituoli päivystää",
+        "Huolituoli – A Listening Chair",
+        "Huolituoli – en plats för att bli hörd"
+      ),
+      img: imgHuolituoli,
+      day: t("la", "Sat", "lör"),
+      date: "22.8.",
+      time: t("klo 11–13", "11–13", "kl. 11–13"),
+      lang: t("suomi", "Finnish", "finska"),
+      desc: t(
+        "Huolituoli-kohtaamisessa\n\n– tullaan kuulluksi kiirettömästi\n– voi asioida nimettömänä\n– vallitsee luottamus ja turvallisuus\n– keskustelussa huoli tai murhe on keskeisintä\n\nHuolituolissa päivystää MIELI ry:n koulutettu vapaaehtoinen tai kriisityöntekijä. Huolituolille ohjaus kivipihan infopöydältä. Huolituoli fasilitoidaan suomeksi.",
+        "At the Huolituoli meeting:\n\n– you can be heard without being rushed\n– you can remain anonymous\n– the space is based on trust and safety\n– your worries or concerns are at the heart of the conversation\n\nThe Huolituoli is staffed by a trained volunteer or crisis worker from MIELI Mental Health Finland. Directions to Huolituoli are available at the information desk at Kivipiha. Huolituoli is facilitated in Finnish.",
+        "Vid Huolituoli-mötet:\n\n– får du bli hörd utan brådska\n– kan du vara anonym\n– råder en trygg och förtroendefull atmosfär\n– står dina bekymmer eller din oro i centrum för samtalet\n\nHuolituoli bemannas av en utbildad frivillig eller krisarbetare från MIELI Mental Health Finland. Du får vägbeskrivning till Huolituoli vid infobordet på Kivipiha. Huolituoli faciliteras på finska."
       ),
     }),
     workshopEntry({
@@ -1822,6 +1861,18 @@ export const buildCatalog = (locale) => {
         "Poljin on kahden näyttelijän absurdi näytelmä kommunikaatiosta ja kohtaamisesta, jaetusta tilasta, hetkestä ja tunteesta. Se kysyy, minkä pituinen on yksi hetki, mitä se merkitsee ja onko sillä lopulta väliä?\n\nKäsikirjoitus ja ohjaus: Pepe Hakala\nNäyttämöllä: Bruno Baer ja Amos Brotherus.",
         "Poljin is an absurdist play for two actors about communication and encounter — about shared space, a shared moment and a shared feeling. It asks how long a single moment lasts, what it means, and whether it matters in the end.\n\nWritten and directed by Pepe Hakala\nOn stage: Bruno Baer and Amos Brotherus.",
         "Poljin är en absurd pjäs för två skådespelare om kommunikation och möten — om ett delat rum, ett delat ögonblick och en delad känsla. Den frågar hur långt ett ögonblick är, vad det betyder och om det till slut spelar någon roll.\n\nManus och regi: Pepe Hakala\nPå scenen: Bruno Baer och Amos Brotherus."
+      ),
+    }),
+    artEntry({
+      id: "antiviral-macabre",
+      title: "ANTIVIRAL MACABRE – Sketches for an Unknown Future",
+      artist: "Dmitri Zudov",
+      img: imgAntiviralMacabre,
+      location: t("Pääkäytävä", "Main Hall", "Huvudkorridor"),
+      desc: t(
+        "Yksi teos on esillä Juho Poesiloe Pöystin ja Dima!:n Antiviral Art Gallery -projektin pohjalta syntyneestä ANTIVIRAL MACABRE – Sketches for an Unknown Future -kokonaisuudesta.\n\nAntiviral Art Gallery oli Pöystin vuonna 2020 toteuttama 40 päivän suoratoistoprojekti, jossa taidetta esitettiin ympäri vuorokauden entisen Lapinlahden sairaalan tiloista. Projektin aikana syntyneitä teoksia ja performansseja koottiin myöhemmin näyttelyksi.\n\nEsillä oleva teos liittyy Dima!:n, Poesiloen ja työryhmän tulevaan projektiin, joka käsittelee seitsemää kuolemansyntiä.",
+        "One work from the ANTIVIRAL MACABRE – Sketches for an Unknown Future series, created out of Juho Poesiloe Pöysti and Dima!'s Antiviral Art Gallery project, is on display.\n\nAntiviral Art Gallery was a 40-day streaming project created by Pöysti in 2020, presenting art around the clock from the premises of the former Lapinlahti mental hospital. Works and performances created during the project were later brought together as an exhibition.\n\nThe work on display is connected to an upcoming project by Dima!, Poesiloe and their collaborators exploring the Seven Deadly Sins.",
+        "Ett verk ur serien ANTIVIRAL MACABRE – Sketches for an Unknown Future, som växte fram ur Juho Poesiloe Pöystis och Dima!:s projekt Antiviral Art Gallery, visas på festivalen.\n\nAntiviral Art Gallery var ett 40 dagar långt streamingprojekt som Pöysti genomförde 2020, där konst visades dygnet runt från den tidigare mentalvårdsanstalten i Lappviken. Verk och performance som skapades under projektet samlades senare till en utställning.\n\nVerket som visas är kopplat till ett kommande projekt av Dima!, Poesiloe och deras medarbetare, som utforskar de sju dödssynderna."
       ),
     }),
 ];
